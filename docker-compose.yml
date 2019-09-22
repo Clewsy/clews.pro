@@ -9,6 +9,8 @@
 #### - nginx-clews.pro          NGINX          (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX          (image: nginx)
 
+## Note some sensitive environment variables defined in external file ".env"
+
 version: '3'  
 
 services:
