@@ -1,13 +1,14 @@
 ######################################### Docker compose yaml file for clews.pro and sub-domains
 #### Containers include:
-#### - nginx-proxy              NGINX-Proxy    (image: jwilder/nginx-proxy)
-#### - letsencrypt              Let's Encrypt  (image: jrcs/letsencrypt-nginx-proxy-companion)
-#### - mariadb-nextcloud        MariaDB        (image: mariadb)
-#### - nextcloud-app            Nextcloud      (image: nextcloud)
-#### - collabora-app            Collabora      (image: collabora/code)
-#### - bitwarden-app            BitWarden      (image: bitwardenrs/server)
-#### - nginx-clews.pro          NGINX          (image: nginx)
-#### - nginx-tyler.clews.pro    NGINX          (image: nginx)
+#### - nginx-proxy              NGINX-Proxy         (image: jwilder/nginx-proxy)
+#### - letsencrypt              Let's Encrypt       (image: jrcs/letsencrypt-nginx-proxy-companion)
+#### - mariadb-nextcloud        MariaDB             (image: mariadb)
+#### - nextcloud-app            Nextcloud           (image: nextcloud)
+#### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
+#### - collabora-app            Collabora           (image: collabora/code)
+#### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
+#### - nginx-clews.pro          NGINX               (image: nginx)
+#### - nginx-tyler.clews.pro    NGINX               (image: nginx)
 
 ## Note some sensitive environment variables defined in external file ".env"
 
@@ -89,6 +90,21 @@ services:
       - ./nextcloud.clews.pro/data:/var/www/html/data
       - ./nextcloud.clews.pro/themes:/var/www/html/themes
       - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
+######################################### Nextcloud cron container (for periodically running cron.php)
+  nextcloud-cron:
+    image: rcdailey/nextcloud-cronjob
+    container_name: nextcloud-cron
+    network_mode: none
+    depends_on:
+    - nextcloud-app
+    environment:
+    - NEXTCLOUD_CONTAINER_NAME=nextcloud-app
+    - NEXTCLOUD_CRON_MINUTE_INTERVAL=5
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
 ######################################### Bitwarden web app container
