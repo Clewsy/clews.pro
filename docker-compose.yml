@@ -2,7 +2,7 @@
 #### Containers include:
 #### - nginx-proxy              NGINX-Proxy         (image: jwilder/nginx-proxy)
 #### - letsencrypt              Let's Encrypt       (image: jrcs/letsencrypt-nginx-proxy-companion)
-#### - mariadb-nextcloud        MariaDB             (image: mariadb)
+#### - nextcloud-db             MariaDB             (image: mariadb)
 #### - nextcloud-app            Nextcloud           (image: nextcloud)
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
 #### - collabora-app            Collabora           (image: collabora/code)
@@ -54,9 +54,9 @@ services:
     restart: unless-stopped
 
 ######################################### MariaDB database (for nextcloud) container
-  mariadb-nextcloud:
+  nextcloud-db:
     image: mariadb
-    container_name: mariadb-nextcloud
+    container_name: nextcloud-db
     networks:
       - clews.pro_network
     environment:
@@ -65,7 +65,7 @@ services:
       - MYSQL_PASSWORD="${MARIADB_NEXTCLOUD_MYSQL_PASSWORD}"
       - MYSQL_DATABASE=nextcloud
     volumes:
-      - mariadb-nextcloud:/var/lib/mysql
+      - ./nextcloud-db:/var/lib/mysql
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
@@ -78,13 +78,13 @@ services:
     depends_on:
       - letsencrypt
       - nginx-proxy
-      - mariadb-nextcloud
+      - nextcloud-db
     environment:
       - VIRTUAL_HOST=nextcloud.clews.pro
       - LETSENCRYPT_HOST=nextcloud.clews.pro
       - LETSENCRYPT_EMAIL="${NEXTCLOUD_APP_LETSENCRYPT_EMAIL}"
     volumes:
-      - nextcloud:/var/www/html
+      - ./nextcloud.clews.pro:/var/www/html
       - ./nextcloud.clews.pro/config:/var/www/html/config
       - ./nextcloud.clews.pro/custom_apps:/var/www/html/custom_apps
       - ./nextcloud.clews.pro/data:/var/www/html/data
@@ -196,10 +196,6 @@ services:
     volumes:
       - ./tyler.clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
-
-volumes:
-  nextcloud:
-  mariadb-nextcloud:
 
 networks:
   clews.pro_network:
