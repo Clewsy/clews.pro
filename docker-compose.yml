@@ -5,6 +5,7 @@
 #### - nextcloud-db             MariaDB             (image: mariadb)
 #### - nextcloud-app            Nextcloud           (image: nextcloud)
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
+#### - nextcloud-bu             NCBU                (image: home made)
 #### - collabora-app            Collabora           (image: collabora/code)
 #### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
 #### - nginx-clews.pro          NGINX               (image: nginx)
@@ -65,7 +66,7 @@ services:
       - MYSQL_PASSWORD="${MARIADB_NEXTCLOUD_MYSQL_PASSWORD}"
       - MYSQL_DATABASE=nextcloud
     volumes:
-      - ./nextcloud-db:/var/lib/mysql
+      - nextcloud-db:/var/lib/mysql
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
@@ -84,11 +85,7 @@ services:
       - LETSENCRYPT_HOST=nextcloud.clews.pro
       - LETSENCRYPT_EMAIL="${NEXTCLOUD_APP_LETSENCRYPT_EMAIL}"
     volumes:
-      - ./nextcloud.clews.pro:/var/www/html
-      - ./nextcloud.clews.pro/config:/var/www/html/config
-      - ./nextcloud.clews.pro/custom_apps:/var/www/html/custom_apps
-      - ./nextcloud.clews.pro/data:/var/www/html/data
-      - ./nextcloud.clews.pro/themes:/var/www/html/themes
+      - nextcloud-app:/var/www/html
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
@@ -105,6 +102,27 @@ services:
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock:ro
     - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
+######################################### Nextcloud backup container (for periodically copyinc data and database)
+  nextcloud-bu:
+    image: clewsy/ncbu
+    container_name: nextcloud-bu
+    networks:
+      - clews.pro_network
+    depends_on:
+    - nextcloud-app
+    - nextcloud-db
+    environment:
+    - NEXTCLOUD_CONTAINER=nextcloud-app                 # Name of the nextcloud container.
+    - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
+    - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro      # Allows container to access another container.
+    - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
+    - nextcloud-app:/mnt/nextcloud_app:ro               # Must match the docker-managed nextcloud app volume (/var/www/html).
+    - nextcloud-db:/mnt/nextcloud_db:ro                 # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
+    - ./nextcloud-bu:/backup                            # Convenient location for the backup.
     restart: unless-stopped
 
 ######################################### Bitwarden web app container
@@ -196,6 +214,10 @@ services:
     volumes:
       - ./tyler.clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
+
+volumes:
+  nextcloud-app:
+  nextcloud-db:   #Let docker manage the db volume.  Note, db is backed up by con-job on host.
 
 networks:
   clews.pro_network:
