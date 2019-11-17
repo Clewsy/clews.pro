@@ -8,9 +8,10 @@
 #### - nextcloud-bu             NCBU                (image: home made)
 #### - collabora-app            Collabora           (image: collabora/code)
 #### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
+#### - airsonic-app             Airsonic            (image: linuxserver/airsonic)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
-#### - airsonic-app              Airsonic            (image: linuxserver/airsonic)
+#### - nginx-jadon.clews.pro    NGINX               (image: nginx)
 
 ## Note some sensitive environment variables defined in external file ".env"
 
