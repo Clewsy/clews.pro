@@ -201,25 +201,6 @@ services:
       - ./clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
   
-######################################### tyler website container
-  nginx-tyler.clews.pro:
-    image: nginx
-    container_name: nginx-tyler.clews.pro
-    networks:
-      - clews.pro_network
-    depends_on:
-      - letsencrypt
-      - nginx-proxy
-    environment:
-      - NGINX_HOST=tyler.clews.pro
-      - NGINX_PORT=80
-      - VIRTUAL_HOST=tyler.clews.pro
-      - LETSENCRYPT_HOST=tyler.clews.pro
-      - LETSENCRYPT_EMAIL=${NGINX_TYLER_CLEWS_PRO_LETSENCRYPT_EMAIL}
-    volumes:
-      - ./tyler.clews.pro/html:/usr/share/nginx/html
-    restart: unless-stopped
-
 ######################################### Airsonic container
   airsonic-app:
     image: linuxserver/airsonic
@@ -245,6 +226,44 @@ services:
       - ./airsonic-app/podcasts:/podcasts
       - ./airsonic-app/media:/media
       - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
+    restart: unless-stopped
+
+######################################### tyler website container
+  nginx-tyler.clews.pro:
+    image: nginx
+    container_name: nginx-tyler.clews.pro
+    networks:
+      - clews.pro_network
+    depends_on:
+      - letsencrypt
+      - nginx-proxy
+    environment:
+      - NGINX_HOST=tyler.clews.pro
+      - NGINX_PORT=80
+      - VIRTUAL_HOST=tyler.clews.pro
+      - LETSENCRYPT_HOST=tyler.clews.pro
+      - LETSENCRYPT_EMAIL=${NGINX_TYLER_CLEWS_PRO_LETSENCRYPT_EMAIL}
+    volumes:
+      - ./tyler.clews.pro/html:/usr/share/nginx/html
+    restart: unless-stopped
+
+######################################### jadon website container
+  nginx-jadon.clews.pro:
+    image: nginx
+    container_name: nginx-jadon.clews.pro
+    networks:
+      - clews.pro_network
+    depends_on:
+      - letsencrypt
+      - nginx-proxy
+    environment:
+      - NGINX_HOST=jadon.clews.pro
+      - NGINX_PORT=80
+      - VIRTUAL_HOST=jadon.clews.pro
+      - LETSENCRYPT_HOST=jadon.clews.pro
+      - LETSENCRYPT_EMAIL=${NGINX_JADON_CLEWS_PRO_LETSENCRYPT_EMAIL}
+    volumes:
+      - ./jadon.clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
 
 ######################################### Docker-managed volumes
