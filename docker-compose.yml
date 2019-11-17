@@ -10,6 +10,7 @@
 #### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
+#### - airsonic-app              Airsonic            (image: linuxserver/airsonic)
 
 ## Note some sensitive environment variables defined in external file ".env"
 
@@ -124,8 +125,8 @@ services:
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock         # Allows container to access another container.
     - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
-    - nextcloud-app:/mnt/nextcloud_app:ro               # Must match the docker-managed nextcloud app volume (/var/www/html).
-    - nextcloud-db:/mnt/nextcloud_db:ro                 # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
+    - nextcloud-app:/mnt/nextcloud_app                  # Must match the docker-managed nextcloud app volume (/var/www/html).
+    - nextcloud-db:/mnt/nextcloud_db                    # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
     - ./nextcloud-bu:/backup                            # Convenient location for the backup.
     restart: unless-stopped
 
@@ -154,7 +155,7 @@ services:
 #      - SMTP_USERNAME=${BITWARDEN_APP_LETSENCRYPT_SMTP_USERNAME}
 #      - SMTP_PASSWORD=${BITWARDEN_APP_LETSENCRYPT_SMTP_PASSWORD}
     volumes:
-      - ./bitwarden.clews.pro/data/:/data/
+      - ./bitwarden-app/data/:/data/
     restart: unless-stopped
 
 ######################################### Collabora (for nextcloud) container
@@ -217,6 +218,33 @@ services:
       - LETSENCRYPT_EMAIL=${NGINX_TYLER_CLEWS_PRO_LETSENCRYPT_EMAIL}
     volumes:
       - ./tyler.clews.pro/html:/usr/share/nginx/html
+    restart: unless-stopped
+
+######################################### Airsonic container
+  airsonic-app:
+    image: linuxserver/airsonic
+    container_name: airsonic-app
+    networks:
+      - clews.pro_network
+    depends_on:
+      - letsencrypt
+      - nginx-proxy
+    ports:
+      - 4040:4040
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VIRTUAL_PORT=4040
+      - VIRTUAL_HOST=airsonic.clews.pro
+      - LETSENCRYPT_HOST=airsonic.clews.pro
+      - LETSENCRYPT_EMAIL=${AIRSONIC_APP_LETSENCRYPT_EMAIL}
+    volumes:
+      - ./airsonic-app/config:/config
+      - ./airsonic-app/music:/music
+      - ./airsonic-app/playlists:/playlists
+      - ./airsonic-app/podcasts:/podcasts
+      - ./airsonic-app/media:/media
+      - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
     restart: unless-stopped
 
 ######################################### Docker-managed volumes
