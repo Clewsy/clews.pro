@@ -35,7 +35,7 @@ services:
       - ./nginx-proxy/vhost.d:/etc/nginx/vhost.d:rw
       - ./nginx-proxy/html:/usr/share/nginx/html:rw
       - ./nginx-proxy/certs:/etc/nginx/certs:ro
-      - ./nginx-proxy/clews.pro_custom_proxy_settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf      #jc- added to enable nc uploads>1MB (client_max_body_size 500m)
+      - ./nginx-proxy/clews.pro_custom_proxy_settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf      # Enables nc uploads>1MB (client_max_body_size 500m)
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
     restart: unless-stopped
@@ -87,9 +87,9 @@ services:
       - nginx-proxy
       - nextcloud-db
     environment:
-      - VIRTUAL_HOST=nextcloud.clews.pro
-      - LETSENCRYPT_HOST=nextcloud.clews.pro
-      - LETSENCRYPT_EMAIL=${NEXTCLOUD_APP_LETSENCRYPT_EMAIL}  
+      - VIRTUAL_HOST=${NEXTCLOUD_APP_URL}
+      - LETSENCRYPT_HOST=${NEXTCLOUD_APP_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}  
     volumes:
       - nextcloud-app:/var/www/html
       - /etc/localtime:/etc/localtime:ro
@@ -131,34 +131,6 @@ services:
     - ./nextcloud-bu:/backup                            # Convenient location for the backup.
     restart: unless-stopped
 
-######################################### Bitwarden web app container
-  bitwarden-app:
-    image: bitwardenrs/server:latest
-    container_name: bitwarden-app
-    networks:
-      - clews.pro_network
-    depends_on:
-      - letsencrypt
-      - nginx-proxy
-    ports:
-      - "127.0.0.1:8080:80"
-      - "127.0.0.1:3012:3012"
-    environment:
-      - VIRTUAL_HOST=bitwarden.clews.pro
-      - LETSENCRYPT_HOST=bitwarden.clews.pro
-      - LETSENCRYPT_EMAIL=${BITWARDEN_APP_LETSENCRYPT_EMAIL}
-      - SIGNUPS_ALLOWED=false
-      - LOG_FILE="/data/bitwarden.log"
-#      - SMTP_HOST=${BITWARDEN_APP_LETSENCRYPT_SMTP_HOST}
-#      - SMTP_FROM=${BITWARDEN_APP_LETSENCRYPT_SMTP_FROM}
-#      - SMTP_PORT=587
-#      - SMTP_SSL=TLS
-#      - SMTP_USERNAME=${BITWARDEN_APP_LETSENCRYPT_SMTP_USERNAME}
-#      - SMTP_PASSWORD=${BITWARDEN_APP_LETSENCRYPT_SMTP_PASSWORD}
-    volumes:
-      - ./bitwarden-app/data/:/data/
-    restart: unless-stopped
-
 ######################################### Collabora (for nextcloud) container
   collabora-app:
     image: collabora/code
@@ -173,35 +145,44 @@ services:
     cap_add:
     - MKNOD
     environment:
-     - domain=nextcloud\.clews\.pro    # jc- This needs to be the same as the nextcloud domain, with periods escaped.
-     - username=${COLLABORA_APP_username}
-     - password=${COLLABORA_APP_password}
+     - domain=nextcloud\.clews\.pro    # This needs to be the same as the nextcloud domain, with periods escaped.
+     - username=${COLLABORA_APP_USERNAME}
+     - password=${COLLABORA_APP_PASSWORD}
      - VIRTUAL_PORT=9980
-     - VIRTUAL_HOST=collabora.clews.pro
-     - LETSENCRYPT_HOST=collabora.clews.pro
-     - LETSENCRYPT_EMAIL=${COLLABORA_APP_LETSENCRYPT_EMAIL}
+     - VIRTUAL_HOST=${COLLABORA_APP_URL}
+     - LETSENCRYPT_HOST=${COLLABORA_APP_URL}
+     - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
      - extra_params=--o:ssl.enable=false --o:ssl.termination=true
     restart: unless-stopped
 
-######################################### Personal website container
-  nginx-clews.pro:
-    image: nginx
-    container_name: nginx-clews.pro
+######################################### Bitwarden web app container
+  bitwarden-app:
+    image: bitwardenrs/server:latest
+    container_name: bitwarden-app
     networks:
       - clews.pro_network
     depends_on:
       - letsencrypt
       - nginx-proxy
+    ports:
+      - "127.0.0.1:8080:80"
+      - "127.0.0.1:3012:3012"
     environment:
-      - NGINX_HOST=clews.pro
-      - NGINX_PORT=80
-      - VIRTUAL_HOST=clews.pro
-      - LETSENCRYPT_HOST=clews.pro
-      - LETSENCRYPT_EMAIL=${NGINX_CLEWS_PRO_LETSENCRYPT_EMAIL}
+      - VIRTUAL_HOST=${BITWARDEN_APP_URL}
+      - LETSENCRYPT_HOST=${BITWARDEN_APP_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+      - SIGNUPS_ALLOWED=false
+      - LOG_FILE="/data/bitwarden.log"
+#      - SMTP_HOST=${BITWARDEN_APP_LETSENCRYPT_SMTP_HOST}
+#      - SMTP_FROM=${BITWARDEN_APP_LETSENCRYPT_SMTP_FROM}
+#      - SMTP_PORT=587
+#      - SMTP_SSL=TLS
+#      - SMTP_USERNAME=${BITWARDEN_APP_LETSENCRYPT_SMTP_USERNAME}
+#      - SMTP_PASSWORD=${BITWARDEN_APP_LETSENCRYPT_SMTP_PASSWORD}
     volumes:
-      - ./clews.pro/html:/usr/share/nginx/html
+      - ./bitwarden-app/data/:/data/
     restart: unless-stopped
-  
+
 ######################################### Airsonic container
   airsonic-app:
     image: linuxserver/airsonic
@@ -217,18 +198,37 @@ services:
       - PUID=1000
       - PGID=1000
       - VIRTUAL_PORT=4040
-      - VIRTUAL_HOST=airsonic.clews.pro
-      - LETSENCRYPT_HOST=airsonic.clews.pro
-      - LETSENCRYPT_EMAIL=${AIRSONIC_APP_LETSENCRYPT_EMAIL}
+      - VIRTUAL_HOST=${AIRSONIC_APP_URL}
+      - LETSENCRYPT_HOST=${AIRSONIC_APP_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - ./airsonic-app/config:/config
       - ./airsonic-app/music:/music
       - ./airsonic-app/playlists:/playlists
       - ./airsonic-app/podcasts:/podcasts
       - ./airsonic-app/media:/media
-      - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
+      - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
+######################################### Personal website container
+  nginx-clews.pro:
+    image: nginx
+    container_name: nginx-clews.pro
+    networks:
+      - clews.pro_network
+    depends_on:
+      - letsencrypt
+      - nginx-proxy
+    environment:
+      - NGINX_HOST=${NGINX_CLEWS_PRO_URL}
+      - NGINX_PORT=80
+      - VIRTUAL_HOST=${NGINX_CLEWS_PRO_URL}
+      - LETSENCRYPT_HOST=${NGINX_CLEWS_PRO_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./clews.pro/html:/usr/share/nginx/html
+    restart: unless-stopped
+  
 ######################################### tyler website container
   nginx-tyler.clews.pro:
     image: nginx
@@ -239,11 +239,11 @@ services:
       - letsencrypt
       - nginx-proxy
     environment:
-      - NGINX_HOST=tyler.clews.pro
+      - NGINX_HOST=${NGINX_TYLER_CLEWS_PRO_URL}
       - NGINX_PORT=80
-      - VIRTUAL_HOST=tyler.clews.pro
-      - LETSENCRYPT_HOST=tyler.clews.pro
-      - LETSENCRYPT_EMAIL=${NGINX_TYLER_CLEWS_PRO_LETSENCRYPT_EMAIL}
+      - VIRTUAL_HOST=${NGINX_TYLER_CLEWS_PRO_URL}
+      - LETSENCRYPT_HOST=${NGINX_TYLER_CLEWS_PRO_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - ./tyler.clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
@@ -258,11 +258,11 @@ services:
       - letsencrypt
       - nginx-proxy
     environment:
-      - NGINX_HOST=jadon.clews.pro
+      - NGINX_HOST=${NGINX_JADON_CLEWS_PRO_URL}
       - NGINX_PORT=80
-      - VIRTUAL_HOST=jadon.clews.pro
-      - LETSENCRYPT_HOST=jadon.clews.pro
-      - LETSENCRYPT_EMAIL=${NGINX_JADON_CLEWS_PRO_LETSENCRYPT_EMAIL}
+      - VIRTUAL_HOST=${NGINX_JADON_CLEWS_PRO_URL}
+      - LETSENCRYPT_HOST=${NGINX_JADON_CLEWS_PRO_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - ./jadon.clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
