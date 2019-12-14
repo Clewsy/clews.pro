@@ -12,9 +12,11 @@ I use this file with docker-compose to set up the following containers:
 * nextcloud-cron - [nextcloud-cronjob](https://hub.docker.com/r/rcdailey/nextcloud-cronjob) - used to regularly run the cron.php script for my nextcloud instance.
 * nextcloud-bu - [ncbu/ncbu](https://hub.docker.com/r/ncbu/ncbu) - container for syncing the nextcloud data and database for convenient backup access.
 * collabora-app - [collabora/code](https://hub.docker.com/r/collabora/code) - allows me to edit documents within my nextcloud instance.
-* bitwarden-app - [bitwardenrs/server](https://hub.docker.com/r/bitwardenrs/server) - my personal password management server.
-* nginx-clews.pro - [nginx](https://hub.docker.com/_/nginx) - html and css files for my personal web site [clews.pro](https://clews.pro).
 * airsonic-app - [linuxserver/airsonic](https://hub.docker.com/r/linuxserver/airsonic) - for streaming my music collection - either via the web interface or an f-droid app (I like [UltraSonic](https://f-droid.org/en/packages/org.moire.ultrasonic/)).
+* bitwarden-app - [bitwardenrs/server](https://hub.docker.com/r/bitwardenrs/server) - my personal password management server.
+* calibre-app - [linuxserver/calibre](https://hub.docker.com/r/linuxserver/calibre) - for ebook management (converting, editing metadata, etc), only accessible locally.
+* calibre-web-app - [linuxserver/calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
+* nginx-clews.pro - [nginx](https://hub.docker.com/_/nginx) - html and css files for my personal web site [clews.pro](https://clews.pro).
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io](https://www.linuxserver.io/) team allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
 

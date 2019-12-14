@@ -7,8 +7,10 @@
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
 #### - nextcloud-bu             NCBU                (image: ncbu/ncbu)
 #### - collabora-app            Collabora           (image: collabora/code)
-#### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
 #### - airsonic-app             Airsonic            (image: linuxserver/airsonic)
+#### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
+#### - calibre-app              Calibre             (image: linuxserver/calibre)
+#### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
 #### - nginx-jadon.clews.pro    NGINX               (image: nginx)
@@ -155,6 +157,33 @@ services:
      - extra_params=--o:ssl.enable=false --o:ssl.termination=true
     restart: unless-stopped
 
+######################################### Airsonic container
+  airsonic-app:
+    image: linuxserver/airsonic
+    container_name: airsonic-app
+    networks:
+      - clews.pro_network
+    depends_on:
+      - letsencrypt
+      - nginx-proxy
+    ports:
+      - 4040:4040
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VIRTUAL_PORT=4040
+      - VIRTUAL_HOST=${AIRSONIC_APP_URL}
+      - LETSENCRYPT_HOST=${AIRSONIC_APP_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./airsonic-app/config:/config
+      - ./airsonic-app/music:/music
+      - ./airsonic-app/playlists:/playlists
+      - ./airsonic-app/podcasts:/podcasts
+      - ./airsonic-app/media:/media
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
 ######################################### Bitwarden web app container
   bitwarden-app:
     image: bitwardenrs/server:latest
@@ -183,30 +212,43 @@ services:
       - ./bitwarden-app/data/:/data/
     restart: unless-stopped
 
-######################################### Airsonic container
-  airsonic-app:
-    image: linuxserver/airsonic
-    container_name: airsonic-app
+######################################### Calibre container
+  calibre-app:
+    image: linuxserver/calibre
+    container_name: calibre-app
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./calibre-app/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8081:8080
+    restart: unless-stopped
+
+######################################### Calibre-Web container
+  calibre-web-app:
+    image: linuxserver/calibre-web
+    container_name: calibre-web-app
     networks:
       - clews.pro_network
     depends_on:
       - letsencrypt
       - nginx-proxy
+      - calibre-app
     ports:
-      - 4040:4040
+      - 8082:8083
     environment:
       - PUID=1000
       - PGID=1000
-      - VIRTUAL_PORT=4040
-      - VIRTUAL_HOST=${AIRSONIC_APP_URL}
-      - LETSENCRYPT_HOST=${AIRSONIC_APP_URL}
+      - DOCKER_MODS=linuxserver/calibre-web:calibre
+      - VIRTUAL_PORT=8083
+      - VIRTUAL_HOST=${CALIBRE_APP_URL}
+      - LETSENCRYPT_HOST=${CALIBRE_APP_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - ./airsonic-app/config:/config
-      - ./airsonic-app/music:/music
-      - ./airsonic-app/playlists:/playlists
-      - ./airsonic-app/podcasts:/podcasts
-      - ./airsonic-app/media:/media
+      - ./calibre-app/calibre-web-app/config:/config  #calibre-web-app specific confic (separate from calibre-app config)
+      - ./calibre-app/config:/books                   #Map /books to the calibre-app container config volume (contains books/metadata)
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
