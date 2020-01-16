@@ -5,7 +5,7 @@
 #### - nextcloud-db             MariaDB             (image: linuxserver/mariadb)
 #### - nextcloud-app            Nextcloud           (image: nextcloud)
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
-#### - nextcloud-bu             NCBU                (image: ncbu/ncbu)
+#### - nextcloud-bu             NCBU                (image: clewsy/ncbu)
 #### - collabora-app            Collabora           (image: collabora/code)
 #### - airsonic-app             Airsonic            (image: linuxserver/airsonic)
 #### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
@@ -114,7 +114,7 @@ services:
 
 ######################################### Nextcloud backup container (for periodically copying data and database)
   nextcloud-bu:
-    image: ncbu/ncbu
+    image: clewsy/ncbu
     container_name: nextcloud-bu
     networks:
       - clews.pro_network
