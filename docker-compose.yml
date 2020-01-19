@@ -193,9 +193,9 @@ services:
     depends_on:
       - letsencrypt
       - nginx-proxy
-    ports:
-      - "127.0.0.1:8080:80"
-      - "127.0.0.1:3012:3012"
+#    ports:
+#      - "127.0.0.1:8080:80"
+#      - "127.0.0.1:3012:3012"
     environment:
       - VIRTUAL_HOST=${BITWARDEN_APP_URL}
       - LETSENCRYPT_HOST=${BITWARDEN_APP_URL}
@@ -223,7 +223,9 @@ services:
       - ./calibre-app/config:/config
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - 8081:8080
+      - 8080:8080 #Desktop gui
+      - 8081:8081 #Webserver gui
+      - 8082:9090 #Wireless device connection
     restart: unless-stopped
 
 ######################################### Calibre-Web container
@@ -237,7 +239,7 @@ services:
       - nginx-proxy
       - calibre-app
     ports:
-      - 8082:8083
+      - 8083:8083
     environment:
       - PUID=1000
       - PGID=1000
