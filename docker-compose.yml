@@ -142,8 +142,8 @@ services:
     depends_on:
       - letsencrypt
       - nginx-proxy
-    ports:
-     - 9980:9980
+ #   ports:
+ #    - 9980:9980
     cap_add:
     - MKNOD
     environment:
@@ -166,8 +166,8 @@ services:
     depends_on:
       - letsencrypt
       - nginx-proxy
-    ports:
-      - 4040:4040
+ #   ports:
+ #     - 4040:4040
     environment:
       - PUID=1000
       - PGID=1000
@@ -193,21 +193,14 @@ services:
     depends_on:
       - letsencrypt
       - nginx-proxy
-#    ports:
-#      - "127.0.0.1:8080:80"
-#      - "127.0.0.1:3012:3012"
+    ports:
+      - 8170:80 #Keep a port accessible on the local network too.
     environment:
       - VIRTUAL_HOST=${BITWARDEN_APP_URL}
       - LETSENCRYPT_HOST=${BITWARDEN_APP_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
       - SIGNUPS_ALLOWED=false
       - LOG_FILE="/data/bitwarden.log"
-#      - SMTP_HOST=${BITWARDEN_APP_LETSENCRYPT_SMTP_HOST}
-#      - SMTP_FROM=${BITWARDEN_APP_LETSENCRYPT_SMTP_FROM}
-#      - SMTP_PORT=587
-#      - SMTP_SSL=TLS
-#      - SMTP_USERNAME=${BITWARDEN_APP_LETSENCRYPT_SMTP_USERNAME}
-#      - SMTP_PASSWORD=${BITWARDEN_APP_LETSENCRYPT_SMTP_PASSWORD}
     volumes:
       - ./bitwarden-app/data/:/data/
     restart: unless-stopped
@@ -238,8 +231,8 @@ services:
       - letsencrypt
       - nginx-proxy
       - calibre-app
-    ports:
-      - 8083:8083
+#    ports:
+#      - 8083:8083
     environment:
       - PUID=1000
       - PGID=1000
