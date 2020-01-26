@@ -80,7 +80,7 @@ services:
 
 ######################################### Nextcloud web app container
   nextcloud-app:
-    image: nextcloud:latest
+    image: nextcloud
     container_name: nextcloud-app
     networks:
       - clews.pro_network
@@ -103,13 +103,13 @@ services:
     container_name: nextcloud-cron
     network_mode: none
     depends_on:
-    - nextcloud-app
+      - nextcloud-app
     environment:
-    - NEXTCLOUD_CONTAINER_NAME=nextcloud-app
-    - NEXTCLOUD_CRON_MINUTE_INTERVAL=5
+      - NEXTCLOUD_CONTAINER_NAME=nextcloud-app
+      - NEXTCLOUD_CRON_MINUTE_INTERVAL=5
     volumes:
-    - /var/run/docker.sock:/var/run/docker.sock:ro
-    - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
 ######################################### Nextcloud backup container (for periodically copying data and database)
@@ -119,18 +119,19 @@ services:
     networks:
       - clews.pro_network
     depends_on:
-    - nextcloud-app
-    - nextcloud-db
+      - nextcloud-app
+      - nextcloud-db
     environment:
-    - NEXTCLOUD_CONTAINER=nextcloud-app                 # Name of the nextcloud container.
-    - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
-    - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
+      - NEXTCLOUD_EXEC_USER=www-data                      # Name of the user that can execute the occ command in the nextcloud container (www-data by default).
+      - NEXTCLOUD_CONTAINER=nextcloud-app                 # Name of the nextcloud container.
+      - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
+      - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
     volumes:
-    - /var/run/docker.sock:/var/run/docker.sock         # Allows container to access another container.
-    - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
-    - nextcloud-app:/mnt/nextcloud_app                  # Must match the docker-managed nextcloud app volume (/var/www/html).
-    - nextcloud-db:/mnt/nextcloud_db                    # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
-    - ./nextcloud-bu:/backup                            # Convenient location for the backup.
+      - /var/run/docker.sock:/var/run/docker.sock         # Allows container to access another container.
+      - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
+      - nextcloud-app:/mnt/nextcloud_app                  # Must match the docker-managed nextcloud app volume (/var/www/html).
+      - nextcloud-db:/mnt/nextcloud_db                    # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
+      - ./nextcloud-bu:/backup                            # Convenient location for the backup.
     restart: unless-stopped
 
 ######################################### Collabora (for nextcloud) container
@@ -145,16 +146,16 @@ services:
  #   ports:
  #    - 9980:9980
     cap_add:
-    - MKNOD
+      - MKNOD
     environment:
-     - domain=nextcloud\.clews\.pro    # This needs to be the same as the nextcloud domain, with periods escaped.
-     - username=${COLLABORA_APP_USERNAME}
-     - password=${COLLABORA_APP_PASSWORD}
-     - VIRTUAL_PORT=9980
-     - VIRTUAL_HOST=${COLLABORA_APP_URL}
-     - LETSENCRYPT_HOST=${COLLABORA_APP_URL}
-     - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
-     - extra_params=--o:ssl.enable=false --o:ssl.termination=true
+      - domain=nextcloud\.clews\.pro    # This needs to be the same as the nextcloud domain, with periods escaped.
+      - username=${COLLABORA_APP_USERNAME}
+      - password=${COLLABORA_APP_PASSWORD}
+      - VIRTUAL_PORT=9980
+      - VIRTUAL_HOST=${COLLABORA_APP_URL}
+      - LETSENCRYPT_HOST=${COLLABORA_APP_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+      - extra_params=--o:ssl.enable=false --o:ssl.termination=true
     restart: unless-stopped
 
 ######################################### Airsonic container
