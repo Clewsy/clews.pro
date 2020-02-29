@@ -15,7 +15,7 @@ I use this file with docker-compose to set up the following containers:
 * airsonic-app - [linuxserver/airsonic](https://hub.docker.com/r/linuxserver/airsonic) - for streaming my music collection - either via the web interface or an f-droid app (I like [UltraSonic](https://f-droid.org/en/packages/org.moire.ultrasonic/)).
 * bitwarden-app - [bitwardenrs/server](https://hub.docker.com/r/bitwardenrs/server) - my personal password management server.
 * calibre-app - [linuxserver/calibre](https://hub.docker.com/r/linuxserver/calibre) - for ebook management (converting, editing metadata, etc), only accessible locally.
-* calibre-web-app - [linuxserver/calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
+* calibre-web-app - [linuxserver/calibre-web](https://hub.docker.com/r/linuxserver/calibre-web) - web-based ebook library, uses library/database created and managed by calibre-app.
 * nginx-clews.pro - [nginx](https://hub.docker.com/_/nginx) - html and css files for my personal web site [clews.pro](https://clews.pro).
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io](https://www.linuxserver.io/) team allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
