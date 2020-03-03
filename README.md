@@ -16,10 +16,12 @@ I use this file with docker-compose to set up the following containers:
 * bitwarden-app - [bitwardenrs/server](https://hub.docker.com/r/bitwardenrs/server) - my personal password management server.
 * calibre-app - [linuxserver/calibre](https://hub.docker.com/r/linuxserver/calibre) - for ebook management (converting, editing metadata, etc), only accessible locally.
 * calibre-web-app - [linuxserver/calibre-web](https://hub.docker.com/r/linuxserver/calibre-web) - web-based ebook library, uses library/database created and managed by calibre-app.
-* nginx-clews.pro - [nginx](https://hub.docker.com/_/nginx) - html and css files for my personal web site [clews.pro](https://clews.pro).
+* nginx-clews.pro - [nginx](https://hub.docker.com/_/nginx) - html and css files for my personal web site [clews.pro](https://clews.pro).  The html and css for clews.pro is also contained within this repository.
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io](https://www.linuxserver.io/) team allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
 
 The nextcloud-bu container (image: [clewsy/ncbu](https://hub.docker.com/r/clewsy/ncbu)) is my own project.  The source is on gitlab: [clewsy/ncbu](https://gitlab.com/clewsy/ncbu).  I tried a few different methods of backing up my nextcloud files and database but eventually decided it would be an ideal project for learning how to create my own docker image.
 
 Also in this repo is a systemd unit file ([clews.service](https://gitlab.com/clewsy/clews.pro/blob/master/clews.service)).  I created this so that docker-compose is run automatically after a reboot of the host machine.
+
+The clews.pro directory contains the html and css I developed for my personal web site.
