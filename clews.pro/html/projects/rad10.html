@@ -23,19 +23,19 @@
 			<hr />
 			<h3>Daemon Installation and Setup</h3>
 			<p>Install the dependencies:</p>
-			<p class="code">$ sudo apt update<br/>
+			<p class="code">$ sudo apt update<br />
 					$ sudo apt install pigpio mpd mpc libmpdclient-dev</p>
 			<p>(Note, <a href="https://www.musicpd.org/clients/mpc/">mpc</a> is not strictly required for the daemon, but I reccomend it as a useful command-line client for control of mpd, and debugging for a project like this.)</p>
 			<p>Clone the repo and compile the executable "rad10d":</p>
-			<p class="code">$ git clone https://gitlab.com/clewsy/rad10d<br/>
-					$ cd rad10d<br/>
+			<p class="code">$ git clone https://gitlab.com/clewsy/rad10d<br />
+					$ cd rad10d<br />
 					$ make all</p>
 			<p>Copy files to the relevant system directories:</p>
-			<p class="code">$ sudo cp rad10d /usr/local/sbin/rad10d<br/>
+			<p class="code">$ sudo cp rad10d /usr/local/sbin/rad10d<br />
 					$ sudo cp rad10d.service /lib/systemd/system/rad10d.service</p>
 			<p>Enable and start the service:</p>
 			<p>(This service is created so that the daemon runs at boot).</p>
-			<p class="code">$ sudo systemctl enable rad10d.service<br/>
+			<p class="code">$ sudo systemctl enable rad10d.service<br />
 					$ sudo systemctl start rad10d.service</p>
 			<hr />
 			<h3>WebUI Installation and Setup</h3>
@@ -46,9 +46,9 @@
 			<p class="code">$ sudo apt update<br/>
 					$ sudo apt install apache2 php mpd mpc</p>
 			<p>By default, Apache will serve up the content located within the /var/www/html/ directory.  The default files installed at this location should be deleted and replaced by the contents of the "webui" directory in the rad10d repository:</p>
-			<p class="code">$ sudo rm --recursive /var/www/html/*</br>
-					$ git clone https://gitlab.com/clewsy/rad10d</br>
-					$ cd rad10d/webui</br>
+			<p class="code">$ sudo rm --recursive /var/www/html/*<br />
+					$ git clone https://gitlab.com/clewsy/rad10d<br />
+					$ cd rad10d/webui<br />
 					$ sudo cp --recursive * /var/www/html/.</p>
 			<p>(Note, cloning the gitlab repo can be skipped if already done to install the daemon.)</p>
 			<p>The WebUI should now be accessible over your local network.</p>

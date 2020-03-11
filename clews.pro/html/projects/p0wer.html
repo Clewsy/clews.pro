@@ -12,11 +12,11 @@
 			<a href="photos/p0wer_1.jpg"><img class="photo align-left" src="photos/p0wer_1.jpg" alt="The final assembly in a simple enclosure." /></a>
 			<h3>Summary</h3>
 			<p>Off-the-shelf wifi-connected mains switches are pretty common now, but from what I understand, they typically require some kind of cloud service subscription or account (at least at the time I developed this project).</p>
-			<p>I am loath to sign up for such an account and even more so, I want to retain control within my local network, with external control only via specific protocols & ports under my control.</p>
-			<p>By combining a cheap (<$20AUD) remote mains adapter kit with an RF remote control and a Raspberry Pi Zero W, I deeloped a custom solution.</p>
+			<p>I am loath to sign up for such an account and even more so, I want to retain control within my local network, with external control only via specific protocols &amp; ports under my control.</p>
+			<p>By combining a cheap (&lt;$20AUD) remote mains adapter kit with an RF remote control and a Raspberry Pi Zero W, I deeloped a custom solution.</p>
 			<hr />
 			<h3>Hardware</h3>
-			<p>I started off with a mains outlet remote control kit I found at Bunnings. It's an Arlec branded kit and works by transmitting on the 433.92MHz band. The remote can control up to four channels (A, B, C & D).</p>
+			<p>I started off with a mains outlet remote control kit I found at Bunnings. It's an Arlec branded kit and works by transmitting on the 433.92MHz band. The remote can control up to four channels (A, B, C &amp; D).</p>
 			<p>To interface the remote control I had to reverse engineer it. I assumed it would be a matter of tracing the button pads and finding a point to which I could connect a GPIO pin on the Raspberry Pi and simply pull up or down to trigger.</p>
 			<p>This wasn't the case - I found that the button pads were matrixed, so triggering a channel required connecting two specific points with each other, depending on the channel and the desired action ("on" or "off").</p>
 			<a href="photos/p0wer_2.jpg"><img class="photo align-right" src="photos/p0wer_2.jpg" alt="Hacked remote control." /></a>
@@ -52,7 +52,7 @@
 			<p>The script will connect to the raspberry pi (using ssh) and run the program with the desired inputs.</p>
 			<p>The following example two-line script will connect to the raspi via the home server and run the program with the options to turn on the channel A outlet:</p>
 			<p class="code">#!/bin/bash<br/>
-					ssh home.server "ssh raspberry.pi "p0wer a on""</p>
+					ssh home.server 'ssh raspberry.pi "sudo p0wer a on"'</p>
 			<p>The full termux script I wrote is a bit more robust (and documented on gitlab: <a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">p0wer_switch.sh</a>).</p>
 			<hr />
 			<h3>Revision 2.0</h3>
@@ -69,7 +69,7 @@
 			<ul>
 				<li>Using cURL (host "raspberrypi"):</li>
 			</ul>
-				<p class="code">$ curl --silent http://raspberrypi/index.php?a=ON >> /dev/null</p>
+				<p class="code">$ curl --silent http://raspberrypi/index.php?a=ON &gt;&gt; /dev/null</p>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
