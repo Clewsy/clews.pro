@@ -43,8 +43,8 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_web_ultrasonic]:https://f-droid.org/en/packages/org.moire.ultrasonic/
 [link_web_linuxserver]:https://www.linuxserver.io/
 [link_gitlab_clewsy_ncbu]:https://gitlab.com/clewsy/ncbu
-[link_repo_clews.service]:clews.pro/blob/master/clews.service
-[link_repo_html]:/clews.pro/-/tree/master/clews.pro/html
+[link_repo_clews.service]:clews.service
+[link_repo_html]:clews.pro/html
 [link_clews]:https://clews.pro
 
 [image_clews.pro]:clews.pro/html/images/clews_logo.png
