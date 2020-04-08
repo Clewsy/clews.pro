@@ -20,7 +20,7 @@ I use this file with docker-compose to set up the following containers:
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io][link_web_linuxserver] developers allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
 
-The nextcloud-bu container (docker image: [clewsy/ncbu][link_dockerhub_clewsy_ncbu] is my own project.  The source is on gitlab: [clewsy/ncbu][link_gitlab_clewsy_ncbu].  I tried a few different methods of backing up my nextcloud files and database but eventually decided it would be an ideal project for learning how to create my own docker image.
+The nextcloud-bu container (docker image: [clewsy/ncbu][link_dockerhub_clewsy_ncbu] is my own project.  The source is on [gitlab][link_gitlab_clewsy_ncbu].  I tried a few different methods of backing up my nextcloud files and database but eventually decided it would be an ideal project for learning how to create my own docker image.
 
 Also in this repo is a systemd unit file ([clews.service][link_repo_clews.service]).  I created this so that docker-compose is run automatically after a reboot of the host machine.
 
