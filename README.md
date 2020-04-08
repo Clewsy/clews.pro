@@ -4,7 +4,7 @@ I am slowly removing my dependency on cloud services (google in particular) by s
 
 Herein lies the [docker-compose.yml][link_repo_docker-compose.yml] file with which I establish my personal web site and various web apps under sub-domains.
 
-I use this file with docker-compose to set up the following containers:
+I use this file with [docker-compose][link_web_docker-compose] to set up the following containers:
 * nginx-proxy - [jwilder/nginx-proxy][link_dockerhub_jwilder_nginx-proxy] - used to reverse-proxy the  domain and sub-domains.
 * letsencrypt - [jrcs/letsencrypt-nginx-proxy-companion][link_dockerhub_jrcs_letsencrypt] - used for https encryption of the domain and sub-domains.
 * nextcloud-app - [nextcloud][link_dockerhub_nextcloud] - my personal nextcloud instance.
@@ -40,6 +40,7 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_dockerhub_linuxserver_calibre]:https://hub.docker.com/r/linuxserver/calibre
 [link_dockerhub_linuxserver_calibre-web]:https://hub.docker.com/r/linuxserver/calibre-web
 [link_dockerhub_nginx]:https://hub.docker.com/_/nginx
+[link_web_docker-compose]:https://docs.docker.com/compose/
 [link_web_ultrasonic]:https://f-droid.org/en/packages/org.moire.ultrasonic/
 [link_web_linuxserver]:https://www.linuxserver.io/
 [link_gitlab_clewsy_ncbu]:https://gitlab.com/clewsy/ncbu
