@@ -12,6 +12,7 @@
 #### - calibre-app              Calibre             (image: linuxserver/calibre)
 #### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
 #### - nginx-clews.pro          NGINX               (image: nginx)
+#### - nginx-clews.dev          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
 #### - nginx-jadon.clews.pro    NGINX               (image: nginx)
 
@@ -243,7 +244,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
-######################################### Personal website container
+######################################### Personal website container clews.pro
   nginx-clews.pro:
     image: nginx
     container_name: nginx-clews.pro
@@ -263,6 +264,26 @@ services:
       - ./clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
   
+######################################### clews.dev website container
+  nginx-jadon.clews.dev:
+    image: nginx
+    container_name: nginx-clews.dev
+    networks:
+      - clews.pro_network
+    depends_on:
+      - letsencrypt
+      - nginx-proxy
+    environment:
+      - NGINX_HOST=${NGINX_CLEWS_DEV_URL}
+      - NGINX_PORT=80
+      - VIRTUAL_PORT=80
+      - VIRTUAL_HOST=${NGINX_CLEWS_DEV_URL}
+      - LETSENCRYPT_HOST=${NGINX_CLEWS_DEV_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./clews.dev/html:/usr/share/nginx/html
+    restart: unless-stopped
+
 ######################################### tyler website container
   nginx-tyler.clews.pro:
     image: nginx
