@@ -11,6 +11,7 @@
 #### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
 #### - calibre-app              Calibre             (image: linuxserver/calibre)
 #### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
+#### - netdata-app              Netdata             (image: netdata/netdata)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-clews.dev          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
@@ -242,6 +243,34 @@ services:
       - ./calibre-app/calibre-web-app/config:/config  #calibre-web-app specific config (separate from calibre-app config)
       - ./calibre-app/config:/books                   #Map /books to the calibre-app container config volume (contains books/metadata)
       - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
+######################################### Personal website container clews.pro
+  netdata-app:
+    image: netdata/netdata
+    container_name: netdata-app
+    networks:
+      - clews.pro_network
+#    depends_on:
+#      - letsencrypt
+#      - nginx-proxy
+    hostname: netdata.clews.pro
+    ports:
+      - 19999:19999
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+#    environment:
+#      - VIRTUAL_PORT=19999  #Disabled for now until netdata incorporates authentication for web-facing instance.  For now access on lan only.
+#      - VIRTUAL_HOST=${NETDATA_APP_URL}
+#      - LETSENCRYPT_HOST=${NETDATA_APP_URL}
+#      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - /etc/passwd:/host/etc/passwd:ro
+      - /etc/group:/host/etc/group:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
     restart: unless-stopped
 
 ######################################### Personal website container clews.pro

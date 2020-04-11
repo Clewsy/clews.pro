@@ -16,6 +16,7 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 * bitwarden-app - [bitwardenrs/server][link_dockerhub_bitwardenrs_server] - my personal password management server.
 * calibre-app - [linuxserver/calibre][link_dockerhub_linuxserver_calibre] - for ebook management (converting, editing metadata, etc), only accessible locally.
 * calibre-web-app - [linuxserver/calibre-web][link_dockerhub_linuxserver_calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
+* netdata-app - [netdata/netdata][link_dockerhub_netdata] - charts and snapshots of live system hardware statistic.
 * nginx-clews.pro - [nginx][link_dockerhub_nginx] - html and css files for my personal web site [clews.pro][link_clews].  The html and css for clews.pro is also contained within this repository.
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io][link_web_linuxserver] developers allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
@@ -39,6 +40,7 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_dockerhub_bitwardenrs_server]:https://hub.docker.com/r/bitwardenrs/server
 [link_dockerhub_linuxserver_calibre]:https://hub.docker.com/r/linuxserver/calibre
 [link_dockerhub_linuxserver_calibre-web]:https://hub.docker.com/r/linuxserver/calibre-web
+[link_dockerhub_netdata]:https://hub.docker.com/r/netdata/netdata
 [link_dockerhub_nginx]:https://hub.docker.com/_/nginx
 [link_web_docker-compose]:https://docs.docker.com/compose/
 [link_web_ultrasonic]:https://f-droid.org/en/packages/org.moire.ultrasonic/
