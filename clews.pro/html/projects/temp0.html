@@ -15,7 +15,7 @@
 			<ul>
 				<li>Make a device that monitored and reported the inside temperature at home.</li>
 				<li>Learn how to use an ESP8266 chip.</li>
-				<li>Put to use (and potentially showcase) a Hackaday 10-year anniversary special-edition Pro-Trinket module that has sat un-used for about 6 years.</li>
+				<li>Put to use (and potentially showcase) a <a href="https://hackaday.com/2014/10/10/10th-anniversary-trinket-pro-now-in-the-hackaday-store/">Hackaday 10-year anniversary special-edition Pro-Trinket module</a> that has sat un-used for about 6 years.</li>
 				<li>Try out the arduino platform instead of natively programming a micro-controller.</li>
 				<li>Use C++ for a microcontroller project instead of C.</li>
 			</ul>
@@ -54,18 +54,17 @@
 				</li>
 			</ul>
 			<p>From a command line, a simple use of "curl" will provide plain-text temperature and humidity values for easy integration into other systems.</p>
-			<p class="code">$ curl http://temp0/temperature<br />
-				15.68<br />
-				$ curl http://temp0/humidity<br />
-				70.69</p>
+			<p class="code">	$ curl http://temp0/temperature<br />
+						15.68<br />
+						$ curl http://temp0/humidity<br />
+						70.69</p>
 			<hr />
 			<h3>Thoughts on <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> and programming firmware in C++</h3>
-			<p>Meh, it's pretty clunky and seems dated.  Ultimately I started looking into alternatives.  I tried the <a href="https://github.com/Microsoft/vscode-arduino">VSCode Arduino</a> extension which took some configuring but eventually I got working.  Though I moved on from that when I found a better solution - the <a href=https://platformio.org/">PlatformIO IDE</a> extension for VSCode.  This was easy to set up and start using.  It adds a few buttons to the interface for compiling and uploading to a connected device.  The only down-side in my opinion is the directory structure it forces and the cruft it generates within.</p>
-			<p>I think once I've finished this project I'll return to my old workflow of writing within VSCode but using the command line to compile and upload.</p>
-			<p>The standard arduino libraries are good though.  In this project I used Serial (comms between Trinket and ESP8266) and Wire (I2C comms for Trinket/SD1306 and Trinket/HDC1080).  These libraries made it super-fast to get going with the low-level comms.  For both the SSD1306 OLED and HDC1080 Sensor though, I opted to write my own drivers rather than use existing libraries.  Partly because it keeps the drivers more minimal and project-specific, and also partly because it was a fun learning experience to create C++ classes for them.</p>
+			<p>Meh, the Arduino IDE is pretty clunky and seems dated so I started looking into alternatives.  I first tried the <a href="https://github.com/Microsoft/vscode-arduino">VSCode Arduino</a> extension which took some configuring but eventually worked.  Though I moved on from that when I found a better solution - the <a href=https://platformio.org/">PlatformIO IDE</a> extension for VSCode.  This was easy to set up and start using.  It adds a few buttons to the VSCode interface for compiling and uploading to a connected device.  The only down-side in my opinion is the directory structure it forces and the cruft it generates within.</p>
+			<p>The standard arduino libraries are handy though.  In this project I used Serial (comms between Trinket and ESP8266) and Wire (I2C comms for Trinket/SD1306 and Trinket/HDC1080).  These libraries made it super-fast to get going with the low-level comms.  For both the SSD1306 OLED and HDC1080 Sensor though, I opted to write my own drivers rather than use existing libraries.  Partly because it keeps the drivers more minimal and project-specific, and also partly because it was a fun learning experience to create C++ classes for them.</p>
 			<hr />
 			<h3>Thoughts on the ESP8266</h3>
-			<p>In programming the ESP8266 I drew heavily from existing libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust existing <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
+			<p>While programming the ESP8266 I drew from existing example libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust existing <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">

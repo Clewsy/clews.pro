@@ -18,6 +18,7 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 * calibre-web-app - [linuxserver/calibre-web][link_dockerhub_linuxserver_calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
 * netdata-app - [netdata/netdata][link_dockerhub_netdata] - charts and snapshots of live system hardware statistic.
 * nginx-clews.pro - [nginx][link_dockerhub_nginx] - html and css files for my personal web site [clews.pro][link_clews].  The html and css for clews.pro is also contained within this repository.
+* nginx-clews.dev - [nginx][link_dockerhub_nginx] - html and css files for my other personal web site [clews.dev][link_clews.dev].  The html and css for clews.dev is also contained within this repository.
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io][link_web_linuxserver] developers allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
 
@@ -50,5 +51,6 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_repo_clews.service]:clews.service
 [link_repo_html]:clews.pro/html
 [link_clews]:https://clews.pro
+[link_clews.dev]:https://clews.dev
 
 [image_clews.pro]:clews.pro/html/images/clews_logo.png
