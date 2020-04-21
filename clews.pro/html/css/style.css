@@ -168,7 +168,6 @@ a:hover {
 	text-decoration: underline;	
 }
 a:active {
-	color: rgb(150,150,150);
+	color: black;
 	text-decoration: underline;
-	background-color: black;
 }
