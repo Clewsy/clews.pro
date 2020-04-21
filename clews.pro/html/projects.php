@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>clews.pro</title>
-		<link href="/css/style.css" type="text/css" rel="stylesheet" />
+		<?php include("$_SERVER[DOCUMENT_ROOT]/includes/head.html"); ?>
 	</head>
 	<body>
-		<script src="/js/header_common.js"></script>
+		<?php include("$_SERVER[DOCUMENT_ROOT]/includes/header.html"); ?>
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Projects</h2>
@@ -19,19 +18,19 @@
 					<th scope="col">Tags</th>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/clews.html">clews.pro</a></th>
-					<td><a href="/projects/clews.html"><img class="thumbnail" src="/projects/photos/clews_1.png" /></a></td>
-					<td><a href="/projects/clews.html">Meta.</a></td>
-					<td class="date">2020-03-04</td>
+					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
+					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/photos/clews_1.png" /></a></td>
+					<td><a href="/projects/clews.php">Meta.</a></td>
+					<td class="date">2020-04-21</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
-						<a href="/projects.html">Recursion...</a>
+						<a href="/projects.php">Recursion...</a>
 					</td>
-					<td>HTML, CSS, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, AirSonic, Calibre, MariaDB, Inkscape, Javascript, Systemd</td>
+					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, AirSonic, Calibre, MariaDB, Inkscape, Javascript, Systemd</td>
 				<tr>
-					<th scope="row"><a href="/projects/gps_clock.html">gps_clock</a></th>
-					<td><a href="/projects/gps_clock.html"><img class="thumbnail" src="/projects/photos/small_gps_clock_1.jpg" /></a></td>
-					<td><a href="/projects/gps_clock.html">GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</a></td>
+					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
+					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/photos/small_gps_clock_1.jpg" /></a></td>
+					<td><a href="/projects/gps_clock.php">GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</a></td>
 					<td class="date">2019-10-05</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
@@ -42,9 +41,9 @@
 					<td>Clock, GPS, ISO-8601, epoch, 7-seg, led, MAX-7219, AVR, Atmel, ATmega328p, ds3234, C, Ki-CAD, Wood</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/grinder_timer.html">grinder_timer</a></th>
-					<td><a href="/projects/grinder_timer.html"><img class="thumbnail" src="/projects/photos/small_grinder_timer_1.jpg" /></a></td>
-					<td><a href="/projects/grinder_timer.html">Programmable timer to control a dumb coffee grinder.</a></td>
+					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
+					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/photos/small_grinder_timer_1.jpg" /></a></td>
+					<td><a href="/projects/grinder_timer.php">Programmable timer to control a dumb coffee grinder.</a></td>
 					<td class="date">2019-09-28</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
@@ -55,9 +54,9 @@
 					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, C, Ki-CAD</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/media_center.html">media_center</a></th>
-					<td><a href="/projects/media_center.html"><img class="thumbnail" src="/projects/photos/small_media_center_1.jpg" /></a></td>
-					<td><a href="/projects/media_center.html">Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</a></td>
+					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
+					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/photos/small_media_center_1.jpg" /></a></td>
+					<td><a href="/projects/media_center.php">Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</a></td>
 					<td class="date">2020-02-04</td>
 					<td class="links">
 						<a href="https://core-electronics.com.au/projects/raspberry-pi-media-center">core-electronics</a>
@@ -65,9 +64,9 @@
 					<td>Raspberry Pi 3, Raspbian, OSMC, kodi, Wood</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/ncbu.html">ncbu</a></th>
-					<td><a href="/projects/ncbu.html"><img class="thumbnail" src="/projects/photos/ncbu_1.png" /></a></td>
-					<td><a href="/projects/ncbu.html">Docker container image to simplify and automate backup of a self-hosted nextcloud service.</a></td>
+					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
+					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/photos/ncbu_1.png" /></a></td>
+					<td><a href="/projects/ncbu.php">Docker container image to simplify and automate backup of a self-hosted nextcloud service.</a></td>
 					<td class="date">2020-03-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
@@ -76,9 +75,9 @@
 					<td>Docker, Docker-Compose, DockerHub, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/p0wer.html">p0wer</a></th>
-					<td><a href="/projects/p0wer.html"><img class="thumbnail" src="/projects/photos/p0wer_1.jpg" /></a></td>
-					<td><a href="/projects/p0wer.html">Simple rf mains remote switches hacked to add wifi control.</a></td>
+					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
+					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/photos/p0wer_1.jpg" /></a></td>
+					<td><a href="/projects/p0wer.php">Simple rf mains remote switches hacked to add wifi control.</a></td>
 					<td class="date">2020-01-06</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
@@ -87,9 +86,9 @@
 					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, wiringpi, pigpio, Termux, C, PHP, cURL, Automation, KiCAD</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/rad10.html">rad10</a></th>
-					<td><a href="/projects/rad10.html"><img class="thumbnail" src="/projects/photos/small_rad10_1.jpg" /></a></td>
-					<td><a href="/projects/rad10.html">An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</a></td>
+					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
+					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/photos/small_rad10_1.jpg" /></a></td>
+					<td><a href="/projects/rad10.php">An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</a></td>
 					<td class="date">2020-03-04</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
@@ -98,9 +97,9 @@
 					<td>Rotary Encoder, Raspberry Pi, Raspbian, mpd, mpc, libmpdclient, wiringpi, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/scripts.html">scripts</a></th>
-					<td><a href="/projects/scripts.html"><img class="thumbnail" src="/projects/photos/scripts_1.png" /></a></td>
-					<td><a href="/projects/scripts.html">Various bash shell scripts.</a></td>
+					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
+					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/photos/scripts_1.png" /></a></td>
+					<td><a href="/projects/scripts.php">Various bash shell scripts.</a></td>
 					<td class="date">2019-11-24</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/scripts">gitlab</a>
@@ -109,9 +108,9 @@
 				</tr>
 <!-- project temp0 is a work-in-progress.
 				<tr>
-					<th scope="row"><a href="/projects/temp0.html">temp0</a></th>
-					<td><a href="/projects/temp0.html"><img class="thumbnail" src="/projects/photos/temp0_1.jpg" /></a></td>
-					<td><a href="/projects/temp0.html">Temperature and humidity monitor with WiFi and local readout.</a></td>
+					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
+					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/photos/temp0_1.jpg" /></a></td>
+					<td><a href="/projects/temp0.php">Temperature and humidity monitor with WiFi and local readout.</a></td>
 					<td class="date">2020-04-01</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
@@ -120,9 +119,9 @@
 				</tr>
 -->
 				<tr>
-					<th scope="row"><a href="/projects/volcon.html">VolCon</a></th>
-					<td><a href="/projects/volcon.html"><img class="thumbnail" src="/projects/photos/small_volcon_1.jpg" /></a></td>
-					<td><a href="/projects/volcon.html">HID compliant USB volume controller.</a></td>
+					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
+					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/photos/small_volcon_1.jpg" /></a></td>
+					<td><a href="/projects/volcon.php">HID compliant USB volume controller.</a></td>
 					<td class="date">2019-12-16</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
@@ -131,9 +130,9 @@
 					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, Rotary Encoder, Gray Code</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/wishabi.html">WiSHABI</a></th>
-					<td><a href="/projects/wishabi.html"><img class="thumbnail" src="/projects/photos/small_wishabi_1.jpg" /></a></td>
-					<td><a href="/projects/wishabi.html">WIreless Single-Handed Accelerometer-Based Interface. (Under-Grad thesis project)</a></td>
+					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
+					<td><a href="/projects/wishabi.php"><img class="thumbnail" src="/projects/photos/small_wishabi_1.jpg" /></a></td>
+					<td><a href="/projects/wishabi.php">WIreless Single-Handed Accelerometer-Based Interface. (Under-Grad thesis project)</a></td>
 					<td class="date">2019-10-07</td>
 					<td class="links">
 						<a href="http://vusb.wikidot.com/project:wishabi">V-USB</a><br />
@@ -141,9 +140,9 @@
 					<td>AVR, Atmel, ATmega8, 433.92MHz, Wireless, USB, HID, C, Keyboard, Mouse, Accelerometer, ADXL330</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/wood.html">Wood</a></th>
-					<td><a href="/projects/wood.html"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
-					<td><a href="/projects/wood.html">Stuff made from wood.</a></td>
+					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
+					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
+					<td><a href="/projects/wood.php">Stuff made from wood.</a></td>
 					<td class="date">2019-09-28</td>
 					<td class="links">
 

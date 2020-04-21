@@ -245,7 +245,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
-######################################### Personal website container clews.pro
+######################################### System monitoring netdata app
   netdata-app:
     image: netdata/netdata
     container_name: netdata-app
@@ -273,15 +273,30 @@ services:
       - /sys:/host/sys:ro
     restart: unless-stopped
 
+######################################### php app for use by nginx containers
+  php:
+    image: php:7.3-fpm
+    container_name: php
+    networks:
+      - clews.pro_network
+    ports:
+      - 9000:9000
+    volumes:
+      - ./clews.pro/html:/usr/share/nginx/html
+    restart: unless-stopped
+
 ######################################### Personal website container clews.pro
   nginx-clews.pro:
     image: nginx
     container_name: nginx-clews.pro
     networks:
       - clews.pro_network
+#    links:
+#      - php
     depends_on:
       - letsencrypt
       - nginx-proxy
+      - php
     environment:
       - NGINX_HOST=${NGINX_CLEWS_PRO_URL}
       - NGINX_PORT=80
@@ -291,6 +306,7 @@ services:
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - ./clews.pro/html:/usr/share/nginx/html
+      - ./clews.pro/conf.d:/etc/nginx/conf.d/
     restart: unless-stopped
   
 ######################################### clews.dev website container

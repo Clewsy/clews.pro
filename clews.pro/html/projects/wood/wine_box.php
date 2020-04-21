@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>clews.pro</title>
-		<link href="/css/style.css" type="text/css" rel="stylesheet" />
+		<?php include("$_SERVER[DOCUMENT_ROOT]/includes/head.html"); ?>
 	</head>
 	<body>
-		<script src="/js/header_common.js"></script>
+		<?php include("$_SERVER[DOCUMENT_ROOT]/includes/header.html"); ?>
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Wine Box</h2>
