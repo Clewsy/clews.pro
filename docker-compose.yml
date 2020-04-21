@@ -12,6 +12,7 @@
 #### - calibre-app              Calibre             (image: linuxserver/calibre)
 #### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
 #### - netdata-app              Netdata             (image: netdata/netdata)
+#### - php                      PHP                 (image: php:fpm)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-clews.dev          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
@@ -209,6 +210,7 @@ services:
   calibre-app:
     image: linuxserver/calibre
     container_name: calibre-app
+    network_mode: none
     environment:
       - PUID=1000
       - PGID=1000
@@ -275,12 +277,10 @@ services:
 
 ######################################### php app for use by nginx containers
   php:
-    image: php:7.3-fpm
+    image: php:fpm
     container_name: php
     networks:
       - clews.pro_network
-    ports:
-      - 9000:9000
     volumes:
       - ./clews.pro/html:/usr/share/nginx/html
     restart: unless-stopped
@@ -291,8 +291,6 @@ services:
     container_name: nginx-clews.pro
     networks:
       - clews.pro_network
-#    links:
-#      - php
     depends_on:
       - letsencrypt
       - nginx-proxy
