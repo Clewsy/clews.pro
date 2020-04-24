@@ -10,12 +10,12 @@
 			<h2 class="align-center">temp0</h2>
 			<a href="photos/temp0_03.jpg"><img class="photo align-left" src="photos/small_temp0_03.jpg" alt="The final assembled temp0." /></a>
 			<h3>Summary</h3>
-			<p>This project combined a handful of small project ideas:</p>
+			<p>This project combined a handful of smaller project ideas:</p>
 			<ul>
-				<li>Make a device that monitored and reported the inside temperature at home.</li>
+				<li>Make a device that monitors and reports the inside temperature at home.</li>
 				<li>Learn how to use an ESP8266 chip.</li>
 				<li>Put to use (and potentially showcase) a <a href="https://hackaday.com/2014/10/10/10th-anniversary-trinket-pro-now-in-the-hackaday-store/">Hackaday 10-year anniversary special-edition Pro-Trinket module</a> that has sat un-used for about 6 years.</li>
-				<li>Try out the arduino platform instead of natively programming a micro-controller.</li>
+				<li>Try out the arduino platform (IDE and bootloader) instead of directly programming a microcontroller.</li>
 				<li>Use C++ for a microcontroller project instead of C.</li>
 			</ul>
 			<p>The final system is comprised of the following main components:</p>
@@ -26,11 +26,11 @@
 				<li>Pro Trinket 5V (Hackaday 10-Year Anniversary Special-Edition) - Controls the SSD1306 and the HDC1080.  Sends temperature/humidity readings over serial to the ESP8266 module.</li>
 			</ul>
 			<p>There is also a few additional minor components for regulating 5V from the trinket down to 3.3V for the ESP8266, OLED and HDC1080.</p>
-			<p>I believe it would be possible to create a similar device without a Pro Trinket, utilising more of the ESP8266 capability, but I wanted an excuse to use one of these Hackaday special edition modules.</p>
-			<p>The ESP8266 servers a pretty HTML page at the index (http://temp0/) which shows the current temperature and humidity readings.</p>
+			<p>It would be possible to create a similar device without a Pro Trinket, utilising more of the ESP8266 capability, but I wanted an excuse to use one of these Hackaday special edition modules.</p>
+			<p>The ESP8266 serves a pretty HTML page at the index (http://temp0/) which shows the current temperature and humidity readings.</p>
 			<a href="photos/temp0_01.jpg"><img class="photo align-right" src="photos/temp0_01.jpg" alt="Promotional photo of special edition Pro Trinket." /></a>
-			<p>Certain sub-directories of the web-server will provide plain-text values of the temperature or humidity.  This is useful for home-automation stuff.</p>
-			<p>The working http addresses are:</p>
+			<p>Certain sub-directories of the web-server will provide plain-text values of the temperature or humidity.  This is useful for home-automation implementatios (<a href="https://www.home-assistant.io/">Home Assistant</a> for example).</p>
+			<p>Setting the ESP8266 hostname to "temp0", the useful http addresses are:</p>
 			<ul>
 				<li>For html "pretty" temperature and humidity readings:
 					<ul>
@@ -59,11 +59,23 @@
 						70.69</p>
 			<hr />
 			<h3>Thoughts on <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> and programming firmware in C++</h3>
-			<p>Meh, the Arduino IDE is pretty clunky and seems dated so I started looking into alternatives.  I first tried the <a href="https://github.com/Microsoft/vscode-arduino">VSCode Arduino</a> extension which took some configuring but eventually worked.  Though I moved on from that when I found a better solution - the <a href=https://platformio.org/">PlatformIO IDE</a> extension for VSCode.  This was easy to set up and start using.  It adds a few buttons to the VSCode interface for compiling and uploading to a connected device.  The only down-side in my opinion is the directory structure it forces and the cruft it generates within.</p>
-			<p>The standard arduino libraries are handy though.  In this project I used Serial (comms between Trinket and ESP8266) and Wire (I2C comms for Trinket/SD1306 and Trinket/HDC1080).  These libraries made it super-fast to get going with the low-level comms.  For both the SSD1306 OLED and HDC1080 Sensor though, I opted to write my own drivers rather than use existing libraries.  Partly because it keeps the drivers more minimal and project-specific, and also partly because it was a fun learning experience to create C++ classes for them.</p>
+			<p>Meh, the Arduino IDE wasn't much fun and I thought it felt a little dated so I started looking into alternatives.  I first tried the <a href="https://github.com/Microsoft/vscode-arduino">VSCode Arduino</a> extension which took some configuring but eventually worked.  Though I moved on from that when I found a better solution - the <a href=https://platformio.org/">PlatformIO IDE</a> extension for VSCode.  This was easy to set up and start using.  It adds a few buttons to the VSCode interface for compiling and uploading to a connected device.  The VSCode extensions also set me up with an integrated terminal console and integrated git management.  After a few weeks back-and-forth with PlatformIO I came to really like it and plan to use it for future embedded projects, even if I don't continue with the arduino bootloader.</p>
+			<p>The standard arduino libraries are handy though.  In this project I used Serial (comms between Trinket and ESP8266) and Wire (I2C comms for Trinket/SD1306 and Trinket/HDC1080).  These libraries made it super-fast to get going with the low-level comms.  However, for both the SSD1306 OLED and HDC1080 Sensor, I opted to write my own drivers rather than use existing libraries.  Partly because it keeps the drivers more minimal and project-specific, and also partly because it was a fun learning experience to create C++ classes.</p>
 			<hr />
 			<h3>Thoughts on the ESP8266</h3>
-			<p>While programming the ESP8266 I drew from existing example libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust existing <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
+			<p>While programming the ESP8266 I drew from existing example libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
+			<hr />
+			<h3>SSD1306</h3>
+			<p>I had some prior familiarity with the SSD1306 OLED driver on a <a href="https://clews.pro/projects/grinder_timer.php">previous project</a>.  There are a couple of differences this time in how I implemented the driver:</p>
+			<ul>
+				<li>I used C++ instead of C.  This meant creating a class and declaring private and public functions.</li>
+				<li>I made the character and string functions more efficient and (somewhat) more robust.</li>
+			</ul>
+			<p>  I can now just specify a font array and the char and string functions can print to the OLED regardless of font characteristics (character widths and height).  To do this I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  I then inspected the files generated to get my head around the font and character metadata so that I could create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments in these functions that I addeed as I went - this is part of my learning process.</p>
+			</ul>
+			<hr />
+			<h3>HDC1080</h3>
+			<p>The HDC1080 is a temperature and humidity sensor.  Similar to the OLED/SSD1306, I created a project-specific driver for it.  When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which kept it 100mm or so from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had placed the sensor on the PCB top side, immediadely opposite the 3.3V regulator on the bottom-side.  The waste heat from the regulator was therefore affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located more-or-less opposite corners (and opposite sides) of the PCB to give the sensor plento of trace to diisipate heat before affecting the HDC1080..</p>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
