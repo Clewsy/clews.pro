@@ -54,6 +54,16 @@
 					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, C, Ki-CAD</td>
 				</tr>
 				<tr>
+					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
+					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/photos/small_led_matrix_04.jpg" /></a></td>
+					<td><a href="/projects/led_matrix.php">LED matrix that has a clock mode and a text mode.  My first microcontroller project.</a></td>
+					<td class="date">2020-04-28</td>
+					<td class="links">
+
+					</td>
+					<td>ATMEGA8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
+				</tr>
+				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
 					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/photos/small_media_center_1.jpg" /></a></td>
 					<td><a href="/projects/media_center.php">Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</a></td>

@@ -81,7 +81,7 @@
 			<table class="gallery">
 				<tr>
 					<td class="align-left"><a href="photos/temp0_02.jpg"><img class="photo" src="photos/small_temp0_02.jpg" alt="Early prototyping - pre-OLED." /></a></td>
-					<td class="align-right"><a href="photos/temp0_03.jpg"><img class="photo" src="photos/small_temp0_03.jpg" alt="Prototyping - added OLED.." /></a></td>
+					<td class="align-right"><a href="photos/temp0_03.jpg"><img class="photo" src="photos/small_temp0_03.jpg" alt="Prototyping - added OLED." /></a></td>
 				</tr>
 				<tr>
 					<td class="align-left"><a href="photos/temp0_04.jpg"><img class="photo" src="photos/small_temp0_04.jpg" alt="Prototyping - OLED close-up." /></a></td>
