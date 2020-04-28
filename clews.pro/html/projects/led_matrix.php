@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">led_matrix</h2>
-			<a href="photos/led_matrix_01.jpg"><img class="photo align-left" src="photos/small_led_matrix_01.jpg" alt="The still-working led_matrix." /></a>
+			<a href="photos/led_matrix_04.jpg"><img class="photo align-left" src="photos/small_led_matrix_04.jpg" alt="The still-working led_matrix." /></a>
 			<h3>Summary</h3>
 			<p>According to early pages in my notebook, I built this in 2006.  I'm pretty sure this was my first microcontroller project (excluding of course blinking an LED).  Back then I didn't have good back-up habits and had never even heard of git, so the code I wrote is gone forever (maybe for the best).</p>
 			<p>The enclosure is a translucent blue plastic so I can see some of the internals.  I'm not willing to open it up though - I can see a birds-nest of wiring and I expect after openeing it may never work again.  I was surprised it still works at all as it is!<p>
