@@ -23,7 +23,7 @@
 				<li>It takes a 5V DC power supply.</li>
 				<li>There is a socketed DIP ATMEGA8535 microcontroller running the show (I wish I could find the code I wrote!).</li>
 				<li>Six buttons used for control and programming settings.</li>
-				<li>Three 74HC138 3-to-8 line decoders are used for multiplexing each column</li>
+				<li>Three 74HC138 3-to-8 line decoders are used for multiplexing each column.</li>
 			</ul>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
