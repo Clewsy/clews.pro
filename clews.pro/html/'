@@ -9,19 +9,14 @@ body {
 	text-align: center;
 }
 
-#header-links a:link, #header-links a:visited{
+#header-links a:link, #header-links a:visited, #header-links a:hover{
 	color: rgb(150,150,150);
 	text-decoration: none;	/* Remove underlines from links in header */
 }
 
-#header-links a:hover{
-	color: rgb(150,150,150);
-	text-decoration: underline;
-}
-
 #header-links a:active{
 	color: black;
-	text-decoration: underline;
+	text-decoration: none;	/* Remove underlines from links in header */
 }
 
 #header-links {
