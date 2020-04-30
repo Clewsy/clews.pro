@@ -19,7 +19,7 @@
 					<td><a href="https://github.com/clewsy"><img class="icon"  src="/images/github_icon.png" title="GitHub Logo" alt="GitHub repo" /></a></td>
 					<td><a href="https://hub.docker.com/u/clewsy"><img class="icon"  src="/images/dockerhub_icon.png" title="DockerHub Logo" alt="DockerHub repo" /></a></td>
 					<td><a href="https://hackaday.io/Clewsy"><img class="icon"  src="/images/hackaday_icon.png" title="Hackaday Logo" alt="Hackaday.io profile" /></a></td>
-					<td><a href="https://clews.pro"><img class="icon"  src="/images/clews_logo.png" title="Clewsy Logo" alt="Clewsy Homepage" /></a></td>
+					<td><a href="https://clews.dev"><img class="icon"  src="/images/clews_logo.png" title="Clewsy Logo" alt="The other clews domain." /></a></td>
 				</tr>
 			</table>
 		</div>
