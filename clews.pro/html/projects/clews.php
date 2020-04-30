@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">clews.pro</h2>
-			<a href="photos/clews_1.png"><img class="photo align-left" src="photos/clews_1.png" alt="Whoah." /></a>
+			<a href="images/clews_01.png"><img class="photo align-left" src="images/clews_01.png" alt="Whoah." /></a>
 			<p>Clews.pro is this web site.  A place to document my various projects.  Mostly just for fun and education.</p>
 			<p>I started with the knowledge of installing apache, exposing port 80 and some very basic HTML skills.</p>
 			<p>Now I have a modular set of web apps served at different subdomains and all encrypted (https) over port 443.</p>
@@ -32,7 +32,7 @@
 			</ul>
 			<p>The logo I made was also intended to serve as lesson.  This time in vector graphics editing - specifically <a href="https://inkscape.org/">Inkscape</a>.</p>
 			<p> I've been doodling the <a href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a> since I discovered it as a kid, so it's with this nice geometric shape that I started.  I exploded it into the three identical but rotated parts and rearranged them to make it different from the original.  I felt this resulted in an overly aggressive image, so I put the whole thing into a circle.  I clearly lack the designer gene but it serves the purpose.</p>
-			<p><a class="align-center" href="photos/clews_2.png"><img class="photo" src="photos/clews_2.png" alt="I don't know what I'm doing." /></a></p>
+			<p><a class="align-center" href="images/clews_02.png"><img class="photo" src="images/clews_02.png" alt="I don't know what I'm doing." /></a></p>
 		</div>
 	</body>
 </html>

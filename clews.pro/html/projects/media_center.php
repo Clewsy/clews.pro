@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">media_center</h2>
-			<a href="photos/media_center_1.jpg"><img class="photo align-left" src="photos/media_center_1.jpg" alt="The final media_center." /></a>
+			<a href="images/media_center_01.jpg"><img class="photo align-left" src="images/media_center_01.jpg" alt="The final media_center." /></a>
 			<p>I wanted to upgrade my media center (RPi B+ with Xbian) to something a bit nicer, more stable and more accessible than just the RPi in a basic plastic case.</p>
 			<p>I built an enclosure out of plywood with aluminum front and rear panels.</p>
 			<p>All of the connections I wanted to use were broken out from the pi with panel-mount extension cables.</p>
@@ -27,23 +27,23 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="photos/media_center_2.jpg"><img class="photo" src="photos/small_media_center_2.jpg" alt="Glueing merbau edge-banding to the plywood." /></a></td>
-					<td class="align-right"><a href="photos/media_center_3.jpg"><img class="photo" src="photos/small_media_center_3.jpg" alt="Preparing bottom and side panels for glue-up.." /></a></td>
+					<td class="align-left"><a href="images/media_center_02.jpg"><img class="photo" src="images/small_media_center_02.jpg" alt="Glueing merbau edge-banding to the plywood." /></a></td>
+					<td class="align-right"><a href="images/media_center_03.jpg"><img class="photo" src="images/small_media_center_03.jpg" alt="Preparing bottom and side panels for glue-up.." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/media_center_4.jpg"><img class="photo" src="photos/small_media_center_4.jpg" alt="Partially assembled enclosure with aluminium front/rear panels." /></a></td>
-					<td class="align-right"><a href="photos/media_center_5.jpg"><img class="photo" src="photos/small_media_center_5.jpg" alt="Clamped while the glue dries (top panel clamped - no glue - to keep things square)." /></a></td>
+					<td class="align-left"><a href="images/media_center_04.jpg"><img class="photo" src="images/small_media_center_04.jpg" alt="Partially assembled enclosure with aluminium front/rear panels." /></a></td>
+					<td class="align-right"><a href="images/media_center_05.jpg"><img class="photo" src="images/small_media_center_05.jpg" alt="Clamped while the glue dries (top panel clamped - no glue - to keep things square)." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/media_center_6.jpg"><img class="photo" src="photos/small_media_center_6.jpg" alt="Mounted HDMI and Ethernet extensions." /></a></td>
-					<td class="align-right"><a href="photos/media_center_7.jpg"><img class="photo" src="photos/small_media_center_7.jpg" alt="All ports extended and power switch added." /></a></td>
+					<td class="align-left"><a href="images/media_center_06.jpg"><img class="photo" src="images/small_media_center_06.jpg" alt="Mounted HDMI and Ethernet extensions." /></a></td>
+					<td class="align-right"><a href="images/media_center_07.jpg"><img class="photo" src="images/small_media_center_07.jpg" alt="All ports extended and power switch added." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/media_center_8.jpg"><img class="photo" src="photos/small_media_center_8.jpg" alt="Different angle." /></a></td>
-					<td class="align-right"><a href="photos/media_center_9.jpg"><img class="photo" src="photos/small_media_center_9.jpg" alt="Different angle." /></a></td>
+					<td class="align-left"><a href="images/media_center_08.jpg"><img class="photo" src="images/small_media_center_08.jpg" alt="Different angle." /></a></td>
+					<td class="align-right"><a href="images/media_center_09.jpg"><img class="photo" src="images/small_media_center_09.jpg" alt="Different angle." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/media_center_10.jpg"><img class="photo" src="photos/small_media_center_10.jpg" alt="The final media_center (rear panel view)." /></a></td>
+					<td class="align-left"><a href="images/media_center_10.jpg"><img class="photo" src="images/small_media_center_10.jpg" alt="The final media_center (rear panel view)." /></a></td>
 				</tr>
 			</table>
 		</div>

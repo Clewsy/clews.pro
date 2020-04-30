@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">rad10</h2>
-			<a href="photos/rad10_1.jpg"><img class="photo align-left" src="photos/small_rad10_1.jpg" alt="The final assembled rad10." /></a>
+			<a href="images/rad10_01.jpg"><img class="photo align-left" src="images/small_rad10_01.jpg" alt="The final assembled rad10." /></a>
 			<h3>Summary</h3>
 			<p>The rad10 project consists of a raspberry pi outputting audio to a speaker via a small amplifier.</p>
 			<p>The pi takes minimal input - a rotary encoder with a push-button toggle.  Rotate to control the volume, push the button to toggle pause/play</p>
@@ -55,12 +55,12 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="photos/rad10_2.jpg"><img class="photo" src="photos/small_rad10_2.jpg" alt="Rear view." /></a></td>
-					<td class="align-right"><a href="photos/rad10_3.jpg"><img class="photo" src="photos/small_rad10_3.jpg" alt="Prototyping." /></a></td>
+					<td class="align-left"><a href="images/rad10_02.jpg"><img class="photo" src="images/small_rad10_02.jpg" alt="Rear view." /></a></td>
+					<td class="align-right"><a href="images/rad10_03.jpg"><img class="photo" src="images/small_rad10_03.jpg" alt="Prototyping." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/rad10_4.png"><img class="photo" src="photos/rad10_4.png" alt="WebUI on an android smartphone." /></a></td>
-					<td class="align-right"><a href="photos/rad10_5.png"><img class="photo" src="photos/rad10_5.png" alt="WebUI on an android smartphone." /></a></td>
+					<td class="align-left"><a href="images/rad10_04.png"><img class="photo" src="images/rad10_04.png" alt="WebUI on an android smartphone." /></a></td>
+					<td class="align-right"><a href="images/rad10_05.png"><img class="photo" src="images/rad10_05.png" alt="WebUI on an android smartphone." /></a></td>
 				</tr>
 			</table>
 		</div>

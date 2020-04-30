@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">ncbu</h2>
-			<a href="https://hub.docker.com/"><img class="image align-left" src="photos/ncbu_1.png" alt="Dockerhub" /></a>
+			<a href="https://hub.docker.com/"><img class="image align-left" src="images/ncbu_01.png" alt="Dockerhub" /></a>
 			<h3>Description:</h3>
 			<p>ncbu - or NextCloud Back-Up - is a docker container image created to simplify and automate perodic physical snapshots of a self-hosted nextcloud service.  The snapshots serve as a backup of the nextcloud volume and also (if applicable) the nextcloud database volume.</p>
 			<p>The intention is to run this image as a container alongside the nextcloud app and database containers.  Management of the "live" nextcloud/database volumes can therefore be left to docker.  When the ncbu back-up script is initialised, it first locks the nextcloud instance (i.e. puts nextcloud into maintenance mode) before syncing the volumes to a user-defined location.  Once complete, the script unlocks nextcloud so that normal usage can resume.</p>
@@ -16,7 +16,7 @@
 			<h3>Why?:</h3>
 			<p>I discovered docker on my journey to rid myself of cloud-based services not within my control.  A docker implementation of nextcloud is great for robustness and portability.  It also facillitated simple back-ups by binding the data volumes to a user-accessible directory.  Initially I set up an rsync cronjob to automate my backups and this was fine, but I saw potential benefits in containerising the backup service.  Mostly, I wanted to have a go at learning docker and creating my own container image.</p>
 			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to docker-compose and a single *.yml file.  Refer to my <a href="/projects/clews.html">clews.pro</a> project for more information of my self-hosting implementation.</p>
-			<a href="https://nextcloud.com/"><img class="image align-right" src="photos/ncbu_2.png" alt="Nextcloud" /></a>
+			<a href="https://nextcloud.com/"><img class="image align-right" src="images/ncbu_02.png" alt="Nextcloud" /></a>
 			<h3>What:</h3>
 			<p>Once it is spun up, provided the correct environment variables and volumes are defined, the ncbu will run an initialisation script (ncbu_init.sh) to do some basic error-checking, then it will simply kick off cron in the foreground.  There is a single cron job set (at a user-defined time, midnight every dy by default) which will execute the backup script.</p>
 			<p>The backup script (ncbu.sh) will first put the nextcloud instance into maintenance mode, effectively "freezing" the nextcloud data files and database.  Rsync is then used to copy all of the files from the nextcloud and database volumes to a backup directory.  Once complete, maintenance mode is disabled.</p>

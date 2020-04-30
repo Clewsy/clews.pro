@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">temp0</h2>
-			<a href="photos/temp0_03.jpg"><img class="photo align-left" src="photos/small_temp0_03.jpg" alt="The final assembled temp0." /></a>
+			<a href="images/temp0_03.jpg"><img class="photo align-left" src="images/small_temp0_03.jpg" alt="The final assembled temp0." /></a>
 			<h3>Summary</h3>
 			<p>This project combined a handful of smaller project ideas:</p>
 			<ul>
@@ -28,7 +28,7 @@
 			<p>There is also a few additional minor components for regulating 5V from the trinket down to 3.3V for the ESP8266, OLED and HDC1080.</p>
 			<p>It would be possible to create a similar device without a Pro Trinket, utilising more of the ESP8266 capability, but I wanted an excuse to use one of these Hackaday special edition modules.</p>
 			<p>The ESP8266 serves a pretty HTML page at the index (http://temp0/) which shows the current temperature and humidity readings.</p>
-			<a href="photos/temp0_01.jpg"><img class="photo align-right" src="photos/temp0_01.jpg" alt="Promotional photo of special edition Pro Trinket." /></a>
+			<a href="images/temp0_01.jpg"><img class="photo align-right" src="images/temp0_01.jpg" alt="Promotional photo of special edition Pro Trinket." /></a>
 			<p>Certain sub-directories of the web-server will provide plain-text values of the temperature or humidity.  This is useful for home-automation implementatios (<a href="https://www.home-assistant.io/">Home Assistant</a> for example).</p>
 			<p>Setting the ESP8266 hostname to "temp0", the useful http addresses are:</p>
 			<ul>
@@ -80,28 +80,28 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="photos/temp0_02.jpg"><img class="photo" src="photos/small_temp0_02.jpg" alt="Early prototyping - pre-OLED." /></a></td>
-					<td class="align-right"><a href="photos/temp0_03.jpg"><img class="photo" src="photos/small_temp0_03.jpg" alt="Prototyping - added OLED." /></a></td>
+					<td class="align-left"><a href="images/temp0_02.jpg"><img class="photo" src="images/small_temp0_02.jpg" alt="Early prototyping - pre-OLED." /></a></td>
+					<td class="align-right"><a href="imsges/temp0_03.jpg"><img class="photo" src="images/small_temp0_03.jpg" alt="Prototyping - added OLED." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/temp0_04.jpg"><img class="photo" src="photos/small_temp0_04.jpg" alt="Prototyping - OLED close-up." /></a></td>
-					<td class="align-right"><a href="photos/temp0_05.png"><img class="photo" src="photos/temp0_05.png" alt="Web Server as seen on an android smartphone." /></a></td>
+					<td class="align-left"><a href="images/temp0_04.jpg"><img class="photo" src="images/small_temp0_04.jpg" alt="Prototyping - OLED close-up." /></a></td>
+					<td class="align-right"><a href="images/temp0_05.png"><img class="photo" src="images/temp0_05.png" alt="Web Server as seen on an android smartphone." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/temp0_06.png"><img class="photo" src="photos/temp0_06.png" alt="Revision 1 PCB design render - top." /></a></td>
-					<td class="align-right"><a href="photos/temp0_07.png"><img class="photo" src="photos/temp0_07.png" alt="Revision 1 PCB design render - bottom." /></a></td>
+					<td class="align-left"><a href="images/temp0_06.png"><img class="photo" src="images/temp0_06.png" alt="Revision 1 PCB design render - top." /></a></td>
+					<td class="align-right"><a href="images/temp0_07.png"><img class="photo" src="images/temp0_07.png" alt="Revision 1 PCB design render - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/temp0_08.jpg"><img class="photo" src="photos/small_temp0_08.jpg" alt="Revision 1 PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="photos/temp0_09.jpg"><img class="photo" src="photos/small_temp0_09.jpg" alt="Revision 1 PCB fabricated - bottom." /></a></td>
+					<td class="align-left"><a href="images/temp0_08.jpg"><img class="photo" src="images/small_temp0_08.jpg" alt="Revision 1 PCB fabricated - top." /></a></td>
+					<td class="align-right"><a href="images/temp0_09.jpg"><img class="photo" src="images/small_temp0_09.jpg" alt="Revision 1 PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/temp0_10.jpg"><img class="photo" src="photos/small_temp0_10.jpg" alt="Revision 1 PCB partially populated." /></a></td>
-					<td class="align-right"><a href="photos/temp0_11.jpg"><img class="photo" src="photos/small_temp0_11.jpg" alt="Revision 1 PCB assembled and testing." /></a></td>
+					<td class="align-left"><a href="images/temp0_10.jpg"><img class="photo" src="images/small_temp0_10.jpg" alt="Revision 1 PCB partially populated." /></a></td>
+					<td class="align-right"><a href="images/temp0_11.jpg"><img class="photo" src="images/small_temp0_11.jpg" alt="Revision 1 PCB assembled and testing." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/temp0_12.png"><img class="photo" src="photos/temp0_12.png" alt="Revision 2 PCB design render - top." /></a></td>
-					<td class="align-right"><a href="photos/temp0_13.png"><img class="photo" src="photos/temp0_13.png" alt="Revision 2 PCB design render - bottom." /></a></td>
+					<td class="align-left"><a href="images/temp0_12.png"><img class="photo" src="images/temp0_12.png" alt="Revision 2 PCB design render - top." /></a></td>
+					<td class="align-right"><a href="images/temp0_13.png"><img class="photo" src="images/temp0_13.png" alt="Revision 2 PCB design render - bottom." /></a></td>
 				</tr>
 			</table>
 		</div>

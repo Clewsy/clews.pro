@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">grinder_timer</h2>
-			<a href="photos/grinder_timer_1.jpg"><img class="photo align-left" src="photos/small_grinder_timer_1.jpg" alt="The final timer."></a>
+			<a href="images/grinder_timer_01.jpg"><img class="photo align-left" src="images/small_grinder_timer_01.jpg" alt="The final timer."></a>
 			<p>This is a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
 			<p>The Rocky is a "dumb" grinder and electrically very simple. Basically it's an ac motor with an on/off switch and a momentary push-button to grind.</p>
 			<p>This project adds an electronic timer so that consistent, repeatable grind quantities can be produced without having to stand over the grinder.</p>
@@ -27,7 +27,7 @@
 			<h3>Tether</h3>
 			<p>A three-core cable is required to tether the grinder_timer to the coffee grinder.  The cores are required for power (active, neutral) and to actually switch on the grinder (motor).  The tether cable is connected at both ends via spade connectors.</p>
 			<p>Within the grinder, the spade connectors splice into existing spade connections with no modifications required.  The cable is run through the same grommet as the grinder's AC supply cable.  There is no permanent modification to the grinder required.</p>
-			<a href="photos/grinder_timer_2.jpg"><img class="photo align-right" src="photos/small_grinder_timer_2.jpg" alt="Prototyping." /></a>
+			<a href="images/grinder_timer_02.jpg"><img class="photo align-right" src="images/small_grinder_timer_02.jpg" alt="Prototyping." /></a>
 			<hr />
 			<h3>Power</h3>
 			<p>The grinder_timer takes power from the coffee grinder.  Since the grinder is a simple AC circuit, the grinder_timer had to include power transformation/rectification/regulation to provide 5V for the other components.  The power sub-circuit uses basic components to provide 5V to the AVR and other components:</p>
@@ -51,7 +51,7 @@
 			<h3>OLED Module</h3>
 			<p>The display is a 128x64 pixel mon OLED driven by an SSD1306 controlled by the AVR's I2C (TWI) peripheral.</p>
 			<p>The module is physically connected via a pin header on the main circuit board.</p>
-			<a href="photos/grinder_timer_3.jpg"><img class="photo align-left" src="photos/small_grinder_timer_3.jpg" alt="PCB Etched." /></a>
+			<a href="images/grinder_timer_03.jpg"><img class="photo align-left" src="images/small_grinder_timer_03.jpg" alt="PCB Etched." /></a>
 			<hr />
 			<h3>Code</h3>
 			<p>Early development stages of the code was written exclusively with vim from the terminal (terminator).  However I had read about Atom and decided to try it out so at some point in development I switched over.</p>
@@ -64,7 +64,7 @@
 			<p>However, if I need to iterate, the next circuit design would probably include AVR control of the OLED's reset line.</p>
 			<p>I designed a seven-segment-style font for the timer display.  This design was done using a spreadsheet which is included in the reference material on the repo.</p>
 			<p>Each digit is 24x48 pixels.</p>
-			<a href="photos/grinder_timer_6.jpg"><img class="photo align-right" src="photos/small_grinder_timer_6.jpg" alt="Re-programming." /></a>
+			<a href="images/grinder_timer_06.jpg"><img class="photo align-right" src="images/small_grinder_timer_06.jpg" alt="Re-programming." /></a>
 			<hr />
 			<h3>Circuit Design</h3>
 			<p>The schematic and PCB layout were designed with KiCad.  Prior to this project my only circuit CAD experience was with eagle.  I used this project to familiarise myself with the open source alternative.</p>
@@ -82,19 +82,19 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="photos/grinder_timer_4.jpg"><img class="photo" src="photos/small_grinder_timer_4.jpg" alt="Populating PCB." /></a></td>
-					<td class="align-right"><a href="photos/grinder_timer_5.jpg"><img class="photo" src="photos/small_grinder_timer_5.jpg" alt="PCB Assembled." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_04.jpg"><img class="photo" src="images/small_grinder_timer_04.jpg" alt="Populating PCB." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_05.jpg"><img class="photo" src="images/small_grinder_timer_05.jpg" alt="PCB Assembled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/grinder_timer_7.jpg"><img class="photo" src="photos/small_grinder_timer_7.jpg" alt="Assembly Started." /></a></td>
-					<td class="align-right"><a href="photos/grinder_timer_8.jpg"><img class="photo" src="photos/small_grinder_timer_8.jpg" alt="Mostly Assembled." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_07.jpg"><img class="photo" src="images/small_grinder_timer_07.jpg" alt="Assembly Started." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_08.jpg"><img class="photo" src="images/small_grinder_timer_08.jpg" alt="Mostly Assembled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/grinder_timer_9.jpg"><img class="photo" src="photos/small_grinder_timer_9.jpg" alt="Connecting Tether." /></a></td>
-					<td class="align-right"><a href="photos/grinder_timer_10.jpg"><img class="photo" src="photos/small_grinder_timer_10.jpg" alt="Complete and Functional." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_09.jpg"><img class="photo" src="images/small_grinder_timer_09.jpg" alt="Connecting Tether." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_10.jpg"><img class="photo" src="images/small_grinder_timer_10.jpg" alt="Complete and Functional." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/grinder_timer_11.png"><img class="photo" src="photos/grinder_timer_11.png" alt="The Complete Schematic." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_11.png"><img class="photo" src="images/grinder_timer_11.png" alt="The Complete Schematic." /></a></td>
 				</tr>
 			</table>
 		</div>

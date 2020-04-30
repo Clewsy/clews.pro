@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">VolCon</h2>
-			<a href="photos/volcon_1.jpg"><img class="photo align-left" src="photos/small_volcon_1.jpg" alt="The final assembled volcon." /></a>
+			<a href="images/volcon_01.jpg"><img class="photo align-left" src="images/small_volcon_01.jpg" alt="The final assembled volcon." /></a>
 			<p>This project began as an experiment when I inexplicably decided to learn how an optical rotary encoder worked (FYI, 2-bit gray code).</p>
 			<p>It transformed into a learning experience around USB - specifically the HID protocol. Ultimately I ended up with a simple gadget that now sits on my desk and allows me to control the PC volume.</p>
 			<p>A salvaged optical encoder was used to detect rotation along with a reclaimed head drum from a VCR which was repurposed as a control knob.  I very much like the smotth bearings combined with the heavy mass that let the drum spin forever.</p>
@@ -33,12 +33,12 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="photos/volcon_2.jpg"><img class="photo" src="photos/small_volcon_2.jpg" alt="Partially assembled." /></a></td>
-					<td class="align-right"><a href="photos/volcon_3.jpg"><img class="photo" src="photos/small_volcon_3.jpg" alt="Bottom view." /></a></td>
+					<td class="align-left"><a href="images/volcon_02.jpg"><img class="photo" src="images/small_volcon_02.jpg" alt="Partially assembled." /></a></td>
+					<td class="align-right"><a href="images/volcon_03.jpg"><img class="photo" src="images/small_volcon_03.jpg" alt="Bottom view." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="photos/volcon_4.jpg"><img class="photo" src="photos/small_volcon_4.jpg" alt="Planning - block diagram." /></a></td>
-					<td class="align-right"><a href="photos/volcon_5.jpg"><img class="photo align-right" src="photos/small_volcon_5.jpg" alt="Planning - sensors." /></a></td>
+					<td class="align-left"><a href="images/volcon_04.jpg"><img class="photo" src="images/small_volcon_04.jpg" alt="Planning - block diagram." /></a></td>
+					<td class="align-right"><a href="images/volcon_05.jpg"><img class="photo" src="images/small_volcon_05.jpg" alt="Planning - sensors." /></a></td>
 				</tr>
 			</table>
 		</div>
