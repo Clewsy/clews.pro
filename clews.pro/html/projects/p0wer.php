@@ -26,7 +26,7 @@
 			<hr />
 			<h3>Code</h3>
 			<p>In C I wrote a program that takes the desired channel (A, B, C or D) and desired action ("on" or "off") and then pulses the remote control to emulate pressing the desired button.</p>
-			<p>The code and KiCad files are on gitlab: <a href="https://gitlab.com/clewsy/p0wer">https://gitlab.com/clewsy/p0wer</a></p>
+			<p>The code and KiCad files are on the <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
 			<p>The program interfaces with the gpio via the <s>wiringpi</s> <a href="http://abyz.me.uk/rpi/pigpio/index.html">pigpio</a> library.</p>
 			<p>Program usage follows:</p>
 			<p class="code">$ sudo p0wer &lt;channel(a,b,c,d)&gt; &lt;on/off&gt;</p>
@@ -52,7 +52,7 @@
 			<p>The following example two-line script will connect to the raspi via the home server and run the program with the options to turn on the channel A outlet:</p>
 			<p class="code">#!/bin/bash<br/>
 					ssh home.server 'ssh raspberry.pi "sudo p0wer a on"'</p>
-			<p>The full termux script I wrote is a bit more robust (and documented on gitlab: <a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">p0wer_switch.sh</a>).</p>
+			<p>The full termux script I wrote is a bit more robust (and documented on <a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">gitlab</a>).</p>
 			<hr />
 			<h3>Revision 2.0</h3>
 			<p>In August 2019, support ceased for the wiringPi library.  As such, I revised the code to instead utilise the <a href="http://abyz.me.uk/rpi/pigpio/index.html">pigpio</a> library.</p>

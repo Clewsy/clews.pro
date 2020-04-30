@@ -62,7 +62,7 @@
 			<br />
 			<br />
 			<h2 class="align-center">Archived scripts</h2>
-			<p>Additional assorted scripts I developed but no longer use.  These are still available on <a href="https://gitlab.com/clewsy/scripts/archive">gitlab</a>.  Click on the script name to go directly to the gitlab page.</p>
+			<p>Additional assorted scripts I developed but no longer use.  These are still available on <a href="https://gitlab.com/clewsy/scripts/-/tree/master/archive">gitlab</a>.  Click on the script name to go directly to the gitlab page.</p>
 			<table class="text-table">
 				<tr>
 					<th scope="col">Name</th>

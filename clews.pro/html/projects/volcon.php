@@ -23,10 +23,10 @@
 				<li>The code is written in C and implements the LUFA library developed by Dean Cameron.</li>
 				<li>The whole unit plugs into a PC via USB and is automatically identified as a HID - no drivers required (tested in Debian Linux and Windows).</li>
 				<li>It's a very simple device - rotate clockwise to increase volume, counter-clockwise to decrease.</li>
-        			<li>Code and PCB design are available via gitlab (<a href="https://gitlab.com/clewsy/volcon">link</a>). Here are some reference links:</li>
+        			<li>Code and PCB design are available via <a href="https://gitlab.com/clewsy/volcon">gitlab</a>). Here are some reference links:</li>
 				<ul>
-					<li>VolCon gitlab repo - for code and eagle design (PCB) - <a href="https://gitlab.com/clewsy/volcon">https://gitlab.com/clewsy/volcon/</a></li>
-					<li>LUFA (lightweight USB Framework for AVRs) main page - <a href="http://www.fourwalledcubicle.com/LUFA.php">http://www.fourwalledcubicle.com/LUFA.php</a></li>
+					<li><a href="https://gitlab.com/clewsy/volcon">VolCon gitlab repo</a> - for code and eagle design (PCB)</li>
+					<li><a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA</a> (lightweight USB Framework for AVRs) main page</li>
 				</ul>
 			</ul>
 			<hr />

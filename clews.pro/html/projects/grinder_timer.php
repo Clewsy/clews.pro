@@ -22,7 +22,7 @@
 				<li>Aluminium enclosure.</li>
 				<li>Single cable (3-core) tether to grinder for power and control.</li>
 			</ul>
-			<p>Code, schematic and PCB layout are all on gitlab (<a href="https://gitlab.com/clewsy/grinder_timer">link</a>).</p>
+			<p>Code, schematic and PCB layout are all in the <a href="https://gitlab.com/clewsy/grinder_timer">gitlab repo</a>).</p>
 			<hr />
 			<h3>Tether</h3>
 			<p>A three-core cable is required to tether the grinder_timer to the coffee grinder.  The cores are required for power (active, neutral) and to actually switch on the grinder (motor).  The tether cable is connected at both ends via spade connectors.</p>
