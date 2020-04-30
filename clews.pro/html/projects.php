@@ -21,7 +21,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews_01.png" /></a></td>
 					<td><a href="/projects/clews.php">Meta.</a></td>
-					<td class="date">2020-04-21</td>
+					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -31,7 +31,7 @@
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/small_gps_clock_01.jpg" /></a></td>
 					<td><a href="/projects/gps_clock.php">GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</a></td>
-					<td class="date">2019-10-05</td>
+					<td class="date">2019-30-04</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
 						<a href="https://hackaday.com/2018/09/18/epic-clock-clocks-the-unix-epoch/">hackaday</a><br />
@@ -44,7 +44,7 @@
 					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
 					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_01.jpg" /></a></td>
 					<td><a href="/projects/grinder_timer.php">Programmable timer to control a dumb coffee grinder.</a></td>
-					<td class="date">2019-09-28</td>
+					<td class="date">2019-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
 						<a href="https://hackaday.com/2017/12/14/dumb-coffee-grinder-gets-smarter-with-time/">hackaday</a><br />
@@ -57,11 +57,11 @@
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
 					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/small_led_matrix_04.jpg" /></a></td>
 					<td><a href="/projects/led_matrix.php">LED matrix that has a clock mode and a text mode.  My first microcontroller project.</a></td>
-					<td class="date">2020-04-28</td>
+					<td class="date">2020-04-30</td>
 					<td class="links">
 
 					</td>
-					<td>ATMEGA8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
+					<td>AVR, ATMEGA8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
@@ -88,7 +88,7 @@
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
 					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer_01.jpg" /></a></td>
 					<td><a href="/projects/p0wer.php">Simple rf mains remote switches hacked to add wifi control.</a></td>
-					<td class="date">2020-01-06</td>
+					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/p0wer-control-mains-outlets-over-wifi">core-electronics</a>
@@ -99,7 +99,7 @@
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
 					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/small_rad10_01.jpg" /></a></td>
 					<td><a href="/projects/rad10.php">An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</a></td>
-					<td class="date">2020-03-04</td>
+					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/rad10">core-electronics</a>
@@ -132,7 +132,7 @@
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_01.jpg" /></a></td>
 					<td><a href="/projects/volcon.php">HID compliant USB volume controller.</a></td>
-					<td class="date">2019-12-16</td>
+					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>
