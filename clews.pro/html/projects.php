@@ -93,7 +93,7 @@
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/p0wer-control-mains-outlets-over-wifi">core-electronics</a>
 					</td>
-					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, wiringpi, pigpio, Termux, C, PHP, cURL, Automation, KiCAD</td>
+					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, wiringpi, pigpio, Termux, C, PHP, cURL, Automation, KiCAD</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
