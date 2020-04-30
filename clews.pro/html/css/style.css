@@ -70,7 +70,12 @@ table.text-table a:link, table.text-table a:visited {
 	color: rgb(150,150,150);
 	text-decoration: none;
 }
-table.text-table a:hover, table.text-table a:active {
+table.text-table a:hover {
+	color: rgb(150,150,150);
+	text-decoration: underline;	
+}
+table.text-table a:active {
+	color: black;
 	text-decoration: underline;	
 }
 table.text-table .links, table.text-table .date {
