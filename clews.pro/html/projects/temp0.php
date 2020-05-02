@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">temp0</h2>
-			<a href="images/temp0_03.jpg"><img class="photo align-left" src="images/small_temp0_03.jpg" alt="The final assembled temp0." /></a>
+			<a href="images/temp0_22.jpg"><img class="photo align-left" src="images/small_temp0_22.jpg" alt="The final assembled temp0." /></a>
 			<h3>Summary</h3>
 			<p>This project combined a handful of smaller project ideas:</p>
 			<ul>
@@ -28,8 +28,8 @@
 			<p>There is also a few additional minor components for regulating 5V from the trinket down to 3.3V for the ESP8266, OLED and HDC1080.</p>
 			<p>It would be possible to create a similar device without a Pro Trinket, utilising more of the ESP8266 capability, but I wanted an excuse to use one of these Hackaday special edition modules.</p>
 			<p>The ESP8266 serves a pretty HTML page at the index (http://temp0/) which shows the current temperature and humidity readings.</p>
+			<p>Certain sub-directories of the web-server will provide plain-text values of the temperature or humidity.  This is useful for home-automation implementatins (e.g. <a href="https://www.home-assistant.io/">Home Assistant</a>).</p>
 			<a href="images/temp0_01.jpg"><img class="photo align-right" src="images/temp0_01.jpg" alt="Promotional photo of special edition Pro Trinket." /></a>
-			<p>Certain sub-directories of the web-server will provide plain-text values of the temperature or humidity.  This is useful for home-automation implementatios (<a href="https://www.home-assistant.io/">Home Assistant</a> for example).</p>
 			<p>Setting the ESP8266 hostname to "temp0", the useful http addresses are:</p>
 			<ul>
 				<li>For html "pretty" temperature and humidity readings:
@@ -59,9 +59,11 @@
 						70.69</p>
 			<hr />
 			<h3>Thoughts on <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> and programming firmware in C++</h3>
+
 			<p>Meh, the Arduino IDE wasn't much fun and I thought it felt a little dated so I started looking into alternatives.  I first tried the <a href="https://github.com/Microsoft/vscode-arduino">VSCode Arduino</a> extension which took some configuring but eventually worked.  Though I moved on from that when I found a better solution - the <a href=https://platformio.org/">PlatformIO IDE</a> extension for VSCode.  This was easy to set up and start using.  It adds a few buttons to the VSCode interface for compiling and uploading to a connected device.  The VSCode extensions also set me up with an integrated terminal console and integrated git management.  After a few weeks back-and-forth with PlatformIO I came to really like it and plan to use it for future embedded projects, even if I don't continue with the arduino bootloader.</p>
 			<p>The standard arduino libraries are handy though.  In this project I used Serial (comms between Trinket and ESP8266) and Wire (I2C comms for Trinket/SD1306 and Trinket/HDC1080).  These libraries made it super-fast to get going with the low-level comms.  However, for both the SSD1306 OLED and HDC1080 Sensor, I opted to write my own drivers rather than use existing libraries.  Partly because it keeps the drivers more minimal and project-specific, and also partly because it was a fun learning experience to create C++ classes.</p>
 			<hr />
+			<a href="images/temp0_25.png"><img class="photo align-left" src="images/temp0_25.png" alt="Web Server as seen on an android smartphone." /></a>
 			<h3>Thoughts on the ESP8266</h3>
 			<p>While programming the ESP8266 I drew from existing example libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
 			<hr />
@@ -77,8 +79,14 @@
 			<h3>HDC1080</h3>
 			<p>The HDC1080 is a temperature and humidity sensor.  Similar to the OLED/SSD1306, I created a project-specific driver for it.  When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which kept it 100mm or so from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had placed the sensor on the PCB top side, immediadely opposite the 3.3V regulator on the bottom-side.  The waste heat from the regulator was therefore affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located more-or-less opposite corners (and opposite sides) of the PCB to give the sensor plento of trace to diisipate heat before affecting the HDC1080..</p>
 			<hr />
+			<h3>Final Assembly</h3>
+			<p>Since the idea was to show off the Pro Trinket, I diesigned the PCB to suit an enclosure I had on hand with a transparent lid.  A panel mount micro-usb port on the side supplies power and also passes through data to allow re-programming without opening the case.  A push-button on top cycles through the different display modes.  I included an LED on one of the analogue outputs which really doesn't serve much purpose except add some extra bling.  It is just set to pulse continuously.  I located it so that iw shines through the mounting hole on the Pro Trinket right under the Jolly-Wrencher symbol.</p>
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
+				<tr>
+					<td class="align-left"><a href="images/temp0_23.gif"><img class="photo" src="images/small_temp0_23.gif" alt="Demo - start-up." /></a></td>
+					<td class="align-right"><a href="images/temp0_24.gif"><img class="photo" src="images/temp0_24.gif" alt="Demo - modes." /></a></td>
+				</tr>
 				<tr>
 					<td class="align-left"><a href="images/temp0_02.jpg"><img class="photo" src="images/small_temp0_02.jpg" alt="Early prototyping - pre-OLED." /></a></td>
 					<td class="align-right"><a href="imsges/temp0_03.jpg"><img class="photo" src="images/small_temp0_03.jpg" alt="Prototyping - added OLED." /></a></td>
@@ -102,6 +110,25 @@
 				<tr>
 					<td class="align-left"><a href="images/temp0_12.png"><img class="photo" src="images/temp0_12.png" alt="Revision 2 PCB design render - top." /></a></td>
 					<td class="align-right"><a href="images/temp0_13.png"><img class="photo" src="images/temp0_13.png" alt="Revision 2 PCB design render - bottom." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/temp0_14.jpg"><img class="photo" src="images/small_temp0_14.jpg" alt="Revision 2 PCB fabricated - top." /></a></td>
+					<td class="align-right"><a href="images/temp0_15.jpg"><img class="photo" src="images/small_temp0_15.jpg" alt="Revision 2 PCB fabricated - bottom." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/temp0_16.jpg"><img class="photo" src="images/small_temp0_16.jpg" alt="Revision 2 PCB assembled - bottom." /></a></td>
+					<td class="align-right"><a href="images/temp0_17.jpg"><img class="photo" src="images/small_temp0_17.jpg" alt="Revision 2 PCB assembled and testing - bottom." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/temp0_18.jpg"><img class="photo" src="images/small_temp0_18.jpg" alt="Revision 2 PCB assembled - top." /></a></td>
+					<td class="align-right"><a href="images/temp0_19.jpg"><img class="photo" src="images/small_temp0_19.jpg" alt="Revision 2 PCB assembled and testing - top." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/temp0_20.jpg"><img class="photo" src="images/small_temp0_20.jpg" alt="Mounting hardware to enclosure.." /></a></td>
+					<td class="align-right"><a href="images/temp0_21.jpg"><img class="photo" src="images/small_temp0_21.jpg" alt="Installing PCB into enclosue." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/temp0_22.jpg"><img class="photo" src="images/small_temp0_22.jpg" alt="Fully assembled." /></a></td>
 				</tr>
 			</table>
 		</div>

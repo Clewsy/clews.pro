@@ -116,18 +116,16 @@
 					</td>
 					<td>Bash, Shell, Script, Linux, Debian, Ubuntu, Raspbian, Termux, echo, rsync, curl, apt-get, ssh, openvpn, ping, grep, lscpu, lspci, lsblk, df, uname, lsb_release, route, netstat, nmcli, ifconfig, ip, iw, iwgetid, command</td>
 				</tr>
-<!-- project temp0 is a work-in-progress.
 				<tr>
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
 					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/temp0_01.jpg" /></a></td>
 					<td><a href="/projects/temp0.php">Temperature and humidity monitor with WiFi and local readout.</a></td>
-					<td class="date">2020-04-01</td>
+					<td class="date">2020-05-02</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
 					</td>
 					<td>Arduino, Pro-Trinket, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
 				</tr>
--->
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_01.jpg" /></a></td>
