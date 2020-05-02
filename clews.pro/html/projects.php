@@ -118,7 +118,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
-					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/temp0_01.jpg" /></a></td>
+					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/small_temp0_22.jpg" /></a></td>
 					<td><a href="/projects/temp0.php">Temperature and humidity monitor with WiFi and local readout.</a></td>
 					<td class="date">2020-05-02</td>
 					<td class="links">
