@@ -85,7 +85,7 @@
 			<p>The schematic and PCB layouts were created with <a href="https://kicad-pcb.org/">KiCad</a>.  Early iterations included a header for an FTDI serial adapter intended to facillitate programming of the ESP-01.  This was removed from the final PCB iteration for simplicity.</p>
 			<p>A few component symbols and footprints were custom made:</p>
 			<ul>
-				<li>OLED module - these are pretty cheap but non-standard.  I made the footprint to match the actual model I intended to install (dimensions vary from module-to-module depending on the manufacturer).  Also, some versions of this model have the GND and VCC pins in the opposite order.</li>
+				<li>OLED module - these are pretty cheap but non-standard.  I made the footprint to match the actual model I intended to install (dimensions vary from module-to-module depending on the manufacturer).  Also, some versions of this module have the GND and VCC pins in the opposite order.</li>
 				<li>HDC1080 module - I just couldn't find this footprint online anywhere.</li>
 				<li>Pro Trinket - Since I intended to install this module backwards (up-side-down?) to show off the special-edition silk-screen, I had to create a new, reversed footprint.</li>
 				<li>ESP8266/ESP-01 - After making the three footprints above, I was pretty comfortable with the process so I made a custom symbol and footprint for the ESP-01 as well.  I'm sure this is probably easily found elsewhere.</li>
