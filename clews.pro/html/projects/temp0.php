@@ -81,6 +81,16 @@
 			<h3>HDC1080</h3>
 			<p>The HDC1080 is a temperature and humidity sensor that interfaces over I2C.  Similar to the OLED/SSD1306, I wrote a project-specific driver for it.  When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which gave it 100mm or so clearance from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had located the sensor on the PCB too close to the 3.3V regulator on the opposite side.  The waste heat from the regulator was therefore affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located more-or-less opposite corners (and opposite sides) of the PCB to give the sensor additional copper with which to dissipate heat before affecting the HDC1080.  This improved the accuracy of the sensor readings, but it was still showing higher than my callibration thermometer.  Fortunately the delta was a consistent value regardless of temperature so ultimately I added a bodge-factor in code to compensate.</p>
 			<hr />
+			<h3>PCB</h3>
+			<p>The schematic and PCB layouts were created with <a href="https://kicad-pcb.org/">KiCad</a>.  Early iterations included a header for an FTDI serial adapter intended to facillitate programming of the ESP-01.  This was removed from the final PCB iteration for simplicity.</p>
+			<p>A few component symbols and footprints were custom made:</p>
+			<ul>
+				<li>OLED module - these are pretty cheap but non-standard.  I made the footprint to match the actual model I intended to install (dimensions vary from module-to-module depending on the manufacturer).  Also, some versions of this model have the GND and VCC pins in the opposite order.</li>
+				<li>HDC1080 module - I just couldn't find this footprint online anywhere.</li>
+				<li>Pro Trinket - Since I intended to install this module backwards (up-side-down?) to show off the special-edition silk-screen, I had to create a new, reversed footprint.</li>
+				<li>ESP8266/ESP-01 - After making the three footprints above, I was pretty comfortable with the process so I made a custom symbol and footprint for the ESP-01 as well.  I'm sure this is probably easily found elsewhere.</li>
+			</ul>
+			<hr />
 			<h3>Final Assembly</h3>
 			<p>Since the idea was to show off the Pro Trinket, I diesigned the PCB to suit an enclosure with a transparent lid that I had on hand.  A panel mount micro-usb port on the side supplies power and also passes through data to allow re-programming without opening the case (for the Pro-Trinket at least - programming the ESP-01 requires removal of the module from the rest of the unit).</p>
 			<p>A push-button on top cycles through the different display modes.  I included an LED on one of the analogue outputs which really doesn't serve much purpose except to add some extra bling.  It is just set to pulse continuously.  I located it so that it shines through the mounting hole on the Pro Trinket right under the Jolly-Wrencher symbol.</p>
