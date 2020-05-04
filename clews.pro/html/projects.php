@@ -21,7 +21,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews_01.png" /></a></td>
 					<td><a href="/projects/clews.php">Meta.</a></td>
-					<td class="date">2020-04-30</td>
+					<td class="date">2020-05-04</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -120,9 +120,10 @@
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
 					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/small_temp0_22.jpg" /></a></td>
 					<td><a href="/projects/temp0.php">Temperature and humidity monitor with WiFi and local readout.</a></td>
-					<td class="date">2020-05-03</td>
+					<td class="date">2020-05-04</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
+						<a href="https://hackaday.io/project/171367-temp0">hackaday.io</a><br />
 					</td>
 					<td>Arduino, Pro-Trinket, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
 				</tr>
