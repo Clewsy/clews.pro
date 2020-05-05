@@ -20,18 +20,19 @@
 				<li>NGINX-Proxy (image: <a href="https://hub.docker.com/r/jwilder/nginx-proxy">jwilder/nginx-proxy</a>) - Used to serve multiple apps with different subdomains.</li>
 				<li>Let's Encrypt (image: <a href="https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion">jrcs/letsencrypt-nginx-proxy-companion</a>) - Used to implement certificates and encryption for sites served by NGINX-Proxy.</li>
 				<li>Nextcloud (image:  <a href="https://hub.docker.com/_/nextcloud">nextcloud</a>) - Web app for file storage and a bunch of other features.  My method of replacing google drive.</li>
+				<li>MariaDB (image:  <a href="https://hub.docker.com/r/linuxserver/mariadb">linuxserver/mariadb</a>) - Database linked to the Nextcloud container.</li>
 				<li>Nextcloud-Cronjob (image:  <a href="https://hub.docker.com/r/rcdailey/nextcloud-cronjob">rcdailey/nextcloud-cronjob</a>) - Used for scheduled execution of Nextcloud's cron.php script.</li>
 				<li>NCBU (Nextcloud Backup) (image:  <a href="https://hub.docker.com/r/clewsy/ncbu">clewsy/ncbu</a>) - I <a href="/projects/ncbu.html">created</a> this container image to simplify automated backups of my nextcloud data and database.</li>
-				<li>MariaDB (image:  <a href="https://hub.docker.com/r/linuxserver/mariadb">linuxserver/mariadb</a>) - Database linked to the Nextcloud container.</li>
 				<li>Collabora (image:  <a href="https://hub.docker.com/r/collabora/code">collabora/code</a>) - Implemented to enables web-based editing of documents/spreadsheets within the Nextcloud instance.</li>
 				<li>AirSonic (image:  <a href="https://hub.docker.com/r/linuxserver/airsonic">linuxserver/airsonic</a>) - Music library and streaming app.  Stream via web interface or android app (such as <a href="https://www.f-droid.org/en/packages/org.moire.ultrasonic/">UltraSonic</a>).</li>
 				<li>BitWarden (image:  <a href="https://hub.docker.com/r/bitwardenrs/server">bitwardenrs/server</a>) - Password management system.</li>
 				<li>Calibre (image:  <a href="https://hub.docker.com/r/linuxserver/calibre">linuxserver/calibre</a>) - Ebook library/database management system.</li>
 				<li>Calibre-Web (image:  <a href="https://hub.docker.com/r/linuxserver/calibre-web">linuxserver/calibre-web</a>) - Web-based ebook library access system.</li>
-				<li>NGINX (image:  <a href="https://hub.docker.com/_/nginx">nginx</a>) - For serving up the html/css that forms this site.</li>
+				<li>NGINX (image:  <a href="https://hub.docker.com/_/nginx">nginx</a>) - For serving up the html/css/php that forms this (and other) sites.</li>
+				<li>PHP (image: <a href="https://hub.docker.com/_/php">php</a>) - Configured for access by NGINX containers to enable serving php scripts.</li>
 			</ul>
-			<p>The logo I made was also intended to serve as lesson.  This time in vector graphics editing - specifically <a href="https://inkscape.org/">Inkscape</a>.</p>
-			<p> I've been doodling the <a href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a> since I discovered it as a kid, so it's with this nice geometric shape that I started.  I exploded it into the three identical but rotated parts and rearranged them to make it different from the original.  I felt this resulted in an overly aggressive image, so I put the whole thing into a circle.  I clearly lack the designer gene but it serves the purpose.</p>
+			<p>The logo for clews.pro also intended to be a learning exercise - this time in vector graphics editing - specifically <a href="https://inkscape.org/">Inkscape</a>.</p>
+			<p> I've been doodling the <a href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a> since I discovered it in primary school, so it served as a geometric starting point.  I exploded it into the three identical but rotated parts and rearranged them to differ from the original.  I felt the result was a bit too angular/aggressive, so I put the whole thing into a circle.  I clearly lack the designer gene but it serves the purpose.</p>
 			<p><a class="align-center" href="images/clews_02.png"><img class="photo" src="images/clews_02.png" alt="I don't know what I'm doing." /></a></p>
 		</div>
 	</body>
