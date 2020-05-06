@@ -31,7 +31,7 @@
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/small_gps_clock_01.jpg" /></a></td>
 					<td><a href="/projects/gps_clock.php">GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</a></td>
-					<td class="date">2019-30-04</td>
+					<td class="date">2020-05-07</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
 						<a href="https://hackaday.com/2018/09/18/epic-clock-clocks-the-unix-epoch/">hackaday</a><br />
@@ -44,7 +44,7 @@
 					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
 					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_01.jpg" /></a></td>
 					<td><a href="/projects/grinder_timer.php">Programmable timer to control a dumb coffee grinder.</a></td>
-					<td class="date">2019-04-30</td>
+					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
 						<a href="https://hackaday.com/2017/12/14/dumb-coffee-grinder-gets-smarter-with-time/">hackaday</a><br />
