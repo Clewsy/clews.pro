@@ -20,7 +20,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews_01.png" /></a></td>
-					<td><a href="/projects/clews.php">Meta.</a></td>
+					<td>Meta.</td>
 					<td class="date">2020-05-05</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
@@ -30,7 +30,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/small_gps_clock_01.jpg" /></a></td>
-					<td><a href="/projects/gps_clock.php">GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</a></td>
+					<td>GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</td>
 					<td class="date">2020-05-07</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
@@ -43,7 +43,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
 					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_01.jpg" /></a></td>
-					<td><a href="/projects/grinder_timer.php">Programmable timer to control a dumb coffee grinder.</a></td>
+					<td>Programmable timer to control a dumb coffee grinder.</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
@@ -56,7 +56,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
 					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/small_led_matrix_04.jpg" /></a></td>
-					<td><a href="/projects/led_matrix.php">LED matrix that has a clock mode and a text mode.  My first microcontroller project.</a></td>
+					<td>LED matrix that has a clock mode and a text mode.  My first microcontroller project.</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
 
@@ -66,7 +66,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
 					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/small_media_center_01.jpg" /></a></td>
-					<td><a href="/projects/media_center.php">Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</a></td>
+					<td>Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</td>
 					<td class="date">2020-02-04</td>
 					<td class="links">
 						<a href="https://core-electronics.com.au/projects/raspberry-pi-media-center">core-electronics</a>
@@ -76,7 +76,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
 					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/images/ncbu_01.png" /></a></td>
-					<td><a href="/projects/ncbu.php">Docker container image to simplify and automate backup of a self-hosted nextcloud service.</a></td>
+					<td>Docker container image to simplify and automate backup of a self-hosted nextcloud service.</td>
 					<td class="date">2020-03-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
@@ -87,7 +87,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
 					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer_01.jpg" /></a></td>
-					<td><a href="/projects/p0wer.php">Simple rf mains remote switches hacked to add wifi control.</a></td>
+					<td>Simple rf mains remote switches hacked to add wifi control.</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
@@ -98,7 +98,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
 					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/small_rad10_01.jpg" /></a></td>
-					<td><a href="/projects/rad10.php">An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</a></td>
+					<td>An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
@@ -109,7 +109,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
 					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts_01.png" /></a></td>
-					<td><a href="/projects/scripts.php">Various bash shell scripts.</a></td>
+					<td>Various bash shell scripts.</td>
 					<td class="date">2020-05-08</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/scripts">gitlab</a>
@@ -119,7 +119,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
 					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/small_temp0_22.jpg" /></a></td>
-					<td><a href="/projects/temp0.php">Temperature and humidity monitor with WiFi and local readout.</a></td>
+					<td>Temperature and humidity monitor with WiFi and local readout.</td>
 					<td class="date">2020-05-04</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
@@ -130,7 +130,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_01.jpg" /></a></td>
-					<td><a href="/projects/volcon.php">HID compliant USB volume controller.</a></td>
+					<td>HID compliant USB volume controller.</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
@@ -141,7 +141,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
 					<td><a href="/projects/wishabi.php"><img class="thumbnail" src="/projects/images/small_wishabi_01.jpg" /></a></td>
-					<td><a href="/projects/wishabi.php">WIreless Single-Handed Accelerometer-Based Interface. (Under-Grad thesis project)</a></td>
+					<td>WIreless Single-Handed Accelerometer-Based Interface. (Under-Grad thesis project).</td>
 					<td class="date">2019-10-07</td>
 					<td class="links">
 						<a href="http://vusb.wikidot.com/project:wishabi">V-USB</a><br />
@@ -151,7 +151,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
 					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
-					<td><a href="/projects/wood.php">Stuff made from wood.</a></td>
+					<td>Stuff made from wood.</td>
 					<td class="date">2019-09-28</td>
 					<td class="links">
 

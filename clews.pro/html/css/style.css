@@ -67,11 +67,11 @@ img.image {
 
 /*Table formatting for text tables*/
 table.text-table a:link, table.text-table a:visited {
-	color: rgb(150,150,150);
+	color: green;
 	text-decoration: none;
 }
 table.text-table a:hover {
-	color: rgb(150,150,150);
+	color: green;
 	text-decoration: underline;	
 }
 table.text-table a:active {
