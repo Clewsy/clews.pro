@@ -110,7 +110,7 @@
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
 					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts_01.png" /></a></td>
 					<td><a href="/projects/scripts.php">Various bash shell scripts.</a></td>
-					<td class="date">2019-11-24</td>
+					<td class="date">2020-05-08</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/scripts">gitlab</a>
 					</td>

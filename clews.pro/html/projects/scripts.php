@@ -39,10 +39,6 @@
 					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs site status to file and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/roll_out.sh">roll_out.sh</a></th>
-					<td>Attempt to copy a specified file/directory to a destination (relative to home directory) on a list of remote hosts.</td>
-				</tr>
-				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/stuff.sh">stuff.sh</a></th>
 					<td>Pulls and lists a bunch of useful (to me) info about the host (hardware, disks/mounts, OS, network).</td>
 				</tr>
@@ -83,6 +79,10 @@
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/nc_backup.sh">nc_backup.sh</a></th>
 					<td>Creates a local copy of all the important files related to a nextcloud instance - including a mysqldump of the database.  No longer used since migrating my nextcloud service to a docker container.</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/roll_out.sh">roll_out.sh</a></th>
+					<td>Attempt to copy a specified file/directory to a destination (relative to home directory) on a list of remote hosts.   I used this to sync my custom scripts to a list of hosts.  Now deprecated as I manage this task with <a href= "https://docs.ansible.com/">Ansible</a>.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/ytdl.sh">ytdl.sh</a></th>
