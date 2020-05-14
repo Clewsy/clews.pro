@@ -13,6 +13,7 @@
 			<p>I started with the knowledge of installing apache, exposing port 80 and some very basic HTML skills.</p>
 			<p>Now I have a modular set of web apps served at different subdomains and all encrypted (https) over port 443.</p>
 			<p>To further develop said HTML skills and additionally learn CSS, I made my way through <a href="http://www.htmlandcssbook.com/"><i>HTML & CSS</i> by Jon Duckett</a>.</p>
+			<p>Initially I used a small amount of javascript for the sole purpose of duplicating a common header across multiple pages.  I since learned that the same functionality is super easy with PHP so clews.pro no longer uses any javascript.</p>
 			<p>Containerisation of this site and various subdomains has been implemented with docker and docker-compose.</p>
 			<p>I wish I discovered Docker sooner!  It makes backing-up very straightforward.  I can also tear it all down then pull it all back up on a different machine in a flash.</p>
 			<p>The <a href="https://gitlab.com/clewsy/clews.pro">docker-compose.yml</a> file pulls the following container images:</p>
