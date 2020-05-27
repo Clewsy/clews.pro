@@ -21,12 +21,12 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2020-05-14</td>
+					<td class="date">2020-05-28</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
 					</td>
-					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, AirSonic, Calibre, MariaDB, Inkscape, Javascript, Systemd</td>
+					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, AirSonic, Calibre, MariaDB, Inkscape, <s>Javascript</s>, Systemd</td>
 				<tr>
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/small_gps_clock_01.jpg" /></a></td>
