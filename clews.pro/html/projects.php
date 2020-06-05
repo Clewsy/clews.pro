@@ -158,7 +158,17 @@
 					</td>
 					<td>Wood, Timber, Lumber, Cellulose, Former Tree, Hard Paper</td>
 				</tr>
-			</table>
+<!--				<tr>
+					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
+					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/small_wishabi_01.jpg" /></a></td>
+					<td>Deplolyment/configuration/updating automation of all my boxes with ansible.</td>
+					<td class="date">2020-06-05</td>
+					<td class="links">
+						<a href="https://gitlab.com/clewsy/ansible">gitlab</a><br />
+					</td>
+					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!</td>
+				</tr>
+-->			</table>
 		</div>
 	</body>
 </html>
