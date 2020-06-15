@@ -166,7 +166,7 @@
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ansible">gitlab</a><br />
 					</td>
-					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!</td>
+					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux</td>
 				</tr>
 -->			</table>
 		</div>

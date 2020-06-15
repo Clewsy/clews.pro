@@ -86,6 +86,10 @@ table.text-table th, table.text-table td {
 	padding: 10px 10px 10px 0px;
 	border-bottom: 5px solid black;
 }
+table.text-table ul, table.text-table ol{
+	padding: 0px 0px 0px 0px;
+}
+
 img.thumbnail {
 	max-width: 200px;
 	max-height: 100px;
