@@ -21,7 +21,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2020-05-28</td>
+					<td class="date">2020-06-17</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -158,17 +158,17 @@
 					</td>
 					<td>Wood, Timber, Lumber, Cellulose, Former Tree, Hard Paper</td>
 				</tr>
-<!--				<tr>
+				<tr>
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
-					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/small_wishabi_01.jpg" /></a></td>
-					<td>Deplolyment/configuration/updating automation of all my boxes with ansible.</td>
-					<td class="date">2020-06-05</td>
+					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible_01.png" /></a></td>
+					<td>Deplolyment/configuration/maintenance automation of the machines/devices on my home network with ansible.</td>
+					<td class="date">2020-06-17</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ansible">gitlab</a><br />
 					</td>
-					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux</td>
+					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux, Raspberry Pi, Beaglebone Black, git, GitLab, Home Assistant, Wireguard, OpenVPN, qbittorrent, Vim, Conky, Terminator, Guake, Gnome, Docker, docker-compose, yaml, motion, mpd, mpc, ncmpc, bash scripts, Apache</td>
 				</tr>
--->			</table>
+			</table>
 		</div>
 	</body>
 </html>
