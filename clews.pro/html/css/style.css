@@ -67,11 +67,11 @@ img.image {
 
 /*Table formatting for text tables*/
 table.text-table a:link, table.text-table a:visited {
-	color: green;
+	color: DodgerBlue;
 	text-decoration: none;
 }
 table.text-table a:hover {
-	color: green;
+	color: DodgerBlue;
 	text-decoration: underline;	
 }
 table.text-table a:active {
@@ -153,7 +153,6 @@ table {
 th, td {
 	min-width: 120px;
 	padding: 10px 10px 10px 0px;
-	/*	border-bottom: 5px solid blue;*/
 }
 th {
 	text-transform: lowercase;
@@ -176,23 +175,11 @@ h3 {
 }
 
 /* Default link settings. */
-a:link {
-/*	color: rgb(150,150,150);
-	text-decoration: underline;*/
-	color: green;
+a:link, a:visited {
+	color: DodgerBlue;
 	text-decoration: none;
 }
-a:visited {
-	/*color: rgb(150,150,150);*/
-	color: green;
-	text-decoration: none;
-}
-a:hover {
-	/*color: rgb(150,150,150);*/
-	color: green;
+a:hover, a:active {
+	color: DodgerBlue;
 	text-decoration: underline;	
-}
-a:active {
-	color: black;
-	text-decoration: underline;
 }
