@@ -15,7 +15,7 @@
 			<p>A daemon written in C (<a href="https://gitlab.com/clewsy/rad10d">rad10d</a>) runs on the pi and polls for changes in the encoder or a push of the toggle button.  The code is available on <a href="https://gitlab.com/clewsy/rad10d">gitlab</a>.</p>
 			<p>The daemon is set up as a service to run at boot.  It intefaces with <a href="https://www.musicpd.org/">MPD</a> using the API thanks to the <a href="https://www.musicpd.org/libs/libmpdclient/">libmpdclient</a> C/C++ library.</p>
 			<p>Audio is output from the raspberry pi 3.5mm audio jack to a single speaker via a small amplifier module.</p>
-			<p>Initially I found (via dmesg) that the raspberry pi occassionally triggered an undervolt warning.  It never crashed, but with some experimenting I found the under-voltage would occassionaly be triggered at higher volumes when the amplifier drew higher currents.  I fixed this by switching to a 4A  power supply capable of handling the peak loads.</p>
+			<p>Initially I found (via dmesg) that the raspberry pi occassionally triggered an undervolt warning.  It never crashed, but with some experimenting I found the under-voltage would occassionaly be triggered at higher volumes when the amplifier drew higher currents.  I fixed this by switching to a 4A  power supply, combined with a big capacitor to help supply peak loads.</p>
 			<p>I prototyped with a breadboard until I got the code working before making it permanent.</p>
 			<p>I had been experimenting with some hobbyist-level <a href="/projects/wood.php">woodworking</a> so I decided to put it all in a wooden box, most of which is recycled pallet wood. Access to the ethernet and usb ports was retained for alternative connectivity and the ability to play MP3s from a usb drive, but I almost exclusivley use it for playing a few streams over wifi.</p>
 			<p>Mostly I use this self-contained, wifi-connected setup to stream radio, though it is set to locally mount an nfs share containing my music collection.</p>
@@ -62,6 +62,9 @@
 				<tr>
 					<td class="align-left"><a href="images/rad10_04.png"><img class="photo" src="images/rad10_04.png" alt="WebUI on an android smartphone." /></a></td>
 					<td class="align-right"><a href="images/rad10_05.png"><img class="photo" src="images/rad10_05.png" alt="WebUI on an android smartphone." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/rad10_06.jpg"><img class="photo" src="images/small_rad10_06.jpg" alt="Opened to add a capacitor." /></a></td>
 				</tr>
 			</table>
 		</div>
