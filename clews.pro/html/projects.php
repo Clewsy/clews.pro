@@ -164,7 +164,7 @@
 					<td>Deplolyment/configuration/maintenance automation of the machines/devices on my home network with ansible.</td>
 					<td class="date">2020-06-17</td>
 					<td class="links">
-						<a href="https://gitlab.com/clewsy/ansible">gitlab</a><br />
+						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
 					</td>
 					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux, Raspberry Pi, Beaglebone Black, git, GitLab, Home Assistant, Wireguard, OpenVPN, qbittorrent, Vim, Conky, Terminator, Guake, Gnome, Docker, docker-compose, yaml, motion, mpd, mpc, ncmpc, bash scripts, Apache</td>
 				</tr>
