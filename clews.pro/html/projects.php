@@ -104,7 +104,7 @@
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/rad10">core-electronics</a>
 					</td>
-					<td>Rotary Encoder, Raspberry Pi, Raspbian, mpd, mpc, libmpdclient, wiringpi, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS</td>
+					<td>Rotary Encoder, Raspberry Pi, Raspbian, mpd, mpc, libmpdclient, wiringpi, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS, Wood</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
@@ -129,14 +129,14 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
-					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_01.jpg" /></a></td>
+					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_09.jpg" /></a></td>
 					<td>HID compliant USB volume controller.</td>
-					<td class="date">2020-04-30</td>
+					<td class="date">2020-07-06</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>
 					</td>
-					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, Rotary Encoder, Gray Code</td>
+					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, LUFA, Rotary Encoder, Gray Code, VCR, Wood</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
