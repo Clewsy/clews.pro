@@ -12,8 +12,8 @@ RemainAfterExit=yes
 StandardError=null
 StandardOutput=null
 WorkingDirectory=/home/docker
-ExecStart=/usr/bin/docker-compose -f /home/docker/docker-compose.yml up -d
-ExecStop=/usr/bin/docker-compose -f /home/docker/docker-compose.yml down
+ExecStart=/usr/bin/docker-compose --env-file /home/docker/.env -f /home/docker/docker-compose.yml up -d
+ExecStop=/usr/bin/docker-compose --env-file /home/docker/.env -f /home/docker/docker-compose.yml down
 
 [Install]
 WantedBy=multi-user.target
