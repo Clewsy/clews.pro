@@ -44,6 +44,7 @@ table.gallery {
 	min-width: 1200px;
 	margin-left: 0px;
 	margin-right: 0px;
+	image-orientation: from-image;
 }
 table.gallery td {
 	border-bottom: none;
@@ -56,6 +57,7 @@ img.photo {
 	border-radius: 100px;
 	overflow: hidden;
 	margin: 20px 20px 20px 20px;
+	image-orientation: from-image;
 }
 
 /*Formatting for images (like photos but no border)*/
@@ -96,6 +98,7 @@ img.thumbnail {
 	display: block;
 	border: 2px solid black;
 	border-radius: 10px;
+	image-orientation: from-image;
 }
 .thumbnail {
 	text-align: center;
