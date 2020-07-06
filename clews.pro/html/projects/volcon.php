@@ -15,7 +15,7 @@
 			<p>Key concepts for the project were:</p>
 			<ul>
 				<li>The optical encoder parts (sensors and disk) were salvaged from an old track-ball.</li>
-				<li>The "knob" was made from the head drum of a VCR (remember those?).  This is the part that spins and is used to adjust volume on my PC.</li>
+				<li>The "knob" was made from the <a href="https://en.wikipedia.org/wiki/File:Kopftrommel_2.jpg">head drum</a> of a <a href="https://en.wikipedia.org/wiki/VHS">VHS</a> <a href="https://en.wikipedia.org/wiki/Videocassette_recorder">VCR</a> (remember those?).  This is the part that spins and is used to adjust volume on my PC.</li>
 				<li>The optical disk was fixed to the shaft and optical sensors mounted off some strip-board and attached to the base of the drum.</li>
 				<li>This assembly is mounted to a custom PCB with some nylon stand-offs. The PCB became the base of the whole unit.</li>
 				<li>I cut some wooden rings to enclose the electronics and the base of the VCR drum.</li>
