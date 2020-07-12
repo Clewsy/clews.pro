@@ -80,7 +80,7 @@
 					<td class="date">2020-03-30</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
-						<a href="https://hub.docker.com/r/ncbu/ncbu">Docker Hub</a><br />
+						<a href="https://hub.docker.com/r/clewsy/ncbu">Docker Hub</a><br />
 					</td>
 					<td>Docker, Docker-Compose, DockerHub, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL</td>
 				</tr>
