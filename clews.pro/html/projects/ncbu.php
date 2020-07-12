@@ -45,7 +45,71 @@
 				-v nextcloud-db:/mnt/nextcloud-db \<br/>
 				-v ./nextcloud-bu:/backup \<br/>
 				clewsy/ncbu</p>
-			<p>Alternatively, it can be run using docker-compose.  Here is an <a href="https://gitlab.com/clewsy/clews.pro/blob/master/docker-compose.yml">example docker-compose.yml file</a>.</p>
+			<p>Alternatively, a better/recomended method of running ncbu is via docker-compose.  Here is an <a href="https://gitlab.com/clewsy/clews.pro/blob/master/docker-compose.yml">example docker-compose.yml file</a>.</p>
+			<p>In any case, if configured correctly, the container should be running.  This can be confirmed by running the command <b>docker ps</b>.  The output of this command will show the status of all running containers.</p>
+			<p class="code">$ docker ps</p>
+				<table class="code">
+					<tr>
+						<td>Name</td>
+						<td>Command</td>
+						<td>State</td>
+						<td>Ports</td>
+					</tr>
+					<tr>
+						<td>--------------</td>
+						<td>------------------------------</td>
+						<td>------------</td>
+						<td>----------------------------------------</td>
+					</tr>
+					<tr>
+						<td>collabora-app</td>
+						<td>/bin/sh -c bash start-libr ...</td>
+						<td>Up</td>
+						<td>9980/tcp</td>
+					</tr>
+					<tr>
+						<td>letsencrypt</td>
+						<td>/bin/bash /app/entrypoint. ...</td>
+						<td>Up</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>nextcloud-app</td>
+						<td>/entrypoint.sh apache2-for ...</td>
+						<td>Up</td>
+						<td>80/tcp</td>
+					</tr>
+					<tr>
+						<td>nextcloud-bu</td>
+						<td>ncbu_init.sh</td>
+						<td>Up (healthy)</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>nextcloud-cron</td>
+						<td>tini -- /entrypoint.sh</td>
+						<td>Up (healthy)</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>nextcloud-db</td>
+						<td>/init</td>
+						<td>Up</td>
+						<td>3306/tcp</td>
+					</tr>
+					<tr>
+						<td>nginx-proxy</td>
+						<td>/app/docker-entrypoint.sh ...</td>
+						<td>Up</td>
+						<td>0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp</td>
+					</tr>
+				</table>
+			<p>I included a "healthcheck.sh" script in the container image which is executed every 10 minutes.  As per the example above, the container state shoud read <i>Up (healthy)</i> if everything is runniong as expected.</p>
+			<p>The script will identify the state as <i>unhealthy</i> if either of two conditions are met:</p>
+			<ol>
+				<li>The cron daemon (crond) is not running; or</li>
+				<li>The user defined nextcloud app container ($NEXTCLOUD_CONTAINER) is missing/not running.</li>
+			</ol>
 			<hr/>
 			<h4>Confirm successful initialisation of ncbu:</h4>
 			<p> Confirm inintialisation was successful by checking the log.  This should clarify any errors that may have occurred.  Command below followed by output for a successful initialisation:</p>

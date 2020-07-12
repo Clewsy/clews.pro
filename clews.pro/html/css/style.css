@@ -112,13 +112,18 @@ img.icon {
 }
 
 /*Text formatting when showing code or command bloxks.*/
-p.code {
+.code {
 	font-family: courier, "courier new", monospace;
 	text-transform: none;
+	text-align: left;
 	padding: 10px 20px 10px 20px;
 	color: green;
 	background-color: black;
 	border-radius: 20px;
+}
+table.code {
+	min-width: 1200px;
+	line-height: 0px;
 }
 
 .align-left {
