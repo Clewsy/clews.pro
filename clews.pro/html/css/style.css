@@ -180,6 +180,9 @@ h3 {
 	text-transform: lowercase;
 	font-size: 18px;
 }
+h4 {
+	text-transform: lowercase;
+}
 
 /* Default link settings. */
 a:link, a:visited {

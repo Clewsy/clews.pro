@@ -13,14 +13,17 @@
 			<p>ncbu - or NextCloud Back-Up - is a docker container image created to simplify and automate perodic physical snapshots of a self-hosted nextcloud service.  The snapshots serve as a backup of the nextcloud volume and also (if applicable) the nextcloud database volume.</p>
 			<p>The intention is to run this image as a container alongside the nextcloud app and database containers.  Management of the "live" nextcloud/database volumes can therefore be left to docker.  When the ncbu back-up script is initialised, it first locks the nextcloud instance (i.e. puts nextcloud into maintenance mode) before syncing the volumes to a user-defined location.  Once complete, the script unlocks nextcloud so that normal usage can resume.</p>
 			<p>By locking nextcloud first, ncbu ensures that the backup is effectively a "snapshot" of the nextcloud and database volumes.</p>
+			<hr/>
 			<h3>Why?:</h3>
 			<p>I discovered docker on my journey to rid myself of cloud-based services not within my control.  A docker implementation of nextcloud is great for robustness and portability.  It also facillitated simple back-ups by binding the data volumes to a user-accessible directory.  Initially I set up an rsync cronjob to automate my backups and this was fine, but I saw potential benefits in containerising the backup service.  Mostly, I wanted to have a go at learning docker and creating my own container image.</p>
 			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to docker-compose and a single *.yml file.  Refer to my <a href="/projects/clews.html">clews.pro</a> project for more information of my self-hosting implementation.</p>
 			<a href="https://nextcloud.com/"><img class="image align-right" src="images/ncbu_02.png" alt="Nextcloud" /></a>
+			<hr/>
 			<h3>What:</h3>
 			<p>Once it is spun up, provided the correct environment variables and volumes are defined, the ncbu will run an initialisation script (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu_init.sh">ncbu_init.sh</a>) to do some basic error-checking, then it will simply kick off cron in the foreground.  There is a single cron job set (at a user-defined time, midnight every dy by default) which will execute the backup script.</p>
 			<p>The backup script (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu.sh">ncbu.sh</a>) will first put the nextcloud instance into maintenance mode, effectively "freezing" the nextcloud data files and database.  Rsync is then used to copy all of the files from the nextcloud and database volumes to a backup directory.  Once complete, maintenance mode is disabled.</p>
 			<p>A third script within the container (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu_restore.sh">ncbu_restore.sh</a>) is used to restore nextcloud and database containers from a stored backup.  The restore script can only be run manually by the user.  It will similarly put nextcloud into maintenance mode and then sync all the nextcloud and database files in the reverse direction before exiting maintenance mode.  The restore script will also initialise a scan of the data files and update the database accordingly - this helps if the user is "restoring" to a new host.</p>
+			<hr/>
 			<h3>How:</h3>
 			<p>The following commands may be useful, but much more detail can be found at the <a href="https://gitlab.com/clewsy/ncbu">gitlab</a> or <a href="https://hub.docker.com/r/ncbu/ncbu">dockerhub</a> repositories.</p>
 			<hr/>
@@ -46,6 +49,8 @@
 				-v ./nextcloud-bu:/backup \<br/>
 				clewsy/ncbu</p>
 			<p>Alternatively, a better/recomended method of running ncbu is via docker-compose.  Here is an <a href="https://gitlab.com/clewsy/clews.pro/blob/master/docker-compose.yml">example docker-compose.yml file</a>.</p>
+			<p class="code">$ cd /home/docker #Substitute directory for location of the docker-compose.yml file.<br/>
+				$ docker-compose pull &amp;&amp; docker-compose up -d</p>
 			<p>In any case, if configured correctly, the container should be running.  This can be confirmed by running the command <b>docker ps</b> (or <b>docker-compose ps</b> if using docker-compose).  The output of this command will show the status of all running containers.</p>
 			<p class="code">$ cd /home/docker #Substitute directory for location of the docker-compose.yml file.<br \>
 				$ docker-compose ps</p>
@@ -201,7 +206,7 @@
 					+---------+-------+--------------+<br/>
 					<b>2020-03-30 11:38:44</b> - All done.</p>
 			<hr/>
-			<a class="align-center" href="/index.html"><img src="/images/clews_logo.png" title="Logo" width="100" /></a>
+			<a class="align-center" href="/index.php"><img src="/images/clews_logo.png" title="Logo" width="100" /></a>
 		</div>
 	</body>
 </html>
