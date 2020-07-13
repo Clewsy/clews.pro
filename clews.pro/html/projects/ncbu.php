@@ -46,64 +46,65 @@
 				-v ./nextcloud-bu:/backup \<br/>
 				clewsy/ncbu</p>
 			<p>Alternatively, a better/recomended method of running ncbu is via docker-compose.  Here is an <a href="https://gitlab.com/clewsy/clews.pro/blob/master/docker-compose.yml">example docker-compose.yml file</a>.</p>
-			<p>In any case, if configured correctly, the container should be running.  This can be confirmed by running the command <b>docker ps</b>.  The output of this command will show the status of all running containers.</p>
-			<p class="code">$ docker ps</p>
-				<table class="code">
-					<tr>
-						<td>Name</td>
-						<td>Command</td>
-						<td>State</td>
-						<td>Ports</td>
-					</tr>
-					<tr>
-						<td>--------------</td>
-						<td>------------------------------</td>
-						<td>------------</td>
-						<td>----------------------------------------</td>
-					</tr>
-					<tr>
-						<td>collabora-app</td>
-						<td>/bin/sh -c bash start-libr ...</td>
-						<td>Up</td>
-						<td>9980/tcp</td>
-					</tr>
-					<tr>
-						<td>letsencrypt</td>
-						<td>/bin/bash /app/entrypoint. ...</td>
-						<td>Up</td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>nextcloud-app</td>
-						<td>/entrypoint.sh apache2-for ...</td>
-						<td>Up</td>
-						<td>80/tcp</td>
-					</tr>
-					<tr>
-						<td>nextcloud-bu</td>
-						<td>ncbu_init.sh</td>
-						<td>Up (healthy)</td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>nextcloud-cron</td>
-						<td>tini -- /entrypoint.sh</td>
-						<td>Up (healthy)</td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>nextcloud-db</td>
-						<td>/init</td>
-						<td>Up</td>
-						<td>3306/tcp</td>
-					</tr>
-					<tr>
-						<td>nginx-proxy</td>
-						<td>/app/docker-entrypoint.sh ...</td>
-						<td>Up</td>
-						<td>0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp</td>
-					</tr>
-				</table>
+			<p>In any case, if configured correctly, the container should be running.  This can be confirmed by running the command <b>docker ps</b> (or <b>docker-compose ps</b> if using docker-compose).  The output of this command will show the status of all running containers.</p>
+			<p class="code">$ cd /home/docker #Substitute directory for location of the docker-compose.yml file.<br \>
+				$ docker-compose ps</p>
+			<table class="code">
+				<tr>
+					<td>Name</td>
+					<td>Command</td>
+					<td>State</td>
+					<td>Ports</td>
+				</tr>
+				<tr>
+					<td>-----------------</td>
+					<td>---------------------------------</td>
+					<td>---------------</td>
+					<td>----------------------------------------</td>
+				</tr>
+				<tr>
+					<td>collabora-app</td>
+					<td>/bin/sh -c bash start-libr ...</td>
+					<td>Up</td>
+					<td>9980/tcp</td>
+				</tr>
+				<tr>
+					<td>letsencrypt</td>
+					<td>/bin/bash /app/entrypoint. ...</td>
+					<td>Up</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>nextcloud-app</td>
+					<td>/entrypoint.sh apache2-for ...</td>
+					<td>Up</td>
+					<td>80/tcp</td>
+				</tr>
+				<tr>
+					<td>nextcloud-bu</td>
+					<td>ncbu_init.sh</td>
+					<td>Up (healthy)</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>nextcloud-cron</td>
+					<td>tini -- /entrypoint.sh</td>
+					<td>Up (healthy)</td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>nextcloud-db</td>
+					<td>/init</td>
+					<td>Up</td>
+					<td>3306/tcp</td>
+				</tr>
+				<tr>
+					<td>nginx-proxy</td>
+					<td>/app/docker-entrypoint.sh ...</td>
+					<td>Up</td>
+					<td>0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp</td>
+				</tr>
+			</table>
 			<p>I included a "healthcheck.sh" script in the container image which is executed every 10 minutes.  As per the example above, the container state shoud read <i>Up (healthy)</i> if everything is runniong as expected.</p>
 			<p>The script will identify the state as <i>unhealthy</i> if either of two conditions are met:</p>
 			<ol>

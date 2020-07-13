@@ -122,10 +122,11 @@ img.icon {
 	border-radius: 20px;
 }
 table.code {
-	min-width: 1200px;
-	line-height: 0px;
+	border-spacing: 0px;
+	padding: 10px 170px 10px 20px;
 }
 
+/*General purpose alignment classes.*/
 .align-left {
 	text-align: left;
 	float: left;
@@ -155,16 +156,14 @@ ul {
 
 /*Default table formatting.*/
 table {
-	margin-left: auto;
-	margin-right: auto;
-}
-th, td {
-	min-width: 120px;
-	padding: 10px 10px 10px 0px;
+	margin: auto;
 }
 th {
 	text-transform: lowercase;
 	font-size: 24px;
+}
+td {
+	padding: 0px 0px 0px 0px;
 }
 
 /* Default heading settings*/
