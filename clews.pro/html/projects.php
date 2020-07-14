@@ -120,7 +120,7 @@
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
 					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/small_temp0_22.jpg" /></a></td>
 					<td>Temperature and humidity monitor with WiFi and local readout.</td>
-					<td class="date">2020-05-04</td>
+					<td class="date">2020-07-14</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
 						<a href="https://hackaday.io/project/171367-temp0">hackaday.io</a><br />
@@ -131,7 +131,7 @@
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_09.jpg" /></a></td>
 					<td>HID compliant USB volume controller.</td>
-					<td class="date">2020-07-06</td>
+					<td class="date">2020-07-14</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>

@@ -9,9 +9,9 @@
 		<div id="page">
 			<h2 class="align-center">VolCon</h2>
 			<a href="images/volcon_09.jpg"><img class="photo align-left" src="images/small_volcon_09.jpg" alt="The current, final assembled volcon." /></a>
-			<p>This project began as an experiment when I inexplicably decided to learn how an optical rotary encoder worked (FYI, 2-bit gray code).</p>
-			<p>It transformed into a learning experience around USB - specifically the HID protocol. Ultimately I ended up with a simple gadget that now sits on my desk and allows me to control the PC volume.</p>
-			<p>A salvaged optical encoder was used to detect rotation along with a reclaimed head drum from a VCR which was repurposed as a control knob.  I very much like the smotth bearings combined with the heavy mass that let the drum spin forever.</p>
+			<p>This project began as an experiment when I inexplicably decided to learn how an optical rotary encoder worked (FYI, 2-bit <a href="https://en.wikipedia.org/wiki/Gray_code">Gray code</a>).</p>
+			<p>It transformed into a learning experience around USB - specifically the <a href="https://en.wikipedia.org/wiki/USB_human_interface_device_class">HID protocol</a>. Ultimately I ended up with a simple gadget that now sits on my desk and allows me to control the PC volume.</p>
+			<p>A salvaged optical encoder was used to detect rotation along with a reclaimed head drum from a VCR which was repurposed as a control knob.  I very much like the smooth bearings combined with the heavy mass that let the drum spin forever.</p>
 			<p>Key concepts for the project were:</p>
 			<ul>
 				<li>The optical encoder parts (sensors and disk) were salvaged from an old track-ball.</li>

@@ -76,7 +76,6 @@
 				<li>Character and string functions more efficient and (somewhat) more robust.</li>
 			</ul>
 			<p>To display text on the oled, I can now just specify a font array plus coordinates, and the char/string functions will output to the SSD1306/OLED regardless of font characteristics (character widths and font height).  To create the char/string functions I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  After getting my head around the font and character metadata embedded in the array, I could create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments around these functions that I addeed as I went - this is part of my learning process, plus I'm sure I'll have to re-learn this one day when I return to the project for whatever reason.</p>
-			</ul>
 			<hr />
 			<h3>HDC1080</h3>
 			<p>The HDC1080 is a temperature and humidity sensor that interfaces over I2C.  Similar to the OLED/SSD1306, I wrote a project-specific driver for it.</p>
