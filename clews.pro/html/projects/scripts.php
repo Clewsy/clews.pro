@@ -24,11 +24,11 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu.sh">bu.sh</a></th>
-					<td>Uses rsync to back up files and directories in a list file to a remote server.  Falls back to scp if rsync is not installed.</td>
+					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories in a list file to a remote server.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">p0wer_switch.sh</a></th>
-					<td>Written for use with termux (android) to connect to a server that can control wireless mains outlets via p0wer (<a href="https://gitlab.com/Clewsy/p0wer">gitlab link</a>).</td>
+					<td>Written for use with <a href="https://termux.com/">termux</a> to connect to a server that can control wireless mains outlets via p0wer (<a href="https://gitlab.com/Clewsy/p0wer">gitlab link</a>).</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/pong.sh">pong.sh</a></th>
@@ -36,7 +36,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/polly.sh">polly.sh</a></th>
-					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs site status to file and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
+					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs the site status to a file and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/stuff.sh">stuff.sh</a></th>
@@ -48,7 +48,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/wami.sh">wami.sh</a></th>
-					<td>Pulls and displays info (IP, country, city, etc) from "ipinfo.io" - useful to verify vpn operation.</td>
+					<td>Pulls and displays info (IP, country, city, etc) from <a href="https://ipinfo.io/">ipinfo.io</a> - useful to verify vpn operation.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/whodis.sh">whodis.sh</a></th>
@@ -74,7 +74,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/grab.sh">grab.sh</a></th>
-					<td>Uses rsync (to allow resume after interruption) to download a specified file from a remote server.  Originally used to circumvent some corporate proxy restrictions - no longer used.</td>
+					<td>Uses <a href="https://rsync.samba.org/">rsync</a> (to allow resume after interruption) to download a specified file from a remote server.  Originally used to circumvent some corporate proxy restrictions - no longer used.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/nc_backup.sh">nc_backup.sh</a></th>
@@ -86,7 +86,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/ytdl.sh">ytdl.sh</a></th>
-					<td>ytdl.sh - Written for use with termux (android) to download a youtube video direct to the device.  Archived as I no longer use this since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  Newpipe has direct download capability.</td>
+					<td>ytdl.sh - Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  Archived as I no longer use this since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  Newpipe has direct download capability.</td>
 				</tr>
 			</table>
 		</div>
