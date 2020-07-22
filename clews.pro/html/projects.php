@@ -63,7 +63,17 @@
 					</td>
 					<td>AVR, ATMEGA8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
 				</tr>
-				<tr>
+<!--new project in development	<tr>
+					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
+					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/small_macr0_01.jpg" /></a></td>
+					<td>4-button USB input device.</td>
+					<td class="date">2020-07-22</td>
+					<td class="links">
+
+					</td>
+					<td>AVR, ATMEGA32U4, Microcontroller, Gateron, CAT4104</td>
+				</tr>
+-->				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
 					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/small_media_center_01.jpg" /></a></td>
 					<td>Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</td>
