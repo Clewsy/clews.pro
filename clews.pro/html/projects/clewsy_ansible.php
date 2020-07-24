@@ -77,7 +77,7 @@
 					<td>
 						<p>Home automation stuff.</p>
 						<p>A <a href="https://www.raspberrypi.org/">raspberry pi</a> 4 with "supervised" <a href="https://www.home-assistant.io/">home assistant</a>.</p>
-						<p>This pi runs on top of of an <a href="https://ubuntu.com/download/raspberry-pi">ubuntu server</a> base.</p>
+						<p>This pi runs home assistant on top of of an <a href="https://ubuntu.com/download/raspberry-pi">ubuntu server</a> base.</p>
 					</td>
 					<td>
 						<ul>
@@ -122,7 +122,7 @@
 					<td><a href="https://osmc.tv/">OSMC</a></td>
 					<td>
 						<p>Media server installed on a <a href="https://www.raspberrypi.org/">raspberry pi</a> 3 connected to a tv.</p>
-						<p>Serves media stored on zapp using nfs shares.</p>
+						<p>Serves media stored on zapp using <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> shares.</p>
 						<p>Refer to the <a href="/projects/media_center.php">media_center</a> project page.</p>
 					</td>
 					<td>
@@ -216,7 +216,7 @@
 					<td><a href="https://www.openmediavault.org/">openmediavault</a></td>
 					<td>
 						<p>File-server and backup storage.</p>
-						<p>Shares bulk media over nfs and acts as my on-site backup storage.</p>
+						<p>Shares bulk media over <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> and acts as my on-site backup storage.</p>
 						<p>Also runs a torrent client (<a href="https://www.qbittorrent.org/">qbittorrent</a>).</p>
 					</td>
 					<td>
