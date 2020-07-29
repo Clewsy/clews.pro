@@ -51,8 +51,18 @@
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/grindertimer">core-electronics</a>
 					</td>
-					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, C, Ki-CAD</td>
+					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, Microcontroller, C, KiCAD, PCB Etching</td>
 				</tr>
+<!--new project in development	<tr>
+					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
+					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_rev2_01.jpg" /></a></td>
+					<td>An upgrade to the original grinder_timer.</td>
+					<td class="date">2020-07-29</td>
+					<td class="links">
+						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a>
+					</td>
+					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication</td>
+				</tr> -->
 				<tr>
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
 					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/small_led_matrix_04.jpg" /></a></td>
@@ -67,13 +77,13 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/small_macr0_01.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2020-07-22</td>
+					<td class="date">2020-07-29</td>
 					<td class="links">
-
+						<a href="https://gitlab.com/clewsy/macr0">gitlab</a>
 					</td>
-					<td>AVR, ATMEGA32U4, Microcontroller, Gateron, CAT4104</td>
-				</tr>
--->				<tr>
+					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Gateron, CAT4104</td>
+				</tr> -->
+				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
 					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/small_media_center_01.jpg" /></a></td>
 					<td>Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</td>
@@ -90,7 +100,7 @@
 					<td class="date">2020-07-14</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
-						<a href="https://hub.docker.com/r/clewsy/ncbu">Docker Hub</a><br />
+						<a href="https://hub.docker.com/r/clewsy/ncbu">Docker Hub</a>
 					</td>
 					<td>Docker, Docker-Compose, DockerHub, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL</td>
 				</tr>
