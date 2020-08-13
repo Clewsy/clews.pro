@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">grinder_timer_rev2</h2>
-			<a href="images/grinder_timer_rev2_01.jpg"><img class="photo align-left" src="images/small_grinder_timer_rev2_01.jpg" alt="The final timer."></a>
+			<a href="images/grinder_timer_rev2_05.jpg"><img class="photo align-left" src="images/small_grinder_timer_rev2_05.jpg" alt="The final timer."></a>
 			<p>An upgrade to the original <a href="/projects/grinder_timer.php">grinder_timer</a> - a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
 			<p>Honestly, the original has been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start so I decided to re-make it from scratch with some nicer tactile buttons and a few other improvements.</p>
 			<p>The goals for revision 2 included:</p>
@@ -116,19 +116,23 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_04.jpg"><img class="photo" src="images/small_grinder_timer_04.jpg" alt="Populating PCB." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_05.jpg"><img class="photo" src="images/small_grinder_timer_05.jpg" alt="PCB Assembled." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2_01.png"><img class="photo" src="images/grinder_timer_rev2_01.png" alt="PCB render top." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_02.png"><img class="photo" src="images/grinder_timer_rev2_02.png" alt="PCB render bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_07.jpg"><img class="photo" src="images/small_grinder_timer_07.jpg" alt="Assembly Started." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_08.jpg"><img class="photo" src="images/small_grinder_timer_08.jpg" alt="Mostly Assembled." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2_03.jpg"><img class="photo" src="images/small_grinder_timer_rev2_03.jpg" alt="PCB fabricated top." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_04.jpg"><img class="photo" src="images/small_grinder_timer_rev2_04.jpg" alt="PCB fabricated bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_09.jpg"><img class="photo" src="images/small_grinder_timer_09.jpg" alt="Connecting Tether." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_10.jpg"><img class="photo" src="images/small_grinder_timer_10.jpg" alt="Complete and Functional." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2_05.jpg"><img class="photo" src="images/small_grinder_timer_rev2_05.jpg" alt="PCB assembled top." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_06.jpg"><img class="photo" src="images/small_grinder_timer_rev2_06.jpg" alt="PCB assembled bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_11.png"><img class="photo" src="images/grinder_timer_11.png" alt="The Complete Schematic." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2_07.jpg"><img class="photo" src="images/small_grinder_timer_rev2_07.jpg" alt="PCB assembled top, another angle." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_08.jpg"><img class="photo" src="images/small_grinder_timer_rev2_08.jpg" alt="Night shot of the OLED." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/grinder_timer_rev2_09.png"><img class="photo" src="images/grinder_timer_rev2_09.png" alt="The complete schematic." /></a></td>
 				</tr>
 			</table>
 		</div>
