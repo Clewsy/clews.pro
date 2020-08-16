@@ -10,14 +10,14 @@
 			<h2 class="align-center">grinder_timer_rev2</h2>
 			<a href="images/grinder_timer_rev2_05.jpg"><img class="photo align-left" src="images/small_grinder_timer_rev2_05.jpg" alt="The final timer."></a>
 			<p>An upgrade to the original <a href="/projects/grinder_timer.php">grinder_timer</a> - a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
-			<p>Honestly, the original has been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start so I decided to re-make it from scratch with some nicer tactile buttons and a few other improvements.</p>
+			<p>Honestly, I use the original every day and it hass been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.</p>
 			<p>The goals for revision 2 included:</p>
 			<ul>
 				<li>Hardware improvements:</li>
 				<ul>
-					<li>Change the keypad buttons from cheap mush panel-mount to something with nice tactile feedback.</li>
-					<li>Drive the relay with a transistor instead of directly from an IO pin.</li>
-					<li>Add fly-back diode protection across the relay coil.</li>
+					<li>Change the keypad buttons from cheap, mushy panel-mount buttons to something with nicer tactile feedback.</li>
+					<li>Drive the relay with a transistor instead of directly from an IO pin (original relay required coil current outside of the microcontroller spec).</li>
+					<li>Add fly-back diode protection across the relay coil (to prevent voltage spike across the coil when it is de-energised).</li>
 					<li>Decrease overall physical size.</li>
 					<ul>
 						<li>Use a smaller transformer.</li>
@@ -25,7 +25,7 @@
 						<li>Switch to smd components where possible.</li>
 						<li>Use a double-sided PCB (fabricated instead of home-made copper-etched).</li>
 					</ul>
-					<li>Use properly balanced capacitors across the 32.768kHz crystal oscillator.</li>
+					<li>Use properly balanced capacitors across the 32.768kHz crystal oscillator (per the datasheet).</li>
 					<li>Put the grind button LED on a PWM output (instead of just directly powered).</li>
 					<li>Use a different OLED module - SH1106 with I2C control instead of SSD1306 with SPI control.</li>
 				</ul>
@@ -51,9 +51,9 @@
 			<p>Code, schematic and PCB layout are all in the <a href="https://gitlab.com/clewsy/grinder_timer">gitlab repo</a>.  This is the same repo used for the original version.</p>
 			<hr />
 			<h3>Hardware</h3>
-			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous version I fabricated myself using single-sided copper clad board and copper etchant (toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
-			<p>I found some surface-mount tactile buttons with keycaps for the keypad.  The four direction buttons are identical, the grind button is similar but with a built-in LED.  This LED was connected to a pin with PWM output capability.</p>
-			<p>A suitable enclosure was selected and its dimensions dictated the dimensions for the PCB design size.</p>
+			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
+			<p>I found some surface-mount tactile buttons with keycaps for the keypad.  The four direction buttons are identical, the grind button is similar but with a built-in white LED.  This LED was connected to a pin with PWM output capability.</p>
+			<p>A suitable enclosure was selected and its internal dimensions dictated the dimensions for the PCB design.</p>
 			<hr />
 			<h3>Firmware</h3>
 			<p>In developing a recent project (<a href="/projects/temp0.php">temp0</a>) I tried out an Arduino platform and programming.  I didn't care much for the Arduino IDE, but I learned how C++ brings some advantages to firmware programming.  So for grinder_timer_rev2 I re-wrote the firmware from scratch and made use of classes.  I still opted to directly program the microcontroller as I saw no advantages in using the Arduino bootloader.</p>
@@ -66,9 +66,9 @@
 					<td scope="col"><b>Description</b></td>
 				</tr>
 				<tr>
-					<td><b>usart</b></td>
-					<td>serial</td>
-					<td>Serial interface - really only used for debugging, disabled in the final code.</td>
+					<td><b>clock</b></td>
+					<td>rtc</td>
+					<td>Uses a timer/counter and the 32.768kHz crystal oscillator to create a real-time clock for acurate timing.  Configures to trigger an interrupt every 16<sup>th</sup> of a second when running.</td>
 				</tr>
 				<tr>
 					<td><b>i2c</b></td>
@@ -81,9 +81,9 @@
 					<td>5-button keypad.  4-button d-pad (up, down, left, right) and a "grind" button.</td>
 				</tr>
 				<tr>
-					<td><b>sleeper</b></td>
-					<td>sleep_timer</td>
-					<td>Uses a timer/counter to trigger an interrupt after a set duration to enter a "sleep" mode.</td>
+					<td><b>presets</b></td>
+					<td>preset</td>
+					<td>Variables and eeprom addresses for saving, restoring and referncing the values of four presets, plus the currently selected preset.  Being saved in eeprom means these values are retained through a power-cycle.</td>
 				</tr>
 				<tr>
 					<td><b>pulser</b></td>
@@ -91,9 +91,9 @@
 					<td>Uses a timer/counter pulsing, and another timer/counter for pwm to set an LED on, off or pulsing.</td>
 				</tr>
 				<tr>
-					<td><b>clock</b></td>
-					<td>rtc</td>
-					<td>Uses a timer/counter and the 32.768kHz crystal oscillator to create a real-time clock for acurate timing.  Configures to trigger an interrupt every 16<sup>th</sup> of a second when running.</td>
+					<td><b>relay</b></td>
+					<td>grinder</td>
+					<td>Just an output pin connected to a relay.  In this case, the relay will control the grinder motor.</td>
 				</tr>
 				<tr>
 					<td><b>sh1106</b></td>
@@ -101,14 +101,14 @@
 					<td>Drive a 128x64 pixel oled with a sh1106 controller.  Includes functions for (among other things), printing text, displaying bitmaps, vertical scrolling and drawing boxes.</td>
 				</tr>
 				<tr>
-					<td><b>presets</b></td>
-					<td>preset</td>
-					<td>Variables and eeprom addresses for saving, restoring and referncing the values of four presets, plus the currently selected preset.  Being saved in eeprom means these values are retained through a power-cycle.</td>
+					<td><b>sleeper</b></td>
+					<td>sleep_timer</td>
+					<td>Uses a timer/counter to trigger an interrupt after a set duration to enter a "sleep" mode.</td>
 				</tr>
 				<tr>
-					<td><b>relay</b></td>
-					<td>grinder</td>
-					<td>Just an output pin connected to a relay.  In this case, the relay will control the grinder motor.</td>
+					<td><b>usart</b></td>
+					<td>serial</td>
+					<td>Serial interface - really only used for debugging, disabled in the final code.</td>
 				</tr>
 			</table>
 			<p>The biggest problem I encountered was with stability of the OLED.  It would appear to operate as expected, but after random intervals it would hang.  I located the stall point in the I2C function that waits for completion of an I2C transmission.  After experimenting with different clock speeds and power sources, eventually I figured out that the values of the pull-up resistors I had on the SDA and SCL lines were too high.  After replacing these 10k resistors with 3.3k resistors, the OLED became stable and predictable.</p>
