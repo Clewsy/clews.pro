@@ -57,9 +57,9 @@
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
 					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_rev2_01.jpg" /></a></td>
 					<td>An upgrade to the original grinder_timer.</td>
-					<td class="date">2020-07-29</td>
+					<td class="date">2020-08-17</td>
 					<td class="links">
-						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a>
+						<a href="https://gitlab.com/clewsy/grinder_timer_rev2">gitlab</a>
 					</td>
 					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication</td>
 				</tr> -->
@@ -77,7 +77,7 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/small_macr0_01.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2020-07-29</td>
+					<td class="date">2020-08-17</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a>
 					</td>
