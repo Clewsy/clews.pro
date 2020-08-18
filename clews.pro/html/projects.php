@@ -31,7 +31,7 @@
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/small_gps_clock_01.jpg" /></a></td>
 					<td>GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</td>
-					<td class="date">2020-05-07</td>
+					<td class="date">2020-08-18</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
 						<a href="https://hackaday.com/2018/09/18/epic-clock-clocks-the-unix-epoch/">hackaday</a><br />
