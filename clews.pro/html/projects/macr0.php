@@ -9,8 +9,8 @@
 		<div id="page">
 			<h2 class="align-center">macr0</h2>
 			<a href="images/macr0_04.jpg"><img class="photo align-left" src="images/small_macr0_04.jpg" alt="The current, final assembled volcon." /></a>
-			<p>This project is effectively a handful of proofs of concepts.  Testing some things I haven't done before with the intention to scale-up for a future project.</p>
-			<p>Macr0 is a 4-button macro pad which identifies as a USB keyboard over USB.</p>
+			<p>Macr0 is a 4-button macro pad which identifies as a USB keyboard.</p>
+			<p>This project is effectively a handful of proofs of concepts.  I wanted to test a few things I haven't done before with the intention to scale-up for a future project.</p>
 			<p>The goals I had in mind for this project included:</p>
 			<ol>
 				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller.</li>
