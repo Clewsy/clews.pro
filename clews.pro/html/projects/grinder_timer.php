@@ -9,7 +9,7 @@
 		<div id="page">
 			<h2 class="align-center">grinder_timer</h2>
 			<a href="images/grinder_timer_01.jpg"><img class="photo align-left" src="images/small_grinder_timer_01.jpg" alt="The final timer."></a>
-			<p>This is a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
+			<p>This is a programmable timer tethered to a <a href="https://www.ranciliogroup.com/rancilio/rocky/rocky/">Rancilio Rocky</a> coffee grinder.</p>
 			<p>The Rocky is a "dumb" grinder and electrically very simple. Basically it's an ac motor with an on/off switch and a momentary push-button to grind.</p>
 			<p>This project adds an electronic timer so that consistent, repeatable grind quantities can be produced without having to stand over the grinder.</p>
 			<p>Features include:<p>
@@ -43,20 +43,20 @@
 			<p>The grinder motor is switched on/off by grinder_timer via a relay.  Closing the relay simply completes the neutral side of the grinder motor circuit.</p>
 			<hr />
 			<h3>AVR Circuit</h3>
-			<p>The main circuit is centred around an ATmega328p AVR micro.</p>
-			<p>The circuit includes pin headers for connecting the buttons and a USB/Serial adapter.  Another pin header is for I2C control of the OLED (with pull-up resistors on the clock and data lines).</p>
+			<p>The main circuit is centred around an <a href="https://www.microchip.com/wwwproducts/en/ATMEGA328P">ATmega328p</a> AVR micro.</p>
+			<p>The circuit includes pin headers for connecting the buttons and a USB/Serial adapter.  Another pin header is for SPI control of the OLED.</p>
 			<p>There's a six-pin ISP header for programming.</p>
 			<p>I wanted the countdown timer to be reasonably accurate so there is a 32.768kHz crystal connected so as to implement an RTC (real-time clock) with the AVR.</p>
 			<hr />
 			<h3>OLED Module</h3>
 			<p>The display is a 128x64 pixel mon OLED driven by an SSD1306 controlled by the AVR's I2C (TWI) peripheral.</p>
-			<p>The module is physically connected via a pin header on the main circuit board.</p>
+			<p>The module is physically connected via a pin header and ribbon cable to the main circuit board.</p>
 			<a href="images/grinder_timer_03.jpg"><img class="photo align-left" src="images/small_grinder_timer_03.jpg" alt="PCB Etched." /></a>
 			<hr />
 			<h3>Code</h3>
-			<p>Early development stages of the code was written exclusively with vim from the terminal (terminator).  However I had read about Atom and decided to try it out so at some point in development I switched over.</p>
+			<p>Early development stages of the code was written exclusively with <a href="https://www.vim.org/">Vim</a> from the terminal (<a href="https://github.com/gnome-terminator/terminator">terminator</a>).  However I had read about <a href="https://atom.io/">Atom</a> and decided to try it out so at some point in development I switched over.</p>
 			<p>The code is all interrupt driven.  Pushing any button runs the pin-change interrupt that checks which button and performs the appropriate action.</p>
-			<p>The grind button enables the timer/counter 2 peripheral which is set up to use the external 32.768kHz crystal.  This is the timer that actually counts down the desired duration.  This could have been done with an internal oscillator, but I wanted to learn about using the AVR as an RTC for more accurate and consistent timing.</p>
+			<p>The grind button enables the timer/counter 2 peripheral which is configured to use the external 32.768kHz crystal.  This is the timer that actually counts down the desired duration.  This could have been done with an internal oscillator, but I wanted to learn about using the AVR as an RTC for more accurate and consistent timing.</p>
 			<p>The AVR's internal eeprom is used so that the stored presets survive a powercycle.</p>
 			<p>One trick I missed with the OLED module is the requirement to toggle the reset line as part of a start-up sequence at boot (datasheet included on gitlab repo).  I simply tied the reset line to the AVR's reset line.</p>
 			<p>I eventually found this was causing issues at power-up because the oled reset is supposed to be toggled a minimum duration after the oled power stabilises.  Ideally, this would be done with code using one of the AVR's GPIO pins tied to the OLED's reset pin.</p>
@@ -67,7 +67,7 @@
 			<a href="images/grinder_timer_06.jpg"><img class="photo align-right" src="images/small_grinder_timer_06.jpg" alt="Re-programming." /></a>
 			<hr />
 			<h3>Circuit Design</h3>
-			<p>The schematic and PCB layout were designed with KiCad.  Prior to this project my only circuit CAD experience was with eagle.  I used this project to familiarise myself with the open source alternative.</p>
+			<p>The schematic and PCB layout were designed with <a href="https://kicad-pcb.org/">KiCad</a>.  Prior to this project my only circuit CAD experience was with eagle.  I used this project to familiarise myself with the open source alternative.</p>
 			<p>All the KiCad project files are included in the gitlab repo.</p>
 			<p>The PCB layout outer-dimensions was driven by the size of an aluminium enclosure I wanted to use.  This enclosure was selected based on the most cumbersome component - the PCB mounted transformer.</p>
 			<hr />

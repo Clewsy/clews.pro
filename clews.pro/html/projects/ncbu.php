@@ -10,17 +10,17 @@
 			<h2 class="align-center">ncbu</h2>
 			<a href="https://hub.docker.com/"><img class="image align-left" src="images/ncbu_01.png" alt="Dockerhub" /></a>
 			<h3>Description:</h3>
-			<p>ncbu - or NextCloud Back-Up - is a docker container image created to simplify and automate perodic physical snapshots of a self-hosted nextcloud service.  The snapshots serve as a backup of the nextcloud volume and also (if applicable) the nextcloud database volume.</p>
+			<p>ncbu - or <a href="https://nextcloud.com/">NextCloud</a> Back-Up - is a <a href="https://www.docker.com/">docker</a> container image created to simplify and automate perodic physical snapshots of a self-hosted nextcloud service.  The snapshots serve as a backup of the nextcloud volume and also (if applicable) the nextcloud database volume.</p>
 			<p>The intention is to run this image as a container alongside the nextcloud app and database containers.  Management of the "live" nextcloud/database volumes can therefore be left to docker.  When the ncbu back-up script is initialised, it first locks the nextcloud instance (i.e. puts nextcloud into maintenance mode) before syncing the volumes to a user-defined location.  Once complete, the script unlocks nextcloud so that normal usage can resume.</p>
 			<p>By locking nextcloud first, ncbu ensures that the backup is effectively a "snapshot" of the nextcloud and database volumes.</p>
 			<hr/>
 			<h3>Why?:</h3>
-			<p>I discovered docker on my journey to rid myself of cloud-based services not within my control.  A docker implementation of nextcloud is great for robustness and portability.  It also facillitated simple back-ups by binding the data volumes to a user-accessible directory.  Initially I set up an rsync cronjob to automate my backups and this was fine, but I saw potential benefits in containerising the backup service.  Mostly, I wanted to have a go at learning docker and creating my own container image.</p>
-			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to docker-compose and a single *.yml file.  Refer to my <a href="/projects/clews.html">clews.pro</a> project for more information of my self-hosting implementation.</p>
+			<p>I discovered docker on my journey to rid myself of cloud-based services not within my control.  A docker implementation of nextcloud is great for robustness and portability.  It also facillitated simple back-ups by binding the data volumes to a user-accessible directory.  Initially I set up an <a href="https://rsync.samba.org/">rsync</a> cronjob to automate my backups and this was fine, but I saw potential benefits in containerising the backup service.  Mostly, I wanted to have a go at learning docker and creating my own container image.</p>
+			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to <a href="https://docs.docker.com/compose/">docker-compose</a> and a single *.yml file.  Refer to my <a href="/projects/clews.html">clews.pro</a> project for more information of my self-hosting implementation.</p>
 			<a href="https://nextcloud.com/"><img class="image align-right" src="images/ncbu_02.png" alt="Nextcloud" /></a>
 			<hr/>
 			<h3>What:</h3>
-			<p>Once it is spun up, provided the correct environment variables and volumes are defined, the ncbu will run an initialisation script (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu_init.sh">ncbu_init.sh</a>) to do some basic error-checking, then it will simply kick off cron in the foreground.  There is a single cron job set (at a user-defined time, midnight every dy by default) which will execute the backup script.</p>
+			<p>Once spun up, provided the correct environment variables and volumes are defined, ncbu will run an initialisation script (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu_init.sh">ncbu_init.sh</a>) to do some basic error-checking, then it will simply kick off cron in the foreground.  There is a single cron job set (at a user-defined time, midnight every dy by default) which will execute the backup script.</p>
 			<p>The backup script (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu.sh">ncbu.sh</a>) will first put the nextcloud instance into maintenance mode, effectively "freezing" the nextcloud data files and database.  Rsync is then used to copy all of the files from the nextcloud and database volumes to a backup directory.  Once complete, maintenance mode is disabled.</p>
 			<p>A third script within the container (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu_restore.sh">ncbu_restore.sh</a>) is used to restore nextcloud and database containers from a stored backup.  The restore script can only be run manually by the user.  It will similarly put nextcloud into maintenance mode and then sync all the nextcloud and database files in the reverse direction before exiting maintenance mode.  The restore script will also initialise a scan of the data files and update the database accordingly - this helps if the user is "restoring" to a new host.</p>
 			<hr/>
@@ -32,7 +32,7 @@
 			<p class="code">$ git clone git@gitlab.com:clewsy/ncbu<br/>
 				$ cd ncbu<br/>
 				$ docker build -t ncbu/ncbu .</p>
-			<p>Pull from dockerhub:</p>
+			<p>Pull from <a href="https://hub.docker.com/r/clewsy/ncbu">dockerhub</a>:</p>
 			<p class="code">$ docker pull clewsy/ncbu</p>
 			<hr/>
 			<h4>Run the container:</h4>
@@ -110,7 +110,7 @@
 					<td>0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp</td>
 				</tr>
 			</table>
-			<p>I included a "healthcheck.sh" script in the container image which is executed every 10 minutes.  As per the example above, the container state shoud read <i>Up (healthy)</i> if everything is runniong as expected.</p>
+			<p>I included a "healthcheck.sh" script (<a href="https://gitlab.com/clewsy/ncbu/-/blob/master/ncbu_scripts/ncbu_healthcheck.sh">ncbu_healthcheck.sh</a>) in the container image which is executed every 10 minutes.  As per the example above, the container state shoud read <i>Up (healthy)</i> if everything is running as expected.</p>
 			<p>The script will identify the state as <i>unhealthy</i> if either of two conditions are met:</p>
 			<ol>
 				<li>The cron daemon (crond) is not running; or</li>
@@ -120,17 +120,17 @@
 			<h4>Confirm successful initialisation of ncbu:</h4>
 			<p> Confirm inintialisation was successful by checking the log.  This should clarify any errors that may have occurred.  Command below followed by output for a successful initialisation:</p>
 			<p class="code">$ docker logs ncbu</p>
-			<p class="code">2020-03-30 11:13:29 - Initialising ncbu (nextcloud-backup)...<br/>
-				2020-03-30 11:13:29 - Checking environment variables provided:<br/>
+			<p class="code"><b>2020-03-30 11:13:29</b> - Initialising ncbu (nextcloud-backup)...<br/>
+				<b>2020-03-30 11:13:29</b> - Checking environment variables provided:<br/>
 				&emsp;&emsp;&emsp;&emsp;NEXTCLOUD_CONTAINER=nextcloud-app<br/>
 				&emsp;&emsp;&emsp;&emsp;NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db<br/>
-				2020-03-30 11:13:29 - Checking mounted volumes:<br/>
+				<b>2020-03-30 11:13:29</b> - Checking mounted volumes:<br/>
 				&emsp;&emsp;&emsp;&emsp;Nextcloud app volume successfully mounted to /mnt/nextcloud_app<br/>
 				&emsp;&emsp;&emsp;&emsp;Nextcloud database volume successfully mounted to /mnt/nextcloud_db<br/>
-				2020-03-30 11:13:29 - Checking backup volume:<br/>
+				<b>2020-03-30 11:13:29</b> - Checking backup volume:<br/>
 				&emsp;&emsp;&emsp;&emsp;Backup exists.<br/>
-				2020-03-30 11:13:29 - Updating crontab with: "0 0 * * * ncbu.sh"<br/>
-				2020-03-30 11:13:29 - Running crond in the foreground...</p>
+				<b>2020-03-30 11:13:29</b> - Updating crontab with: "0 0 * * * ncbu.sh"<br/>
+				<b>2020-03-30 11:13:29</b> - Running crond in the foreground...</p>
 			<hr/>
 			<h4>Initiate a manual backup (with sample output):</h4>
 			<p class="code">$ docker exec ncbu ncbu.sh</p>

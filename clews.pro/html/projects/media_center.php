@@ -9,12 +9,12 @@
 		<div id="page">
 			<h2 class="align-center">media_center</h2>
 			<a href="images/media_center_01.jpg"><img class="photo align-left" src="images/media_center_01.jpg" alt="The final media_center." /></a>
-			<p>I wanted to upgrade my media center (RPi B+ with Xbian) to something a bit nicer, more stable and more accessible than just the RPi in a basic plastic case.</p>
+			<p>I wanted to upgrade my media center (<a href="https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus/">RPi B+</a> with <a href="https://xbian.org/">xbian</a>) to something a bit nicer, more stable and more accessible than just the RPi in a basic plastic case.</p>
 			<p>I built an enclosure out of plywood with aluminum front and rear panels.</p>
 			<p>All of the connections I wanted to use were broken out from the pi with panel-mount extension cables.</p>
 			<p>The electronic components includes:</p>
 			<ul>
-				<li>Raspberry Pi 3</li>
+				<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a></li>
 				<li>Panel Mount HDMI Cable</li>
 				<li>Panel Mount Ethernet Cable</li>
 				<li>Panel Mount USB to 4-Pin Female Header Cables</li>
