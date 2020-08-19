@@ -10,22 +10,22 @@
 			<h2 class="align-center">clewsy_ansible</h2>
 			<a href="https://docs.ansible.com/"><img class="image align-left" src="images/clewsy_ansible_01.png" alt="Just the ansible logo." /></a>
 			<p><a href="https://docs.ansible.com/">Ansible</a> is software for secure, push-style, agentless, system configuration management.  I guess it's more than that, but I'm new.  It had a moderate learning curve and then required a reasonable amount of configuration, but now I have some basic playbooks and roles written that will save me a lot of time in the future.  This project is purely about using ansible to configure machines on my personal home network.</p>
-			<p>My biggest problem has been completely forgetting why or how I configured a system, shortly after initially getting it up and running.  Ansible playbooks are self-documenting, so even if I want to do something manually in the future, the instructions are all there, built-in to my ansible playbooks stored in my <a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab repo</a>.</p>
+			<p>My biggest problem has been completely forgetting why or how I configured a system, shortly after initially getting it up and running.  Ansible playbooks are self-documenting, so even if I want to do something manually in the future, the instructions are all there, built-in to the ansible playbooks stored in my <a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab repo</a>.</p>
 			<p>The repo includes a host-spcific playbook and variables file for each managed host machine/device on my home network.</p>
 			<p>Some minimal configuration is required on a host to prepare it for being automatically configured by the ansible playbook:</p>
 			<ol>
 				<li>Install the operating system.</li>
 				<li>Create the user - must match the username defined in the host variables file (<i>host_vars/hostname.yml</i>).</li>
 				<li>Give the user sudo access.  The sudo password must be as defined (encrypted) by the host-specific setup-password variable (also in <i>host_vars/hostname.yml</i>).</li>
-				<li>Ensure a static IP has been assigned to the MAC address of the machine's network interface.  I use a hosts file on my dhcp server, so all machines are identified by hostname, not ip address.</li>
+				<li>Ensure a static IP has been assigned to the MAC address of the machine's network interface.  I use a hosts file on my dhcp server, so in my hosts.yml file all machines are identified by hostname, not ip address.</li>
 			</ol>
 			<p>The flexo.yml playbook is a special case.  Flexo is the hostname assigned to my smartphone, so to configure it with ansible (using the <i>droid</i> role) the pre-requisites differ:</p>
 			<ol>
 				<li><a href="https://termux.com/">Termux</a> must be installed.</li>
 				<li>Within termux, a couple of packages need to be manually installed:</li>
 				<ul>
-					<li>python</li>
-					<li>openssh</li>
+					<li><a href="https://www.python.org/">python</a></li>
+					<li><a href="https://www.openssh.com/">openssh</a></li>
 				</ul>
 				<li>Termux ssh sessions don't really have a "user" in the traditional sense, but a password must be configured (i.e. run <i>passwd</i>).</li>
 				<li>The ssh daemon must be running (i.e run <i>sshd</i>).  By default, the ssh daemon will serve on port 8022.</li>
@@ -65,6 +65,7 @@
 						<ul>
 							<li>common</li>
 							<li>docker</li>
+							<li>headless</li>
 							<li>secure</li>
 							<li>wireguard_server</li>
 							<li>vpn</li>
@@ -98,6 +99,7 @@
 							<li>common</li>
 							<li>desktop</li>
 							<li>docker</li>
+							<li>headless</li>
 							<li>mpd</li>
 							<li>node</li>
 							<li>secure</li>
@@ -204,7 +206,7 @@
 					<td>
 						<ul>
 							<li>common</li>
-							<li>docker</li>
+							<li>headless</li>
 							<li>node</li>
 							<li>polly</li>
 							<li>secure</li>
@@ -223,6 +225,7 @@
 						<ul>
 							<li>common</li>
 							<li>docker</li>
+							<li>headless</li>
 							<li>qbittorrent</li>
 							<li>vpn</li>
 						</ul>
@@ -241,6 +244,7 @@
 							<li>clews.pro</li>
 							<li>common</li>
 							<li>docker</li>
+							<li>headless</li>
 							<li>polly</li>
 							<li>secure</li>
 						</ul>
@@ -274,6 +278,10 @@
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/droid">droid</a></th>
 					<td>A special role created to configure an android smartphone running <a href="https://termux.com/">Termux</a>.  This role has tasks similar to common that had to be implemented dfferently (configure ssh, install packages, install scripts).  It also installs some termux "shortcuts" which are basically scripts that can be run from a widget.</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/headless">headless</a></th>
+					<td>Install and configure some <a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a> apps useful for headless systems and systems that are often accessed remotely.  Includes <a href="https://hisham.hm/htop/">htop</a>, <a href="http://www.ex-parrot.com/pdw/iftop/">iftop</a>, <a href="https://dev.yorhel.nl/ncdu">ncdu</a>, <a href="https://github.com/tmux/tmux/wiki">tmux</a> and <a href="https://midnight-commander.org/">Midnight Commander</a>.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/homeassistant">homeassistant</a></th>

@@ -9,28 +9,28 @@
 		<div id="page">
 			<h2 class="align-center">WiSHABI</h2>
 			<a href="images/wishabi_01.jpg"><img class="photo align-left" src="images/small_wishabi_01.jpg" alt="The final project." /></a>
-			<p>WiSHABI (WIreless Single-Handed Accelerometer-based Interface) is the project I created for completion of my university course. It was my first real exposure to programming microcontrollers and was a significant learning experience.</p>
+			<p>WiSHABI (WIreless Single-Handed Accelerometer-based Interface) is the project I created to complete of my university course. It was my first real exposure to programming microcontrollers and was a significant learning experience.</p>
 			<p>The hardware consists of two units:</p>
 			<ol>
 				<li>Transmitter
 				<ul>
-					<li>Atemega8 AVR microcontroller.</li>
-					<li>ADXL330 three-axis  accelerometer.</li>
+					<li><a href="https://www.microchip.com/wwwproducts/en/ATmega8">ATmega8</a> AVR microcontroller.</li>
+					<li><a href="https://www.analog.com/en/products/adxl330.html">ADXL330</a> three-axis  accelerometer.</li>
 					<li>Battery pack with charge controller.</li>
 					<li>433.92MHx serial transmitter module.</li>
 				</ul>
 				<li>Receiver
 				<ul>
-					<li>Atemega8 AVR microcontroller.</li>
+					<li><a href="https://www.microchip.com/wwwproducts/en/ATmega8">ATmega8</a> AVR microcontroller.</li>
 					<li>USB Connector.</li>
 					<li>Detachable LED grid display.</li>
 					<li>433.92MHx serial receiver module.</li>
 				</ul></li>	
 			</ol>
-			<p>A user of WiSHABI would connect the receiver into a USB port and then the transmitter can be used to as an input device.  It would switch between two modes - mouse and keyboard.</p>
-			<p>In mouse mode the cursor would be moved by the tilting motion of the transmitter and thumb buttons used for left- and right-click.</p>
-			<p>To type in keyboard mode, the unit would be pointed into one of nine sectors in a 3x3 grid then click to scroll through characters similar to the 3x3 grid of a mobile phone keypad (this was pre-touchscreen smartphones!).</p>
-			<p>The receiver unit connects to a PC via a USB-B connecor.  The ATmega8 doesn't have a USB peripheral, so the USB HID implementation was implemented with <a href="https://www.obdev.at/products/vusb/index.html">V-USB</a>.</p>
+			<p>A user of WiSHABI would connect the receiver into a USB port and then the transmitter can be used to as an input device.  It could be switched between two modes - mouse and keyboard.</p>
+			<p>In mouse mode the cursor would be moved by the tilting motion of the transmitter.  Thumb buttons are used for left- and right-click.</p>
+			<p>To type in keyboard mode, the unit would be pointed into one of nine sectors in a 3x3 grid then click to scroll through characters.  A similar concept to the 3x3 alpha-numeric character grid of a mobile phone keypad (this was pre-touchscreen smartphones!).</p>
+			<p>The receiver unit connects to a PC via a USB-B connecor.  The ATmega8 doesn't have a USB peripheral, so the USB HID implementation was done in code with <a href="https://www.obdev.at/products/vusb/index.html">V-USB</a>.</p>
 			<p>An aluminium enclosure was used for the receiver unit and a broken cordless screwdriver body was re-purposed for the transmitter.</p>
 			<p>The transmitter ran off batteries but would still operate when tethered to a plug-pack for charging.</p>
 			<p>In addition to the photo gallery below, I also archived the following resources:</p>
