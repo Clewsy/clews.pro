@@ -13,15 +13,15 @@
 			<p>This project combined a handful of smaller project ideas:</p>
 			<ul>
 				<li>Make a device that monitors and reports the inside temperature at home.</li>
-				<li>Learn how to use an ESP8266 chip.</li>
+				<li>Learn how to use an <a href="http://esp8266.net/">ESP8266</a> chip.</li>
 				<li>Put to use (and potentially showcase) a <a href="https://hackaday.com/2014/10/10/10th-anniversary-trinket-pro-now-in-the-hackaday-store/">Hackaday 10-year anniversary special-edition Pro-Trinket module</a> that has sat un-used for about 6 years.</li>
-				<li>Try out the arduino platform (IDE and bootloader) instead of directly programming a microcontroller.</li>
+				<li>Try out the <a href="https://www.arduino.cc/">arduino</a> platform (IDE and bootloader) instead of directly programming a microcontroller.</li>
 				<li>Use C++ for a microcontroller project instead of C.</li>
 			</ul>
 			<p>The final system is comprised of the following main components:</p>
 			<ul>
 				<li>ESP8266 (ESP-01 module) - Acts as a web-server to provide temperature and humidity readings over http/WiFi.</li>
-				<li>HDC1080 module - Temperature/Humidity sensor that communicates over I2C.</li>
+				<li><a href="https://www.ti.com/product/HDC1080">HDC1080</a> module - Temperature/Humidity sensor that communicates over I2C.</li>
 				<li>SSD1306 OLED module - also communicates over I2C - used as a local display for temperature/humidity readings.</li>
 				<li>Pro Trinket 5V (Hackaday 10-Year Anniversary Special-Edition) - Controls the SSD1306 and the HDC1080.  Sends temperature/humidity readings over serial to the ESP8266 module.</li>
 			</ul>
@@ -70,16 +70,17 @@
 			<p>While programming the ESP8266 I drew from existing example libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
 			<hr />
 			<h3>SSD1306</h3>
-			<p>I had some prior familiarity with the SSD1306 OLED driver on a <a href="https://clews.pro/projects/grinder_timer.php">previous project</a>.  There are a couple of differences this time in the way I implemented the driver:</p>
+			<p>I had some prior familiarity with the SSD1306 OLED driver on a <a href="https://clews.pro/projects/grinder_timer.php">previous project</a>.  There are a few differences this time in the way I implemented the driver:</p>
 			<ul>
+				<li>The module I used was configued for I2C comms instead of SPI.</li>
 				<li>C++ instead of C.  This meant creating a class and declaring private and public functions.</li>
-				<li>Character and string functions more efficient and (somewhat) more robust.</li>
+				<li>Character and string functions were made more efficient and (somewhat) more robust.</li>
 			</ul>
-			<p>To display text on the oled, I can now just specify a font array plus coordinates, and the char/string functions will output to the SSD1306/OLED regardless of font characteristics (character widths and font height).  To create the char/string functions I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  After getting my head around the font and character metadata embedded in the array, I could create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments around these functions that I addeed as I went - this is part of my learning process, plus I'm sure I'll have to re-learn this one day when I return to the project for whatever reason.</p>
+			<p>To display text on the oled, I can now just specify a font array plus coordinates, and the char/string functions will output to the SSD1306/OLED regardless of font characteristics (character widths and font height).  To create the char/string functions I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  After getting my head around the font and character metadata embedded in the array, I was able to create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments around these functions that I added as I went - this is part of my learning process, plus I'm sure I'll have to re-learn this one day when I return to the project for whatever reason.</p>
 			<hr />
 			<h3>HDC1080</h3>
 			<p>The HDC1080 is a temperature and humidity sensor that interfaces over I2C.  Similar to the OLED/SSD1306, I wrote a project-specific driver for it.</p>
-			<p>When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which gave it 100mm or so clearance from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had located the sensor on the PCB too close to the 3.3V regulator on the opposite side, so the waste heat from the regulator was therefore affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located more-or-less opposite corners (and opposite sides) of the PCB to give the sensor additional copper with which to dissipate heat before affecting the HDC1080.  This improved the accuracy of the sensor readings, but it was still showing higher than my callibration thermometer.  Fortunately the delta was a consistent value regardless of temperature so ultimately I added a bodge-factor in code to compensate.</p>
+			<p>When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which gave it 100mm or so clearance from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had located the sensor on the PCB too close to the 3.3V regulator on the opposite side, so the waste heat from the regulator was affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located at opposite corners and sides of the PCB to give the sensor additional copper into which it could dissipate heat.  This improved the accuracy of the sensor readings, but it was still showing higher than my callibration thermometer.  Fortunately the delta was a consistent value regardless of temperature so ultimately I added a bodge-factor in code to compensate.</p>
 			<hr />
 			<h3>PCB</h3>
 			<p>The schematic and PCB layouts were created with <a href="https://kicad-pcb.org/">KiCad</a>.  Early iterations included a header for an FTDI serial adapter intended to facillitate programming of the ESP-01.  This was removed from the final PCB iteration for simplicity.</p>
@@ -92,7 +93,7 @@
 			</ul>
 			<hr />
 			<h3>Final Assembly</h3>
-			<p>Since the idea was to show off the Pro Trinket, I diesigned the PCB to suit an enclosure with a transparent lid that I had on hand.  A panel mount micro-usb port on the side supplies power and also passes through data to allow re-programming without opening the case (for the Pro-Trinket at least - programming the ESP-01 requires removal of the module from the rest of the unit).</p>
+			<p>Since the idea was to show off the Pro Trinket, I designed the PCB to suit an enclosure with a transparent lid that I had on hand.  A panel mount micro-usb port on the side supplies power and also passes through data to allow re-programming without opening the case (for the Pro-Trinket at least - programming the ESP-01 requires removal of the module from the rest of the unit).</p>
 			<p>A push-button on top cycles through the different display modes.  I included an LED on one of the analogue outputs which really doesn't serve much purpose except to add some extra bling.  It is just set to pulse continuously.  I located it so that it shines through the mounting hole on the Pro Trinket right under the Jolly-Wrencher symbol.</p>
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">

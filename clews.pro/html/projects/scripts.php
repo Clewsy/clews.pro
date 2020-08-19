@@ -24,11 +24,11 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu.sh">bu.sh</a></th>
-					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories in a list file to a remote server.</td>
+					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories defined in a list file to a remote server.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">p0wer_switch.sh</a></th>
-					<td>Written for use with <a href="https://termux.com/">termux</a> to connect to a server that can control wireless mains outlets via p0wer (<a href="https://gitlab.com/Clewsy/p0wer">gitlab link</a>).</td>
+					<td>Written for use with <a href="https://termux.com/">termux</a> to connect to a server that can control wireless mains outlets via <a href="https://gitlab.com/Clewsy/p0wer">p0wer</a>.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/pong.sh">pong.sh</a></th>
@@ -36,15 +36,15 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/polly.sh">polly.sh</a></th>
-					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs the site status to a file and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
+					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs the result and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/stuff.sh">stuff.sh</a></th>
-					<td>Pulls and lists a bunch of useful (to me) info about the host (hardware, disks/mounts, OS, network).</td>
+					<td>Pulls and lists a bunch of useful (to me) info about the host (hardware, disks/mounts, OS, network, etc).</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/vpn.sh">vpn.sh</a></th>
-					<td>Kills current openvpn service then reconnects and confirms.  Useful for quickly re-establishing connection if it goes bad.</td>
+					<td>Kills current <a href="https://openvpn.net/">openvpn</a> service then reconnects and confirms.  Useful for quickly establishing or re-establishing a vpn connection.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/wami.sh">wami.sh</a></th>
@@ -66,7 +66,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/cal_backup.sh">cal_backup.sh</a></th>
-					<td>Generates an *.ics file from a nextcloud calendar and archives it.  Intended to be used as a cronjob.  No longer used since migrating my nextcloud service to a docker container.</td>
+					<td>Generates an *.ics file from a <a href="https://nextcloud.com/">nextcloud</a> calendar and archives it.  Intended to be used as a cronjob.  No longer used since migrating my nextcloud service to a <a href="https://www.docker.com/">docker</a> container.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/chuck.sh">chuck.sh</a></th>
@@ -78,7 +78,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/nc_backup.sh">nc_backup.sh</a></th>
-					<td>Creates a local copy of all the important files related to a nextcloud instance - including a mysqldump of the database.  No longer used since migrating my nextcloud service to a docker container.</td>
+					<td>Creates a local copy of all the data files from a <a href="https://nextcloud.com/">nextcloud</a> instance - including a mysqldump of the database.  No longer used since migrating my nextcloud service to a <a href="https://www.docker.com/">docker</a> container.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/roll_out.sh">roll_out.sh</a></th>
@@ -86,7 +86,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/ytdl.sh">ytdl.sh</a></th>
-					<td>ytdl.sh - Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  Archived as I no longer use this since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  Newpipe has direct download capability.</td>
+					<td>ytdl.sh - Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  Archived as I no longer use this since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  NewPipe has direct download capability.</td>
 				</tr>
 			</table>
 		</div>
