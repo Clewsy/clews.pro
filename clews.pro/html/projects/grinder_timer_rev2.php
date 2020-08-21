@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">grinder_timer_rev2</h2>
-			<a href="images/grinder_timer_rev2_05.jpg"><img class="photo align-left" src="images/small_grinder_timer_rev2_05.jpg" alt="The final timer."></a>
+			<a href="images/grinder_timer_rev2_11.jpg"><img class="photo align-left" src="images/small_grinder_timer_rev2_11.jpg" alt="The final timer."></a>
 			<p>An upgrade to the original <a href="/projects/grinder_timer.php">grinder_timer</a> - a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
 			<p>Honestly, I use the original every day and it hass been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.</p>
 			<p>The goals for revision 2 included:</p>
@@ -50,10 +50,17 @@
 			</ul>
 			<p>Code, schematic and PCB layout are all in the <a href="https://gitlab.com/clewsy/grinder_timer">gitlab repo</a>.  This is the same repo used for the original version.</p>
 			<hr />
+			<h3>Operation</h3>
+			<a href="images/grinder_timer_rev2_13.gif"><img class="photo align-right" src="images/small_grinder_timer_rev2_13.gif" alt="The final timer in action."></a>
+			<p>The user has 4 available timer presets - A, B, C and D.  A preset is selected by scrolling left or right with the d-pad.  To configure a preset, scrolling up or down increases or decreases the value of the timer in increments of 0.25 seconds.  The maximum configurable timer is 60 seconds and the minimum is one second.  A preset value is saved to eeprom whenever it is used or a different preset is selected.</p>
+			<p>Once a desired timer is set, pressing the grind button will turn on the grind motor and begin counting down to zero.  Once zero is reached, the grinder is turned off and the timer resets to the value of the preset.  Pressing any button whilst the grinder is running cancels the grind (turns the motor off) and resets the timer.</p>
+			<p>After 120 seconds of inactivity, the timer enters a "sleep mode" whereby the OLED is deactivated.  Pressing any button will take the timer out of sleep mode.</p>
+			<p>The grind button is illuminated when it is ready to use and off while a grind is underway.  The LED pulses while the timer is in sleep mode.</p>
+			<hr />
 			<h3>Hardware</h3>
-			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
-			<p>I found some surface-mount tactile buttons with keycaps for the keypad.  The four direction buttons are identical, the grind button is similar but with a built-in white LED.  This LED was connected to a pin with PWM output capability.</p>
-			<p>A suitable enclosure was selected and its internal dimensions dictated the dimensions for the PCB design.</p>
+			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (i.e. the toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
+			<p>I found some surface-mount tactile buttons with keycaps for the keypad.  The four direction buttons are identical, the grind button is similar but with a built-in white LED.  This LED was connected to a pin with PWM output capability to enable variable brightness.</p>
+			<p>A suitable aluminium enclosure was selected and its internal dimensions dictated the dimensions for the PCB design.</p>
 			<hr />
 			<h3>Firmware</h3>
 			<p>In developing a recent project (<a href="/projects/temp0.php">temp0</a>) I tried out an Arduino platform and programming.  I didn't care much for the Arduino IDE, but I learned how C++ brings some advantages to firmware programming.  So for grinder_timer_rev2 I re-wrote the firmware from scratch and made use of classes.  I still opted to directly program the microcontroller as I saw no advantages in using the Arduino bootloader.</p>
@@ -129,10 +136,15 @@
 				</tr>
 				<tr>
 					<td class="align-left"><a href="images/grinder_timer_rev2_07.jpg"><img class="photo" src="images/small_grinder_timer_rev2_07.jpg" alt="PCB assembled top, another angle." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_08.jpg"><img class="photo" src="images/small_grinder_timer_rev2_08.jpg" alt="Night shot of the OLED." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_08.jpg"><img class="photo" src="images/small_grinder_timer_rev2_08.jpg" alt="Close shot of the OLED." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_09.png"><img class="photo" src="images/grinder_timer_rev2_09.png" alt="The complete schematic." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2_09.jpg"><img class="photo" src="images/small_grinder_timer_rev2_09.jpg" alt="Template for enclosure cut-out." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_10.jpg"><img class="photo" src="images/small_grinder_timer_rev2_10.jpg" alt="Enclosure prepared." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/grinder_timer_rev2_12.jpg"><img class="photo" src="images/small_grinder_timer_rev2_12.jpg" alt="Installed into the enclosure and powered on." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_13.png"><img class="photo" src="images/grinder_timer_rev2_13.png" alt="The complete schematic." /></a></td>
 				</tr>
 			</table>
 		</div>
