@@ -54,7 +54,7 @@
 					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, Microcontroller, C, KiCAD, PCB Etching</td>
 				</tr>
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
-					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_rev2_01.jpg" /></a></td>
+					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_rev2_12.jpg" /></a></td>
 					<td>An upgrade to the original grinder_timer.</td>
 					<td class="date">2020-08-21</td>
 					<td class="links">
