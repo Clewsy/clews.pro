@@ -144,7 +144,7 @@
 				</tr>
 				<tr>
 					<td class="align-left"><a href="images/grinder_timer_rev2_12.jpg"><img class="photo" src="images/small_grinder_timer_rev2_12.jpg" alt="Installed into the enclosure and powered on." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_13.png"><img class="photo" src="images/grinder_timer_rev2_13.png" alt="The complete schematic." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2_14.png"><img class="photo" src="images/grinder_timer_rev2_14.png" alt="The complete schematic." /></a></td>
 				</tr>
 			</table>
 		</div>
