@@ -59,6 +59,7 @@
 					<td class="date">2020-08-21</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer_rev2">gitlab</a>
+						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
 					</td>
 					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancillio Rocky, PWM, 32.738kHz, PlatformIO</td>
 				</tr>
