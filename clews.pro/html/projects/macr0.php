@@ -22,6 +22,8 @@
 			</ol>
 			<p><a href="https://kicad-pcb.org/">KiCad</a> for PCB design and <a href="https://jlcpcb.com/">JLCPCB</a> for fabrication.  <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/">PlatformIO IDE</a> extension for developng the firmware.  <a href="https://gitlab.com/clewsy/macr0/-/tree/master/hardware">Hardware</a> (schematic and PCB design) and <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">firmware</a> are all open and published in a <a href="https://gitlab.com/clewsy/macr0/">Gitlab repository</a>.</p>
 			<hr />
+			<h3>Summary</h3>
+			<p>For the most part, everything worked out.  The only goal I didn't quite hit was in regards to the LED backlighting.  I used a CAT4101 LED but I didn't size the LEDs correctly.  Using 4 LEDs total, I used two channels of the CAT4104 with two LEDs per channel.  With VCC at 5V and the CAT4104 requiring 0.4V headroom, that leaves 4.6V per channel or 2.3V per LED.  The LEDs I used are rated at 3.5V.  As a result, I still have backlighting but at a lower brightness and with some instability (flickering).</p>
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
