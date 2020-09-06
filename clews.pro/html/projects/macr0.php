@@ -25,7 +25,7 @@
 			<h2>Reflection</h2>
 			<p>For the most part, everything worked out.  The only goal I didn't quite hit was in regards to the LED backlighting.  I used a CAT4101 LED but I didn't size the LEDs correctly.  Using 4 LEDs total, I used two channels of the CAT4104 with two LEDs per channel.  With VCC at 5V and the CAT4104 requiring 0.4V headroom, that leaves 4.6V per channel or 2.3V per LED.  The LEDs I used are rated at 3.5V.  As a result, I still have backlighting but at a lower brightness and with some instability (flickering).</p>
 			<p>I have been using the device as a media controller with the keys configured as play/pause, stop, previous and next.</p>
-			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A photo in the gallery below shows both devices together.</p> 
+			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A <a href="images/macr0_13.jpg">photo</a> in the gallery below shows both devices together.</p> 
 			<p>I would make a few changes for a future revision:</p>
 			<ul>
 				<li>The smd crystal foorprint was from the included KiCad libray and has huge pads to ease hand-soldering.  They take up too much space and could easily be much smaller and still hand-solderable.</li>
