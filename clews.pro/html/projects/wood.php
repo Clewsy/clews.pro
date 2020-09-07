@@ -32,6 +32,7 @@
 				</tr>
 				<tr>
 					<td class="align-left"><a href="wood/desk.php"><img class="photo" src="wood/photos/desk/small_desk_5.jpg" title="Desk"></a></td>
+					<td class="align-right"><a href="wood/frame_4.php"><img class="photo" src="wood/photos/frame_4/small_frame_4_08.jpg" title="Small Frames"></a></td>
 				</tr>
 			</table>
 		</div>
