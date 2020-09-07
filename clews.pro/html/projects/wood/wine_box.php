@@ -11,15 +11,15 @@
 			<hr />
 			<div id="gallery">
 				<h2 class="align-center">Gallery</h2>
-				<a href="photos/wine_box/wine_box_1.jpg"><img class="photo" src="photos/wine_box/small_wine_box_1.jpg"></a>
-				<a href="photos/wine_box/wine_box_2.jpg"><img class="photo" src="photos/wine_box/small_wine_box_2.jpg"></a>
-				<a href="photos/wine_box/wine_box_3.jpg"><img class="photo" src="photos/wine_box/small_wine_box_3.jpg"></a>
-				<a href="photos/wine_box/wine_box_4.jpg"><img class="photo" src="photos/wine_box/small_wine_box_4.jpg"></a>
-				<a href="photos/wine_box/wine_box_5.jpg"><img class="photo" src="photos/wine_box/small_wine_box_5.jpg"></a>
-				<a href="photos/wine_box/wine_box_6.jpg"><img class="photo" src="photos/wine_box/small_wine_box_6.jpg"></a>
-				<a href="photos/wine_box/wine_box_7.jpg"><img class="photo" src="photos/wine_box/small_wine_box_7.jpg"></a>
-				<a href="photos/wine_box/wine_box_8.jpg"><img class="photo" src="photos/wine_box/small_wine_box_8.jpg"></a>
-				<a href="photos/wine_box/wine_box_9.jpg"><img class="photo" src="photos/wine_box/small_wine_box_9.jpg"></a>
+				<a href="photos/wine_box/wine_box_01.jpg"><img class="photo" src="photos/wine_box/small_wine_box_01.jpg"></a>
+				<a href="photos/wine_box/wine_box_02.jpg"><img class="photo" src="photos/wine_box/small_wine_box_02.jpg"></a>
+				<a href="photos/wine_box/wine_box_03.jpg"><img class="photo" src="photos/wine_box/small_wine_box_03.jpg"></a>
+				<a href="photos/wine_box/wine_box_04.jpg"><img class="photo" src="photos/wine_box/small_wine_box_04.jpg"></a>
+				<a href="photos/wine_box/wine_box_05.jpg"><img class="photo" src="photos/wine_box/small_wine_box_05.jpg"></a>
+				<a href="photos/wine_box/wine_box_06.jpg"><img class="photo" src="photos/wine_box/small_wine_box_06.jpg"></a>
+				<a href="photos/wine_box/wine_box_07.jpg"><img class="photo" src="photos/wine_box/small_wine_box_07.jpg"></a>
+				<a href="photos/wine_box/wine_box_08.jpg"><img class="photo" src="photos/wine_box/small_wine_box_08.jpg"></a>
+				<a href="photos/wine_box/wine_box_09.jpg"><img class="photo" src="photos/wine_box/small_wine_box_09.jpg"></a>
 				<a href="photos/wine_box/wine_box_10.jpg"><img class="photo" src="photos/wine_box/small_wine_box_10.jpg"></a>
 				<a href="photos/wine_box/wine_box_11.jpg"><img class="photo" src="photos/wine_box/small_wine_box_11.jpg"></a>
 				<a href="photos/wine_box/wine_box_12.jpg"><img class="photo" src="photos/wine_box/small_wine_box_12.jpg"></a>

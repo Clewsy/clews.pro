@@ -11,15 +11,15 @@
 			<hr />
 			<div id="gallery">
 				<h2 class="align-center">Gallery</h2>
-				<a href="photos/frame_1/frame_1_1.jpg"><img class="photo" src="photos/frame_1/small_frame_1_1.jpg"></a>
-				<a href="photos/frame_1/frame_1_2.jpg"><img class="photo" src="photos/frame_1/small_frame_1_2.jpg"></a>
-				<a href="photos/frame_1/frame_1_3.jpg"><img class="photo" src="photos/frame_1/small_frame_1_3.jpg"></a>
-				<a href="photos/frame_1/frame_1_4.jpg"><img class="photo" src="photos/frame_1/small_frame_1_4.jpg"></a>
-				<a href="photos/frame_1/frame_1_5.jpg"><img class="photo" src="photos/frame_1/small_frame_1_5.jpg"></a>
-				<a href="photos/frame_1/frame_1_6.jpg"><img class="photo" src="photos/frame_1/small_frame_1_6.jpg"></a>
-				<a href="photos/frame_1/frame_1_7.jpg"><img class="photo" src="photos/frame_1/small_frame_1_7.jpg"></a>
-				<a href="photos/frame_1/frame_1_8.jpg"><img class="photo" src="photos/frame_1/small_frame_1_8.jpg"></a>
-				<a href="photos/frame_1/frame_1_9.jpg"><img class="photo" src="photos/frame_1/small_frame_1_9.jpg"></a>
+				<a href="photos/frame_1/frame_1_01.jpg"><img class="photo" src="photos/frame_1/small_frame_1_01.jpg"></a>
+				<a href="photos/frame_1/frame_1_02.jpg"><img class="photo" src="photos/frame_1/small_frame_1_02.jpg"></a>
+				<a href="photos/frame_1/frame_1_03.jpg"><img class="photo" src="photos/frame_1/small_frame_1_03.jpg"></a>
+				<a href="photos/frame_1/frame_1_04.jpg"><img class="photo" src="photos/frame_1/small_frame_1_04.jpg"></a>
+				<a href="photos/frame_1/frame_1_05.jpg"><img class="photo" src="photos/frame_1/small_frame_1_05.jpg"></a>
+				<a href="photos/frame_1/frame_1_06.jpg"><img class="photo" src="photos/frame_1/small_frame_1_06.jpg"></a>
+				<a href="photos/frame_1/frame_1_07.jpg"><img class="photo" src="photos/frame_1/small_frame_1_07.jpg"></a>
+				<a href="photos/frame_1/frame_1_08.jpg"><img class="photo" src="photos/frame_1/small_frame_1_08.jpg"></a>
+				<a href="photos/frame_1/frame_1_09.jpg"><img class="photo" src="photos/frame_1/small_frame_1_09.jpg"></a>
 				<a href="photos/frame_1/frame_1_10.jpg"><img class="photo" src="photos/frame_1/small_frame_1_10.jpg"></a>
 				<a href="photos/frame_1/frame_1_11.jpg"><img class="photo" src="photos/frame_1/small_frame_1_11.jpg"></a>
 				<a href="photos/frame_1/frame_1_12.jpg"><img class="photo" src="photos/frame_1/small_frame_1_12.jpg"></a>

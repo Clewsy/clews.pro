@@ -11,12 +11,12 @@
 			<hr />
 			<div id="gallery">
 				<h2 class="align-center">Gallery</h2>
-				<a href="photos/desk/desk_1.jpg"><img class="photo" src="photos/desk/small_desk_1.jpg"></a>
-				<a href="photos/desk/desk_2.jpg"><img class="photo" src="photos/desk/small_desk_2.jpg"></a>
-				<a href="photos/desk/desk_3.jpg"><img class="photo" src="photos/desk/small_desk_3.jpg"></a>
-				<a href="photos/desk/desk_4.jpg"><img class="photo" src="photos/desk/small_desk_4.jpg"></a>
-				<a href="photos/desk/desk_5.jpg"><img class="photo" src="photos/desk/small_desk_5.jpg"></a>
-				<a href="photos/desk/desk_6.jpg"><img class="photo" src="photos/desk/small_desk_6.jpg"></a>
+				<a href="photos/desk/desk_01.jpg"><img class="photo" src="photos/desk/small_desk_01.jpg"></a>
+				<a href="photos/desk/desk_02.jpg"><img class="photo" src="photos/desk/small_desk_02.jpg"></a>
+				<a href="photos/desk/desk_03.jpg"><img class="photo" src="photos/desk/small_desk_03.jpg"></a>
+				<a href="photos/desk/desk_04.jpg"><img class="photo" src="photos/desk/small_desk_04.jpg"></a>
+				<a href="photos/desk/desk_05.jpg"><img class="photo" src="photos/desk/small_desk_05.jpg"></a>
+				<a href="photos/desk/desk_06.jpg"><img class="photo" src="photos/desk/small_desk_06.jpg"></a>
 			</div>
 		</div>
 	</body>

@@ -11,15 +11,15 @@
 			<hr />
 			<div id="gallery">
 				<h2 class="align-center">Gallery</h2>
-				<a href="photos/pet_bowls/pet_bowls_1.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_1.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_2.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_2.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_3.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_3.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_4.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_4.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_5.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_5.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_6.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_6.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_7.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_7.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_8.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_8.jpg"></a>
-				<a href="photos/pet_bowls/pet_bowls_9.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_9.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_01.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_01.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_02.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_02.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_03.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_03.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_04.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_04.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_05.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_05.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_06.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_06.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_07.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_07.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_08.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_08.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_09.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_09.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_10.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_10.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_11.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_11.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_12.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_12.jpg"></a>

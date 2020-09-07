@@ -11,9 +11,9 @@
 			<hr />
 			<div id="gallery">
 				<h2 class="align-center">Gallery</h2>
-				<a href="photos/frame_3/frame_3_1.jpg"><img class="photo" src="photos/frame_3/small_frame_3_1.jpg"></a>
-				<a href="photos/frame_3/frame_3_2.jpg"><img class="photo" src="photos/frame_3/small_frame_3_2.jpg"></a>
-				<a href="photos/frame_3/frame_3_3.jpg"><img class="photo" src="photos/frame_3/small_frame_3_3.jpg"></a>
+				<a href="photos/frame_3/frame_3_01.jpg"><img class="photo" src="photos/frame_3/small_frame_3_01.jpg"></a>
+				<a href="photos/frame_3/frame_3_02.jpg"><img class="photo" src="photos/frame_3/small_frame_3_02.jpg"></a>
+				<a href="photos/frame_3/frame_3_03.jpg"><img class="photo" src="photos/frame_3/small_frame_3_03.jpg"></a>
 			</div>
 		</div>
 	</body>

@@ -11,22 +11,22 @@
 			<hr />
 			<div id="gallery">
 				<h2 class="align-center">Gallery</h2>
-				<a href="photos/frame_2/frame_2_1.jpg"><img class="photo" src="photos/frame_2/small_frame_2_1.jpg"></a>
-				<a href="photos/frame_2/frame_2_2.jpg"><img class="photo" src="photos/frame_2/small_frame_2_2.jpg"></a>
-				<a href="photos/frame_2/frame_2_3.jpg"><img class="photo" src="photos/frame_2/small_frame_2_3.jpg"></a>
-				<a href="photos/frame_2/frame_2_4.jpg"><img class="photo" src="photos/frame_2/small_frame_2_4.jpg"></a>
-				<a href="photos/frame_2/frame_2_5.jpg"><img class="photo" src="photos/frame_2/small_frame_2_5.jpg"></a>
-				<a href="photos/frame_2/frame_2_6.jpg"><img class="photo" src="photos/frame_2/small_frame_2_6.jpg"></a>
-				<a href="photos/frame_2/frame_2_7.jpg"><img class="photo" src="photos/frame_2/small_frame_2_7.jpg"></a>
-				<a href="photos/frame_2/frame_2_8.jpg"><img class="photo" src="photos/frame_2/small_frame_2_8.jpg"></a>
-				<a href="photos/frame_2/frame_2_9.jpg"><img class="photo" src="photos/frame_2/small_frame_2_9.jpg"></a>
+				<a href="photos/frame_2/frame_2_01.jpg"><img class="photo" src="photos/frame_2/small_frame_2_01.jpg"></a>
+				<a href="photos/frame_2/frame_2_02.jpg"><img class="photo" src="photos/frame_2/small_frame_2_02.jpg"></a>
+				<a href="photos/frame_2/frame_2_03.jpg"><img class="photo" src="photos/frame_2/small_frame_2_03.jpg"></a>
+				<a href="photos/frame_2/frame_2_04.jpg"><img class="photo" src="photos/frame_2/small_frame_2_04.jpg"></a>
+				<a href="photos/frame_2/frame_2_05.jpg"><img class="photo" src="photos/frame_2/small_frame_2_05.jpg"></a>
+				<a href="photos/frame_2/frame_2_06.jpg"><img class="photo" src="photos/frame_2/small_frame_2_06.jpg"></a>
+				<a href="photos/frame_2/frame_2_07.jpg"><img class="photo" src="photos/frame_2/small_frame_2_07.jpg"></a>
+				<a href="photos/frame_2/frame_2_08.jpg"><img class="photo" src="photos/frame_2/small_frame_2_08.jpg"></a>
+				<a href="photos/frame_2/frame_2_09.jpg"><img class="photo" src="photos/frame_2/small_frame_2_09.jpg"></a>
 				<a href="photos/frame_2/frame_2_10.jpg"><img class="photo" src="photos/frame_2/small_frame_2_10.jpg"></a>
 				<a href="photos/frame_2/frame_2_11.jpg"><img class="photo" src="photos/frame_2/small_frame_2_11.jpg"></a>
 				<a href="photos/frame_2/frame_2_12.jpg"><img class="photo" src="photos/frame_2/small_frame_2_12.jpg"></a>
 				<a href="photos/frame_2/frame_2_13.jpg"><img class="photo" src="photos/frame_2/small_frame_2_13.jpg"></a>
 				<a href="photos/frame_2/frame_2_14.jpg"><img class="photo" src="photos/frame_2/small_frame_2_14.jpg"></a>
 				<a href="photos/frame_2/frame_2_15.jpg"><img class="photo" src="photos/frame_2/small_frame_2_15.jpg"></a>
-				<a href="photos/frame_2/frame_2_16.jpg"><img class="photo align-right" src="photos/frame_2/small_frame_2_16.jpg"></a>
+				<a href="photos/frame_2/frame_2_16.jpg"><img class="photo" src="photos/frame_2/small_frame_2_16.jpg"></a>
 			</div>
 		</div>
 	</body>
