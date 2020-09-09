@@ -145,7 +145,7 @@
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
 						<a href="https://hackaday.io/project/171367-temp0">hackaday.io</a><br />
 					</td>
-					<td>Arduino, Pro-Trinket, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
+					<td>Arduino, Pro-Trinket, Adafruit, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
