@@ -108,12 +108,12 @@
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
 					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer_01.jpg" /></a></td>
 					<td>Simple rf mains remote switches hacked to add wifi control.</td>
-					<td class="date">2020-04-30</td>
+					<td class="date">2020-09-09</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/p0wer-control-mains-outlets-over-wifi">core-electronics</a>
 					</td>
-					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, wiringpi, pigpio, Termux, C, PHP, cURL, Automation, KiCAD</td>
+					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, wiringpi, pigpio, Termux, C, PHP, cURL, Automation, KiCAD, Ansible</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
@@ -124,7 +124,7 @@
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/rad10">core-electronics</a>
 					</td>
-					<td>Rotary Encoder, Raspberry Pi, Raspbian, mpd, mpc, libmpdclient, wiringpi, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS, Wood</td>
+					<td>Rotary Encoder, Raspberry Pi, Raspbian, Ubuntu, mpd, mpc, libmpdclient, wiringpi, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS, Ansible, Wood</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>

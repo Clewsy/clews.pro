@@ -39,10 +39,16 @@
 			<p>Clone this repository and enter the cloned project directory:</p>
 			<p class="code">$ git clone https://gitlab.com/clewsy/p0wer<br/>
 					$ cd p0wer</p>
-			<p>Compile the executable:</p>
-			<p class="code">$ make all</p>
-			<p>The binary is now ready to use.  For frequent calls it can be copied to the /usr/local/sbin directory:</p>
-			<p class="code">$ sudo cp p0wer /usr/local/sbin/p0wer</p>
+			<p>Compile and install the executable:</p>
+			<p class="code">$ sudo make install</p>
+			<p>The binary is now ready to use.  This can be tested by running the command with no arguments.  It should print the usage to screen.</p>
+			<p class="code">$ p0wer<br/>
+					Usage: p0wer <channel(a,b,c,d)> <on/off></p>
+			<p><b>NOTE</b> using the <b>sudo make install</b> command as per the instructions above will automatically set the SUID bit (i.e. set the setuid flag) for the executable file.  This means it is executed with owner (root) privileges.  As such, it can be run (and the GPIO pins can be manipulated) with out prepending the command with sudo.  If you want to install the file without this permission, use the following commands instead of running <b>sudo make install</b>:</p>
+			<p class="code">$ make<br/>
+					$ sudo cp p0wer /usr/local/sbin/p0wer</p>
+
+
 			<hr />
 			<h3>Usage</h3>
 			<p>In the future, I intend to facillitate switching of these mains outlet units via a web-server.  However until I finish that project, manipulating the outlets is done by running the compiled program.</p>
@@ -61,12 +67,15 @@
 			<h3>WebUI</h3>
 			<p>In December 2019, I decided to create a simple web interface for controlling all 4 channels from a browser.  I wrote a simple php script and combined it with some basic html and css.  Combined with <a href="http://www.apache.org/">Apache</a> and <a href="https://www.php.net/">php</a> installed on the raspberry pi, I am now able to control power points from and browser with access to the local network.  To achieve this I learned about setting the SUID bit on an executable so that when called by the web user (www-data) it is still executed as root.  WebUI setup instructions can be found in the <a href="https://gitlab.com/clewsy/p0wer">README</a> at gitlab.</p>
 			<p>As a bonus, the webui allows me to script control of the remote units using a <a href="https://curl.haxx.se/">curl</a> command as an alternative to ssh.  Using curl to control the outlets enables simple integration into automation platforms such as <a href="https://www.openhab.org/">openHAB</a> or <a href="https://www.home-assistant.io/">Home Assistant</a>.  The following example commands produce an equivalent result (turning on channel a).</p>
-			<p><b>Using ssh</b> (user "pi" on host "raspberrypi"):</p>
+			<p><b>Using ssh</b> (user <b>pi</b> on host <b>raspberrypi</b>):</p>
 			<p class="code">$ ssh pi@raspberrypi "sudo p0wer a on"</p>
-			<p><b>Using curl</b> (host "raspberrypi" or host IP "192.168.1.123"):</p>
+			<p><b>Using curl</b> (hostname <b>raspberrypi</b> or host IP <b>192.168.1.123</b>):</p>
 			<p class="code">$ curl --silent http://raspberrypi/index.php?a=ON &gt;&gt; /dev/null</p>
 			<p>or</p>
 			<p class="code">$ curl --silent http://192.168.1.123/index.php?a=ON &gt;&gt; /dev/null</p>
+			<hr />
+			<h3>Ansible Deployment</h3>
+			<p>As part of another project (<a href="/projects/clewsy_ansible.php">clewsy_ansible</a>) I have automated installation of the p0wer command and the webui.  Starting with a fresh <a href="https://www.raspberrypi.org/downloads/">Raspberry Pi OS</a> installation on a raspberry pi, I can run a single <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/p0wer.yml">playbook</a> that will install the dependencies, clone and install the executable and configure the webui.  See the <a href="https://gitlab.com/clewsy/clewsy_ansible">clewsy_ansible</a> gitlab repository and specifically the <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/roles/p0wer/tasks/main.yml">main p0wer role</a> for more information.</p>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
