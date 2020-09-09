@@ -11,7 +11,7 @@
 			<center>
 				<p>I like to learn things.  Today I'm learning how to write html and css.</p>
 				<p>This is a work-in-progress.  I do like the idea of a central place from which I can link all my different projects.</p>
-				<p>If you'd like to contact me, shout really loudly.</p>
+				<p>If you'd like to contact me, try <img style="vertical-align:top;" src="/images/clews_email.png" \></p>
 			</center>
 			<table>
 				<tr>
