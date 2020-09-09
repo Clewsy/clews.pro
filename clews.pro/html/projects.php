@@ -119,7 +119,7 @@
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
 					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/small_rad10_01.jpg" /></a></td>
 					<td>An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</td>
-					<td class="date">2020-06-29</td>
+					<td class="date">2020-09-09</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/rad10">core-electronics</a>
