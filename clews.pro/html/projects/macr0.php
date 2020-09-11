@@ -22,18 +22,55 @@
 			</ol>
 			<p><a href="https://kicad-pcb.org/">KiCad</a> for PCB design and <a href="https://jlcpcb.com/">JLCPCB</a> for fabrication.  <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/">PlatformIO IDE</a> extension for developng the firmware.  <a href="https://gitlab.com/clewsy/macr0/-/tree/master/hardware">Hardware</a> (schematic and PCB design) and <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">firmware</a> are all open and published in a <a href="https://gitlab.com/clewsy/macr0/">Gitlab repository</a>.</p>
 			<hr />
-			<h2>Reflection</h2>
+			<h2>Revision 1</h2>
 			<p>For the most part, everything worked out.  The only goal I didn't quite hit was in regards to the LED backlighting.  I used a CAT4101 LED but I didn't size the LEDs correctly.  Using 4 LEDs total, I used two channels of the CAT4104 with two LEDs per channel.  With VCC at 5V and the CAT4104 requiring 0.4V headroom, that leaves 4.6V per channel or 2.3V per LED.  The LEDs I used are rated at 3.5V.  As a result, I still have backlighting but at a lower brightness and with some instability (flickering).</p>
 			<p>I have been using the device as a media controller with the keys configured as play/pause, stop, previous and next.</p>
 			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A <a href="images/macr0_13.jpg">photo</a> in the gallery below shows both devices together.</p> 
-			<p>I would make a few changes for a future revision:</p>
+			<h2>Revision 2</h2>
+			<p>Having learned a few lessons and prooved concepts for a larger-scale project, I decided to revise macr0 since I've found it quite useful.  Changes to be incorporated::</p>
 			<ul>
 				<li>The smd crystal foorprint was from the included KiCad libray and has huge pads to ease hand-soldering.  They take up too much space and could easily be much smaller and still hand-solderable.</li>
 				<li>With only four LEDs I would just drive them directly from the microcontroller instead of with the LED driver.  To have adjustable brightness I would still use a PWM pin and probably some transistors to sink the LED current.  The point of the LED driver was of course just to try it out and determine if it would be suitable for a future project.</li>
 				<li>Similarly I would just use a gpio pin configured as an input to directly read each key.  For this 4-key input it would take exactly the same number of gpio pins.  Of course, then I wouldn't have learned how best to read a key matrix - also required for a future project.</li>
 				<li>I put a pull-up resistor on the dimmer/brightness button for some reason.  This can be ommitted in favour of an internal pull-up.</li>
-				<li>A thinner PCB would better suit the USB connector.  The pins don't quite extend through the default 1.6mm thick PCB I ordered from JLCPCB.</li>
 			</ul>
+			<p> Since this revision won't require the keyscan functionality, I'll record the code here for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
+
+
+			<p class="code">void create_keyscan_report(keyscan_report_t *keyscan_report)<br />
+					{<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">	// Start with a blank keyscan report.</span><br />
+					&emsp;&emsp;&emsp;&emsp;	memset(keyscan_report, 0, sizeof(keyscan_report_t));<br />
+					&emsp;&emsp;&emsp;&emsp;<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">	// Define the pins to scan through.</span><br />
+					&emsp;&emsp;&emsp;&emsp;	uint8_t row_array[2] = ROW_ARRAY;<br />
+					&emsp;&emsp;&emsp;&emsp;	uint8_t col_array[2] = COL_ARRAY;<br />
+					&emsp;&emsp;&emsp;&emsp;<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">	// Loop through for each row.</span><br />
+					&emsp;&emsp;&emsp;&emsp;	for(uint8_t r = 0; r < sizeof(row_array); r++)<br />
+					&emsp;&emsp;&emsp;&emsp;	{<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Set low current row (enable check).</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		KEYS_PORT &= ~(1 << row_array[r]);<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Wait until row is set low before continuing, otherwise column checks can be missed.</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		while(!(~KEYS_PINS & (1 << row_array[r]))) {}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Loop through for each column in the current row.</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		for(uint8_t c = 0; c < sizeof(col_array); c++)<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		{<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">			// If the button in the current row and column is pressed, handle it.</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;			if(~KEYS_PINS & (1 << col_array[c]))<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;			{<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;				handle_key(pgm_read_byte(&KEYMAP[r][c]), keyscan_report);<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;			}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Set high current row (disable check).</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		KEYS_PORT |= (1 << row_array[r]);<br />
+					&emsp;&emsp;&emsp;&emsp;	}<br />
+					}<br />
+
+
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
@@ -66,6 +103,14 @@
 				</tr>
 				<tr>
 					<td class="align-left"><a href="images/macr0_15.jpg"><img class="photo" src="images/small_macr0_15.jpg" alt="Assembled, closer view." /></a></td>
+					<td class="align-right"><a href="images/macr0_16.png"><img class="photo" src="images/macr0_16.png" alt="Schematic for revision 1." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0_17.png"><img class="photo" src="images/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
+					<td class="align-right"><a href="images/macr0_18.png"><img class="photo" src="images/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0_99.png"><img class="photo" src="images/macr0_99.png" alt="Schematic for revision 2." /></a></td>
 				</tr>
 			</table>
 		</div>

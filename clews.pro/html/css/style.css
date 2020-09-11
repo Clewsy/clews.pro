@@ -111,7 +111,7 @@ img.icon {
 	margin: auto auto auto auto;
 }
 
-/*Text formatting when showing code or command bloxks.*/
+/*Text formatting when showing code or command blocks.*/
 .code {
 	font-family: courier, "courier new", monospace;
 	text-transform: none;
@@ -125,6 +125,11 @@ table.code {
 	border-spacing: 0px;
 	padding: 10px 170px 10px 20px;
 }
+.comment {
+	color: gray;
+}
+
+
 
 /*General purpose alignment classes.*/
 .align-left {
