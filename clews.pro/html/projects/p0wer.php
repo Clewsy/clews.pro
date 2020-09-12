@@ -31,7 +31,7 @@
 			<p>The code and <a href="https://kicad-pcb.org/">KiCad</a> files are on the <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
 			<p>The program interfaces with the gpio via the <s>wiringpi</s> <a href="http://abyz.me.uk/rpi/pigpio/index.html">pigpio</a> library.</p>
 			<p>Program usage follows:</p>
-			<div class="code"">
+			<div class="code">
 				<p class="terminal">	$ sudo p0wer &lt;channel(a,b,c,d)&gt; &lt;on/off&gt;</p>
 			</div>
 			<p>Super user access is required for manipulation of the gpio pins.</p>

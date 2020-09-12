@@ -77,7 +77,7 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/small_macr0_15.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2020-09-06</td>
+					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a>
 					</td>
@@ -97,7 +97,7 @@
 					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
 					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/images/ncbu_01.png" /></a></td>
 					<td>Docker container image to simplify and automate backup of a self-hosted nextcloud service.</td>
-					<td class="date">2020-07-14</td>
+					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
 						<a href="https://hub.docker.com/r/clewsy/ncbu">Docker Hub</a>
@@ -108,7 +108,7 @@
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
 					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer_01.jpg" /></a></td>
 					<td>Simple rf mains remote switches hacked to add wifi control.</td>
-					<td class="date">2020-09-09</td>
+					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/p0wer-control-mains-outlets-over-wifi">core-electronics</a>
@@ -119,7 +119,7 @@
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
 					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/small_rad10_01.jpg" /></a></td>
 					<td>An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</td>
-					<td class="date">2020-09-09</td>
+					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/rad10">core-electronics</a>
@@ -140,7 +140,7 @@
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
 					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/small_temp0_22.jpg" /></a></td>
 					<td>Temperature and humidity monitor with WiFi and local readout.</td>
-					<td class="date">2020-07-14</td>
+					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
 						<a href="https://hackaday.io/project/171367-temp0">hackaday.io</a><br />
