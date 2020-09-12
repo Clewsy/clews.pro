@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">p0wer</h2>
-			<a href="images/p0wer_01.jpg"><img class="photo align-left" src="images/p0wer_01.jpg" alt="The final assembly in a simple enclosure." /></a>
+			<a href="images/p0wer/p0wer_01.jpg"><img class="photo align-left" src="images/p0wer/p0wer_01.jpg" alt="The final assembly in a simple enclosure." /></a>
 			<h3>Summary</h3>
 			<p>Off-the-shelf wifi-connected mains switches are pretty common now, but from what I understand, they typically require some kind of cloud service subscription or account (at least at the time I developed this project).</p>
 			<p>I am loath to sign up for such an account and even more so, I want to retain control within my local network, with external control only via specific protocols &amp; ports under my control.</p>
@@ -19,7 +19,7 @@
 			<p>I started off with a mains outlet remote control kit I found at <a href="https://www.bunnings.com.au/arlec-remote-controlled-power-outlet-twin-pack_p0095172">Bunnings</a>. It's an Arlec branded kit and works by transmitting on the 433.92MHz band. The remote can control up to four channels (A, B, C &amp; D).</p>
 			<p>To interface the remote control I had to reverse engineer it. I assumed it would be a matter of tracing the button pads and finding a point to which I could connect a GPIO pin on the Raspberry Pi and simply pull up or down to trigger.</p>
 			<p>This wasn't the case - I found that the button pads were matrixed, so triggering a channel required connecting two specific points with each other, depending on the channel and the desired action ("on" or "off").</p>
-			<a href="images/p0wer_02.jpg"><img class="photo align-right" src="images/p0wer_02.jpg" alt="Hacked remote control." /></a>
+			<a href="images/p0wer/p0wer_02.jpg"><img class="photo align-right" src="images/p0wer/p0wer_02.jpg" alt="Hacked remote control." /></a>
 			<p>As such, instead of direcly connecting the remote to the GPIO, I used the GPIO to trigger bilateral switches within a couple of 4066 CMOS quad bilateral switch packages.  These switches then short the two contacts to emulate a button press on the remote.</p>
 			<p>I broke out the contacts on the remote via a pin-header and assembled the intermediate interface circuit on some proto-board.</p>
 			<p>The final assembled interface circuit included headers for connecting the raspbrry pi and the hacked remote.</p>
@@ -106,16 +106,16 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/p0wer_03.jpg"><img class="photo" src="images/p0wer_03.jpg" alt="Off-the-shelf 433.92MHz mains remote control kit." /></a></td>
-					<td class="align-right"><a href="images/p0wer_04.jpg"><img class="photo" src="images/p0wer_04.jpg" alt="Intermediate interface board with the 4066 chips." /></a></td>
+					<td class="align-left"><a href="images/p0wer/p0wer_03.jpg"><img class="photo" src="images/p0wer/p0wer_03.jpg" alt="Off-the-shelf 433.92MHz mains remote control kit." /></a></td>
+					<td class="align-right"><a href="images/p0wer/p0wer_04.jpg"><img class="photo" src="images/p0wer/p0wer_04.jpg" alt="Intermediate interface board with the 4066 chips." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/p0wer_05.jpg"><img class="photo" src="images/p0wer_05.jpg" alt="Assembled circuit." /></a></td>
-					<td class="align-right"><a href="images/p0wer_06.png"><img class="photo" src="images/p0wer_06.png" alt="Schematic." /></a></td>
+					<td class="align-left"><a href="images/p0wer/p0wer_05.jpg"><img class="photo" src="images/p0wer/p0wer_05.jpg" alt="Assembled circuit." /></a></td>
+					<td class="align-right"><a href="images/p0wer/p0wer_06.png"><img class="photo" src="images/p0wer/p0wer_06.png" alt="Schematic." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/p0wer_07.png"><img class="photo" src="images/p0wer_07.png" alt="Rev_2.0 Schematic." /></a></td>
-					<td class="align-right"><a href="images/p0wer_08.png"><img class="photo" src="images/p0wer_08.png" alt="WebUI on an Android device" /></a></td>
+					<td class="align-left"><a href="images/p0wer/p0wer_07.png"><img class="photo" src="images/p0wer/p0wer_07.png" alt="Rev_2.0 Schematic." /></a></td>
+					<td class="align-right"><a href="images/p0wer/p0wer_08.png"><img class="photo" src="images/p0wer/p0wer_08.png" alt="WebUI on an Android device" /></a></td>
 				</tr>
 			</table>
 		</div>

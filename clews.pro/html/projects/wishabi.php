@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">WiSHABI</h2>
-			<a href="images/wishabi_01.jpg"><img class="photo align-left" src="images/small_wishabi_01.jpg" alt="The final project." /></a>
+			<a href="images/wishabi/wishabi_01.jpg"><img class="photo align-left" src="images/wishabi/small_wishabi_01.jpg" alt="The final project." /></a>
 			<p>WiSHABI (WIreless Single-Handed Accelerometer-based Interface) is the project I created to complete of my university course. It was my first real exposure to programming microcontrollers and was a significant learning experience.</p>
 			<p>The hardware consists of two units:</p>
 			<ol>
@@ -36,43 +36,43 @@
 			<p>In addition to the photo gallery below, I also archived the following resources:</p>
 			<table class="text-table">
 				<tr>
-					<td class="thumbnail"><a href="/projects/documents/wishabi_report.pdf"><img class="thumbnail" src="/projects/documents/thumbnail_wishabi_report.png" /></a>Report<br>(pdf)</td>
-					<td class="thumbnail"><a href="/projects/documents/wishabi_code.tar.gz"><img class="thumbnail" src="/projects/documents/thumbnail_wishabi_code.png" /></a>Code<br>(gzipped tar)</td>
-					<td class="thumbnail"><a href="/projects/video/wishabi_1.mp4"><img class="thumbnail" src="/projects/video/thumbnail_wishabi_1.png" /></a>Keyboard Demo<br>(mp4)</td>
-					<td class="thumbnail"><a href="/projects/video/wishabi_2.mp4"><img class="thumbnail" src="/projects/video/thumbnail_wishabi_2.png" /></a>Mouse Demo 1<br>(mp4)</td>
-					<td class="thumbnail"><a href="/projects/video/wishabi_3.mp4"><img class="thumbnail" src="/projects/video/thumbnail_wishabi_3.png" /></a>Mouse Demo 2<br>(mp4)</td>
+					<td class="thumbnail"><a href="/projects/documents/wishabi/wishabi_report.pdf"><img class="thumbnail" src="/projects/documents/wishabi/thumbnail_wishabi_report.png" /></a>Report<br>(pdf)</td>
+					<td class="thumbnail"><a href="/projects/documents/wishabi/wishabi_code.tar.gz"><img class="thumbnail" src="/projects/documents/wishabi/thumbnail_wishabi_code.png" /></a>Code<br>(gzipped tar)</td>
+					<td class="thumbnail"><a href="/projects/video/wishabi/wishabi_1.mp4"><img class="thumbnail" src="/projects/video/wishabi/thumbnail_wishabi_1.png" /></a>Keyboard Demo<br>(mp4)</td>
+					<td class="thumbnail"><a href="/projects/video/wishabi/wishabi_2.mp4"><img class="thumbnail" src="/projects/video/wishabi/thumbnail_wishabi_2.png" /></a>Mouse Demo 1<br>(mp4)</td>
+					<td class="thumbnail"><a href="/projects/video/wishabi/wishabi_3.mp4"><img class="thumbnail" src="/projects/video/wishabi/thumbnail_wishabi_3.png" /></a>Mouse Demo 2<br>(mp4)</td>
 				</tr>
 			</table>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/wishabi_02.jpg"><img class="photo" src="images/small_wishabi_02.jpg" alt="Final assemblies." /></a></td>
-					<td class="align-right"><a href="images/wishabi_03.jpg"><img class="photo" src="images/small_wishabi_03.jpg" alt="Transmitter in hand (ISP connector exposed)." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_02.jpg"><img class="photo" src="images/wishabi/small_wishabi_02.jpg" alt="Final assemblies." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_03.jpg"><img class="photo" src="images/wishabi/small_wishabi_03.jpg" alt="Transmitter in hand (ISP connector exposed)." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/wishabi_04.jpg"><img class="photo" src="images/small_wishabi_04.jpg" alt="Transmitter in hand (ISP connector exposed)." /></a></td>
-					<td class="align-right"><a href="images/wishabi_05.jpg"><img class="photo" src="images/small_wishabi_05.jpg" alt="Transmitter (ISP connector exposed)." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_04.jpg"><img class="photo" src="images/wishabi/small_wishabi_04.jpg" alt="Transmitter in hand (ISP connector exposed)." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_05.jpg"><img class="photo" src="images/wishabi/small_wishabi_05.jpg" alt="Transmitter (ISP connector exposed)." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/wishabi_06.jpg"><img class="photo" src="images/small_wishabi_06.jpg" alt="Transmitter open." /></a></td>
-					<td class="align-right"><a href="images/wishabi_07.jpg"><img class="photo" src="images/small_wishabi_07.jpg" alt="Transmitter (ISP connector exposed)." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_06.jpg"><img class="photo" src="images/wishabi/small_wishabi_06.jpg" alt="Transmitter open." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_07.jpg"><img class="photo" src="images/wishabi/small_wishabi_07.jpg" alt="Transmitter (ISP connector exposed)." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/wishabi_08.jpg"><img class="photo" src="images/small_wishabi_08.jpg" alt="Transmitter (ISP connector exposed)." /></a></td>
-					<td class="align-right"><a href="images/wishabi_09.jpg"><img class="photo" src="images/small_wishabi_09.jpg" alt="LED grid display." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_08.jpg"><img class="photo" src="images/wishabi/small_wishabi_08.jpg" alt="Transmitter (ISP connector exposed)." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_09.jpg"><img class="photo" src="images/wishabi/small_wishabi_09.jpg" alt="LED grid display." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/wishabi_10.jpg"><img class="photo" src="images/small_wishabi_10.jpg" alt="Receiver circuit board." /></a></td>
-					<td class="align-right"><a href="images/wishabi_11.jpg"><img class="photo" src="images/small_wishabi_11.jpg" alt="Receiver circuit board." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_10.jpg"><img class="photo" src="images/wishabi/small_wishabi_10.jpg" alt="Receiver circuit board." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_11.jpg"><img class="photo" src="images/wishabi/small_wishabi_11.jpg" alt="Receiver circuit board." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/wishabi_12.jpg"><img class="photo" src="images/small_wishabi_12.jpg" alt="Receiver unit." /></a></td>
-					<td class="align-right"><a href="images/wishabi_13.jpg"><img class="photo" src="images/small_wishabi_13.jpg" alt="Receiver unit." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_12.jpg"><img class="photo" src="images/wishabi/small_wishabi_12.jpg" alt="Receiver unit." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_13.jpg"><img class="photo" src="images/wishabi/small_wishabi_13.jpg" alt="Receiver unit." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/wishabi_14.png"><img class="photo" src="images/wishabi_14.png" alt="Transmitter schematic." /></a></td>
-					<td class="align-right"><a href="images/wishabi_15.png"><img class="photo" src="images/wishabi_15.png" alt="Receiver schematic." /></a></td>
+					<td class="align-left"><a href="images/wishabi/wishabi_14.png"><img class="photo" src="images/wishabi/wishabi_14.png" alt="Transmitter schematic." /></a></td>
+					<td class="align-right"><a href="images/wishabi/wishabi_15.png"><img class="photo" src="images/wishabi/wishabi_15.png" alt="Receiver schematic." /></a></td>
 				</tr>
 			</table>
 		</div>

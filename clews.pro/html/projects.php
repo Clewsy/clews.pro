@@ -19,9 +19,9 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
-					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews_01.png" /></a></td>
+					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2020-06-25</td>
+					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -29,7 +29,7 @@
 					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, AirSonic, Calibre, MariaDB, Inkscape, <s>Javascript</s>, Systemd, Ansible</td>
 				<tr>
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
-					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/small_gps_clock_01.jpg" /></a></td>
+					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/gps_clock/small_gps_clock_01.jpg" /></a></td>
 					<td>GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</td>
 					<td class="date">2020-08-18</td>
 					<td class="links">
@@ -42,7 +42,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
-					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_01.jpg" /></a></td>
+					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/images/grinder_timer/small_grinder_timer_01.jpg" /></a></td>
 					<td>Programmable timer to control a dumb coffee grinder.</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
@@ -54,7 +54,7 @@
 					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, Microcontroller, C, KiCAD, PCB Etching</td>
 				</tr>
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
-					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/small_grinder_timer_rev2_12.jpg" /></a></td>
+					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" /></a></td>
 					<td>An upgrade to the original grinder_timer.</td>
 					<td class="date">2020-08-21</td>
 					<td class="links">
@@ -65,7 +65,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
-					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/small_led_matrix_04.jpg" /></a></td>
+					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/led_matrix/small_led_matrix_04.jpg" /></a></td>
 					<td>LED matrix that has a clock mode and a text mode.  My first microcontroller project.</td>
 					<td class="date">2020-04-30</td>
 					<td class="links">
@@ -75,7 +75,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
-					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/small_macr0_15.jpg" /></a></td>
+					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_15.jpg" /></a></td>
 					<td>4-button USB input device.</td>
 					<td class="date">2020-09-12</td>
 					<td class="links">
@@ -85,7 +85,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
-					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/small_media_center_01.jpg" /></a></td>
+					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/media_center/small_media_center_01.jpg" /></a></td>
 					<td>Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</td>
 					<td class="date">2020-02-04</td>
 					<td class="links">
@@ -95,7 +95,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
-					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/images/ncbu_01.png" /></a></td>
+					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/images/ncbu/ncbu_01.png" /></a></td>
 					<td>Docker container image to simplify and automate backup of a self-hosted nextcloud service.</td>
 					<td class="date">2020-09-12</td>
 					<td class="links">
@@ -106,7 +106,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
-					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer_01.jpg" /></a></td>
+					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer/p0wer_01.jpg" /></a></td>
 					<td>Simple rf mains remote switches hacked to add wifi control.</td>
 					<td class="date">2020-09-12</td>
 					<td class="links">
@@ -117,7 +117,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
-					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/small_rad10_01.jpg" /></a></td>
+					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/rad10/small_rad10_01.jpg" /></a></td>
 					<td>An internet radio on a raspberry pi with a simple hardware control daemon (and WebUI).</td>
 					<td class="date">2020-09-12</td>
 					<td class="links">
@@ -128,7 +128,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
-					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts_01.png" /></a></td>
+					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts/scripts_01.png" /></a></td>
 					<td>Various bash shell scripts.</td>
 					<td class="date">2020-07-22</td>
 					<td class="links">
@@ -138,7 +138,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
-					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/small_temp0_22.jpg" /></a></td>
+					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/temp0/small_temp0_22.jpg" /></a></td>
 					<td>Temperature and humidity monitor with WiFi and local readout.</td>
 					<td class="date">2020-09-12</td>
 					<td class="links">
@@ -149,7 +149,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
-					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/small_volcon_09.jpg" /></a></td>
+					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_09.jpg" /></a></td>
 					<td>HID compliant USB volume controller.</td>
 					<td class="date">2020-07-14</td>
 					<td class="links">
@@ -160,7 +160,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
-					<td><a href="/projects/wishabi.php"><img class="thumbnail" src="/projects/images/small_wishabi_01.jpg" /></a></td>
+					<td><a href="/projects/wishabi.php"><img class="thumbnail" src="/projects/images/wishabi/small_wishabi_01.jpg" /></a></td>
 					<td>WIreless Single-Handed Accelerometer-Based Interface. (Under-Grad thesis project).</td>
 					<td class="date">2019-10-07</td>
 					<td class="links">
@@ -180,7 +180,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
-					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible_01.png" /></a></td>
+					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible/clewsy_ansible_01.png" /></a></td>
 					<td>Deplolyment/configuration/maintenance automation of the machines/devices on my home network with ansible.</td>
 					<td class="date">2020-08-19</td>
 					<td class="links">

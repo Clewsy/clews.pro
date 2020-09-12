@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">clewsy_ansible</h2>
-			<a href="https://docs.ansible.com/"><img class="image align-left" src="images/clewsy_ansible_01.png" alt="Just the ansible logo." /></a>
+			<a href="https://docs.ansible.com/"><img class="image align-left" src="images/clewsy_ansible/clewsy_ansible_01.png" alt="Just the ansible logo." /></a>
 			<p><a href="https://docs.ansible.com/">Ansible</a> is software for secure, push-style, agentless, system configuration management.  I guess it's more than that, but I'm new.  It had a moderate learning curve and then required a reasonable amount of configuration, but now I have some basic playbooks and roles written that will save me a lot of time in the future.  This project is purely about using ansible to configure machines on my personal home network.</p>
 			<p>My biggest problem has been completely forgetting why or how I configured a system, shortly after initially getting it up and running.  Ansible playbooks are self-documenting, so even if I want to do something manually in the future, the instructions are all there, built-in to the ansible playbooks stored in my <a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab repo</a>.</p>
 			<p>The repo includes a host-spcific playbook and variables file for each managed host machine/device on my home network.</p>
@@ -333,7 +333,7 @@
 					<td>Configure a box as a <a href="https://www.wireguard.com/">wireguard</a> "server" endpoint.</td>
 				</tr>
 			</table>
-			<p><a class="align-center" href="images/clewsy_ansible_02.png"><img class="image" src="images/clewsy_ansible_02.png" alt="I don't know what I'm doing." /></a></p>
+			<p><a class="align-center" href="images/clewsy_ansible/clewsy_ansible_02.png"><img class="image" src="images/clewsy_ansible/clewsy_ansible_02.png" alt="I don't know what I'm doing." /></a></p>
 		</div>
 	</body>
 </html>

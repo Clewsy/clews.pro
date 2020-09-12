@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">ncbu</h2>
-			<a href="https://hub.docker.com/"><img class="image align-left" src="images/ncbu_01.png" alt="Dockerhub" /></a>
+			<a href="https://hub.docker.com/"><img class="image align-left" src="images/ncbu/ncbu_01.png" alt="Dockerhub" /></a>
 			<h3>Description:</h3>
 			<p>ncbu - or <a href="https://nextcloud.com/">NextCloud</a> Back-Up - is a <a href="https://www.docker.com/">docker</a> container image created to simplify and automate perodic physical snapshots of a self-hosted nextcloud service.  The snapshots serve as a backup of the nextcloud volume and also (if applicable) the nextcloud database volume.</p>
 			<p>The intention is to run this image as a container alongside the nextcloud app and database containers.  Management of the "live" nextcloud/database volumes can therefore be left to docker.  When the ncbu back-up script is initialised, it first locks the nextcloud instance (i.e. puts nextcloud into maintenance mode) before syncing the volumes to a user-defined location.  Once complete, the script unlocks nextcloud so that normal usage can resume.</p>
@@ -18,7 +18,7 @@
 			<h3>Why?:</h3>
 			<p>I discovered docker on my journey to rid myself of cloud-based services not within my control.  A docker implementation of nextcloud is great for robustness and portability.  It also facillitated simple back-ups by binding the data volumes to a user-accessible directory.  Initially I set up an <a href="https://rsync.samba.org/">rsync</a> cronjob to automate my backups and this was fine, but I saw potential benefits in containerising the backup service.  Mostly, I wanted to have a go at learning docker and creating my own container image.</p>
 			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to <a href="https://docs.docker.com/compose/">docker-compose</a> and a single *.yml file.  Refer to my <a href="/projects/clews.html">clews.pro</a> project for more information of my self-hosting implementation.</p>
-			<a href="https://nextcloud.com/"><img class="image align-right" src="images/ncbu_02.png" alt="Nextcloud" /></a>
+			<a href="https://nextcloud.com/"><img class="image align-right" src="images/ncbu/ncbu_02.png" alt="Nextcloud" /></a>
 			<hr/>
 
 			<h3>What:</h3>

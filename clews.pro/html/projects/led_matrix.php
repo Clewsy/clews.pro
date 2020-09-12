@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">led_matrix</h2>
-			<a href="images/led_matrix_04.jpg"><img class="photo align-left" src="images/small_led_matrix_04.jpg" alt="The still-working led_matrix." /></a>
+			<a href="images/led_matrix/led_matrix_04.jpg"><img class="photo align-left" src="images/led_matrix/small_led_matrix_04.jpg" alt="The still-working led_matrix." /></a>
 			<h3>Summary</h3>
 			<p>According to early pages in my notebook, I built this in 2006.  I'm pretty sure this was my first microcontroller project (excluding of course blinking an LED).  Back then I didn't have good back-up habits and had never even heard of <a href="https://git-scm.com/">git</a>, so the code I wrote is gone forever (maybe for the best).</p>
 			<p>The enclosure is a translucent blue plastic so I can see some of the internals.  I'm not willing to open it up though - I can see a birds-nest of wiring and I expect that after openeing, it may never work again.  I was surprised it still works at all as it is!<p>
@@ -29,20 +29,20 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/led_matrix_01.jpg"><img class="photo" src="images/small_led_matrix_01.jpg" alt="Front view - 20x5 matrix." /></a></td>
-					<td class="align-right"><a href="images/led_matrix_02.jpg"><img class="photo" src="images/small_led_matrix_02.jpg" alt="Rear view - proto-board." /></a></td>
+					<td class="align-left"><a href="images/led_matrix/led_matrix_01.jpg"><img class="photo" src="images/led_matrix/small_led_matrix_01.jpg" alt="Front view - 20x5 matrix." /></a></td>
+					<td class="align-right"><a href="images/led_matrix/led_matrix_02.jpg"><img class="photo" src="images/led_matrix/small_led_matrix_02.jpg" alt="Rear view - proto-board." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/led_matrix_03.jpg"><img class="photo" src="images/small_led_matrix_03.jpg" alt="Side view - ATMEGA8535." /></a></td>
-					<td class="align-right"><a href="images/led_matrix_04.jpg"><img class="photo" src="images/small_led_matrix_04.jpg" alt="Powered up - still works!" /></a></td>
+					<td class="align-left"><a href="images/led_matrix/led_matrix_03.jpg"><img class="photo" src="images/led_matrix/small_led_matrix_03.jpg" alt="Side view - ATMEGA8535." /></a></td>
+					<td class="align-right"><a href="images/led_matrix/led_matrix_04.jpg"><img class="photo" src="images/led_matrix/small_led_matrix_04.jpg" alt="Powered up - still works!" /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/led_matrix_05.gif"><img class="photo" src="images/small_led_matrix_05.gif" alt="Clock mode." /></a></td>
-					<td class="align-right"><a href="images/led_matrix_06.gif"><img class="photo" src="images/small_led_matrix_06.gif" alt="Text mode." /></a></td>
+					<td class="align-left"><a href="images/led_matrix/led_matrix_05.gif"><img class="photo" src="images/led_matrix/small_led_matrix_05.gif" alt="Clock mode." /></a></td>
+					<td class="align-right"><a href="images/led_matrix/led_matrix_06.gif"><img class="photo" src="images/led_matrix/small_led_matrix_06.gif" alt="Text mode." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/led_matrix_07.jpg"><img class="photo" src="images/small_led_matrix_07.jpg" alt="Old notes - matrix configuration." /></a></td>
-					<td class="align-right"><a href="images/led_matrix_08.jpg"><img class="photo" src="images/small_led_matrix_08.jpg" alt="Old notes - 3x 74HC138 configuration." /></a></td>
+					<td class="align-left"><a href="images/led_matrix/led_matrix_07.jpg"><img class="photo" src="images/led_matrix/small_led_matrix_07.jpg" alt="Old notes - matrix configuration." /></a></td>
+					<td class="align-right"><a href="images/led_matrix/led_matrix_08.jpg"><img class="photo" src="images/led_matrix/small_led_matrix_08.jpg" alt="Old notes - 3x 74HC138 configuration." /></a></td>
 				</tr>
 			</table>
 		</div>

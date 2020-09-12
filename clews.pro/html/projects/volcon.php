@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">VolCon</h2>
-			<a href="images/volcon_09.jpg"><img class="photo align-left" src="images/small_volcon_09.jpg" alt="The current, final assembled volcon." /></a>
+			<a href="images/volcon/volcon_09.jpg"><img class="photo align-left" src="images/volcon/small_volcon_09.jpg" alt="The current, final assembled volcon." /></a>
 			<p>This project began as an experiment when I inexplicably decided to learn how an optical rotary encoder worked (FYI, 2-bit <a href="https://en.wikipedia.org/wiki/Gray_code">Gray code</a>).</p>
 			<p>It transformed into a learning experience around USB - specifically the <a href="https://en.wikipedia.org/wiki/USB_human_interface_device_class">HID protocol</a>. Ultimately I ended up with a simple gadget that now sits on my desk and allows me to control the PC volume.</p>
 			<p>A salvaged optical encoder was used to detect rotation along with a reclaimed head drum from a VCR which was repurposed as a control knob.  I very much like the smooth bearings combined with the heavy mass that let the drum spin forever.</p>
@@ -34,20 +34,20 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/volcon_02.jpg"><img class="photo" src="images/small_volcon_02.jpg" alt="Partially assembled." /></a></td>
-					<td class="align-right"><a href="images/volcon_03.jpg"><img class="photo" src="images/small_volcon_03.jpg" alt="PCB view." /></a></td>
+					<td class="align-left"><a href="images/volcon/volcon_02.jpg"><img class="photo" src="images/volcon/small_volcon_02.jpg" alt="Partially assembled." /></a></td>
+					<td class="align-right"><a href="images/volcon/volcon_03.jpg"><img class="photo" src="images/volcon/small_volcon_03.jpg" alt="PCB view." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon_04.jpg"><img class="photo" src="images/small_volcon_04.jpg" alt="Planning - block diagram." /></a></td>
-					<td class="align-right"><a href="images/volcon_05.jpg"><img class="photo" src="images/small_volcon_05.jpg" alt="Planning - sensors." /></a></td>
+					<td class="align-left"><a href="images/volcon/volcon_04.jpg"><img class="photo" src="images/volcon/small_volcon_04.jpg" alt="Planning - block diagram." /></a></td>
+					<td class="align-right"><a href="images/volcon/volcon_05.jpg"><img class="photo" src="images/volcon/small_volcon_05.jpg" alt="Planning - sensors." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon_06.jpg"><img class="photo" src="images/small_volcon_06.jpg" alt="Disassembled and dusty." /></a></td>
-					<td class="align-right"><a href="images/volcon_07.jpg"><img class="photo" src="images/small_volcon_07.jpg" alt="Assembled without enclosure." /></a></td>
+					<td class="align-left"><a href="images/volcon/volcon_06.jpg"><img class="photo" src="images/volcon/small_volcon_06.jpg" alt="Disassembled and dusty." /></a></td>
+					<td class="align-right"><a href="images/volcon/volcon_07.jpg"><img class="photo" src="images/volcon/small_volcon_07.jpg" alt="Assembled without enclosure." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon_08.jpg"><img class="photo" src="images/small_volcon_08.jpg" alt="The current assembly (with nicer spotted gum finish)." /></a></td>
-					<td class="align-right"><a href="images/volcon_01.jpg"><img class="photo" src="images/small_volcon_01.jpg" alt="The original assembly (with stained pine finish)." /></a></td>
+					<td class="align-left"><a href="images/volcon/volcon_08.jpg"><img class="photo" src="images/volcon/small_volcon_08.jpg" alt="The current assembly (with nicer spotted gum finish)." /></a></td>
+					<td class="align-right"><a href="images/volcon/volcon_01.jpg"><img class="photo" src="images/small_volcon_01.jpg" alt="The original assembly (with stained pine finish)." /></a></td>
 				</tr>
 			</table>
 		</div>

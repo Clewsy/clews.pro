@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">rad10</h2>
-			<a href="images/rad10_01.jpg"><img class="photo align-left" src="images/small_rad10_01.jpg" alt="The final assembled rad10." /></a>
+			<a href="images/rad10/rad10_01.jpg"><img class="photo align-left" src="images/rad10/small_rad10_01.jpg" alt="The final assembled rad10." /></a>
 			<h3>Summary</h3>
 			<p>The rad10 project consists of a <a href="https://www.raspberrypi.org/">raspberry pi</a>, a speaker and a small amplifier.</p>
 			<p>The pi takes minimal input - a rotary encoder with a push-button toggle.  Rotate to control the volume, push the button to toggle pause/play</p>
@@ -76,15 +76,15 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/rad10_02.jpg"><img class="photo" src="images/small_rad10_02.jpg" alt="Rear view." /></a></td>
-					<td class="align-right"><a href="images/rad10_03.jpg"><img class="photo" src="images/small_rad10_03.jpg" alt="Prototyping." /></a></td>
+					<td class="align-left"><a href="images/rad10/rad10_02.jpg"><img class="photo" src="images/rad10/small_rad10_02.jpg" alt="Rear view." /></a></td>
+					<td class="align-right"><a href="images/rad10/rad10_03.jpg"><img class="photo" src="images/rad10/small_rad10_03.jpg" alt="Prototyping." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/rad10_04.png"><img class="photo" src="images/rad10_04.png" alt="WebUI on an android smartphone." /></a></td>
-					<td class="align-right"><a href="images/rad10_05.png"><img class="photo" src="images/rad10_05.png" alt="WebUI on an android smartphone." /></a></td>
+					<td class="align-left"><a href="images/rad10/rad10_04.png"><img class="photo" src="images/rad10/rad10_04.png" alt="WebUI on an android smartphone." /></a></td>
+					<td class="align-right"><a href="images/rad10/rad10_05.png"><img class="photo" src="images/rad10/rad10_05.png" alt="WebUI on an android smartphone." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/rad10_06.jpg"><img class="photo" src="images/small_rad10_06.jpg" alt="Opened to add a capacitor." /></a></td>
+					<td class="align-left"><a href="images/rad10/rad10_06.jpg"><img class="photo" src="images/rad10/small_rad10_06.jpg" alt="Opened to add a capacitor." /></a></td>
 				</tr>
 			</table>
 		</div>

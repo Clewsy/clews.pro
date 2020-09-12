@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">grinder_timer_rev2</h2>
-			<a href="images/grinder_timer_rev2_11.jpg"><img class="photo align-left" src="images/small_grinder_timer_rev2_11.jpg" alt="The final timer."></a>
+			<a href="images/grinder_timer_rev2/grinder_timer_rev2_11.jpg"><img class="photo align-left" src="images/grinder_timer_rev2/small_grinder_timer_rev2_11.jpg" alt="The final timer."></a>
 			<p>An upgrade to the original <a href="/projects/grinder_timer.php">grinder_timer</a> - a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
 			<p>Honestly, I use the original every day and it hass been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.</p>
 			<p>The goals for revision 2 included:</p>
@@ -51,7 +51,7 @@
 			<p>Code, schematic and PCB layout are all in the <a href="https://gitlab.com/clewsy/grinder_timer">gitlab repo</a>.  This is the same repo used for the original version.</p>
 			<hr />
 			<h3>Operation</h3>
-			<a href="images/grinder_timer_rev2_13.gif"><img class="photo align-right" src="images/small_grinder_timer_rev2_13.gif" alt="The final timer in action."></a>
+			<a href="images/grinder_timer_rev2/grinder_timer_rev2_13.gif"><img class="photo align-right" src="images/grinder_timer_rev2/small_grinder_timer_rev2_13.gif" alt="The final timer in action."></a>
 			<p>The user has 4 available timer presets - A, B, C and D.  A preset is selected by scrolling left or right with the d-pad.  To configure a preset, scrolling up or down increases or decreases the value of the timer in increments of 0.25 seconds.  The maximum configurable timer is 60 seconds and the minimum is one second.  A preset value is saved to eeprom whenever it is used or a different preset is selected.</p>
 			<p>Once a desired timer is set, pressing the grind button will turn on the grind motor and begin counting down to zero.  Once zero is reached, the grinder is turned off and the timer resets to the value of the preset.  Pressing any button whilst the grinder is running cancels the grind (turns the motor off) and resets the timer.</p>
 			<p>After 120 seconds of inactivity, the timer enters a "sleep mode" whereby the OLED is deactivated.  Pressing any button will take the timer out of sleep mode.</p>
@@ -123,28 +123,28 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_01.png"><img class="photo" src="images/grinder_timer_rev2_01.png" alt="PCB render top." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_02.png"><img class="photo" src="images/grinder_timer_rev2_02.png" alt="PCB render bottom." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_01.png"><img class="photo" src="images/grinder_timer_rev2/grinder_timer_rev2_01.png" alt="PCB render top." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_02.png"><img class="photo" src="images/grinder_timer_rev2/grinder_timer_rev2_02.png" alt="PCB render bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_03.jpg"><img class="photo" src="images/small_grinder_timer_rev2_03.jpg" alt="PCB fabricated top." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_04.jpg"><img class="photo" src="images/small_grinder_timer_rev2_04.jpg" alt="PCB fabricated bottom." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_03.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_03.jpg" alt="PCB fabricated top." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_04.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_04.jpg" alt="PCB fabricated bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_05.jpg"><img class="photo" src="images/small_grinder_timer_rev2_05.jpg" alt="PCB assembled top." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_06.jpg"><img class="photo" src="images/small_grinder_timer_rev2_06.jpg" alt="PCB assembled bottom." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_05.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_05.jpg" alt="PCB assembled top." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_06.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_06.jpg" alt="PCB assembled bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_07.jpg"><img class="photo" src="images/small_grinder_timer_rev2_07.jpg" alt="PCB assembled top, another angle." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_08.jpg"><img class="photo" src="images/small_grinder_timer_rev2_08.jpg" alt="Close shot of the OLED." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_07.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_07.jpg" alt="PCB assembled top, another angle." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_08.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_08.jpg" alt="Close shot of the OLED." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_09.jpg"><img class="photo" src="images/small_grinder_timer_rev2_09.jpg" alt="Template for enclosure cut-out." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_10.jpg"><img class="photo" src="images/small_grinder_timer_rev2_10.jpg" alt="Enclosure prepared." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_09.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_09.jpg" alt="Template for enclosure cut-out." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_10.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_10.jpg" alt="Enclosure prepared." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2_12.jpg"><img class="photo" src="images/small_grinder_timer_rev2_12.jpg" alt="Installed into the enclosure and powered on." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2_14.png"><img class="photo" src="images/grinder_timer_rev2_14.png" alt="The complete schematic." /></a></td>
+					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_12.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" alt="Installed into the enclosure and powered on." /></a></td>
+					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_14.png"><img class="photo" src="images/grinder_timer_rev2/grinder_timer_rev2_14.png" alt="The complete schematic." /></a></td>
 				</tr>
 			</table>
 		</div>

@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">macr0</h2>
-			<a href="images/macr0_15.jpg"><img class="photo align-left" src="images/small_macr0_15.jpg" alt="The current, final assembled volcon." /></a>
+			<a href="images/macr0/macr0_15.jpg"><img class="photo align-left" src="images/macr0/small_macr0_15.jpg" alt="The current, final assembled volcon." /></a>
 			<p>Macr0 is a 4-button macro pad which identifies as a USB keyboard.</p>
 			<p>This project is effectively a handful of proofs of concepts.  I wanted to test a few things I haven't done before with the intention to scale-up for a future project.</p>
 			<p>The goals I had in mind for this project included:</p>
@@ -25,7 +25,7 @@
 			<h2>Revision 1</h2>
 			<p>For the most part, everything worked out.  The only goal I didn't quite hit was in regards to the LED backlighting.  I used a CAT4101 LED but I didn't size the LEDs correctly.  Using 4 LEDs total, I used two channels of the CAT4104 with two LEDs per channel.  With VCC at 5V and the CAT4104 requiring 0.4V headroom, that leaves 4.6V per channel or 2.3V per LED.  The LEDs I used are rated at 3.5V.  As a result, I still have backlighting but at a lower brightness and with some instability (flickering).</p>
 			<p>I have been using the device as a media controller with the keys configured as play/pause, stop, previous and next.</p>
-			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A <a href="images/macr0_13.jpg">photo</a> in the gallery below shows both devices together.</p> 
+			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A <a href="images/macr0/macr0_13.jpg">photo</a> in the gallery below shows both devices together.</p> 
 			<h2>Revision 2</h2>
 			<p>Having learned a few lessons and prooved concepts for a larger-scale project, I decided to revise macr0 since I've found it quite useful.  Changes to be incorporated::</p>
 			<ul>
@@ -74,43 +74,43 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/macr0_01.png"><img class="photo" src="images/macr0_01.png" alt="PCB design - top." /></a></td>
-					<td class="align-right"><a href="images/macr0_02.png"><img class="photo" src="images/macr0_02.png" alt="PCB design - bottom." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_01.png"><img class="photo" src="images/macr0/macr0_01.png" alt="PCB design - top." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_02.png"><img class="photo" src="images/macr0/macr0_02.png" alt="PCB design - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_03.jpg"><img class="photo" src="images/small_macr0_03.jpg" alt="PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="images/macr0_04.jpg"><img class="photo" src="images/small_macr0_04.jpg" alt="PCB fabricated - bottom." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_03.jpg"><img class="photo" src="images/macr0/small_macr0_03.jpg" alt="PCB fabricated - top." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_04.jpg"><img class="photo" src="images/macr0/small_macr0_04.jpg" alt="PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_05.jpg"><img class="photo" src="images/small_macr0_05.jpg" alt="PCB assembled - bottom." /></a></td>
-					<td class="align-right"><a href="images/macr0_06.jpg"><img class="photo" src="images/small_macr0_06.jpg" alt="PCB assembled - top." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_05.jpg"><img class="photo" src="images/macr0/small_macr0_05.jpg" alt="PCB assembled - bottom." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_06.jpg"><img class="photo" src="images/macr0/small_macr0_06.jpg" alt="PCB assembled - top." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_07.jpg"><img class="photo" src="images/small_macr0_07.jpg" alt="PCB assembled - top with keycaps." /></a></td>
-					<td class="align-right"><a href="images/macr0_08.jpg"><img class="photo" src="images/small_macr0_08.jpg" alt="Beginning fabrication of frame." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_07.jpg"><img class="photo" src="images/macr0/small_macr0_07.jpg" alt="PCB assembled - top with keycaps." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_08.jpg"><img class="photo" src="images/macr0/small_macr0_08.jpg" alt="Beginning fabrication of frame." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_09.jpg"><img class="photo" src="images/small_macr0_09.jpg" alt="Frame and base fabrication 1." /></a></td>
-					<td class="align-right"><a href="images/macr0_10.jpg"><img class="photo" src="images/small_macr0_10.jpg" alt="Frame and base fabrication 2." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_09.jpg"><img class="photo" src="images/macr0/small_macr0_09.jpg" alt="Frame and base fabrication 1." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_10.jpg"><img class="photo" src="images/macr0/small_macr0_10.jpg" alt="Frame and base fabrication 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_11.jpg"><img class="photo" src="images/small_macr0_11.jpg" alt="Frame assembled." /></a></td>
-					<td class="align-right"><a href="images/macr0_12.jpg"><img class="photo" src="images/small_macr0_12.jpg" alt="Enclosed - bottom view.." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_11.jpg"><img class="photo" src="images/macr0/small_macr0_11.jpg" alt="Frame assembled." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_12.jpg"><img class="photo" src="images/macr0/small_macr0_12.jpg" alt="Enclosed - bottom view.." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_13.jpg"><img class="photo" src="images/small_macr0_13.jpg" alt="Next to volcon." /></a></td>
-					<td class="align-right"><a href="images/macr0_14.jpg"><img class="photo" src="images/small_macr0_14.jpg" alt="Assembled, pen for scale." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_13.jpg"><img class="photo" src="images/macr0/small_macr0_13.jpg" alt="Next to volcon." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_14.jpg"><img class="photo" src="images/macr0/small_macr0_14.jpg" alt="Assembled, pen for scale." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_15.jpg"><img class="photo" src="images/small_macr0_15.jpg" alt="Assembled, closer view." /></a></td>
-					<td class="align-right"><a href="images/macr0_16.png"><img class="photo" src="images/macr0_16.png" alt="Schematic for revision 1." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_15.jpg"><img class="photo" src="images/macr0/small_macr0_15.jpg" alt="Assembled, closer view." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_16.png"><img class="photo" src="images/macr0/macr0_16.png" alt="Schematic for revision 1." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_17.png"><img class="photo" src="images/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
-					<td class="align-right"><a href="images/macr0_18.png"><img class="photo" src="images/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_17.png"><img class="photo" src="images/macr0/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_18.png"><img class="photo" src="images/macr0/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0_99.png"><img class="photo" src="images/macr0_99.png" alt="Schematic for revision 2." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_99.png"><img class="photo" src="images/macr0/macr0_99.png" alt="Schematic for revision 2." /></a></td>
 				</tr>
 			</table>
 		</div>
