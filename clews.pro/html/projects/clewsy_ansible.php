@@ -32,6 +32,7 @@
 			</ol>
 			<p>The following tables detail the machines I have on my network and the roles I created for them.</p>
 			<hr />
+
 			<h2 class="align-center">Hosts</h2>
 			<table class="text-table">
 				<tr>

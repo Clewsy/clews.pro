@@ -10,7 +10,7 @@
 			<h2 class="align-center">rad10</h2>
 			<a href="images/rad10_01.jpg"><img class="photo align-left" src="images/small_rad10_01.jpg" alt="The final assembled rad10." /></a>
 			<h3>Summary</h3>
-			<p>The rad10 project consists of a <a href="https://www.raspberrypi.org/">raspberry pi</a> outputting audio to a speaker via a small amplifier.</p>
+			<p>The rad10 project consists of a <a href="https://www.raspberrypi.org/">raspberry pi</a>, a speaker and a small amplifier.</p>
 			<p>The pi takes minimal input - a rotary encoder with a push-button toggle.  Rotate to control the volume, push the button to toggle pause/play</p>
 			<p>A daemon written in C (<a href="https://gitlab.com/clewsy/rad10d">rad10d</a>) runs on the pi and polls for changes in the encoder or a push of the toggle button.  The code is available on <a href="https://gitlab.com/clewsy/rad10d">gitlab</a>.</p>
 			<p>The daemon is configured as a service to run at boot.  It intefaces with <a href="https://www.musicpd.org/">MPD</a> using the API thanks to the <a href="https://www.musicpd.org/libs/libmpdclient/">libmpdclient</a> C/C++ library.</p>
@@ -21,42 +21,58 @@
 			<p>Mostly I use this self-contained, wifi-connected setup to <a href="http://dir.xiph.org/genres/Electronic">stream</a> "radio", though it is set to locally mount an <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> share containing my music collection.</p>
 			<p>There are a few MPD client apps for android that allow finer control of MPD (I like <a href="https://f-droid.org/en/packages/org.gateshipone.malp/">M.A.L.P.</a>)  That said, in keeping with the minimalist hardware interface, I created a similarly minimal web interface with a small amount of php, html and css.  This WebUI provides the same contol (play/pause and volume +/-), but I also added a few "preset" buttons to launch my most-used streams.</p>
 			<hr />
+
 			<h3>Daemon Installation and Setup</h3>
 			<p>Install the dependencies:</p>
-			<p class="code">$ sudo apt update<br />
-					$ sudo apt install pigpio mpd mpc libmpdclient-dev</p>
+			<div class="code">
+				<p class="terminal">	$ sudo apt update<br />
+							$ sudo apt install pigpio mpd mpc libmpdclient-dev</p>
+			</div>
 			<p>(Note, <a href="https://www.musicpd.org/clients/mpc/">mpc</a> is not strictly required for the daemon, but I recommend it as a useful command-line client for control of mpd, and debugging for a project like this.)</p>
 			<p>Clone the repo and compile the executable "rad10d":</p>
-			<p class="code">$ git clone https://gitlab.com/clewsy/rad10d<br />
-					$ cd rad10d<br />
-					$ sudo make install</p>
+			<div class="code">
+				<p class="terminal">	$ git clone https://gitlab.com/clewsy/rad10d<br />
+							$ cd rad10d<br />
+							$ sudo make install</p>
+			</div>
 			<p>The install target in the makefile will automatically compile/install the daemon and also enable/start the systemd service so that the daemon will run at boot.  running <b>make install</b> is equivalent to running the following commands:</p>
-			<p class="code">$ make<br />
-					$ sudo cp rad10d /usr/local/sbin/rad10d<br />
-					$ sudo cp rad10d.service /lib/systemd/system/rad10d.service<br />
-					$ sudo systemctl enable rad10d.service<br />
-					$ sudo systemctl start rad10d.service</p>
+			<div class="code">
+				<p class="terminal">	$ make<br />
+							$ sudo cp rad10d /usr/local/sbin/rad10d<br />
+							$ sudo cp rad10d.service /lib/systemd/system/rad10d.service<br />
+							$ sudo systemctl enable rad10d.service<br />
+							$ sudo systemctl start rad10d.service</p>
+			</div>
 			<p>The installation can be reversed with the uninstall target:</p>
-			<p class="code">$ sudo make uninstall</p>
+			<div class="code">
+				<p class="terminal">	$ sudo make uninstall</p>
+			</div>
 			<hr />
+
 			<h3>WebUI Installation and Setup</h3>
 			<p>For the raspberry pi to serve content over a browser, you will need to install web server software.  The following example uses <a href="https://httpd.apache.org/">Apache</a>.</p>
 			<p>To give the WebUI the ability to execute commands, I used php code.  Therefore <a href="https://www.php.net/">php</a> will also need to be installed on the pi.</p>
 			<p>The hardware daemon is not actually require for the WebUI.  This interface could be used with any pi or other computer running mpd and mpc.</p>
 			<p>Install the dependencies:</p>
-			<p class="code">$ sudo apt update<br/>
-					$ sudo apt install apache2 php mpd mpc</p>
+			<div class="code">
+				<p class="terminal">	$ sudo apt update<br/>
+							$ sudo apt install apache2 php mpd mpc</p>
+			</div>
 			<p>By default, Apache will serve up the content located within the <i>/var/www/html/</i> directory.  The default files installed at this location should be deleted and replaced by the contents of the "<i>webui</i>" directory in the rad10d repository:</p>
-			<p class="code">$ sudo rm --recursive /var/www/html/*<br />
-					$ git clone https://gitlab.com/clewsy/rad10d<br />
-					$ cd rad10d/webui<br />
-					$ sudo cp --recursive * /var/www/html/.</p>
+			<div class="code">
+				<p class="terminal">	$ sudo rm --recursive /var/www/html/*<br />
+							$ git clone https://gitlab.com/clewsy/rad10d<br />
+							$ cd rad10d/webui<br />
+							$ sudo cp --recursive * /var/www/html/.</p>
+			</div>
 			<p>(Note, cloning the gitlab repo can be skipped if already done to install the daemon.)</p>
 			<p>The WebUI should now be accessible over your local network.</p>
 			<hr />
+
 			<h3>Ansible Deployment</h3>
 			<p>As part of another project (<a href="/projects/clewsy_ansible.php">clewsy_ansible</a>) I have automated installation of the daemon and the webui.  Starting with a fresh <a href="https://www.raspberrypi.org/downloads/">Raspberry Pi OS</a> or <a href="https://ubuntu.com/download/raspberry-pi">Ubuntu Server</a> installation on a raspberry pi, I can run a single <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/rad10.yml">playbook</a> that will install the dependencies, clone and install the daemon and configure the webui.  See the <a href="https://gitlab.com/clewsy/clewsy_ansible">clewsy_ansible</a> gitlab repository and specifically the <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/roles/rad10/tasks/main.yml">main rad10 role</a> for more information.</p>
 			<hr />
+
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>

@@ -3,6 +3,7 @@ body {
 	line-height: 1.4em;
 	color: rgb(150,150,150);
 	background-color: rgb(55,55,55);
+	margin: 0px 0px 0px 0px;
 }
 
 #header {
@@ -68,6 +69,9 @@ img.image {
 }
 
 /*Table formatting for text tables*/
+table.text-table {
+	margin: auto;
+}
 table.text-table a:link, table.text-table a:visited {
 	color: DodgerBlue;
 	text-decoration: none;
@@ -111,22 +115,30 @@ img.icon {
 	margin: auto auto auto auto;
 }
 
+
+
+
 /*Text formatting when showing code or command blocks.*/
 .code {
 	font-family: courier, "courier new", monospace;
 	text-transform: none;
 	text-align: left;
-	padding: 10px 20px 10px 20px;
-	color: green;
+	color: white;
 	background-color: black;
 	border-radius: 20px;
-}
-table.code {
 	border-spacing: 0px;
-	padding: 10px 170px 10px 20px;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 16px;
+}
+.terminal {
+	color: green;
+	margin: 0px 0px 0px 0px;
 }
 .comment {
 	color: gray;
+}
+.type {
+	color: cyan;
 }
 
 
@@ -160,9 +172,6 @@ ul {
 }
 
 /*Default table formatting.*/
-table {
-	margin: auto;
-}
 th {
 	text-transform: lowercase;
 	font-size: 24px;

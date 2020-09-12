@@ -53,22 +53,26 @@
 				</li>
 			</ul>
 			<p>From a command line, a simple use of "curl" will provide plain-text temperature and humidity values for simple integration into other systems.</p>
-			<p class="code">	$ curl http://temp0/temperature<br />
-								15.68<br />
-								$ curl http://temp0/humidity<br />
-								70.69</p>
+			<div class="code">
+				<p class="terminal">	$ curl http://temp0/temperature<br />
+							15.68<br />
+							$ curl http://temp0/humidity<br />
+							70.69</p>
+			</div>
 			<p>Code (for the Pro-Trinket and the ESP8266) and KiCAD schematic/layout can all be found at the <a href="https://gitlab.com/clewsy/temp0">GitLab repo</a>.</p>
 			<hr />
-			<h3>Thoughts on <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> and programming firmware in C++</h3>
 
+			<h3>Thoughts on <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> and programming firmware in C++</h3>
 			<p>Meh, the Arduino IDE wasn't much fun and I thought it felt a little dated, so I started looking into alternatives.  I first tried the <a href="https://github.com/Microsoft/vscode-arduino">VSCode Arduino</a> extension which took some configuring but eventually worked.  Though I moved on from that when I discovered a better solution - the <a href="https://platformio.org/">PlatformIO IDE</a> extension for VSCode.  This was easy to set up and start using.  It adds a few buttons to the VSCode interface for compiling and uploading to a connected device.  Being a VSCode extension means I also have an integrated terminal console and integrated git management.  After a few weeks back-and-forth with PlatformIO I came to really like it and plan to use it for future embedded projects, even if I don't continue with the arduino bootloader.</p>
 			<p>The standard arduino libraries are handy though.  In this project I used <a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/">Serial</a> (comms between Trinket and ESP8266) and <a href="https://www.arduino.cc/en/Reference/Wire">Wire</a> (I2C comms for Trinket/SD1306 and Trinket/HDC1080).  These libraries made it super-fast to get going with the low-level comms.</p>
 			<p>For both the SSD1306 OLED and HDC1080 Sensor however, I opted to write my own drivers rather than use existing libraries.  Partly because it keeps the drivers more minimal and project-specific, and also partly because it was a fun learning experience to create C++ classes.</p>
 			<hr />
+
 			<a href="images/temp0_25.png"><img class="photo align-left" src="images/temp0_25.png" alt="Web Server as seen on an android smartphone." /></a>
 			<h3>Thoughts on the ESP8266</h3>
 			<p>While programming the ESP8266 I drew from existing example libraries.  At first I implemented some basic web-server functionality using AT commands sent from the Trinket over serial to the default ESP8266 firmware, but ultimately I switched to the more robust <a href="https://arduino-esp8266.readthedocs.io/en/latest/index.html">ESP8266 Arduino Core</a> libraries.  I was super impressed with the capability of the ESP-01 module combined with these libraries.</p>
 			<hr />
+
 			<h3>SSD1306</h3>
 			<p>I had some prior familiarity with the SSD1306 OLED driver on a <a href="https://clews.pro/projects/grinder_timer.php">previous project</a>.  There are a few differences this time in the way I implemented the driver:</p>
 			<ul>
@@ -78,10 +82,12 @@
 			</ul>
 			<p>To display text on the oled, I can now just specify a font array plus coordinates, and the char/string functions will output to the SSD1306/OLED regardless of font characteristics (character widths and font height).  To create the char/string functions I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  After getting my head around the font and character metadata embedded in the array, I was able to create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments around these functions that I added as I went - this is part of my learning process, plus I'm sure I'll have to re-learn this one day when I return to the project for whatever reason.</p>
 			<hr />
+
 			<h3>HDC1080</h3>
 			<p>The HDC1080 is a temperature and humidity sensor that interfaces over I2C.  Similar to the OLED/SSD1306, I wrote a project-specific driver for it.</p>
 			<p>When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which gave it 100mm or so clearance from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had located the sensor on the PCB too close to the 3.3V regulator on the opposite side, so the waste heat from the regulator was affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located at opposite corners and sides of the PCB to give the sensor additional copper into which it could dissipate heat.  This improved the accuracy of the sensor readings, but it was still showing higher than my callibration thermometer.  Fortunately the delta was a consistent value regardless of temperature so ultimately I added a bodge-factor in code to compensate.</p>
 			<hr />
+
 			<h3>PCB</h3>
 			<p>The schematic and PCB layouts were created with <a href="https://kicad-pcb.org/">KiCad</a>.  Early iterations included a header for an FTDI serial adapter intended to facillitate programming of the ESP-01.  This was removed from the final PCB iteration for simplicity.</p>
 			<p>A few component symbols and footprints were custom made:</p>
@@ -91,10 +97,13 @@
 				<li>Pro Trinket - Since I intended to install this module backwards (up-side-down?) to show off the special-edition silk-screen, I had to create a new, reversed footprint.</li>
 				<li>ESP8266/ESP-01 - After making the three footprints above, I was pretty comfortable with the process so I made a custom symbol and footprint for the ESP-01 as well.  I'm sure this is probably easily found elsewhere.</li>
 			</ul>
+
 			<hr />
 			<h3>Final Assembly</h3>
 			<p>Since the idea was to show off the Pro Trinket, I designed the PCB to suit an enclosure with a transparent lid that I had on hand.  A panel mount micro-usb port on the side supplies power and also passes through data to allow re-programming without opening the case (for the Pro-Trinket at least - programming the ESP-01 requires removal of the module from the rest of the unit).</p>
 			<p>A push-button on top cycles through the different display modes.  I included an LED on one of the analogue outputs which really doesn't serve much purpose except to add some extra bling.  It is just set to pulse continuously.  I located it so that it shines through the mounting hole on the Pro Trinket right under the Jolly-Wrencher symbol.</p>
+			<hr />
+
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>

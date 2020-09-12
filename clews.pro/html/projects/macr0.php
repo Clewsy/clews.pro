@@ -36,40 +36,40 @@
 			</ul>
 			<p> Since this revision won't require the keyscan functionality, I'll record the code here for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
 
-
-			<p class="code">void create_keyscan_report(keyscan_report_t *keyscan_report)<br />
+			<div class="code">
+			<p><span class="type">void</span> <b>create_keyscan_report</b>(<span class="type">keyscan_report_t</span> *keyscan_report)<br />
 					{<br />
-					&emsp;&emsp;&emsp;&emsp;<span class="comment">	// Start with a blank keyscan report.</span><br />
-					&emsp;&emsp;&emsp;&emsp;	memset(keyscan_report, 0, sizeof(keyscan_report_t));<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">// Start with a blank keyscan report.</span><br />
+					&emsp;&emsp;&emsp;&emsp;<b>memset</b>(keyscan_report, 0, <b>sizeof</b>(keyscan_report_t));<br />
 					&emsp;&emsp;&emsp;&emsp;<br />
-					&emsp;&emsp;&emsp;&emsp;<span class="comment">	// Define the pins to scan through.</span><br />
-					&emsp;&emsp;&emsp;&emsp;	uint8_t row_array[2] = ROW_ARRAY;<br />
-					&emsp;&emsp;&emsp;&emsp;	uint8_t col_array[2] = COL_ARRAY;<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">// Define the pins to scan through.</span><br />
+					&emsp;&emsp;&emsp;&emsp;<span class="type">uint8_t</span> row_array[2] = {ROW_1, ROW_2};<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="type">uint8_t</span> col_array[2] = {COL_1, COL_2};<br />
 					&emsp;&emsp;&emsp;&emsp;<br />
-					&emsp;&emsp;&emsp;&emsp;<span class="comment">	// Loop through for each row.</span><br />
-					&emsp;&emsp;&emsp;&emsp;	for(uint8_t r = 0; r < sizeof(row_array); r++)<br />
-					&emsp;&emsp;&emsp;&emsp;	{<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Set low current row (enable check).</span><br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		KEYS_PORT &= ~(1 << row_array[r]);<br />
+					&emsp;&emsp;&emsp;&emsp;<span class="comment">// Loop through for each row.</span><br />
+					&emsp;&emsp;&emsp;&emsp;<b>for</b>(<span class="type">uint8_t</span> r = 0; r < <b>sizeof</b>(row_array); r++)<br />
+					&emsp;&emsp;&emsp;&emsp;{<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Set low current row (enable check).</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KEYS_PORT &= ~(1 << row_array[r]);<br />
 					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Wait until row is set low before continuing, otherwise column checks can be missed.</span><br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		while(!(~KEYS_PINS & (1 << row_array[r]))) {}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Wait until row is set low before continuing, otherwise column checks can be missed.</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>while</b>(!(~KEYS_PINS & (1 << row_array[r]))) {}<br />
 					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Loop through for each column in the current row.</span><br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		for(uint8_t c = 0; c < sizeof(col_array); c++)<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		{<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">			// If the button in the current row and column is pressed, handle it.</span><br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;			if(~KEYS_PINS & (1 << col_array[c]))<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;			{<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;				handle_key(pgm_read_byte(&KEYMAP[r][c]), keyscan_report);<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;			}<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Loop through for each column in the current row.</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>for</b>(<span class="type">uint8_t</span> c = 0; c < <b>sizeof</b>(col_array); c++)<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// If the button in the current row and column is pressed, handle it.</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>if</b>(~KEYS_PINS & (1 << col_array[c]))<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>handle_key</b>(<b>pgm_read_byte</b>(&KEYMAP[r][c]), keyscan_report);<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br />
 					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">		// Set high current row (disable check).</span><br />
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		KEYS_PORT |= (1 << row_array[r]);<br />
-					&emsp;&emsp;&emsp;&emsp;	}<br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Set high current row (disable check).</span><br />
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KEYS_PORT |= (1 << row_array[r]);<br />
+					&emsp;&emsp;&emsp;&emsp;}<br />
 					}<br />
-
+			</div>
 
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
