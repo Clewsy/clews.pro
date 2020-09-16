@@ -99,6 +99,7 @@
 							<li>clews.pro</li>
 							<li>common</li>
 							<li>desktop</li>
+							<li>develop</li>
 							<li>docker</li>
 							<li>headless</li>
 							<li>mpd</li>
@@ -144,6 +145,7 @@
 						<ul>
 							<li>common</li>
 							<li>desktop</li>
+							<li>develop</li>
 							<li>mpd</li>
 							<li>node</li>
 							<li>secure</li>
@@ -271,6 +273,10 @@
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/desktop">desktop</a></th>
 					<td>Configurations for systems with a desktop - fonts, <a href="https://github.com/brndnmtthws/conky">conky</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/terbling.sh">terbling</a>, <a href="https://github.com/software-jessies-org/jessies/wiki/Terminator">terminator</a>, <a href="http://guake-project.org/">guake</a>, <a href="https://www.gnome.org/">gnome</a> settings.</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/develop">develop</a></th>
+					<td>Install <a href="https://code.visualstudio.com/">VSCode</a>, the AVR toolchain (including <a href="http://savannah.nongnu.org/projects/avr-libc">avr-libc</a>, <a href="http://savannah.nongnu.org/projects/avrdude">avrdude</a> and dependencies) and other miscellaneous development packages.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/docker">docker</a></th>

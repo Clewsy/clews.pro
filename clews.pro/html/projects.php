@@ -182,7 +182,7 @@
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
 					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible/clewsy_ansible_01.png" /></a></td>
 					<td>Deplolyment/configuration/maintenance automation of the machines/devices on my home network with ansible.</td>
-					<td class="date">2020-08-19</td>
+					<td class="date">2020-09-16</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
 					</td>
