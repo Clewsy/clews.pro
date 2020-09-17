@@ -35,6 +35,14 @@
 				<li>I put a pull-up resistor on the dimmer/brightness button for some reason.  This can be ommitted in favour of an internal pull-up.</li>
 			</ul>
 			<p> Since this revision won't require the keyscan functionality, I'll record the code here for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
+<div class="code"><p>
+<span class="comment">// The key map array.<br /></span>
+<span class="type">const char</span> <b>KEYMAP</b>[NUM_ROWS][NUM_COLS] PROGMEM = {<br />
+&emsp;&emsp;&emsp;&emsp;<span class="comment">// Column 1	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Column 2</span><br />
+&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_TOGGLE,		&emsp;&emsp; HID_MEDIACONTROLLER_SC_STOP},	&emsp;<span class="comment">// Row 1</span><br />
+&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_PREVIOUS,	&emsp;HID_MEDIACONTROLLER_SC_NEXT}		&emsp;&emsp;<span class="comment">// Row 2</span><br />
+};<br />
+</p></div>
 			<div class="code"><p>
 				<span class="comment">// Initialise the gpio for scanning rows and columns.</span><br />
 				<span class="type">void</span> <b>keyscan_init</b>(<span class="type">void</span>)<br />
@@ -48,7 +56,6 @@
 				&emsp;&emsp;&emsp;&emsp;KEYS_PORT |= ((1 &lt;&lt; COL_1) | (1 &lt;&lt; COL_2));<br />
 				}<br />
 			</p></div>
-
 			<div class="code"><p>
 				<span class="comment">// Parse the detected key and update the appropriate part of the report struct.</span><br />
 				<span class="type">void</span> <b>handle_key</b>(<span class="type">char</span> key, <span class="type">keyscan_report_t</span> *keyscan_report)<br />
