@@ -8,7 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">macr0</h2>
-			<a href="images/macr0/macr0_15.jpg"><img class="photo align-left" src="images/macr0/small_macr0_15.jpg" alt="The current, final assembled volcon." /></a>
+			<a href="images/macr0/macr0_27.jpg"><img class="photo align-left" src="images/macr0/small_macr0_27.jpg" alt="The assembled macr0 revision 2." /></a>
 			<p>Macr0 is a 4-button macro pad which identifies as a USB keyboard.</p>
 			<p>This project is effectively a handful of proofs of concepts.  I wanted to test a few things I haven't done before with the intention to scale-up for a future project.</p>
 			<p>The goals I had in mind for this project included:</p>
@@ -22,10 +22,14 @@
 			</ol>
 			<p><a href="https://kicad-pcb.org/">KiCad</a> for PCB design and <a href="https://jlcpcb.com/">JLCPCB</a> for fabrication.  <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/">PlatformIO IDE</a> extension for developng the firmware.  <a href="https://gitlab.com/clewsy/macr0/-/tree/master/hardware">Hardware</a> (schematic and PCB design) and <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">firmware</a> are all open and published in a <a href="https://gitlab.com/clewsy/macr0/">Gitlab repository</a>.</p>
 			<hr />
+
 			<h2>Revision 1</h2>
 			<p>For the most part, everything worked out.  The only goal I didn't quite hit was in regards to the LED backlighting.  I used a CAT4101 LED but I didn't size the LEDs correctly.  Using 4 LEDs total, I used two channels of the CAT4104 with two LEDs per channel.  With VCC at 5V and the CAT4104 requiring 0.4V headroom, that leaves 4.6V per channel or 2.3V per LED.  The LEDs I used are rated at 3.5V.  As a result, I still have backlighting but at a lower brightness and with some instability (flickering).</p>
 			<p>I have been using the device as a media controller with the keys configured as play/pause, stop, previous and next.</p>
 			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A <a href="images/macr0/macr0_13.jpg">photo</a> in the gallery below shows both devices together.</p> 
+			<hr />
+
+			<a href="images/macr0/macr0_25.jpg"><img class="photo align-right" src="images/macr0/small_macr0_25.jpg" alt="The assembled macr0 revision 2, bottom view." /></a>
 			<h2>Revision 2</h2>
 			<p>Having learned a few lessons and prooved concepts for a larger-scale project, I decided to revise macr0 since I've found it quite useful.  Changes to be incorporated::</p>
 			<ul>
@@ -34,15 +38,19 @@
 				<li>Similarly I would just use a gpio pin configured as an input to directly read each key.  For this 4-key input it would take exactly the same number of gpio pins.  Of course, then I wouldn't have learned how best to read a key matrix - also required for a future project.</li>
 				<li>I put a pull-up resistor on the dimmer/brightness button for some reason.  This can be ommitted in favour of an internal pull-up.</li>
 			</ul>
-			<p> Since this revision won't require the keyscan functionality, I'll record the code here for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
-<div class="code"><p>
-<span class="comment">// The key map array.<br /></span>
-<span class="type">const char</span> <b>KEYMAP</b>[NUM_ROWS][NUM_COLS] PROGMEM = {<br />
-&emsp;&emsp;&emsp;&emsp;<span class="comment">// Column 1	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Column 2</span><br />
-&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_TOGGLE,		&emsp;&emsp; HID_MEDIACONTROLLER_SC_STOP},	&emsp;<span class="comment">// Row 1</span><br />
-&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_PREVIOUS,	&emsp;HID_MEDIACONTROLLER_SC_NEXT}		&emsp;&emsp;<span class="comment">// Row 2</span><br />
-};<br />
-</p></div>
+			<p>Since this revision won't require the keyscan functionality, I'll record the code bellow for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
+			<p>Revision 2 works great.  I get full brightness out of the LEDs (although I set the default to quite dim).</p>  The PCB is also a nicer fit to the wood enclosure.</p>
+			<hr />
+
+			<h2>Key Scanning Code Snippets</h2>
+			<div class="code"><p>
+				<span class="comment">// The key map array.<br /></span>
+				<span class="type">const char</span> <b>KEYMAP</b>[NUM_ROWS][NUM_COLS] PROGMEM = {<br />
+				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Column 1	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Column 2</span><br />
+				&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_TOGGLE,		&emsp;&emsp; HID_MEDIACONTROLLER_SC_STOP},	&emsp;<span class="comment">// Row 1</span><br />
+				&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_PREVIOUS,	&emsp;HID_MEDIACONTROLLER_SC_NEXT}		&emsp;&emsp;<span class="comment">// Row 2</span><br />
+				};<br />
+			</p></div>
 			<div class="code"><p>
 				<span class="comment">// Initialise the gpio for scanning rows and columns.</span><br />
 				<span class="type">void</span> <b>keyscan_init</b>(<span class="type">void</span>)<br />
@@ -127,6 +135,7 @@
 				&emsp;&emsp;&emsp;&emsp;}<br />
 				}<br />
 			</p></div>
+			<hr />
 
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
@@ -166,8 +175,29 @@
 					<td class="align-left"><a href="images/macr0/macr0_17.png"><img class="photo" src="images/macr0/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
 					<td class="align-right"><a href="images/macr0/macr0_18.png"><img class="photo" src="images/macr0/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
 				</tr>
+
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_99.png"><img class="photo" src="images/macr0/macr0_99.png" alt="Schematic for revision 2." /></a></td>
+					<td class="align-left"><a href="images/macr0/macr0_19.jpg"><img class="photo" src="images/macr0/small_macr0_19.jpg" alt="Rev 2 PCB - top view." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_20.jpg"><img class="photo" src="images/macr0/small_macr0_20.jpg" alt="Rev 2 PCB - bottom view." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0/macr0_21.jpg"><img class="photo" src="images/macr0/small_macr0_21.jpg" alt="Rev 2 PCB assembled." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_22.jpg"><img class="photo" src="images/macr0/small_macr0_22.jpg" alt="Rev 2 assembly - 1." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0/macr0_23.jpg"><img class="photo" src="images/macr0/small_macr0_23.jpg" alt="Rev 2 assembly - 2." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_24.jpg"><img class="photo" src="images/macr0/small_macr0_24.jpg" alt="Rev 2 assembly - 3." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0/macr0_25.jpg"><img class="photo" src="images/macr0/small_macr0_25.jpg" alt="Rev 2 assembled - bottom." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_26.jpg"><img class="photo" src="images/macr0/small_macr0_26.jpg" alt="Rev 2 assembled - top." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0/macr0_27.jpg"><img class="photo" src="images/macr0/small_macr0_27.jpg" alt="Rev 2 working." /></a></td>
+					<td class="align-right"><a href="images/macr0/macr0_28.jpg"><img class="photo" src="images/macr0/small_macr0_28.jpg" alt="Rev 2 working with keycaps." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0/macr0_29.png"><img class="photo" src="images/macr0/macr0_29.png" alt="Schematic for revision 2." /></a></td>
 				</tr>
 			</table>
 		</div>
