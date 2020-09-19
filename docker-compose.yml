@@ -207,7 +207,8 @@ services:
   calibre-app:
     image: linuxserver/calibre
     container_name: calibre-app
-    network_mode: none
+    networks:
+      - clews.pro_network
     environment:
       - PUID=1000
       - PGID=1000
