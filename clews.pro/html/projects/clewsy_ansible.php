@@ -34,7 +34,7 @@
 			<hr />
 
 			<h2 class="align-center">Hosts</h2>
-			<table class="text-table">
+			<table class="text-table"><col style="width:auto"><col style="width:auto"><col style="width:600px"><col style="width:auto">
 				<tr>
 					<th scope="col">Hostname</th>
 					<th scope="col">Base OS</th>
@@ -218,18 +218,21 @@
 				</tr>
 				<tr>
 					<th scope="row">zapp</th>
-					<td><a href="https://www.openmediavault.org/">openmediavault</a></td>
+					<td><a href="https://ubuntu.com/">Ubuntu</a></td>
 					<td>
-						<p>File-server and backup storage.</p>
-						<p>Shares bulk media over <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> and acts as my on-site backup storage.</p>
-						<p>Also runs a torrent client (<a href="https://www.qbittorrent.org/">qbittorrent</a>).</p>
+						<p>File-server, backup storage and torrent client.</p>
+						<p>Shares media using <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> and acts as my on-site backup storage.</p>
+						<p>Includes some specific rsync cron jobs to facillitate on-site and off-site backups.</p>
+						<p>For a few years I used <a href="https://www.openmediavault.org/">openmediavault</a> (omv) as the operating system for backups and file serving, but I switched to a minimal Ubuntu server install which allowed me to fully automate deployment/redeployment without needing to use the omv gui or learn the omv command-line options.</p> 
 					</td>
 					<td>
 						<ul>
 							<li>common</li>
 							<li>docker</li>
+							<li>file_server</li>
 							<li>headless</li>
 							<li>qbittorrent</li>
+							<li>rsync_server</li>
 							<li>vpn</li>
 						</ul>
 					</td>
@@ -287,6 +290,10 @@
 					<td>A special role created to configure an android smartphone running <a href="https://termux.com/">Termux</a>.  This role has tasks similar to common that had to be implemented dfferently (configure ssh, install packages, install scripts).  It also installs some termux "shortcuts" which are basically scripts that can be run from a widget.</td>
 				</tr>
 				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/file_server">file_server</a></th>
+					<td>Mounts a number of disks and configures specified disks or directories as <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> shares for access over the local network.</td>
+				</tr>
+				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/headless">headless</a></th>
 					<td>Install and configure some <a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a> apps useful for headless systems and systems that are often accessed remotely.  Includes <a href="https://hisham.hm/htop/">htop</a>, <a href="http://www.ex-parrot.com/pdw/iftop/">iftop</a>, <a href="https://dev.yorhel.nl/ncdu">ncdu</a>, <a href="https://github.com/tmux/tmux/wiki">tmux</a> and <a href="https://midnight-commander.org/">Midnight Commander</a>.</td>
 				</tr>
@@ -321,6 +328,10 @@
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/rad10">rad10</a></th>
 					<td>Configure a <a href="https://www.raspberrypi.org/">raspberry pi</a> as an internet radio/music streamer with hardware control and a webui.  First run the mpd role, then clone the <a href="https://gitlab.com/clewsy/rad10d">rad10d repo</a>, compile the daemon and configure a unit-file for systemd auto-starting.  Will also install web server packages (<a href="https://httpd.apache.org/">Apache</a>) and copy the html/php files for the rad10 webui.</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/rsync_server">rsync_server</a></th>
+					<td>Creates a series of <a href="https://en.wikipedia.org/wiki/Cron">cron</a> jobs that use <a href="https://rsync.samba.org/">rsync</a> to create specified local and remote backups to/from various machines..</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/secure">secure</a></th>
