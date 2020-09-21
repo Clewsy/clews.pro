@@ -39,7 +39,7 @@
 				<li>I put a pull-up resistor on the dimmer/brightness button for some reason.  This can be ommitted in favour of an internal pull-up.</li>
 			</ul>
 			<p>Since this revision won't require the keyscan functionality, I'll record the code bellow for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
-			<p>Revision 2 works great.  I get full brightness out of the LEDs (although I set the default to quite dim).</p>  The PCB is also a nicer fit to the wood enclosure.</p>
+			<p>Revision 2 works great.  I get full brightness out of the LEDs (although I set the default to quite dim).  The PCB is also a nicer fit to the wood enclosure.</p>
 			<hr />
 
 			<h2>Key Scanning Code Snippets</h2>
