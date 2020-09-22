@@ -19,6 +19,8 @@
 				<li>Give the user sudo access.  The sudo password must be as defined (encrypted) by the host-specific setup-password variable (also in <i>host_vars/hostname.yml</i>).</li>
 				<li>Ensure a static IP has been assigned to the MAC address of the machine's network interface.  I use a hosts file on my dhcp server, so in my hosts.yml file all machines are identified by hostname, not ip address.</li>
 			</ol>
+			<hr />
+			<h3>Android Phone Automation</h3>
 			<p>The flexo.yml playbook is a special case.  Flexo is the hostname assigned to my smartphone, so to configure it with ansible (using the <i>droid</i> role) the pre-requisites differ:</p>
 			<ol>
 				<li><a href="https://termux.com/">Termux</a> must be installed.</li>
@@ -31,6 +33,20 @@
 				<li>The ssh daemon must be running (i.e run <i>sshd</i>).  By default, the ssh daemon will serve on port 8022.</li>
 			</ol>
 			<p>The following tables detail the machines I have on my network and the roles I created for them.</p>
+			<hr />
+
+			<h3>File Server / Backup Automation box</h3>
+			<p>For a few years I used <a href="https://www.openmediavault.org/">openmediavault</a> (omv) on a headless system.  Omv has many features, of which I really used only two:</p>
+			<ol>
+				<li><b>Network Accessible Storage / File Server</b>:  It is in this box that I keep bulk file storage including media.  I create a few network shares so that video/music/image files can be accessed elswhere through the local network.</li>
+				<li><b>Backups</b>:  With rsync and a few cron jobs, this machine would create daily backups of important files.  It pulled files from various machines to create on-site backups, and it also pushed these backups to an off-site box.</li>
+			</ol>
+			<p>Omv has a nice web-based graphical interface with which I had no issues, but it obfuscated some of the workings of the tasks I used it for.  Additionally, deployment via ansible would require learning omv-specific commands.  I expect automation would be possible this way, but it occurred to me I could easily automate file-sharing and rsync cron jobs with a minimal Ubuntu system.  The only loss would be the webUI, but I only ever needed that when initially setting up omv.</p>
+			<p>So I replaced omv with <a href="https://ubuntu.com/download/server">Ubuntu Server</a> and created a couple of roles that serve my minimal needs:</p>
+			<ol>
+				<li><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/file_server">file_server</a>: This role mounts disks/partitions and creates <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> shares to access them across the LAN.</li>
+				<li><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/rsync_server">rsync_server</a>: This role creates cron jobs for <a href="https://rsync.samba.org/">rsync</a> pull and push backups.</li>
+			</ol> 
 			<hr />
 
 			<h2 class="align-center">Hosts</h2>
