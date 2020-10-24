@@ -47,7 +47,7 @@
 				</tr>
 				<tr>
 					<td class="align-left"><a href="images/volcon/volcon_08.jpg"><img class="photo" src="images/volcon/small_volcon_08.jpg" alt="The current assembly (with nicer spotted gum finish)." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_01.jpg"><img class="photo" src="images/small_volcon_01.jpg" alt="The original assembly (with stained pine finish)." /></a></td>
+					<td class="align-right"><a href="images/volcon/volcon_01.jpg"><img class="photo" src="images/volcon/small_volcon_01.jpg" alt="The original assembly (with stained pine finish)." /></a></td>
 				</tr>
 			</table>
 		</div>

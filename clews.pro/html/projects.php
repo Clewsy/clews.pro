@@ -75,7 +75,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
-					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_27.jpg" /></a></td>
+					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
 					<td class="date">2020-10-24</td>
 					<td class="links">
