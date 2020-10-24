@@ -115,9 +115,6 @@ img.icon {
 	margin: auto auto auto auto;
 }
 
-
-
-
 /*Text formatting when showing code or command blocks.*/
 .code {
 	font-family: courier, "courier new", monospace;
@@ -140,8 +137,25 @@ img.icon {
 .type {
 	color: cyan;
 }
-
-
+.function {/*Use when defining or declaring a function.*/
+	font-weight: bold;
+}
+.compiler {/*Use for compiler flags - #define, #include, etc*/
+	color: dodgerblue;
+}
+.flow {/*Use for flow control - for, if, else, while, switch, case, etc.*/
+	color:steelblue;
+	font-weight: bold;
+}
+.operator {/*Use for operators (arithmetic, logical and relational) - +, -, *, /, %, =, !, <, >, &, |, etc.*/
+	color: goldenrod;
+}
+.numerical {
+	color: firebrick;
+}
+.string {
+	color: indianred;
+}
 
 /*General purpose alignment classes.*/
 .align-left {
