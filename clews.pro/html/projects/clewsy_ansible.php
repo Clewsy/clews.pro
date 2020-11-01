@@ -44,7 +44,7 @@
 			<p>Omv has a nice web-based graphical interface with which I had no issues, but it obfuscated some of the workings of the tasks I used it for.  Additionally, deployment via ansible would require learning omv-specific commands.  I expect automation would be possible this way, but it occurred to me I could easily automate file-sharing and rsync cron jobs with a minimal Ubuntu system.  The only loss would be the webUI, but I only ever needed that when initially setting up omv.</p>
 			<p>So I replaced omv with <a href="https://ubuntu.com/download/server">Ubuntu Server</a> and created a couple of roles that serve my minimal needs:</p>
 			<ol>
-				<li><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/file_server">file_server</a>: This role mounts disks/partitions and creates <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> shares to access them across the LAN.</li>
+				<li><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/file_server">file_server</a>: This role mounts disks/partitions and creates <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> and/or <a href="http://cifs.com/">cifs</a> shares to access them across the LAN.</li>
 				<li><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/rsync_server">rsync_server</a>: This role creates cron jobs for <a href="https://rsync.samba.org/">rsync</a> pull and push backups.</li>
 			</ol> 
 			<hr />
