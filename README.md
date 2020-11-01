@@ -20,6 +20,7 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 * php - [php][link_dockerhub_php] - accessed by nginx containers in order to execute php scripts.
 * nginx-clews.pro - [nginx][link_dockerhub_nginx] - html and css files for my personal web site [clews.pro][link_clews].  The html and css for clews.pro is also contained within this repository.
 * nginx-clews.dev - [nginx][link_dockerhub_nginx] - html and css files for my other personal web site [clews.dev][link_clews.dev].  The html and css for clews.dev is also contained within this repository.
+* watchtower - [containrrr/watchtower][link_dockerhub_watchtower] - configured to check for updated container images - will download and run automatically.
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io][link_web_linuxserver] developers allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
 
@@ -31,28 +32,33 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 
 ![clews.pro][image_clews.pro]
 
-[link_dockerhub_jwilder_nginx-proxy]:https://hub.docker.com/r/jwilder/nginx-proxy
-[link_dockerhub_jrcs_letsencrypt]:https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion
-[link_dockerhub_nextcloud]:https://hub.docker.com/_/nextcloud
-[link_dockerhub_linuxserver_mariadb]:https://hub.docker.com/r/linuxserver/mariadb
-[link_dockerhub_rcdailey_nextcloud-cronjob]:https://hub.docker.com/r/rcdailey/nextcloud-cronjob
+[link_clews]:https://clews.pro
+[link_clews.dev]:https://clews.dev
+
+[link_dockerhub_bitwardenrs_server]:https://hub.docker.com/r/bitwardenrs/server
 [link_dockerhub_clewsy_ncbu]:https://hub.docker.com/r/clewsy/ncbu
 [link_dockerhub_collabora_code]:https://hub.docker.com/r/collabora/code
+[link_dockerhub_netdata]:https://hub.docker.com/r/netdata/netdata
+[link_dockerhub_nginx]:https://hub.docker.com/_/nginx
+[link_dockerhub_jrcs_letsencrypt]:https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion
+[link_dockerhub_jwilder_nginx-proxy]:https://hub.docker.com/r/jwilder/nginx-proxy
 [link_dockerhub_linuxserver_airsonic]:https://hub.docker.com/r/linuxserver/airsonic
-[link_dockerhub_bitwardenrs_server]:https://hub.docker.com/r/bitwardenrs/server
 [link_dockerhub_linuxserver_calibre]:https://hub.docker.com/r/linuxserver/calibre
 [link_dockerhub_linuxserver_calibre-web]:https://hub.docker.com/r/linuxserver/calibre-web
-[link_dockerhub_netdata]:https://hub.docker.com/r/netdata/netdata
+[link_dockerhub_linuxserver_mariadb]:https://hub.docker.com/r/linuxserver/mariadb
+[link_dockerhub_nextcloud]:https://hub.docker.com/_/nextcloud
 [link_dockerhub_php]:https://hub.docker.com/_/php
-[link_dockerhub_nginx]:https://hub.docker.com/_/nginx
-[link_web_docker-compose]:https://docs.docker.com/compose/
-[link_web_ultrasonic]:https://f-droid.org/en/packages/org.moire.ultrasonic/
-[link_web_linuxserver]:https://www.linuxserver.io/
+[link_dockerhub_rcdailey_nextcloud-cronjob]:https://hub.docker.com/r/rcdailey/nextcloud-cronjob
+[link_dockerhub_watchtower]:https://hub.docker.com/r/containrrr/watchtower
+
 [link_gitlab_clewsy_ncbu]:https://gitlab.com/clewsy/ncbu
+
 [link_repo_docker-compose.yml]:docker-compose.yml
 [link_repo_clews.service]:clews.service
 [link_repo_html]:clews.pro/html
-[link_clews]:https://clews.pro
-[link_clews.dev]:https://clews.dev
+
+[link_web_docker-compose]:https://docs.docker.com/compose/
+[link_web_ultrasonic]:https://f-droid.org/en/packages/org.moire.ultrasonic/
+[link_web_linuxserver]:https://www.linuxserver.io/
 
 [image_clews.pro]:clews.pro/html/images/clews_logo.png

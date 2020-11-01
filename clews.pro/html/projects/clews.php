@@ -9,7 +9,7 @@
 		<div id="page">
 			<h2 class="align-center">clews.pro</h2>
 			<a href="images/clews/clews_01.png"><img class="photo align-left" src="images/clews/clews_01.png" alt="Whoah." /></a>
-			<p>Clews.pro is this web site.  A place to document my various projects.  Mostly just for fun and education.</p>
+			<p>Clews.pro is this web site.  A place to document my various projects.  I do this mostly just for fun and education.</p>
 			<p>I started with the knowledge of installing apache, exposing port 80 and some very basic HTML skills.</p>
 			<p>Now I have a modular set of web apps served at different subdomains and all encrypted with SSL.</p>
 			<p>To further develop said HTML skills and additionally learn CSS, I made my way through <a href="http://www.htmlandcssbook.com/"><i>HTML & CSS</i> by Jon Duckett</a>.</p>
@@ -30,6 +30,7 @@
 				<li><b>Calibre-Web</b> (image:  <a href="https://hub.docker.com/r/linuxserver/calibre-web">linuxserver/calibre-web</a>) - Web-based ebook library access system.</li>
 				<li><b>NGINX</b> (image:  <a href="https://hub.docker.com/_/nginx">nginx</a>) - For serving up the html/css/php that forms this (and other) sites.</li>
 				<li><b>PHP</b> (image: <a href="https://hub.docker.com/_/php">php</a>) - Configured for access by NGINX containers to enable serving php scripts.</li>
+				<li><b>Watchtower</b> (image: <a href="https://hub.docker.com/r/containrrr/watchtower">containrrr/watchtower</a>) - Periodically checks for updates to all container images.  Downloads and runs when new images are discovered.</li>
 			</ul>
 			<p>The logo for clews.pro also intended to be a learning exercise - this time in vector graphics editing - specifically <a href="https://inkscape.org/">Inkscape</a>.</p>
 			<p> I've been doodling the <a href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a> since I discovered it in primary school, so it served as a geometric starting point.  I exploded it into the three identical but rotated parts and rearranged them to differ from the original.  I felt the result was a bit too angular/aggressive, so I put the whole thing into a circle.  I clearly lack the designer gene but it serves the purpose.</p>

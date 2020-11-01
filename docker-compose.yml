@@ -16,6 +16,7 @@
 #### - nginx-clews.dev          NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
 #### - nginx-jadon.clews.pro    NGINX               (image: nginx)
+#### - watchtower               Watchtower          (image: containrrr/watchtower)
 
 ## Note some sensitive environment variables defined in external file ".env"
 
@@ -337,6 +338,21 @@ services:
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - ./jadon.clews.pro/html:/usr/share/nginx/html
+    restart: unless-stopped
+
+######################################### jadon website container
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      - WATCHTOWER_CLEANUP=true #Remove old images.
+      - WATCHTOWER_INCLUDE_STOPPED=true
+      - WATCHTOWER_REVIVE_STOPPED=true
+      - WATCHTOWER_POLL_INTERVAL=3600 #Hourly
+      - WATCHTOWER_DEBUG=false
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock #Mount docker.sock to give watchtower ability to control docker.
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
 ######################################### Docker-managed volumes
