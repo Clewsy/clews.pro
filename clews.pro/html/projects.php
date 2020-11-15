@@ -77,9 +77,10 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2020-10-24</td>
+					<td class="date">2020-11-15</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a>
+						<a href="https://hackaday.io/project/175874-macr0">hackaday.io</a><br />
 					</td>
 					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver</td>
 				</tr>

@@ -21,6 +21,7 @@
 				<li>Connectivity (and power) will be via a <a href="https://en.wikipedia.org/wiki/USB-C">USC-C</a> connector, configured for USB 2.0.</li>
 			</ol>
 			<p><a href="https://kicad-pcb.org/">KiCad</a> for PCB design and <a href="https://jlcpcb.com/">JLCPCB</a> for fabrication.  <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/">PlatformIO IDE</a> extension for developng the firmware.  <a href="https://gitlab.com/clewsy/macr0/-/tree/master/hardware">Hardware</a> (schematic and PCB design) and <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">firmware</a> are all open and published in a <a href="https://gitlab.com/clewsy/macr0/">Gitlab repository</a>.</p>
+			<p>The firmware was programmed in C and draws from Dean Camera's <a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA libray</a>.
 			<hr />
 
 			<h2>Revision 1</h2>
@@ -29,8 +30,8 @@
 			<p>The wood enclosure is made from spotted gum and was intended to match another project - <a href="/projects/volcon.php">volcon</a>.  A <a href="images/macr0/macr0_13.jpg">photo</a> in the gallery below shows both devices together.</p> 
 			<hr />
 
-			<a href="images/macr0/macr0_25.jpg"><img class="photo align-right" src="images/macr0/small_macr0_25.jpg" alt="The assembled macr0 revision 2, bottom view." /></a>
 			<h2>Revision 2</h2>
+			<a href="images/macr0/macr0_35.gif"><img class="photo align-right" src="images/macr0/small_macr0_35.gif" alt="The assembled macr0 revision 2, showing the LED pulse effect." /></a>
 			<p>Having learned a few lessons and prooved concepts for a larger-scale project, I decided to revise macr0 since I've found it quite useful.  Changes to be incorporated::</p>
 			<ul>
 				<li>The smd crystal foorprint was from the included KiCad libray and has huge pads to ease hand-soldering.  They take up too much space and could easily be much smaller and still hand-solderable.</li>
@@ -283,6 +284,9 @@
 				<tr>
 					<td class="align-left"><a href="images/macr0/macr0_33.jpg"><img class="photo" src="images/macr0/small_macr0_33.jpg" alt="Rev 2 working with black media control keycaps." /></a></td>
 					<td class="align-right"><a href="images/macr0/macr0_34.jpg"><img class="photo" src="images/macr0/small_macr0_34.jpg" alt="Rev 2 working with black media control keycaps." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/macr0/macr0_35.gif"><img class="photo" src="images/macr0/small_macr0_35.gif" alt="The assembled macr0 revision 2, showing the LED pulse effect." /></a></td>
 				</tr>
 			</table>
 		</div>
