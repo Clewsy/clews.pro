@@ -20,7 +20,7 @@
 				<li>This assembly is mounted to a custom PCB with some nylon stand-offs. The PCB became the base of the whole unit.</li>
 				<li>I cut some wooden rings to enclose the electronics and the base of the VCR drum.</li>
 				<li>The custom PCB was designed in eagle and etched at home from some single-sided copper-clad board. The circuit was designed around an AVR at90usb162.</li>
-				<li>The code is written in C and implements the <a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA</a> library <a href="https://github.com/abcminiuser/lufa/">developed</a> by <a href="http://www.fourwalledcubicle.com/AboutMe.php">Dean Cameron</a>.</li>
+				<li>The code is written in C and implements the <a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA</a> library <a href="https://github.com/abcminiuser/lufa/">developed</a> by <a href="http://www.fourwalledcubicle.com/AboutMe.php">Dean Camera</a>.</li>
 				<li>The whole unit plugs into a PC via USB and is automatically identified as a HID - no drivers required (tested in Debian Linux and Windows).</li>
 				<li>It's a very simple device - rotate clockwise to increase volume, counter-clockwise to decrease.</li>
         			<li>Code and PCB design are available via <a href="https://gitlab.com/clewsy/volcon">gitlab</a>). Here are some reference links:</li>

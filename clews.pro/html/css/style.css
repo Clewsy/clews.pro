@@ -117,6 +117,7 @@ img.icon {
 
 /*Text formatting when showing code or command blocks.*/
 .code {
+	tab-size: 68;
 	font-family: courier, "courier new", monospace;
 	text-transform: none;
 	text-align: left;
