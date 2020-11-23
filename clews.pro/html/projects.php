@@ -21,7 +21,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2020-11-12</td>
+					<td class="date">2020-11-23</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -58,7 +58,7 @@
 					<td>An upgrade to the original grinder_timer.</td>
 					<td class="date">2020-08-21</td>
 					<td class="links">
-						<a href="https://gitlab.com/clewsy/grinder_timer_rev2">gitlab</a>
+						<a href="https://gitlab.com/clewsy/grinder_timer_rev2">gitlab</a><br />
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
 					</td>
 					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancillio Rocky, PWM, 32.738kHz, PlatformIO</td>
@@ -77,10 +77,11 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2020-11-15</td>
+					<td class="date">2020-11-23</td>
 					<td class="links">
-						<a href="https://gitlab.com/clewsy/macr0">gitlab</a>
-						<a href="https://hackaday.io/project/175874-macr0">hackaday.io</a><br />
+						<a href="https://gitlab.com/clewsy/macr0">gitlab</a><br />
+						<a href="https://hackaday.com/2020/11/19/micro-macro-keyboard-is-mega-based/">hackaday</a><br />
+						<a href="https://hackaday.io/project/175874-macr0">hackaday.io</a>
 					</td>
 					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver</td>
 				</tr>
@@ -144,7 +145,7 @@
 					<td class="date">2020-09-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/temp0">gitlab</a><br />
-						<a href="https://hackaday.io/project/171367-temp0">hackaday.io</a><br />
+						<a href="https://hackaday.io/project/171367-temp0">hackaday.io</a>
 					</td>
 					<td>Arduino, Pro-Trinket, Adafruit, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
 				</tr>
