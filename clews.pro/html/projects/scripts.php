@@ -20,7 +20,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ball">ball</a></th>
-					<td>Runs bu.sh on a bunch of remote host or list of hosts.</td>
+					<td>Runs bu on a bunch of remote host or list of hosts.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu">bu</a></th>
