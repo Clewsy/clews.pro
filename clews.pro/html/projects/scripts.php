@@ -15,15 +15,15 @@
 					<th scope="col">Description</th>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/apt_all.sh">apt_all.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/apt_all">apt_all</a></th>
 					<td>Runs apt-get update, apt-get dist-upgrade, apt-get autoremove and apt-get autoclean on a provided host or list of hosts.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ball.sh">ball.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ball">ball</a></th>
 					<td>Runs bu.sh on a bunch of remote host or list of hosts.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu.sh">bu.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu">bu</a></th>
 					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories defined in a list file to a remote server.</td>
 				</tr>
 				<tr>
@@ -47,7 +47,7 @@
 					<td>Kills current <a href="https://openvpn.net/">openvpn</a> service then reconnects and confirms.  Useful for quickly establishing or re-establishing a vpn connection.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/wami.sh">wami.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/wami">wami</a></th>
 					<td>Pulls and displays info (IP, country, city, etc) from <a href="https://ipinfo.io/">ipinfo.io</a> - useful to verify vpn operation.</td>
 				</tr>
 				<tr>
