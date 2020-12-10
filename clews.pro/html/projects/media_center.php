@@ -10,8 +10,9 @@
 			<h2 class="align-center">media_center</h2>
 			<a href="images/media_center/media_center_01.jpg"><img class="photo align-left" src="images/media_center/media_center_01.jpg" alt="The final media_center." /></a>
 			<p>I wanted to upgrade my media center (<a href="https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus/">RPi B+</a> with <a href="https://xbian.org/">xbian</a>) to something a bit nicer, more stable and more accessible than just the RPi in a basic plastic case.</p>
-			<p>I built an enclosure out of plywood with aluminum front and rear panels.</p>
+			<p>I built an enclosure out marine plywood with merbau edging and aluminum front and rear panels.</p>
 			<p>All of the connections I wanted to use were broken out from the pi with panel-mount extension cables.</p>
+			<p>I've also switched to <a href="https://osmc.tv/">OSMC</a> as the operating system which serves up <a href="https://kodi.tv/">Kodi</a>.</p>
 			<p>The electronic components includes:</p>
 			<ul>
 				<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a></li>
@@ -22,7 +23,6 @@
 				<li>USB DIY Connector Shells (Type A Plug)</li>
 				<li>Rocker Switch - SPST</li>
 			</ul>
-			<p>The enclosure materials include some marine plywood, merbau strip cut from scrap for the front edging and aluminium plate for the front and rear panels.
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">

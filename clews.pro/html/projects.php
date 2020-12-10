@@ -89,7 +89,7 @@
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
 					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/media_center/small_media_center_01.jpg" /></a></td>
 					<td>Home media center running OSMC on a Raspberry Pi in a wood and aluminium enclosure.</td>
-					<td class="date">2020-02-04</td>
+					<td class="date">2020-12-10</td>
 					<td class="links">
 						<a href="https://core-electronics.com.au/projects/raspberry-pi-media-center">core-electronics</a>
 					</td>
