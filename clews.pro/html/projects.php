@@ -136,7 +136,7 @@
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/scripts">gitlab</a>
 					</td>
-					<td>Bash, Shell, Script, Linux, Debian, Ubuntu, Raspbian, Termux, echo, rsync, curl, apt-get, ssh, openvpn, ping, grep, lscpu, lspci, lsblk, df, uname, lsb_release, route, netstat, nmcli, ifconfig, ip, iw, iwgetid, command</td>
+					<td>Bash, Shell, Script, Linux, Debian, Ubuntu, Raspbian, Termux, echo, rsync, curl, apt-get, ssh, openvpn, ping, grep, lscpu, lspci, lsblk, df, uname, lsb_release, route, netstat, nmcli, ifconfig, ip, iw, iwgetid, command, printf</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
