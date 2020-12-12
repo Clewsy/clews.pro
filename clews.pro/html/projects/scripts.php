@@ -31,7 +31,7 @@
 					<td>Written for use with <a href="https://termux.com/">termux</a> to connect to a server that can control wireless mains outlets via <a href="https://gitlab.com/Clewsy/p0wer">p0wer</a>.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/pong.sh">pong.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/pong">pong</a></th>
 					<td>Runs through a list of servers, pings each once for a second then returns a success or fail result.</td>
 				</tr>
 				<tr>
