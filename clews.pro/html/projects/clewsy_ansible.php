@@ -59,7 +59,7 @@
 				</tr>
 				<tr>
 					<th scope="row">b4t-cam</th>
-					<td><a href="https://www.raspbian.org/">Raspbian</a></td>
+					<td><a href="https://www.raspberrypi.org/software/">Raspberry Pi OS</a></td>
 					<td>
 						<p>An old <a href="https://www.raspberrypi.org/">raspberry pi</a> 2 with a wifi dongle and an old usb webcam.</p>
 						<p>Configured as an ip cam.</p>
@@ -138,6 +138,20 @@
 					</td>
 				</tr>
 				<tr>
+					<th scope="row">hermes</th>
+					<td><a href="https://www.raspberrypi.org/software/">Raspberry Pi OS</a></td>
+					<td>
+						<p>Minimal Raspberry Pi OS image on an old Raspberry Pi 2 with <a href="https://www.cups.org/">CUPS</a> installed.</p>
+						<p>Configured to serve a connected laser printer on the local network.</p>
+					</td>
+					<td>
+						<ul>
+							<li>common</li>
+							<li>cups</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
 					<th scope="row">hypnotoad</th>
 					<td><a href="https://osmc.tv/">OSMC</a></td>
 					<td>
@@ -172,7 +186,7 @@
 				</tr>
 				<tr>
 					<th scope="row">p0wer</th>
-					<td><a href="https://www.raspbian.org/">Raspbian</a></td>
+					<td><a href="https://www.raspberrypi.org/software/">Raspberry Pi OS</a></td>
 					<td>
 						<p>A <a href="https://www.raspberrypi.org/">raspberry pi</a> zero W with an RF remote connected to the gpio.</p>
 						<p>Refer to the <a href="/projects/p0wer.php">p0wer</a> project page or <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
@@ -186,7 +200,7 @@
 				</tr>
 				<tr>
 					<th scope="row">pazuzu</th>
-					<td><a href="https://www.raspbian.org/">Raspbian</a></td>
+					<td><a href="https://www.raspberrypi.org/software/">Raspberry Pi OS</a></td>
 					<td>
 						<p><a href="https://www.raspberrypi.org/">Raspberry pi</a> zero W connected to a raspberry pi cam.</p>
 						<p>Configured as an ip cam.</p>
@@ -200,7 +214,7 @@
 				</tr>
 				<tr>
 					<th scope="row">rad10</th>
-					<td><a href="https://www.raspbian.org/">Raspbian</a></td>
+					<td><a href="https://www.raspberrypi.org/software/">Raspberry Pi OS</a></td>
 					<td>
 						<p>A <a href="https://www.raspberrypi.org/">raspberry pi</a> 3 with an encoder connected to the gpio.</p>
 						<p>Refer to the <a href="/projects/rad10.php">rad10</a> project page or <a href="https://gitlab.com/clewsy/rad10d">gitlab repo</a>.</p>
@@ -290,6 +304,10 @@
 					<td>Configurations common to all hosts - hostname, timezone, ssh keys/configs, apt upgrades, common packages, <a href="https://www.vim.org/">vim</a>, <a href="https://git-scm.com/">git</a>, host-specific packages, motd, .bashrc, aliases, cron jobs, mounts/fstab, common scripts (<a href="https://gitlab.com/clewsy/scripts/-/blob/master/bu.sh">bu</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/stuff.sh">stuff</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/wami.sh">wami</a>).</td>
 				</tr>
 				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/cups">cups</a></th>
+					<td>Will allow configuration of a printer that is connected directly (USB) or on the network.  Can effectively convert a direct connected printer into a network printer.</td>
+				</tr>
+				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/desktop">desktop</a></th>
 					<td>Configurations for systems with a desktop - fonts, <a href="https://github.com/brndnmtthws/conky">conky</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/terbling.sh">terbling</a>, <a href="https://github.com/software-jessies-org/jessies/wiki/Terminator">terminator</a>, <a href="http://guake-project.org/">guake</a>, <a href="https://www.gnome.org/">gnome</a> settings.</td>
 				</tr>
@@ -303,7 +321,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/droid">droid</a></th>
-					<td>A special role created to configure an android smartphone running <a href="https://termux.com/">Termux</a>.  This role has tasks similar to common that had to be implemented dfferently (configure ssh, install packages, install scripts).  It also installs some termux "shortcuts" which are basically scripts that can be run from a widget.</td>
+					<td>A special role created to configure an android smartphone running <a href="https://termux.com/">Termux</a>.  This role has tasks similar to common that had to be implemented dfferently (configure ssh, install packages, install scripts).  Installs some termux "shortcuts" which are basically scripts that can be run from a widget.  Also copies specified files onto the device (e.g. ringtones, wallpapers).</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/file_server">file_server</a></th>

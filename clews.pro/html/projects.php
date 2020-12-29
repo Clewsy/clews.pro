@@ -174,7 +174,7 @@
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
 					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
 					<td>Stuff made from wood.</td>
-					<td class="date">2020-09-07</td>
+					<td class="date">2020-12-29</td>
 					<td class="links">
 
 					</td>
@@ -184,11 +184,11 @@
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
 					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible/clewsy_ansible_01.png" /></a></td>
 					<td>Deplolyment/configuration/maintenance automation of the machines/devices on my home network with ansible.</td>
-					<td class="date">2020-11-01</td>
+					<td class="date">2020-12-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
 					</td>
-					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux, Raspberry Pi, Beaglebone Black, git, GitLab, Home Assistant, Wireguard, OpenVPN, qbittorrent, Vim, Conky, Terminator, Guake, Gnome, Docker, docker-compose, yaml, motion, mpd, mpc, ncmpc, bash scripts, Apache, php, apt, snap, ssh, mount, fstab, lm-sensors, VSCode, midnight commander, alias, python, motd, htop, iftop, ncdu, tmux, curl, netdiscover, nmap, chmod. chown, cron, pigpio, ufw, LineageOS, VPS, android, nfs, sudo, rsync, Watchtower, logrotate</td>
+					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux, Raspberry Pi, Beaglebone Black, git, GitLab, Home Assistant, Wireguard, OpenVPN, qbittorrent, Vim, Conky, Terminator, Guake, Gnome, Docker, docker-compose, yaml, motion, mpd, mpc, ncmpc, bash scripts, Apache, php, apt, snap, ssh, mount, fstab, lm-sensors, VSCode, midnight commander, alias, python, motd, htop, iftop, ncdu, tmux, curl, netdiscover, nmap, chmod. chown, cron, pigpio, ufw, LineageOS, VPS, android, nfs, sudo, rsync, Watchtower, logrotate, cups</td>
 				</tr>
 			</table>
 		</div>
