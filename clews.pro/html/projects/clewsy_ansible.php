@@ -17,7 +17,7 @@
 				<li>Install the operating system.</li>
 				<li>Create the user - must match the username defined in the host variables file (<i>host_vars/hostname.yml</i>).</li>
 				<li>Give the user sudo access.  The sudo password must be as defined (encrypted) by the host-specific setup-password variable (also in <i>host_vars/hostname.yml</i>).</li>
-				<li>Ensure a static IP has been assigned to the MAC address of the machine's network interface.  I use a hosts file on my dhcp server, so in my hosts.yml file all machines are identified by hostname, not ip address.</li>
+				<li>Ensure a static IP has been assigned to the MAC address of the machine's network interface.  I use a hosts file on my dhcp server, so in my hosts.yml file all machines are identified by hostname, not ip address.  I find it easier to remember character names from <a href="https://en.wikipedia.org/wiki/List_of_Futurama_characters">Futurama</a> than IP addresses.</li>
 			</ol>
 			<hr />
 			<h3>Android Phone Automation</h3>
@@ -32,13 +32,12 @@
 				<li>Termux ssh sessions don't really have a "user" in the traditional sense, but a password must be configured (i.e. run <i>passwd</i>).</li>
 				<li>The ssh daemon must be running (i.e run <i>sshd</i>).  By default, the ssh daemon will serve on port 8022.</li>
 			</ol>
-			<p>The following tables detail the machines I have on my network and the roles I created for them.</p>
 			<hr />
 
 			<h3>File Server / Backup Automation box</h3>
 			<p>For a few years I used <a href="https://www.openmediavault.org/">openmediavault</a> (omv) on a headless system.  Omv has many features, of which I really used only two:</p>
 			<ol>
-				<li><b>Network Accessible Storage / File Server</b>:  It is in this box that I keep bulk file storage including media.  I create a few network shares so that video/music/image files can be accessed elswhere through the local network.</li>
+				<li><b>Network Accessible Storage / File Server</b>:  It is in this box that I keep bulk file storage including media.  I create a few network shares so that video/music/image files can be accessed elswhere on the local network.</li>
 				<li><b>Backups</b>:  With rsync and a few cron jobs, this machine would create daily backups of important files.  It pulled files from various machines to create on-site backups, and it also pushed these backups to an off-site box.</li>
 			</ol>
 			<p>Omv has a nice web-based graphical interface with which I had no issues, but it obfuscated some of the workings of the tasks I used it for.  Additionally, deployment via ansible would require learning omv-specific commands.  I expect automation would be possible this way, but it occurred to me I could easily automate file-sharing and rsync cron jobs with a minimal Ubuntu system.  The only loss would be the webUI, but I only ever needed that when initially setting up omv.</p>
@@ -50,6 +49,7 @@
 			<hr />
 
 			<h2 class="align-center">Hosts</h2>
+			<p>The following table lists the machines I have on my network and the roles I assigned them.</p>
 			<table class="text-table"><col style="width:auto"><col style="width:auto"><col style="width:600px"><col style="width:auto">
 				<tr>
 					<th scope="col">Hostname</th>
@@ -290,6 +290,7 @@
 			<br /><br />
 			<hr />
 			<h2 class="align-center">Roles</h2>
+			<p>The following table describes the various roles I created and use.</p>
 			<table class="text-table">
 				<tr>
 					<th scope="col">Role</th>
