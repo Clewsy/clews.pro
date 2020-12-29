@@ -34,6 +34,9 @@
 					<td class="align-left"><a href="wood/desk.php"><img class="photo" src="wood/photos/desk/small_desk_05.jpg" title="Desk"></a></td>
 					<td class="align-right"><a href="wood/frame_4.php"><img class="photo" src="wood/photos/frame_4/small_frame_4_08.jpg" title="Small Frames"></a></td>
 				</tr>
+				<tr>
+					<td class="align-left"><a href="wood/frame_5_and_6.php"><img class="photo" src="wood/photos/frame_5_and_6/small_frame_5_and_6_09.jpg" title="X-mas 2020 Gift Frames"></a></td>
+				</tr>
 			</table>
 		</div>
 	</body>
