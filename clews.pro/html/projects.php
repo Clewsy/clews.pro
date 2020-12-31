@@ -188,7 +188,7 @@
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
 					</td>
-					<td>Ansible, Linux, Debian, Ubuntu, Raspbian, OpenMediaVault, OSMC, Pop_OS!, Termux, Raspberry Pi, Beaglebone Black, git, GitLab, Home Assistant, Wireguard, OpenVPN, qbittorrent, Vim, Conky, Terminator, Guake, Gnome, Docker, docker-compose, yaml, motion, mpd, mpc, ncmpc, bash scripts, Apache, php, apt, snap, ssh, mount, fstab, lm-sensors, VSCode, midnight commander, alias, python, motd, htop, iftop, ncdu, tmux, curl, netdiscover, nmap, chmod. chown, cron, pigpio, ufw, LineageOS, VPS, android, nfs, sudo, rsync, Watchtower, logrotate, cups</td>
+					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, yaml, </td>
 				</tr>
 			</table>
 		</div>
