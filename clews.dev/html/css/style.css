@@ -3,14 +3,26 @@ body {
 	line-height: 1.4em;
 	color: rgb(150,150,150);
 	background-color: rgb(55,55,55);
+	margin: 0px 0px 0px 0px;
 }
 
 #header {
 	text-align: center;
 }
 
-#header a:link {
+#header-links a:link, #header-links a:visited{
+	color: rgb(150,150,150);
 	text-decoration: none;	/* Remove underlines from links in header */
+}
+
+#header-links a:hover{
+	color: rgb(150,150,150);
+	text-decoration: underline;
+}
+
+#header-links a:active{
+	color: black;
+	text-decoration: underline;
 }
 
 #header-links {
@@ -33,6 +45,7 @@ table.gallery {
 	min-width: 1200px;
 	margin-left: 0px;
 	margin-right: 0px;
+	image-orientation: from-image;
 }
 table.gallery td {
 	border-bottom: none;
@@ -45,6 +58,7 @@ img.photo {
 	border-radius: 100px;
 	overflow: hidden;
 	margin: 20px 20px 20px 20px;
+	image-orientation: from-image;
 }
 
 /*Formatting for images (like photos but no border)*/
@@ -55,10 +69,19 @@ img.image {
 }
 
 /*Table formatting for text tables*/
+table.text-table {
+	margin: auto;
+}
 table.text-table a:link, table.text-table a:visited {
+	color: DodgerBlue;
 	text-decoration: none;
 }
-table.text-table a:hover, table.text-table a:active {
+table.text-table a:hover {
+	color: DodgerBlue;
+	text-decoration: underline;	
+}
+table.text-table a:active {
+	color: black;
 	text-decoration: underline;	
 }
 table.text-table .links, table.text-table .date {
@@ -69,12 +92,17 @@ table.text-table th, table.text-table td {
 	padding: 10px 10px 10px 0px;
 	border-bottom: 5px solid black;
 }
+table.text-table ul, table.text-table ol{
+	padding: 0px 0px 0px 0px;
+}
+
 img.thumbnail {
 	max-width: 200px;
 	max-height: 100px;
 	display: block;
 	border: 2px solid black;
 	border-radius: 10px;
+	image-orientation: from-image;
 }
 .thumbnail {
 	text-align: center;
@@ -87,16 +115,50 @@ img.icon {
 	margin: auto auto auto auto;
 }
 
-/*Text formatting when showing code or command bloxks.*/
-p.code {
+/*Text formatting when showing code or command blocks.*/
+.code {
+	tab-size: 68;
 	font-family: courier, "courier new", monospace;
 	text-transform: none;
-	padding: 10px 20px 10px 20px;
-	color: green;
+	text-align: left;
+	color: white;
 	background-color: black;
 	border-radius: 20px;
+	border-spacing: 0px;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 16px;
+}
+.terminal {
+	color: green;
+	margin: 0px 0px 0px 0px;
+}
+.comment {
+	color: gray;
+}
+.type {
+	color: cyan;
+}
+.function {/*Use when defining or declaring a function.*/
+	font-weight: bold;
+}
+.compiler {/*Use for compiler flags - #define, #include, etc*/
+	color: dodgerblue;
+}
+.flow {/*Use for flow control - for, if, else, while, switch, case, etc.*/
+	color:steelblue;
+	font-weight: bold;
+}
+.operator {/*Use for operators (arithmetic, logical and relational) - +, -, *, /, %, =, !, <, >, &, |, etc.*/
+	color: goldenrod;
+}
+.numerical {
+	color: firebrick;
+}
+.string {
+	color: indianred;
 }
 
+/*General purpose alignment classes.*/
 .align-left {
 	text-align: left;
 	float: left;
@@ -121,22 +183,16 @@ ol {
 ul {
 	list-style-position: outside;
 	position: relative;
-	left: 50px;
+	left: 20px;
 }
 
 /*Default table formatting.*/
-table {
-	margin-left: auto;
-	margin-right: auto;
-}
-th, td {
-	min-width: 120px;
-	padding: 10px 10px 10px 0px;
-	/*	border-bottom: 5px solid blue;*/
-}
 th {
 	text-transform: lowercase;
 	font-size: 24px;
+}
+td {
+	padding: 0px 0px 0px 0px;
 }
 
 /* Default heading settings*/
@@ -153,21 +209,16 @@ h3 {
 	text-transform: lowercase;
 	font-size: 18px;
 }
+h4 {
+	text-transform: lowercase;
+}
 
 /* Default link settings. */
-a:link {
-	color: rgb(150,150,150);
-	text-decoration: underline;
-}
-a:visited {
-	color: rgb(150,150,150);
+a:link, a:visited {
+	color: DodgerBlue;
 	text-decoration: none;
 }
-a:hover {
-	color: rgb(150,150,150);
+a:hover, a:active {
+	color: DodgerBlue;
 	text-decoration: underline;	
-}
-a:active {
-	color: black;
-	text-decoration: underline;
 }
