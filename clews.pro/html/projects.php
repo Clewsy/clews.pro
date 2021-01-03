@@ -77,7 +77,7 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2020-11-23</td>
+					<td class="date">2021-01-03</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a><br />
 						<a href="https://hackaday.com/2020/11/19/micro-macro-keyboard-is-mega-based/">hackaday</a><br />

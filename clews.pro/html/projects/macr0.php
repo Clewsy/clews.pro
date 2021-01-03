@@ -52,7 +52,7 @@
 			</ul>
 			<p>The key actions are set when the AVR is flashed so configuration is done with the source code.  The only file that needs to be edited is the "keymap.c" file.  Following are some examples of how the keys can be configured.</p>
 			<h3>Example 1</h3>
-			<p>All four keys are configured for media control - toggle (play/pause) stop, previous and next.  This is the final configuration I actually use macr0 for.</p>
+			<p>All four keys are configured for media control - toggle (play/pause) stop, previous and next.  It is this  configuration I actually settled on for daily use.</p>
 			<div class="code"><p>
 				<span class="comment">// keymap.c - Configure keys with this file.</span><br />
 				<br />
@@ -113,7 +113,6 @@
 				<br />
 				<span class="comment">// Map the macro strings.</span><br />
 				<span class="type">const char</span> MACRO_MAP[][MAX_MACRO_CHARS] PROGMEM <span class="operator">=</span> {};<br />
-				};<br />
 			</p></div>
 			<br />
 			<hr />
