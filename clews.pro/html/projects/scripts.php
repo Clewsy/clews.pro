@@ -27,7 +27,7 @@
 					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories defined in a list file to a remote server.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">p0wer_switch.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch">p0wer_switch</a></th>
 					<td>Written for use with <a href="https://termux.com/">termux</a> to connect to a server that can control wireless mains outlets via <a href="https://gitlab.com/Clewsy/p0wer">p0wer</a>.</td>
 				</tr>
 				<tr>
@@ -35,15 +35,15 @@
 					<td>Runs through a list of servers, pings each once for a second then returns a success or fail result.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/polly.sh">polly.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/polly">polly</a></th>
 					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs the result and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/stuff.sh">stuff.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/stuff">stuff</a></th>
 					<td>Pulls and lists a bunch of useful (to me) info about the host (hardware, disks/mounts, OS, network, etc).</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/vpn.sh">vpn.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/vpn">vpn</a></th>
 					<td>Kills current <a href="https://openvpn.net/">openvpn</a> service then reconnects and confirms.  Useful for quickly establishing or re-establishing a vpn connection.</td>
 				</tr>
 				<tr>
@@ -51,7 +51,7 @@
 					<td>Pulls and displays info (IP, country, city, etc) from <a href="https://ipinfo.io/">ipinfo.io</a> - useful to verify vpn operation.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/whodis.sh">whodis.sh</a></th>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/whodis">whodis</a></th>
 					<td>Grabs the contents of the /tmp/dhcp.leases file on a remote router, pretties it up and prints it to stdout.</td>
 				</tr>
 			</table>
