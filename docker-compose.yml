@@ -349,7 +349,7 @@ services:
       - WATCHTOWER_INCLUDE_STOPPED=true
       - WATCHTOWER_REVIVE_STOPPED=true
       - WATCHTOWER_SCHEDULE=0 30 4 * * * #Daily at 0430hrs.
-      - WATCHTOWER_DEBUG=true
+#      - WATCHTOWER_DEBUG=true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock #Mount docker.sock to give watchtower ability to control docker.
       - /etc/timezone:/etc/timezone:ro
