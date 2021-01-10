@@ -54,6 +54,10 @@
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/whodis">whodis</a></th>
 					<td>Grabs the contents of the /tmp/dhcp.leases file on a remote router, pretties it up and prints it to stdout.</td>
 				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ytdl">ytdl</a></th>
+					<td>Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  Not used often since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  NewPipe has direct download capability.</td>
+				</tr>
 			</table>
 			<br />
 			<br />
@@ -83,10 +87,6 @@
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/roll_out.sh">roll_out.sh</a></th>
 					<td>Attempt to copy a specified file/directory to a destination (relative to home directory) on a list of remote hosts.   I used this to sync my custom scripts to a list of hosts.  Now deprecated as I manage this task with <a href= "https://docs.ansible.com/">Ansible</a>.</td>
-				</tr>
-				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/ytdl.sh">ytdl.sh</a></th>
-					<td>ytdl.sh - Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  Archived as I no longer use this since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  NewPipe has direct download capability.</td>
 				</tr>
 			</table>
 		</div>
