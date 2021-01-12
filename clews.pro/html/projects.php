@@ -183,12 +183,12 @@
 				<tr>
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
 					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible/clewsy_ansible_01.png" /></a></td>
-					<td>Deplolyment/configuration/maintenance automation of the machines/devices on my home network with ansible.</td>
-					<td class="date">2020-12-29</td>
+					<td>Using Ansible to automate deplolyment, configuration and maintenance of the machines/devices on my home network.</td>
+					<td class="date">2021-01-12</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
 					</td>
-					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, yaml, </td>
+					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, iperf3, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, so much yaml</td>
 				</tr>
 			</table>
 		</div>

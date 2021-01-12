@@ -49,7 +49,7 @@
 			<hr />
 
 			<h2 class="align-center">Hosts</h2>
-			<p>The following table lists the machines I have on my network and the roles I assigned them.</p>
+			<p><center>The following table lists the machines I have on my network and the roles I assigned them.</center></p>
 			<table class="text-table"><col style="width:auto"><col style="width:auto"><col style="width:600px"><col style="width:auto">
 				<tr>
 					<th scope="col">Hostname</th>
@@ -290,7 +290,7 @@
 			<br /><br />
 			<hr />
 			<h2 class="align-center">Roles</h2>
-			<p>The following table describes the various roles I created and use.</p>
+			<p><center>The following table describes the various roles I created and use.</center></p>
 			<table class="text-table">
 				<tr>
 					<th scope="col">Role</th>
@@ -302,7 +302,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/common">common</a></th>
-					<td>Configurations common to all hosts - hostname, timezone, ssh keys/configs, apt upgrades, common packages, <a href="https://www.vim.org/">vim</a>, <a href="https://git-scm.com/">git</a>, host-specific packages, motd, .bashrc, aliases, cron jobs, mounts/fstab, common scripts (<a href="https://gitlab.com/clewsy/scripts/-/blob/master/bu.sh">bu</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/stuff.sh">stuff</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/wami.sh">wami</a>).</td>
+					<td>Configurations common to all hosts - hostname, timezone, ssh keys/configs, apt upgrades, common packages, <a href="https://www.vim.org/">vim</a>, <a href="https://git-scm.com/">git</a>, host-specific packages, motd, .bashrc, aliases, cron jobs, mounts/fstab, common scripts (<a href="https://gitlab.com/clewsy/scripts/-/blob/master/bu">bu</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/stuff">stuff</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/wami">wami</a>).</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/cups">cups</a></th>
@@ -310,7 +310,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/desktop">desktop</a></th>
-					<td>Configurations for systems with a desktop - fonts, <a href="https://github.com/brndnmtthws/conky">conky</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/terbling.sh">terbling</a>, <a href="https://github.com/software-jessies-org/jessies/wiki/Terminator">terminator</a>, <a href="http://guake-project.org/">guake</a>, <a href="https://www.gnome.org/">gnome</a> settings.</td>
+					<td>Configurations for systems with a desktop - <a href="https://github.com/brndnmtthws/conky">conky</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/terbling">terbling</a>, <a href="https://github.com/software-jessies-org/jessies/wiki/Terminator">terminator</a>, <a href="http://guake-project.org/">guake</a>, <a href="https://www.gnome.org/">gnome</a> settings and others.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/develop">develop</a></th>
@@ -346,7 +346,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/node">node</a></th>
-					<td>Set up some common packages and scripts on key boxes that are used for maintaining other boxes.  Install networking packages (<a href="https://github.com/netdiscover-scanner/netdiscover">netdiscover</a>, <a href="https://nmap.org/">nmap</a>), install <a href="https://docs.ansible.com/">ansible</a>, clone the <a href="https://gitlab.com/clewsy/clewsy_ansible">clewsy_ansible gitlab repository</a> and install some custom scripts (<a href="https://gitlab.com/clewsy/scripts/-/blob/master/apt_all.sh">apt_all</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/ball.sh">ball</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/pong.sh">pong</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/whodis.sh">whodis</a>).</td>
+					<td>Set up some common packages and scripts on key boxes that are used for maintaining other boxes.  Install networking packages (<a href="https://github.com/netdiscover-scanner/netdiscover">netdiscover</a>, <a href="https://nmap.org/">nmap</a>), install <a href="https://docs.ansible.com/">ansible</a>, clone the <a href="https://gitlab.com/clewsy/clewsy_ansible">clewsy_ansible gitlab repository</a> and install some custom scripts (<a href="https://gitlab.com/clewsy/scripts/-/blob/master/apt_all">apt_all</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/ball">ball</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/pong">pong</a>, <a href="https://gitlab.com/clewsy/scripts/-/blob/master/whodis">whodis</a>).</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/p0wer">p0wer</a></th>
@@ -354,7 +354,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/polly">polly</a></th>
-					<td>Configue a box to control a <a href="https://blink1.thingm.com/">thingm blink1</a> device, then install <a href="https://gitlab.com/clewsy/scripts/-/blob/master/polly.sh">polly</a> script which polls <a href="https://clews.pro/">clews.pro</a>, logs the result and uses the blink1 to indicate the site status.</td>
+					<td>Configue a box to control a <a href="https://blink1.thingm.com/">thingm blink1</a> device, then install <a href="https://gitlab.com/clewsy/scripts/-/blob/master/polly">polly</a> script which polls <a href="https://clews.pro/">clews.pro</a>, logs the result and uses the blink1 to indicate the site status.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/qbittorrent">qbittorrent</a></th>
@@ -374,7 +374,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/vpn">vpn</a></th>
-					<td>Install <a href="https://openvpn.net/">openvpn</a> and copy some custom vpn configuration files.  Also copy and configure a custom <a href="https://gitlab.com/clewsy/scripts/-/blob/master/vpn.sh">vpn</a> initialisation script.</td>
+					<td>Install <a href="https://openvpn.net/">openvpn</a> and copy some custom vpn configuration files.  Also copy and configure a custom <a href="https://gitlab.com/clewsy/scripts/-/blob/master/vpn">vpn</a> initialisation script.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/wireguard">wireguard</a></th>
