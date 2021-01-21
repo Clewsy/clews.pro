@@ -36,6 +36,7 @@
 				</tr>
 				<tr>
 					<td class="align-left"><a href="wood/frame_5_and_6.php"><img class="photo" src="wood/photos/frame_5_and_6/small_frame_5_and_6_09.jpg" title="X-mas 2020 Gift Frames"></a></td>
+					<td class="align-right"><a href="wood/knife_block.php"><img class="photo" src="wood/photos/knife_block/small_knife_block_11.jpg" title="Knife Block"></a></td>
 				</tr>
 			</table>
 		</div>
