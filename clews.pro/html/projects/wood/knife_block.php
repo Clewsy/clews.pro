@@ -22,6 +22,7 @@
 				<a href="photos/knife_block/knife_block_09.jpg"><img class="photo" src="photos/knife_block/knife_block_09.jpg"></a>
 				<a href="photos/knife_block/knife_block_10.jpg"><img class="photo" src="photos/knife_block/knife_block_10.jpg"></a>
 				<a href="photos/knife_block/knife_block_11.jpg"><img class="photo" src="photos/knife_block/knife_block_11.jpg"></a>
+				<a href="photos/knife_block/knife_block_12.jpg"><img class="photo" src="photos/knife_block/knife_block_12.jpg"></a>
 			</div>
 		</div>
 	</body>

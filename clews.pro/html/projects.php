@@ -174,7 +174,7 @@
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
 					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
 					<td>Stuff made from wood.</td>
-					<td class="date">2021-01-22</td>
+					<td class="date">2021-01-25</td>
 					<td class="links">
 
 					</td>
