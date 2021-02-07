@@ -150,15 +150,15 @@
 					<td>Arduino, Pro-Trinket, Adafruit, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="/projects/volcon.php">VolCon</a></th>
-					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_09.jpg" /></a></td>
+					<th scope="row"><a href="/projects/volcon.php">volcon</a></th>
+					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_21.jpg" /></a></td>
 					<td>HID compliant USB volume controller.</td>
-					<td class="date">2020-07-14</td>
+					<td class="date">2021-02-07</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>
 					</td>
-					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, LUFA, Rotary Encoder, Gray Code, VCR, Wood</td>
+					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, LUFA, Rotary Encoder, Gray Code, VCR, Wood, ATmega32u4, KiCad</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
