@@ -21,7 +21,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2020-11-23</td>
+					<td class="date">2021-01-14</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -58,7 +58,7 @@
 					<td>An upgrade to the original grinder_timer.</td>
 					<td class="date">2020-08-21</td>
 					<td class="links">
-						<a href="https://gitlab.com/clewsy/grinder_timer_rev2">gitlab</a><br />
+						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
 					</td>
 					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancillio Rocky, PWM, 32.738kHz, PlatformIO</td>
