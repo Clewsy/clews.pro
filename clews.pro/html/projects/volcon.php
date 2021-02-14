@@ -30,7 +30,8 @@
 				</ul>
 			</ul>
 			<hr />
-			<p>After some time (about six years!) of having this device in-use on my desk, I finally got sick of the simple (gross) stained pine wood enclosure.  With some scrap spotted gum and a router (with a Roman ogee and a roundover bit) I made a slightly nicer enclosure for volcon.
+			<h2>Spotted Gum > Stained Pine</h2>
+			<p>After some time (about six years!) of having this device in-use on my desk, I finally got sick of the simple (ugly) stained pine wood enclosure.  With some scrap spotted gum and a router (with a Roman ogee and a roundover bit) I made a slightly nicer enclosure for volcon.
 			<hr />
 			<a href="images/volcon/volcon_22.gif"><img class="photo align-right" src="images/volcon/small_volcon_22.gif" alt="Rev 2 - Demo of gray code LED visualisation." /></a>
 			<h2>Revision 2</h2>
@@ -46,6 +47,157 @@
 				<li>A couple of LEDs on the bottom of the PCB purely to visualise the gray code (Rev 1 had LEDs but they only barely shone through etched sections of the PCB).</li>
 				<li>Generally improved and cleaner code (still using the LUFA library).</li>
 			</ul>
+			<hr />
+			<h2>Gray Code</h2>
+			<p>The encoder consists of two optical sensor "beams" that are sequentially opened/interrupted by the holes within the encoder disk.  The state of each of the sensors can be represented as two bits.</p>
+			<p>Movement of the knob is simply determined by a change in the state of either of the two sensors.  I.e. if either of the bits change, the device has rotated.  The spacing of the sensors means only one of the bits will change at a time.  Therefore, the direction of rotation is determined by comparing the current state of the two bits to the previous state of the two bits.</p>
+			<table class="simple-table">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Previous State</th>
+					<th scope="col">Current State</th>
+					<th scope="col">Rotation Direction</th>
+					<th scope="col">Delta</th>
+				</tr>
+				<tr>
+					<td scope="col">0x0</td>
+					<td scope="col">00</td>
+					<td scope="col">00</td>
+					<td scope="col">No movement.</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0x1</td>
+					<td scope="col">00</td>
+					<td scope="col">01</td>
+					<td scope="col">Counter-clockwise.</td>
+					<td scope="col">-1</td>
+				</tr>
+				<tr>
+					<td scope="col">0x2</td>
+					<td scope="col">00</td>
+					<td scope="col">10</td>
+					<td scope="col">Clockwise.</td>
+					<td scope="col">1</td>
+				</tr>
+				<tr>
+					<td scope="col">0x3</td>
+					<td scope="col">00</td>
+					<td scope="col">11</td>
+					<td scope="col">Not possible (error).</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0x4</td>
+					<td scope="col">01</td>
+					<td scope="col">00</td>
+					<td scope="col">Clockwise.</td>
+					<td scope="col">1</td>
+				</tr>
+				<tr>
+					<td scope="col">0x5</td>
+					<td scope="col">01</td>
+					<td scope="col">01</td>
+					<td scope="col">No movement.</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0x6</td>
+					<td scope="col">01</td>
+					<td scope="col">10</td>
+					<td scope="col">Not possible (error).</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0x7</td>
+					<td scope="col">01</td>
+					<td scope="col">11</td>
+					<td scope="col">Counter-clockwise.</td>
+					<td scope="col">-1</td>
+				</tr>
+				<tr>
+					<td scope="col">0x8</td>
+					<td scope="col">10</td>
+					<td scope="col">00</td>
+					<td scope="col">Counter-clockwise.</td>
+					<td scope="col">-1</td>
+				</tr>
+				<tr>
+					<td scope="col">0x9</td>
+					<td scope="col">10</td>
+					<td scope="col">01</td>
+					<td scope="col">Not possible (error).</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0xA</td>
+					<td scope="col">10</td>
+					<td scope="col">10</td>
+					<td scope="col">No movement.</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0xB</td>
+					<td scope="col">10</td>
+					<td scope="col">11</td>
+					<td scope="col">Clockwise.</td>
+					<td scope="col">1</td>
+				</tr>
+				<tr>
+					<td scope="col">0xC</td>
+					<td scope="col">11</td>
+					<td scope="col">00</td>
+					<td scope="col">Not possible (error).</td>
+					<td scope="col">0</td>
+				</tr>
+				<tr>
+					<td scope="col">0xD</td>
+					<td scope="col">11</td>
+					<td scope="col">01</td>
+					<td scope="col">Clockwise.</td>
+					<td scope="col">1</td>
+				</tr>
+				<tr>
+					<td scope="col">0xE</td>
+					<td scope="col">11</td>
+					<td scope="col">10</td>
+					<td scope="col">Counter-clockwise.</td>
+					<td scope="col">-1</td>
+				</tr>
+				<tr>
+					<td scope="col">0xF</td>
+					<td scope="col">11</td>
+					<td scope="col">11</td>
+					<td scope="col">No movement.</td>
+					<td scope="col">0</td>
+				</tr>
+			</table>
+			<p>Note in the table above, if the previous and current states are combined into a single 4-bit value in the order shown, this value is equal to #.  So a 4-bit value (#) can be used to determine the direction of rotation.</p>
+			<p>In the code, any change in the state of either optical sensor triggers an interrupt function (see <i>handle_opto()</i> below) which updates the value of #, then uses a look-up table to determine the direction of movement (delta = -1, 0 or 1).</p>
+			<p>The look-up table is a one-dimensional array stored in eeprom.  The element number corresponds to '#' and the element content corresponds to 'delta' in accordance with the table above.</p>
+			<div class="code"><p>
+				<span class="type">void</span> <span class="function">handle_opto</span>(<span class="type">void</span>)<br />
+				{	<br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// a_b is a 4-bit value that represents previous state (bits 3:2) and the current state (bits 1:0) of the encoder.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Static to retain every time this function is called.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="type">static uint8_t</span> a_b <span class="operator">=</span> <span class="numerical">0b0011</span>;<br />
+				<br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Encoder lookup table.  Three versions of the table for various levels of "sensitivity".</span><br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="type">static const int8_t</span> enc_table [] PROGMEM <span class="operator">=</span> {<span class="numerical">0</span>,<span class="numerical">-1</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">0</span>,<span class="numerical">-1</span>,<span class="numerical">-1</span>,<span class="numerical">0</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">-1</span>,<span class="numerical">0</span>};<span class="comment">&emsp;&emsp;// Register every pulse.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">//static const int8_t enc_table [] PROGMEM = {0,0,0,0,1,0,0,-1,-1,0,0,1,0,0,0,0};&emsp; // Register every second pulse.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">//static const int8_t enc_table [] PROGMEM = {0,0,0,0,1,0,0,-1,0,0,0,0,0,0,0,0};&emsp;&emsp; // Register every fourth pulse.</span><br />
+				<br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// "Remember" previous state of the channels.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	a_b <span class="operator">&lt;&lt;=</span> <span class="numerical">2</span>;<br />
+				<br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Read in the current state of the channels.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	a_b <span class="operator">|=</span> (OPTO_PINS <span class="operator">&amp;</span> OPTO_PIN_MASK);<br />
+				<br />
+				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Look-up the desired volume delta (-1, 0 or 1) and send to the send_volume(delta) function.</span><br />
+				&emsp;&emsp;&emsp;&emsp;	send_volume(pgm_read_byte(&amp;enc_table[a_b <span class="operator">&amp;</span> <span class="numerical">0x0f</span>]));<br />
+				}<br />
+
+			</p></div>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">

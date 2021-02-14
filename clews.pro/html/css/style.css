@@ -68,8 +68,24 @@ img.image {
 	margin: 20px 20px 20px 20px;
 }
 
+/*Table formatting for simple tables*/
+table.simple-table {
+	border-collapse: collapse;
+	margin: auto auto auto auto;
+}
+
+table.simple-table th, table.simple-table td {
+	border: 2px solid rgb(150,150,150);
+	padding: 5px;
+	text-align: center;
+}
+table.simple-table th {
+	font-weight: bold;
+}
+
 /*Table formatting for text tables*/
 table.text-table {
+	border-collapse: collapse;
 	margin: auto;
 }
 table.text-table a:link, table.text-table a:visited {
@@ -91,6 +107,9 @@ table.text-table th, table.text-table td {
 	min-width: 120px;
 	padding: 10px 10px 10px 0px;
 	border-bottom: 5px solid black;
+}
+table.text-table th {
+	font-size: 24px;
 }
 table.text-table ul, table.text-table ol{
 	padding: 0px 0px 0px 0px;
@@ -189,7 +208,7 @@ ul {
 /*Default table formatting.*/
 th {
 	text-transform: lowercase;
-	font-size: 24px;
+	font-weight: bold;
 }
 td {
 	padding: 0px 0px 0px 0px;

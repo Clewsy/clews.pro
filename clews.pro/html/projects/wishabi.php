@@ -34,7 +34,7 @@
 			<p>An aluminium enclosure was used for the receiver unit and a broken cordless screwdriver body was re-purposed for the transmitter.</p>
 			<p>The transmitter ran off batteries but would still operate when tethered to a plug-pack for charging.</p>
 			<p>In addition to the photo gallery below, I also archived the following resources:</p>
-			<table class="text-table">
+			<table class="simple-table">
 				<tr>
 					<td class="thumbnail"><a href="/projects/documents/wishabi/wishabi_report.pdf"><img class="thumbnail" src="/projects/documents/wishabi/thumbnail_wishabi_report.png" /></a>Report<br>(pdf)</td>
 					<td class="thumbnail"><a href="/projects/documents/wishabi/wishabi_code.tar.gz"><img class="thumbnail" src="/projects/documents/wishabi/thumbnail_wishabi_code.png" /></a>Code<br>(gzipped tar)</td>

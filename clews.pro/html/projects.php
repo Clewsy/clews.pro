@@ -153,9 +153,10 @@
 					<th scope="row"><a href="/projects/volcon.php">volcon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_21.jpg" /></a></td>
 					<td>HID compliant USB volume controller.</td>
-					<td class="date">2021-02-07</td>
+					<td class="date">2021-02-14</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
+						<a href="https://hackaday.io/project/177645-volcon">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>
 					</td>
 					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, LUFA, Rotary Encoder, Gray Code, VCR, Wood, ATmega32u4, KiCad</td>
@@ -164,7 +165,7 @@
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
 					<td><a href="/projects/wishabi.php"><img class="thumbnail" src="/projects/images/wishabi/small_wishabi_01.jpg" /></a></td>
 					<td>WIreless Single-Handed Accelerometer-Based Interface. (Under-Grad thesis project).</td>
-					<td class="date">2019-10-07</td>
+					<td class="date">2021-02-14</td>
 					<td class="links">
 						<a href="http://vusb.wikidot.com/project:wishabi">V-USB</a><br />
 					</td>
