@@ -53,6 +53,17 @@
 			<p>Movement of the knob is simply determined by a change in the state of either of the two sensors.  I.e. if either of the bits change, the device has rotated.  The spacing of the sensors means only one of the bits will change at a time.  Therefore, the direction of rotation is determined by comparing the current state of the two bits to the previous state of the two bits.</p>
 			<table class="simple-table">
 				<tr>
+					<th scope="col">Clockwise</th>
+					<td scope="col">00 -&gt; 10 -&gt; 11 -&gt; 01 -&gt; 00</td>
+				</tr>
+				<tr>
+					<th scope="col">Counter-Clockwise</th>
+					<td scope="col">00 -&gt; 01 -&gt; 11 -&gt; 10 -&gt; 00</td>
+				</tr>
+			</table>
+			<br />
+			<table class="simple-table">
+				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Previous State</th>
 					<th scope="col">Current State</th>
