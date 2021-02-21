@@ -21,7 +21,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-01-14</td>
+					<td class="date">2021-02-21</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -153,9 +153,10 @@
 					<th scope="row"><a href="/projects/volcon.php">volcon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_21.jpg" /></a></td>
 					<td>HID compliant USB volume controller.</td>
-					<td class="date">2021-02-14</td>
+					<td class="date">2021-02-21</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
+						<a href="https://hackaday.com/2021/02/15/a-volume-control-from-a-vcr-drum/">hackaday</a><br />
 						<a href="https://hackaday.io/project/177645-volcon">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>
 					</td>
