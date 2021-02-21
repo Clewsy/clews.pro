@@ -31,37 +31,37 @@
 			<p>The code and <a href="https://kicad-pcb.org/">KiCad</a> files are on the <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
 			<p>The program interfaces with the gpio via the <s>wiringpi</s> <a href="http://abyz.me.uk/rpi/pigpio/index.html">pigpio</a> library.</p>
 			<p>Program usage follows:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo p0wer &lt;channel(a,b,c,d)&gt; &lt;on/off&gt;</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ sudo p0wer &lt;channel(a,b,c,d)&gt; &lt;on/off&gt;
+			</p></div>
 			<p>Super user access is required for manipulation of the gpio pins.</p>
 			<hr />
 
 			<h3>Installation</h3>
 			<p>On the raspberry pi install the pigpio library:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo apt update<br/>
-							$ sudo apt install pigpio</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ sudo apt update<br/>
+				$ sudo apt install pigpio
+			</p></div>
 			<p>Clone this repository and enter the cloned project directory:</p>
-			<div class="code">
-				<p class="terminal">	$ git clone https://gitlab.com/clewsy/p0wer<br/>
-							$ cd p0wer</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ git clone https://gitlab.com/clewsy/p0wer<br/>
+				$ cd p0wer
+			</p></div>
 			<p>Compile and install the executable:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo make install</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ sudo make install
+			</p></div>
 			<p>The binary is now ready to use.  This can be tested by running the command with no arguments.  It should print the usage to screen.</p>
-			<div class="code">
-				<p class="terminal">	$ p0wer<br/>
-							Usage: p0wer &lt;channel(a,b,c,d)&gt; &lt;on/off&gt;</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ p0wer<br/>
+				Usage: p0wer &lt;channel(a,b,c,d)&gt; &lt;on/off&gt;
+			</p></div>
 			<p><b>NOTE</b> using the <b>sudo make install</b> command as per the instructions above will automatically set the SUID bit (i.e. set the setuid flag) for the executable file.  This means it is executed with owner (root) privileges.  As such, it can be run (and the GPIO pins can be manipulated) with out prepending the command with sudo.  If you want to install the file without this permission, use the following commands instead of running <b>sudo make install</b>:</p>
-			<div class="code">
-				<p class="terminal">	$ make<br/>
-							$ sudo cp p0wer /usr/local/sbin/p0wer</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ make<br/>
+				$ sudo cp p0wer /usr/local/sbin/p0wer
+			</p></div>
 			<hr />
 
 			<h3>Usage</h3>
@@ -70,10 +70,10 @@
 			<p>I currently use a <a href="https://termux.com/">Termux</a> shortcut on my android smartphone to run a script that calls the program on the pi.  By pressing a button on my homescreen, I can, for example, switch on a lamp in the lounge room.</p>
 			<p>The script will connect to the raspberry pi (using ssh) and run the program with the desired inputs.</p>
 			<p>The following example two-line script will connect to the pi and run the program with the options to turn on the channel A outlet:</p>
-			<div class="code">
-				<p class="terminal">	<span class="comment">#!/bin/bash</span><br/>
-							ssh home.server 'ssh raspberry.pi "sudo p0wer a on"'</p>
-			</div>
+			<div class="code"><p class="terminal">
+				<span class="comment">#!/bin/bash</span><br/>
+				ssh home.server 'ssh raspberry.pi "sudo p0wer a on"'
+			</p></div>
 			<p>The full termux script I wrote is a bit more robust (and documented on <a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch.sh">gitlab</a>).</p>
 			<hr />
 
@@ -86,17 +86,17 @@
 			<p>In December 2019, I decided to create a simple web interface for controlling all 4 channels from a browser.  I wrote a simple php script and combined it with some basic html and css.  Combined with <a href="http://www.apache.org/">Apache</a> and <a href="https://www.php.net/">php</a> installed on the raspberry pi, I am now able to control power points from and browser with access to the local network.  To achieve this I learned about setting the SUID bit on an executable so that when called by the web user (www-data) it is still executed as root.  WebUI setup instructions can be found in the <a href="https://gitlab.com/clewsy/p0wer">README</a> at gitlab.</p>
 			<p>As a bonus, the webui allows me to script control of the remote units using a <a href="https://curl.haxx.se/">curl</a> command as an alternative to ssh.  Using curl to control the outlets enables simple integration into automation platforms such as <a href="https://www.openhab.org/">openHAB</a> or <a href="https://www.home-assistant.io/">Home Assistant</a>.  The following example commands produce an equivalent result (turning on channel a).</p>
 			<p><b>Using ssh</b> (user <b>pi</b> on host <b>raspberrypi</b>):</p>
-			<div class="code">
-				<p class="terminal">	$ ssh pi@raspberrypi "sudo p0wer a on"</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ ssh pi@raspberrypi "sudo p0wer a on"
+			</p></div>
 			<p><b>Using curl</b> (hostname <b>raspberrypi</b> or host IP <b>192.168.1.123</b>):</p>
-			<div class="code">
-				<p class="terminal">	$ curl --silent http://raspberrypi/index.php?a=ON &gt;&gt; /dev/null</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ curl --silent http://raspberrypi/index.php?a=ON &gt;&gt; /dev/null
+			</p></div>
 			<p>or</p>
-			<div class="code">
-				<p class="terminal">	$ curl --silent http://192.168.1.123/index.php?a=ON &gt;&gt; /dev/null</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ curl --silent http://192.168.1.123/index.php?a=ON &gt;&gt; /dev/null
+			</p></div>
 			<hr />
 
 			<h3>Ansible Deployment</h3>

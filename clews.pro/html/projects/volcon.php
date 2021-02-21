@@ -48,7 +48,7 @@
 				<li>Generally improved and cleaner code (still using the LUFA library).</li>
 			</ul>
 			<hr />
-			<h2>Gray Code</h2>
+			<h2>Quadrature Encoder / Gray Code</h2>
 			<p>The encoder consists of two optical sensor "beams" that are sequentially opened/interrupted by the holes within the encoder disk.  The state of each of the sensors can be represented as two bits.</p>
 			<p>Movement of the knob is simply determined by a change in the state of either of the two sensors.  I.e. if either of the bits change, the device has rotated.  The spacing of the sensors means only one of the bits will change at a time.  Therefore, the direction of rotation is determined by comparing the current state of the two bits to the previous state of the two bits.</p>
 			<table class="simple-table">
@@ -189,23 +189,23 @@
 			<div class="code"><p>
 				<span class="type">void</span> <span class="function">handle_opto</span>(<span class="type">void</span>)<br />
 				{	<br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// a_b is a 4-bit value that represents previous state (bits 3:2) and the current state (bits 1:0) of the encoder.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Static to retain every time this function is called.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="type">static uint8_t</span> a_b <span class="operator">=</span> <span class="numerical">0b0011</span>;<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// a_b is a 4-bit value that represents previous state (bits 3:2) and the current state (bits 1:0) of the encoder.</span><br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Static to retain every time this function is called.</span><br />
+				&emsp;&emsp;&emsp;	<span class="type">static uint8_t</span> a_b <span class="operator">=</span> <span class="numerical">0b0011</span>;<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Encoder lookup table.  Three versions of the table for various levels of "sensitivity".</span><br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="type">static const int8_t</span> enc_table [] PROGMEM <span class="operator">=</span> {<span class="numerical">0</span>,<span class="numerical">-1</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">0</span>,<span class="numerical">-1</span>,<span class="numerical">-1</span>,<span class="numerical">0</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">-1</span>,<span class="numerical">0</span>};<span class="comment">&emsp;&emsp;// Use every pulse.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">//static const int8_t enc_table [] PROGMEM = {0,0,0,0,1,0,0,-1,-1,0,0,1,0,0,0,0};&emsp; // Use every second pulse.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">//static const int8_t enc_table [] PROGMEM = {0,0,0,0,1,0,0,-1,0,0,0,0,0,0,0,0};&emsp;&emsp; // Use every fourth pulse.</span><br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Encoder lookup table.  Three versions of the table for various levels of "sensitivity".</span><br />
+				&emsp;&emsp;&emsp;	<span class="type">static const int8_t</span> enc_table [] PROGMEM <span class="operator">=</span> {<span class="numerical">0</span>,<span class="numerical">-1</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">0</span>,<span class="numerical">-1</span>,<span class="numerical">-1</span>,<span class="numerical">0</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">0</span>,<span class="numerical">1</span>,<span class="numerical">-1</span>,<span class="numerical">0</span>};<span class="comment"> // Use every pulse.</span><br />
+				&emsp;&emsp;&emsp;	<span class="comment">//static const int8_t enc_table [] PROGMEM = {0,0,0,0,1,0,0,-1,-1,0,0,1,0,0,0,0}; // Use every second pulse.</span><br />
+				&emsp;&emsp;&emsp;	<span class="comment">//static const int8_t enc_table [] PROGMEM = {0,0,0,0,1,0,0,-1,0,0,0,0,0,0,0,0}; &emsp;// Use every fourth pulse.</span><br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// "Remember" previous state of the channels.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	a_b <span class="operator">&lt;&lt;=</span> <span class="numerical">2</span>;<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// "Remember" previous state of the channels.</span><br />
+				&emsp;&emsp;&emsp;	a_b <span class="operator">&lt;&lt;=</span> <span class="numerical">2</span>;<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Read in the current state of the channels.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	a_b <span class="operator">|=</span> (OPTO_PINS <span class="operator">&amp;</span> OPTO_PIN_MASK);<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Read in the current state of the channels.</span><br />
+				&emsp;&emsp;&emsp;	a_b <span class="operator">|=</span> (OPTO_PINS <span class="operator">&amp;</span> OPTO_PIN_MASK);<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Look-up the desired volume delta (-1, 0 or 1) and send to the send_volume(delta) function.</span><br />
-				&emsp;&emsp;&emsp;&emsp;	send_volume(pgm_read_byte(&amp;enc_table[a_b <span class="operator">&amp;</span> <span class="numerical">0x0f</span>]));<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Look-up the desired volume delta (-1, 0 or 1) and send to the send_volume(delta) function.</span><br />
+				&emsp;&emsp;&emsp;	send_volume(pgm_read_byte(&amp;enc_table[a_b <span class="operator">&amp;</span> <span class="numerical">0x0f</span>]));<br />
 				}<br />
 
 			</p></div>

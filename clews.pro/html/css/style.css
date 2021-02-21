@@ -40,6 +40,11 @@ body {
 	margin-right: auto;
 }
 
+/*Table formatting defaults for all tables.*/
+table {
+	border-collapse: collapse;
+}
+
 /*Table formatting for photo tables*/
 table.gallery {
 	min-width: 1200px;
@@ -70,7 +75,6 @@ img.image {
 
 /*Table formatting for simple tables*/
 table.simple-table {
-	border-collapse: collapse;
 	margin: auto auto auto auto;
 }
 

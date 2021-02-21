@@ -53,12 +53,12 @@
 				</li>
 			</ul>
 			<p>From a command line, a simple use of "curl" will provide plain-text temperature and humidity values for simple integration into other systems.</p>
-			<div class="code">
-				<p class="terminal">	$ curl http://temp0/temperature<br />
-							15.68<br />
-							$ curl http://temp0/humidity<br />
-							70.69</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ curl http://temp0/temperature<br />
+				15.68<br />
+				$ curl http://temp0/humidity<br />
+				70.69
+			</p></div>
 			<p>Code (for the Pro-Trinket and the ESP8266) and KiCAD schematic/layout can all be found at the <a href="https://gitlab.com/clewsy/temp0">GitLab repo</a>.</p>
 			<hr />
 

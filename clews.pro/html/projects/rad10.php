@@ -24,29 +24,29 @@
 
 			<h3>Daemon Installation and Setup</h3>
 			<p>Install the dependencies:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo apt update<br />
-							$ sudo apt install pigpio mpd mpc libmpdclient-dev</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ sudo apt update<br />
+				$ sudo apt install pigpio mpd mpc libmpdclient-dev
+			</p></div>
 			<p>(Note, <a href="https://www.musicpd.org/clients/mpc/">mpc</a> is not strictly required for the daemon, but I recommend it as a useful command-line client for control of mpd, and debugging for a project like this.)</p>
 			<p>Clone the repo and compile the executable "rad10d":</p>
-			<div class="code">
-				<p class="terminal">	$ git clone https://gitlab.com/clewsy/rad10d<br />
-							$ cd rad10d<br />
-							$ sudo make install</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ git clone https://gitlab.com/clewsy/rad10d<br />
+				$ cd rad10d<br />
+				$ sudo make install
+			</p></div>
 			<p>The install target in the makefile will automatically compile/install the daemon and also enable/start the systemd service so that the daemon will run at boot.  running <b>make install</b> is equivalent to running the following commands:</p>
-			<div class="code">
-				<p class="terminal">	$ make<br />
-							$ sudo cp rad10d /usr/local/sbin/rad10d<br />
-							$ sudo cp rad10d.service /lib/systemd/system/rad10d.service<br />
-							$ sudo systemctl enable rad10d.service<br />
-							$ sudo systemctl start rad10d.service</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ make<br />
+				$ sudo cp rad10d /usr/local/sbin/rad10d<br />
+				$ sudo cp rad10d.service /lib/systemd/system/rad10d.service<br />
+				$ sudo systemctl enable rad10d.service<br />
+				$ sudo systemctl start rad10d.service
+			</p></div>
 			<p>The installation can be reversed with the uninstall target:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo make uninstall</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ sudo make uninstall
+			</p></div>
 			<hr />
 
 			<h3>WebUI Installation and Setup</h3>
@@ -54,18 +54,18 @@
 			<p>To give the WebUI the ability to execute commands, I used php code.  Therefore <a href="https://www.php.net/">php</a> will also need to be installed on the pi.</p>
 			<p>The hardware daemon is not actually require for the WebUI.  This interface could be used with any pi or other computer running mpd and mpc.</p>
 			<p>Install the dependencies:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo apt update<br/>
-							$ sudo apt install apache2 php mpd mpc</p>
-			</div>
+			<div class="code"><p class="terminal">
+				$ sudo apt update<br/>
+				$ sudo apt install apache2 php mpd mpc
+			</p></div>
 			<p>By default, Apache will serve up the content located within the <i>/var/www/html/</i> directory.  The default files installed at this location should be deleted and replaced by the contents of the "<i>webui</i>" directory in the rad10d repository:</p>
-			<div class="code">
-				<p class="terminal">	$ sudo rm --recursive /var/www/html/*<br />
-							$ git clone https://gitlab.com/clewsy/rad10d<br />
-							$ cd rad10d/webui<br />
-							$ sudo cp --recursive * /var/www/html/.</p>
-			</div>
-			<p>(Note, cloning the gitlab repo can be skipped if already done to install the daemon.)</p>
+			<div class="code"><p class="terminal">
+				$ sudo rm --recursive /var/www/html/*<br />
+				$ git clone https://gitlab.com/clewsy/rad10d<br />
+				$ cd rad10d/webui<br />
+				$ sudo cp --recursive * /var/www/html/.
+			</p></div>
+			<p>(Note, cloning the gitlab repo can be skipped if this was already done to install the daemon.)</p>
 			<p>The WebUI should now be accessible over your local network.</p>
 			<hr />
 

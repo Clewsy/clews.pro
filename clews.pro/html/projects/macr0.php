@@ -58,15 +58,15 @@
 				<br />
 				<span class="compiler">#include "keymap.h"</span><br />
 				<br />
-				<span class="type">const uint8_t</span> KEY_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_1, KEY_2, KEY_3, KEY_4};&emsp;																<span class="comment">// Set keys as regular keystrokes or media keys.</span><br />
-				<span class="type">const uint8_t</span> MACRO_PIN_ARRAY</span>[] <span class="operator">=</span> {};&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Set keys as macros.</span><br />
+				<span class="type">const uint8_t</span> KEY_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_1, KEY_2, KEY_3, KEY_4};																<span class="comment">// Set keys as regular keystrokes or media keys.</span><br />
+				<span class="type">const uint8_t</span> MACRO_PIN_ARRAY</span>[] <span class="operator">=</span> {};&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Set keys as macros.</span><br />
 				<br />
 				<span class="comment">// Map the regular keystrokes.</span><br />
 				<span class="type">const char</span> KEY_MAP[] PROGMEM <span class="operator">=</span> {<br />
-				&emsp;&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_TOGGLE,&emsp;&emsp;&emsp;		<span class="comment">// Key 1</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_STOP,&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 2</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_PREVIOUS,&emsp;				<span class="comment">// Key 3</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_NEXT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 4</span><br />
+				&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_TOGGLE,&emsp;&emsp;			<span class="comment">// Key 1</span><br />
+				&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_STOP,&emsp;&emsp;&emsp;&emsp;		<span class="comment">// Key 2</span><br />
+				&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_PREVIOUS,				<span class="comment">// Key 3</span><br />
+				&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_NEXT&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 4</span><br />
 				};<br />
 				<br />
 				<span class="comment">// Map the macro strings.</span><br />
@@ -79,19 +79,19 @@
 				<br />
 				<span class="compiler">#include "keymap.h"</span><br />
 				<br />
-				<span class="type">const uint8_t</span> KEY_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_1, KEY_2};&emsp;&emsp;&emsp;	<span class="comment">// Set keys as regular keystrokes or media keys.</span><br />
-				<span class="type">const uint8_t</span> MACRO_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_3, KEY_4};&emsp;			<span class="comment">// Set keys as macros.</span><br />
+				<span class="type">const uint8_t</span> KEY_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_1, KEY_2};&emsp;&emsp;	<span class="comment">// Set keys as regular keystrokes or media keys.</span><br />
+				<span class="type">const uint8_t</span> MACRO_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_3, KEY_4};		<span class="comment">// Set keys as macros.</span><br />
 				<br />
 				<span class="comment">// Map the regular keystrokes.</span><br />
 				<span class="type">const char</span> KEY_MAP[] PROGMEM <span class="operator">=</span> {<br />
-				&emsp;&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_TOGGLE,			<span class="comment">// Key 1</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_STOP&emsp;&emsp;&emsp;	<span class="comment">// Key 2</span><br />
+				&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_TOGGLE,			<span class="comment">// Key 1</span><br />
+				&emsp;&emsp;&emsp;	HID_MEDIACONTROLLER_SC_STOP&emsp;&emsp;&emsp;	<span class="comment">// Key 2</span><br />
 				};<br />
 				<br />
 				<span class="comment">// Map the macro strings.</span><br />
 				<span class="type">const char</span> MACRO_MAP[][MAX_MACRO_CHARS] PROGMEM <span class="operator">=</span> {<br />
-				&emsp;&emsp;&emsp;&emsp;	{<span class="string">"The quick brown fox jumped over the lazy dog.\n"</span>},&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 3</span><br />
-				&emsp;&emsp;&emsp;&emsp;	{<span class="string">"How much wood would a woodchuck chuck if a woodchuck could chuck wood?\n"</span>}&emsp;																<span class="comment">// Key 4</span><br />
+				&emsp;&emsp;&emsp;	{<span class="string">"The quick brown fox jumped over the lazy dog.\n"</span>},&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 3</span><br />
+				&emsp;&emsp;&emsp;	{<span class="string">"How much wood would a woodchuck chuck if a woodchuck could chuck wood?\n"</span>}																<span class="comment">// Key 4</span><br />
 				};<br />
 			</p></div>
 			<h3>Example 3</h3>
@@ -101,14 +101,15 @@
 				<br />
 				<span class="compiler">#include "keymap.h"</span><br />
 				<br />
-				<span class="type">const uint8_t</span> KEY_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_1, KEY_2, KEY_3, KEY_4};&emsp;																<span class="comment">// Set keys as regular keystrokes or media keys.</span><br />
-				<span class="type">const uint8_t</span> MACRO_PIN_ARRAY</span>[] <span class="operator">=</span> {};&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Set keys as macros.</span><br />
+				<span class="type">const uint8_t</span> KEY_PIN_ARRAY</span>[] <span class="operator">=</span> {KEY_1, KEY_2, KEY_3, KEY_4};																<span class="comment">// Set keys as regular keystrokes or media keys.</span><br />
+				<span class="type">const uint8_t</span> MACRO_PIN_ARRAY</span>[] <span class="operator">=</span> {};&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Set keys as macros.</span><br />
 				<br />
+				<span class="comment">// Map the regular keystrokes.</span><br />
 				<span class="type">const char</span> KEY_MAP[] PROGMEM <span class="operator">=</span> {<br />
-				&emsp;&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_LEFT_SHIFT,&emsp;							<span class="comment">// Key 1</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_A,&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		<span class="comment">// Key 2</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_B,&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		<span class="comment">// Key 3</span><br />
-				&emsp;&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_C&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 4</span><br />
+				&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_LEFT_SHIFT,							<span class="comment">// Key 1</span><br />
+				&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_A,&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		<span class="comment">// Key 2</span><br />
+				&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_B,&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;		<span class="comment">// Key 3</span><br />
+				&emsp;&emsp;&emsp;	HID_KEYBOAD_SC_C&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	<span class="comment">// Key 4</span><br />
 				};<br />
 				<br />
 				<span class="comment">// Map the macro strings.</span><br />
@@ -122,93 +123,93 @@
 			<div class="code"><p>
 				<span class="comment">// The key map array.<br /></span>
 				<span class="type">const char</span> KEYMAP</span>[NUM_ROWS][NUM_COLS] PROGMEM <span class="operator">=</span> {<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Column 1	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Column 2</span><br />
-				&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_TOGGLE,		&emsp;&emsp; HID_MEDIACONTROLLER_SC_STOP},	&emsp;<span class="comment">// Row 1</span><br />
-				&emsp;&emsp;&emsp;&emsp;{HID_MEDIACONTROLLER_SC_PREVIOUS,	&emsp;HID_MEDIACONTROLLER_SC_NEXT}		&emsp;&emsp;<span class="comment">// Row 2</span><br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Column 1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	Column 2</span><br />
+				&emsp;&emsp;&emsp;	{HID_MEDIACONTROLLER_SC_TOGGLE,&emsp;&emsp;																	HID_MEDIACONTROLLER_SC_STOP},		<span class="comment">// Row 1</span><br />
+				&emsp;&emsp;&emsp;	{HID_MEDIACONTROLLER_SC_PREVIOUS,																		HID_MEDIACONTROLLER_SC_NEXT}&emsp;	<span class="comment">// Row 2</span><br />
 				};<br />
 			</p></div>
 			<div class="code"><p>
 				<span class="comment">// Initialise the gpio for scanning rows and columns.</span><br />
 				<span class="type">void</span> <span class="function">keyscan_init</span>(<span class="type">void</span>)<br />
 				{<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Set rows as outputs and initialise all as high (disabled).</span><br />
-				&emsp;&emsp;&emsp;&emsp;KEYS_DDR <span class="operator">|=</span> ((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_2));<br />
-				&emsp;&emsp;&emsp;&emsp;KEYS_PORT <span class="operator">|=</span> ((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_2));<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Set rows as outputs and initialise all as high (disabled).</span><br />
+				&emsp;&emsp;&emsp;	KEYS_DDR <span class="operator">|=</span> ((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_2));<br />
+				&emsp;&emsp;&emsp;	KEYS_PORT <span class="operator">|=</span> ((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> ROW_2));<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Set columns as inputs and enable pull-ups.</span><br />
-				&emsp;&emsp;&emsp;&emsp;KEYS_DDR <span class="operator">&amp;= ~</span>((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_2));<br />
-				&emsp;&emsp;&emsp;&emsp;KEYS_PORT <span class="operator">|=</span> ((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_2));<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Set columns as inputs and enable pull-ups.</span><br />
+				&emsp;&emsp;&emsp;	KEYS_DDR <span class="operator">&amp;= ~</span>((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_2));<br />
+				&emsp;&emsp;&emsp;	KEYS_PORT <span class="operator">|=</span> ((<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_1) <span class="operator">|</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> COL_2));<br />
 				}<br />
 			</p></div>
 			<div class="code"><p>
 				<span class="comment">// Parse the detected key and update the appropriate part of the report struct.</span><br />
 				<span class="type">void</span> <span class="function">handle_key</span>(<span class="type">char</span> key, <span class="type">keyscan_report_t</span> *keyscan_report)<br />
 				{<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Media key scan values start at 0xF0, after the last keyboard modifier key scan.</span><br />
-				&emsp;&emsp;&emsp;&emsp;<span class="flow">if</span>(key <span class="operator">&gt;</span> HID_KEYBOARD_SC_RIGHT_GUI)<br />
-				&emsp;&emsp;&emsp;&emsp;{<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Convert the media key to a value from 0 to 10.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;key <span class="operator">-=</span> HID_MEDIACONTROLLER_SC_PLAY;<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Media key scan values start at 0xF0, after the last keyboard modifier key scan.</span><br />
+				&emsp;&emsp;&emsp;	<span class="flow">if</span>(key <span class="operator">&gt;</span> HID_KEYBOARD_SC_RIGHT_GUI)<br />
+				&emsp;&emsp;&emsp;	{<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Convert the media key to a value from 0 to 10.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	key <span class="operator">-=</span> HID_MEDIACONTROLLER_SC_PLAY;<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Shift a bit to the corresponding bit within the media_keys integer.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;keyscan_report->media_keys <span class="operator">|=</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> key);<br />
-				&emsp;&emsp;&emsp;&emsp;}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Shift a bit to the corresponding bit within the media_keys integer.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	keyscan_report->media_keys <span class="operator">|=</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> key);<br />
+				&emsp;&emsp;&emsp;	}<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Modifier keys scan values start at 0xE0, after the last keyboard modifier key scan.</span><br />
-				&emsp;&emsp;&emsp;&emsp;<span class="flow">else if</span>(key <span class="operator">></span> HID_KEYBOARD_SC_APPLICATION)<br />
-				&emsp;&emsp;&emsp;&emsp;{<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Convert the media key to a value from 0 to 7.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;key <span class="operator">-=</span> HID_KEYBOARD_SC_LEFT_CONTROL;<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Modifier keys scan values start at 0xE0, after the last keyboard modifier key scan.</span><br />
+				&emsp;&emsp;&emsp;	<span class="flow">else if</span>(key <span class="operator">></span> HID_KEYBOARD_SC_APPLICATION)<br />
+				&emsp;&emsp;&emsp;	{<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Convert the media key to a value from 0 to 7.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	key <span class="operator">-=</span> HID_KEYBOARD_SC_LEFT_CONTROL;<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Shift a bit to the corresponding bit within the modifier integer.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;keyscan_report->modifier <span class="operator">|=</span> (<span class="numerical">1</span> </span>&lt;&lt;</span> key);<br />
-				&emsp;&emsp;&emsp;&emsp;}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Shift a bit to the corresponding bit within the modifier integer.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	keyscan_report->modifier <span class="operator">|=</span> (<span class="numerical">1</span> </span>&lt;&lt;</span> key);<br />
+				&emsp;&emsp;&emsp;	}<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Regular keys scan values range from 0x00 to 0x65.</span><br />
-				&emsp;&emsp;&emsp;&emsp;<span class="flow">else if</span>(key <span class="operator">&gt;</span> HID_KEYBOARD_SC_RESERVED)<br />
-				&emsp;&emsp;&emsp;&emsp;{<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Skip array elements that already have a keyscan value written.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="type">uint8_t</span> i <span class="operator">=</span> <span class="numerical">0</span>;<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="flow">while</span>((keyscan_report->keys[i]) <span class="operator">&amp;&amp;</span> (i <span class="operator">&lt;</span> MAX_KEYS)) i<span class="operator">++</span>;<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Regular keys scan values range from 0x00 to 0x65.</span><br />
+				&emsp;&emsp;&emsp;	<span class="flow">else if</span>(key <span class="operator">&gt;</span> HID_KEYBOARD_SC_RESERVED)<br />
+				&emsp;&emsp;&emsp;	{<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Skip array elements that already have a keyscan value written.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="type">uint8_t</span> i <span class="operator">=</span> <span class="numerical">0</span>;<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="flow">while</span>((keyscan_report->keys[i]) <span class="operator">&amp;&amp;</span> (i <span class="operator">&lt;</span> MAX_KEYS)) i<span class="operator">++</span>;<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Only register the key if the maximum number of simultaneous keys is not reached.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="flow">if</span>(i <span class="operator">&lt;</span> MAX_KEYS) keyscan_report->keys[i] <span class="operator">=</span> key;<br />
-				&emsp;&emsp;&emsp;&emsp;}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Only register the key if the maximum number of simultaneous keys is not reached.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="flow">if</span>(i <span class="operator">&lt;</span> MAX_KEYS) keyscan_report->keys[i] <span class="operator">=</span> key;<br />
+				&emsp;&emsp;&emsp;	}<br />
 				}<br />
 			</p></div>
 			<div class="code"><p>
 				<span class="comment">// Row-by-row scan through each column and determine which keys are currently pressed.</span><br />
 				<span class="type">void</span> <span class="function">create_keyscan_report</span>(<span class="type">keyscan_report_t</span> *keyscan_report)<br />
 				{<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Start with a blank keyscan report.</span><br />
-				&emsp;&emsp;&emsp;&emsp;memset(keyscan_report, <span class="numerical">0</span>, sizeof(keyscan_report_t));<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Start with a blank keyscan report.</span><br />
+				&emsp;&emsp;&emsp;	memset(keyscan_report, <span class="numerical">0</span>, sizeof(keyscan_report_t));<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Define the pins to scan through.</span><br />
-				&emsp;&emsp;&emsp;&emsp;<span class="type">uint8_t</span> row_array[<span class="numerical">2</span>] <span class="operator">=</span> {ROW_1, ROW_2};<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="type">uint8_t</span> col_array[<span class="numerical">2</span>] <span class="operator">=</span> {COL_1, COL_2};<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Define the pins to scan through.</span><br />
+				&emsp;&emsp;&emsp;	<span class="type">uint8_t</span> row_array[<span class="numerical">2</span>] <span class="operator">=</span> {ROW_1, ROW_2};<br />
+				&emsp;&emsp;&emsp;	<span class="type">uint8_t</span> col_array[<span class="numerical">2</span>] <span class="operator">=</span> {COL_1, COL_2};<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;<span class="comment">// Loop through for each row.</span><br />
-				&emsp;&emsp;&emsp;&emsp;<span class="flow">for</span>(<span class="type">uint8_t</span> r <span class="operator">=</span> <span class="numerical">0</span>; r <span class="operator">&lt;</span> sizeof(row_array); r<span class="operator">++</span>)<br />
-				&emsp;&emsp;&emsp;&emsp;{<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Set low current row (enable check).</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KEYS_PORT <span class="operator">&amp;= ~</span>(<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> row_array[r]);<br />
+				&emsp;&emsp;&emsp;	<span class="comment">// Loop through for each row.</span><br />
+				&emsp;&emsp;&emsp;	<span class="flow">for</span>(<span class="type">uint8_t</span> r <span class="operator">=</span> <span class="numerical">0</span>; r <span class="operator">&lt;</span> sizeof(row_array); r<span class="operator">++</span>)<br />
+				&emsp;&emsp;&emsp;	{<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Set low current row (enable check).</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	KEYS_PORT <span class="operator">&amp;= ~</span>(<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> row_array[r]);<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Wait until row is set low before continuing, otherwise column checks can be missed.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="flow">while</span>(<span class="operator">!</span>(<span class="operator">~</span>KEYS_PINS <span class="operator">&amp;</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> row_array[r]))) {}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Wait until row is set low before continuing, otherwise column checks can be missed.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="flow">while</span>(<span class="operator">!</span>(<span class="operator">~</span>KEYS_PINS <span class="operator">&amp;</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> row_array[r]))) {}<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Loop through for each column in the current row.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="flow">for</span>(<span class="type">uint8_t</span> c <span class="operator">=</span> <span class="numerical">0</span>; c <span class="operator">&lt;</span> sizeof(col_array); c<span class="operator">++</span>)<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// If the button in the current row and column is pressed, handle it.</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="flow">if</span>(<span class="operator">~</span>KEYS_PINS <span class="operator">&amp;</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> col_array[c]))<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;handle_key(pgm_read_byte(&amp;KEYMAP[r][c]), keyscan_report);<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Loop through for each column in the current row.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="flow">for</span>(<span class="type">uint8_t</span> c <span class="operator">=</span> <span class="numerical">0</span>; c <span class="operator">&lt;</span> sizeof(col_array); c<span class="operator">++</span>)<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// If the button in the current row and column is pressed, handle it.</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="flow">if</span>(<span class="operator">~</span>KEYS_PINS <span class="operator">&amp;</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> col_array[c]))<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	handle_key(pgm_read_byte(&amp;KEYMAP[r][c]), keyscan_report);<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	}<br />
 				<br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="comment">// Set high current row (disable check).</span><br />
-				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KEYS_PORT <span class="operator">|=</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> row_array[r]);<br />
-				&emsp;&emsp;&emsp;&emsp;}<br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	<span class="comment">// Set high current row (disable check).</span><br />
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	KEYS_PORT <span class="operator">|=</span> (<span class="numerical">1</span> <span class="operator">&lt;&lt;</span> row_array[r]);<br />
+				&emsp;&emsp;&emsp;	}<br />
 				}<br />
 			</p></div>
 			<hr />
