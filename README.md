@@ -12,7 +12,7 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 * nextcloud-cron - [rcdailey/nextcloud-cronjob][link_dockerhub_rcdailey_nextcloud-cronjob] - used to regularly run the cron.php script for my nextcloud instance.
 * nextcloud-bu - [clewsy/ncbu][link_dockerhub_clewsy_ncbu] - container for syncing the nextcloud data and database for convenient backup access.
 * collabora-app - [collabora/code][link_dockerhub_collabora_code] - allows me to edit documents within my nextcloud instance.
-* airsonic-app - [linuxserver/airsonic][link_dockerhub_linuxserver_airsonic] - for streaming my music collection - either via the web interface or an f-droid app (I like [UltraSonic][link_web_ultrasonic]).
+* airsonic-app - [airsonicadvanced/airsonic-advanced][link_dockerhub_airsonicadvanced_airsonic-advanced] - for streaming my music collection - either via the web interface or an f-droid app (I like [UltraSonic][link_web_ultrasonic]).
 * bitwarden-app - [bitwardenrs/server][link_dockerhub_bitwardenrs_server] - my personal password management server.
 * calibre-app - [linuxserver/calibre][link_dockerhub_linuxserver_calibre] - for ebook management (converting, editing metadata, etc), only accessible locally.
 * calibre-web-app - [linuxserver/calibre-web][link_dockerhub_linuxserver_calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
@@ -35,6 +35,7 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_clews]:https://clews.pro
 [link_clews.dev]:https://clews.dev
 
+[link_dockerhub_airsonicadvanced_airsonic-advanced]:https://hub.docker.com/r/airsonicadvanced/airsonic-advanced
 [link_dockerhub_bitwardenrs_server]:https://hub.docker.com/r/bitwardenrs/server
 [link_dockerhub_clewsy_ncbu]:https://hub.docker.com/r/clewsy/ncbu
 [link_dockerhub_collabora_code]:https://hub.docker.com/r/collabora/code
@@ -42,7 +43,6 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_dockerhub_nginx]:https://hub.docker.com/_/nginx
 [link_dockerhub_jrcs_letsencrypt]:https://hub.docker.com/r/jrcs/letsencrypt-nginx-proxy-companion
 [link_dockerhub_jwilder_nginx-proxy]:https://hub.docker.com/r/jwilder/nginx-proxy
-[link_dockerhub_linuxserver_airsonic]:https://hub.docker.com/r/linuxserver/airsonic
 [link_dockerhub_linuxserver_calibre]:https://hub.docker.com/r/linuxserver/calibre
 [link_dockerhub_linuxserver_calibre-web]:https://hub.docker.com/r/linuxserver/calibre-web
 [link_dockerhub_linuxserver_mariadb]:https://hub.docker.com/r/linuxserver/mariadb

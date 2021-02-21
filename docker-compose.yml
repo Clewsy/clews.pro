@@ -7,7 +7,7 @@
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
 #### - nextcloud-bu             NCBU                (image: clewsy/ncbu)
 #### - collabora-app            Collabora           (image: collabora/code)
-#### - airsonic-app             Airsonic            (image: linuxserver/airsonic)
+#### - airsonic-app             Airsonic-Advanced   (image: airsonicadvanced/airsonic-advanced)
 #### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
 #### - calibre-app              Calibre             (image: linuxserver/calibre)
 #### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
@@ -159,9 +159,9 @@ services:
       - extra_params=--o:ssl.enable=false --o:ssl.termination=true
     restart: unless-stopped
 
-######################################### Airsonic container
+######################################### Airsonic-Advanced container
   airsonic-app:
-    image: linuxserver/airsonic
+    image: airsonicadvanced/airsonic-advanced
     container_name: airsonic-app
     networks:
       - clews.pro_network
@@ -176,11 +176,10 @@ services:
       - LETSENCRYPT_HOST=${AIRSONIC_APP_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - ./airsonic-app/config:/config
-      - ./airsonic-app/music:/music
-      - ./airsonic-app/playlists:/playlists
-      - ./airsonic-app/podcasts:/podcasts
-      - ./airsonic-app/media:/media
+      - ./airsonic-app/data:/var/airsonic
+      - ./airsonic-app/music:/var/music
+      - ./airsonic-app/podcast:/var/podcast
+      - ./airsonic-app/playlists:/var/playlists
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
