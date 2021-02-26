@@ -17,7 +17,7 @@
 
 			<h3>Why?:</h3>
 			<p>I discovered docker on my journey to rid myself of cloud-based services not within my control.  A docker implementation of nextcloud is great for robustness and portability.  It also facillitated simple back-ups by binding the data volumes to a user-accessible directory.  Initially I set up an <a href="https://rsync.samba.org/">rsync</a> cronjob to automate my backups and this was fine, but I saw potential benefits in containerising the backup service.  Mostly, I wanted to have a go at learning docker and creating my own container image.</p>
-			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to <a href="https://docs.docker.com/compose/">docker-compose</a> and a single *.yml file.  Refer to my <a href="/projects/clews.html">clews.pro</a> project for more information of my self-hosting implementation.</p>
+			<p>Now my backup automation is implmented simltaneously alongside the nextcloud and database containers thanks to <a href="https://docs.docker.com/compose/">docker-compose</a> and a single *.yml file.  Refer to my <a href="/projects/clews.php">clews.pro</a> project for more information of my self-hosting implementation.</p>
 			<a href="https://nextcloud.com/"><img class="image align-right" src="images/ncbu/ncbu_02.png" alt="Nextcloud" /></a>
 			<hr/>
 
