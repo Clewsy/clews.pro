@@ -47,7 +47,6 @@ services:
 
 ######################################### Let's Encrypt container
   letsencrypt:
-#    image: jrcs/letsencrypt-nginx-proxy-companion:v1.13.1
     image: jrcs/letsencrypt-nginx-proxy-companion
     container_name: letsencrypt
     networks:

@@ -26,7 +26,7 @@
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
 					</td>
-					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, AirSonic, Calibre, MariaDB, Inkscape, <s>Javascript</s>, Systemd, Ansible, Watchtower</td>
+					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, Collabora, AirSonic, Calibre, MariaDB, Inkscape, <s>Javascript</s>, Systemd, Ansible, Watchtower</td>
 				<tr>
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/gps_clock/small_gps_clock_01.jpg" /></a></td>
@@ -38,7 +38,7 @@
 						<a href="https://hackaday.io/project/161257-gpsclock">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/gps-clock">core-electronics</a>
 					</td>
-					<td>Clock, GPS, ISO-8601, epoch, 7-seg, led, MAX-7219, AVR, Atmel, ATmega328p, ds3234, C, Ki-CAD, Wood</td>
+					<td>Clock, GPS, ISO-8601, epoch, UNIX Time, 7-seg, led, MAX-7219, AVR, Atmel, ATmega328p, ds3234, RTC, C, KiCAD, Wood</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
@@ -51,7 +51,7 @@
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/grindertimer">core-electronics</a>
 					</td>
-					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, Microcontroller, C, KiCAD, PCB Etching</td>
+					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, Microcontroller, C, KiCAD, PCB Etching, Rancilio Rocky</td>
 				</tr>
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
 					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" /></a></td>
@@ -71,7 +71,7 @@
 					<td class="links">
 
 					</td>
-					<td>AVR, ATMEGA8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
+					<td>AVR, ATmega8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
@@ -83,7 +83,7 @@
 						<a href="https://hackaday.com/2020/11/19/micro-macro-keyboard-is-mega-based/">hackaday</a><br />
 						<a href="https://hackaday.io/project/175874-macr0">hackaday.io</a>
 					</td>
-					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver</td>
+					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver, PWM</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
@@ -93,7 +93,7 @@
 					<td class="links">
 						<a href="https://core-electronics.com.au/projects/raspberry-pi-media-center">core-electronics</a>
 					</td>
-					<td>Raspberry Pi 3, Raspbian, OSMC, kodi, Wood</td>
+					<td>Raspberry Pi 3, OSMC, kodi, Wood</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
@@ -104,7 +104,7 @@
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
 						<a href="https://hub.docker.com/r/clewsy/ncbu">Docker Hub</a>
 					</td>
-					<td>Docker, Docker-Compose, DockerHub, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL</td>
+					<td>Docker, Docker-Compose, DockerHub, Dockerfile, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL, Cron</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
@@ -115,7 +115,7 @@
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/p0wer-control-mains-outlets-over-wifi">core-electronics</a>
 					</td>
-					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, wiringpi, pigpio, Termux, C, PHP, cURL, Automation, KiCAD, Ansible</td>
+					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, <s>wiringpi</s>, pigpio, Termux, C, PHP, cURL, Automation, KiCAD, Reverse Engineer, Ansible</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
@@ -126,7 +126,7 @@
 						<a href="https://gitlab.com/clewsy/rad10d">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/rad10">core-electronics</a>
 					</td>
-					<td>Rotary Encoder, Raspberry Pi, Raspbian, Ubuntu, mpd, mpc, libmpdclient, wiringpi, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS, Ansible, Wood</td>
+					<td>Quadrature Encoder, Raspberry Pi, <s>Raspbian</s>, Ubuntu, mpd, mpc, libmpdclient, <s>wiringpi</s>, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS, Ansible, Wood</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
@@ -160,7 +160,7 @@
 						<a href="https://hackaday.io/project/177645-volcon">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/volcon">core-electronics</a>
 					</td>
-					<td>AVR, Atmel, AT90usb162, C, Eagle, USB, HID, LUFA, Rotary Encoder, Gray Code, VCR, Wood, ATmega32u4, KiCad</td>
+					<td>AVR, Atmel, <s>AT90usb162</s>, ATmega32U4, C, Eagle, USB, <s>Type-B</s>, Type-C, HID, LUFA, Quadrature Encoder, Gray Code, VCR, VHS, Wood, KiCad</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
@@ -170,7 +170,7 @@
 					<td class="links">
 						<a href="http://vusb.wikidot.com/project:wishabi">V-USB</a><br />
 					</td>
-					<td>AVR, Atmel, ATmega8, 433.92MHz, Wireless, USB, HID, C, Keyboard, Mouse, Accelerometer, ADXL330</td>
+					<td>AVR, Atmel, ATmega8, 433.92MHz, Wireless, USB, HID, C, Keyboard, Mouse, Accelerometer, ADXL330, University, Engineering</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
