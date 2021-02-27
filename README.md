@@ -12,7 +12,7 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 * nextcloud-cron - [rcdailey/nextcloud-cronjob][link_dockerhub_rcdailey_nextcloud-cronjob] - used to regularly run the cron.php script for my nextcloud instance.
 * nextcloud-bu - [clewsy/ncbu][link_dockerhub_clewsy_ncbu] - container for syncing the nextcloud data and database for convenient backup access.
 * collabora-app - [collabora/code][link_dockerhub_collabora_code] - allows me to edit documents within my nextcloud instance.
-* airsonic-app - [airsonicadvanced/airsonic-advanced][link_dockerhub_airsonicadvanced_airsonic-advanced] - for streaming my music collection - either via the web interface or an f-droid app (I like [UltraSonic][link_web_ultrasonic]).
+* airsonic-app - [airsonicadvanced/airsonic-advanced][link_dockerhub_airsonicadvanced_airsonic-advanced] - for streaming music - either via the webui or an f-droid app (I like [UltraSonic][link_web_ultrasonic]).
 * bitwarden-app - [bitwardenrs/server][link_dockerhub_bitwardenrs_server] - my personal password management server.
 * calibre-app - [linuxserver/calibre][link_dockerhub_linuxserver_calibre] - for ebook management (converting, editing metadata, etc), only accessible locally.
 * calibre-web-app - [linuxserver/calibre-web][link_dockerhub_linuxserver_calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
