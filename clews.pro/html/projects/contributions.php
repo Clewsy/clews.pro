@@ -30,6 +30,7 @@
 			<p>After some initial conversation via an <a href="https://github.com/hassio-addons/addon-motioneye/issues/74">issue</a> raised on GitHub and suggestions made by the maintainer <a href="https://github.com/frenck">Franck Nijhof</a>, I forked addon-motioneye to experiment and see if I could add the ability to implement action buttons.</p>
 			<p>The solution was to define the action button names and script commans in the add-on configuration yaml via the Home Assistant interface, and modify the motioneye initialisation script so that it would generate the action button script files when the container is initialised.</p>
 			<p>After some testing and incorporating feedback from frenck, the pull request was <a href="https://github.com/hassio-addons/addon-motioneye/pull/75">merged</a> and <a href="https://github.com/hassio-addons/addon-motioneye/pull/75/files">commits</a> incorporated into the next addon-motioneye release.</p> 
+			<hr />
 		</div>
 	</body>
 </html>
