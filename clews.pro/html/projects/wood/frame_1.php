@@ -8,9 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Frame 1</h2>
-			<hr />
 			<div id="gallery">
-				<h2 class="align-center">Gallery</h2>
 				<a href="photos/frame_1/frame_1_01.jpg"><img class="photo" src="photos/frame_1/small_frame_1_01.jpg"></a>
 				<a href="photos/frame_1/frame_1_02.jpg"><img class="photo" src="photos/frame_1/small_frame_1_02.jpg"></a>
 				<a href="photos/frame_1/frame_1_03.jpg"><img class="photo" src="photos/frame_1/small_frame_1_03.jpg"></a>

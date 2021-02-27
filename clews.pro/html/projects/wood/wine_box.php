@@ -8,9 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Wine Box</h2>
-			<hr />
 			<div id="gallery">
-				<h2 class="align-center">Gallery</h2>
 				<a href="photos/wine_box/wine_box_01.jpg"><img class="photo" src="photos/wine_box/small_wine_box_01.jpg"></a>
 				<a href="photos/wine_box/wine_box_02.jpg"><img class="photo" src="photos/wine_box/small_wine_box_02.jpg"></a>
 				<a href="photos/wine_box/wine_box_03.jpg"><img class="photo" src="photos/wine_box/small_wine_box_03.jpg"></a>

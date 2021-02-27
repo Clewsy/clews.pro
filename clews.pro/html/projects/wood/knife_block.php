@@ -8,9 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Knife Block</h2>
-			<hr />
 			<div id="gallery">
-				<h2 class="align-center">Gallery</h2>
 				<a href="photos/knife_block/knife_block_01.jpg"><img class="photo" src="photos/knife_block/knife_block_01.jpg"></a>
 				<a href="photos/knife_block/knife_block_02.jpg"><img class="photo" src="photos/knife_block/knife_block_02.jpg"></a>
 				<a href="photos/knife_block/knife_block_03.jpg"><img class="photo" src="photos/knife_block/knife_block_03.jpg"></a>

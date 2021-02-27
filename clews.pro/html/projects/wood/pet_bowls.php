@@ -8,9 +8,7 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Pet's Bowls</h2>
-			<hr />
 			<div id="gallery">
-				<h2 class="align-center">Gallery</h2>
 				<a href="photos/pet_bowls/pet_bowls_01.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_01.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_02.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_02.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_03.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_03.jpg"></a>
