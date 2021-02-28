@@ -14,14 +14,14 @@
 					<th scope="col">Thumbnail</th>
 					<th scope="col">Summary</th>
 					<th class="date" scope="col">Updated</th>
-					<th class="links" scope="col">Links</th>
+					<th class="links" scope="col" style="width: 126px">Links</th> <!--Define width to prevent wrapping of hyphenated links.-->
 					<th scope="col">Tags</th>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-02-21</td>
+					<td class="date">2021-02-28</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -56,7 +56,7 @@
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
 					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" /></a></td>
 					<td>An upgrade to the original grinder_timer.</td>
-					<td class="date">2020-08-21</td>
+					<td class="date">2021-02-28</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
@@ -67,7 +67,7 @@
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
 					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/led_matrix/small_led_matrix_04.jpg" /></a></td>
 					<td>LED matrix that has a clock mode and a text mode.  My first microcontroller project.</td>
-					<td class="date">2020-04-30</td>
+					<td class="date">2021-02-28</td>
 					<td class="links">
 
 					</td>
@@ -77,7 +77,7 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2021-02-21</td>
+					<td class="date">2021-02-28</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a><br />
 						<a href="https://hackaday.com/2020/11/19/micro-macro-keyboard-is-mega-based/">hackaday</a><br />
@@ -176,7 +176,7 @@
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
 					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
 					<td>Stuff made from wood.</td>
-					<td class="date">2021-01-25</td>
+					<td class="date">2021-02-28</td>
 					<td class="links">
 
 					</td>
@@ -192,7 +192,18 @@
 					</td>
 					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, iperf3, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, so much yaml</td>
 				</tr>
-			</table>
+				<tr>
+					<th scope="row"><a href="/projects/contributions.php">Contributions</a></th>
+					<td><a href="/projects/contributions.php"><img class="thumbnail" src="/projects/images/contributions/contributions_03.png" /></a></td>
+					<td>Pull requests merged into other people's projects.  I &lt;3 open source.</td>
+					<td class="date">2021-02-28</td>
+					<td class="links">
+						<a href="https://github.com/rcdailey/nextcloud-cronjob/pull/4">nextcloud-cronjob</a><br />
+						<a href="https://github.com/hassio-addons/addon-motioneye/pull/75">addon-motioney</a><br />
+					</td>
+					<td>Docker, dockerfile, git, GitHub, Home Assistant, motion, motioneye, Pull Request</td>
+				</tr>
+			</table><br />
 		</div>
 	</body>
 </html>
