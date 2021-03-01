@@ -56,7 +56,7 @@
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
 					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" /></a></td>
 					<td>An upgrade to the original grinder_timer.</td>
-					<td class="date">2021-02-28</td>
+					<td class="date">2021-03-02</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />

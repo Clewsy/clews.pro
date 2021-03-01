@@ -10,7 +10,7 @@
 			<h2 class="align-center">grinder_timer_rev2</h2>
 			<a href="images/grinder_timer_rev2/grinder_timer_rev2_11.jpg"><img class="photo align-left" src="images/grinder_timer_rev2/small_grinder_timer_rev2_11.jpg" alt="The final timer."></a>
 			<p>An upgrade to the original <a href="/projects/grinder_timer.php">grinder_timer</a> - a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
-			<p>Honestly, I use the original every day and it hass been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.</p>
+			<p>Honestly, I use the original every day and it has been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.</p>
 			<p>The goals for revision 2 included:</p>
 			<ul>
 				<li>Hardware improvements:</li>
@@ -58,14 +58,14 @@
 			<p>The grind button is illuminated when it is ready to use and off while a grind is underway.  The LED pulses while the timer is in sleep mode.</p>
 			<hr />
 			<h3>Hardware</h3>
-			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (i.e. the toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
+			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (the toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
 			<p>I found some surface-mount tactile buttons with keycaps for the keypad.  The four direction buttons are identical, the grind button is similar but with a built-in white LED.  This LED was connected to a pin with PWM output capability to enable variable brightness.</p>
 			<p>A suitable aluminium enclosure was selected and its internal dimensions dictated the dimensions for the PCB design.</p>
 			<hr />
 			<h3>Firmware</h3>
-			<p>In developing a recent project (<a href="/projects/temp0.php">temp0</a>) I tried out an Arduino platform and programming.  I didn't care much for the Arduino IDE, but I learned how C++ brings some advantages to firmware programming.  So for grinder_timer_rev2 I re-wrote the firmware from scratch and made use of classes.  I still opted to directly program the microcontroller as I saw no advantages in using the Arduino bootloader.</p>
-			<p>This is my second project with which I have used the <a href="https://platformio.org/">PlatformIO</a> IDE.  It's still great, though it took a bit of work figuring out how to directly program an ATmega328PB with a TinyISP programmer (i.e. with no Arduino or other dev board).</p>
-			<p>Classes everywhere!  I defined a bunch of classes in an attempt to keep the overall firmware modular.</p>
+			<p>In developing a recent project (<a href="/projects/temp0.php">temp0</a>) I tried out the Arduino platform and programming.  I didn't care much for the Arduino IDE, but I learned how C++ brings some advantages to firmware programming.  So for grinder_timer_rev2 I re-wrote the firmware from scratch and made use of classes.  I opted to directly program the microcontroller as I saw no advantages in using the Arduino bootloader.</p>
+			<p>This is my second project with which I have used the <a href="https://platformio.org/">PlatformIO</a> IDE.  It's still great, though it took a bit of work and configuration before I was able to directly program an ATmega328PB with a TinyISP programmer (i.e. with no Arduino or other dev board).</p>
+			<p>I like the modularity that using classes seems to facilitate.  Following are the classes I defined for the grinder_timer firmware, and the names I used when declaring them.</p>
 			<table class="text-table">
 				<tr>
 					<td scope="col"><b>Class</b></td>
@@ -117,7 +117,9 @@
 					<td>serial</td>
 					<td>Serial interface - really only used for debugging, disabled in the final code.</td>
 				</tr>
-			</table>
+			</table><br />
+			<hr />
+			<h3>Issues</h3>
 			<p>The biggest problem I encountered was with stability of the OLED.  It would appear to operate as expected, but after random intervals it would hang.  I located the stall point in the I2C function that waits for completion of an I2C transmission.  After experimenting with different clock speeds and power sources, eventually I figured out that the values of the pull-up resistors I had on the SDA and SCL lines were too high.  After replacing these 10k resistors with 3.3k resistors, the OLED became stable and predictable.</p>
 			<hr />
 			<h2 class="align-center">Gallery</h2>
