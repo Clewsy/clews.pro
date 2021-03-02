@@ -14,14 +14,14 @@
 					<th scope="col">Thumbnail</th>
 					<th scope="col">Summary</th>
 					<th class="date" scope="col">Updated</th>
-					<th class="links" scope="col" style="width: 126px">Links</th> <!--Define width to prevent wrapping of hyphenated links.-->
+					<th class="links" scope="col" style="width: 127px">Links</th> <!--Define width to prevent wrapping of hyphenated links.-->
 					<th scope="col">Tags</th>
 				</tr>
 				<tr>
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-02-28</td>
+					<td class="date">2021-03-03</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -196,7 +196,7 @@
 					<th scope="row"><a href="/projects/contributions.php">Contributions</a></th>
 					<td><a href="/projects/contributions.php"><img class="thumbnail" src="/projects/images/contributions/contributions_03.png" /></a></td>
 					<td>Pull requests merged into other people's projects.  I &lt;3 open source.</td>
-					<td class="date">2021-02-28</td>
+					<td class="date">2021-03-03</td>
 					<td class="links">
 						<a href="https://github.com/rcdailey/nextcloud-cronjob/pull/4">nextcloud-cronjob</a><br />
 						<a href="https://github.com/hassio-addons/addon-motioneye/pull/75">addon-motioney</a><br />
