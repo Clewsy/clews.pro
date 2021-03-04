@@ -17,16 +17,20 @@
 					<th class="links" scope="col" style="width: 127px">Links</th> <!--Define width to prevent wrapping of hyphenated links.-->
 					<th scope="col">Tags</th>
 				</tr>
+
+				<!--clews.pro-->
 				<tr>
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-03-03</td>
+					<td class="date">2021-03-05</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
 					</td>
 					<td>HTML, CSS, PHP, Self-Host, Apache, Nginx, Debian, Ubuntu, Docker, Docker-Compose, Let's Encrypt, Certbot, BitWarden, NextCloud, Collabora, AirSonic, Calibre, MariaDB, Inkscape, <s>Javascript</s>, Systemd, Ansible, Watchtower</td>
+
+				<!--gps_clock-->
 				<tr>
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/gps_clock/small_gps_clock_01.jpg" /></a></td>
@@ -40,6 +44,8 @@
 					</td>
 					<td>Clock, GPS, ISO-8601, epoch, UNIX Time, 7-seg, led, MAX-7219, AVR, Atmel, ATmega328p, ds3234, RTC, C, KiCAD, Wood</td>
 				</tr>
+
+				<!--grinder_timer-->
 				<tr>
 					<th scope="row"><a href="/projects/grinder_timer.php">grinder_timer</a></th>
 					<td><a href="/projects/grinder_timer.php"><img class="thumbnail" src="/projects/images/grinder_timer/small_grinder_timer_01.jpg" /></a></td>
@@ -53,6 +59,9 @@
 					</td>
 					<td>Coffee, Timer, OLED, SSD1306, AVR, Atmel, ATmega328p, Microcontroller, C, KiCAD, PCB Etching, Rancilio Rocky</td>
 				</tr>
+
+				<!--grinder_timer_rev2-->
+				<tr>
 					<th scope="row"><a href="/projects/grinder_timer_rev2.php">grinder_timer_rev2</a></th>
 					<td><a href="/projects/grinder_timer_rev2.php"><img class="thumbnail" src="/projects/images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" /></a></td>
 					<td>An upgrade to the original grinder_timer.</td>
@@ -63,6 +72,8 @@
 					</td>
 					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancillio Rocky, PWM, 32.738kHz, PlatformIO</td>
 				</tr>
+
+				<!--led_matrix-->
 				<tr>
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
 					<td><a href="/projects/led_matrix.php"><img class="thumbnail" src="/projects/images/led_matrix/small_led_matrix_04.jpg" /></a></td>
@@ -73,6 +84,8 @@
 					</td>
 					<td>AVR, ATmega8535, Microcontroller, LED, Matrix, Multiplexing, 74HC138</td>
 				</tr>
+
+				<!--macr0-->
 				<tr>
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
@@ -85,6 +98,8 @@
 					</td>
 					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver, PWM</td>
 				</tr>
+
+				<!--media_center-->
 				<tr>
 					<th scope="row"><a href="/projects/media_center.php">media_center</a></th>
 					<td><a href="/projects/media_center.php"><img class="thumbnail" src="/projects/images/media_center/small_media_center_01.jpg" /></a></td>
@@ -95,6 +110,8 @@
 					</td>
 					<td>Raspberry Pi 3, OSMC, kodi, Wood</td>
 				</tr>
+
+				<!--ncbu-->
 				<tr>
 					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
 					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/images/ncbu/ncbu_01.png" /></a></td>
@@ -106,6 +123,8 @@
 					</td>
 					<td>Docker, Docker-Compose, DockerHub, Dockerfile, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL, Cron</td>
 				</tr>
+
+				<!--p0wer-->
 				<tr>
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
 					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer/p0wer_01.jpg" /></a></td>
@@ -117,6 +136,8 @@
 					</td>
 					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, <s>wiringpi</s>, pigpio, Termux, C, PHP, cURL, Automation, KiCAD, Reverse Engineer, Ansible</td>
 				</tr>
+
+				<!--rad10-->
 				<tr>
 					<th scope="row"><a href="/projects/rad10.php">rad10</a></th>
 					<td><a href="/projects/rad10.php"><img class="thumbnail" src="/projects/images/rad10/small_rad10_01.jpg" /></a></td>
@@ -128,6 +149,8 @@
 					</td>
 					<td>Quadrature Encoder, Raspberry Pi, <s>Raspbian</s>, Ubuntu, mpd, mpc, libmpdclient, <s>wiringpi</s>, pigpio, C, Daemon, systemd, Apache, PHP, HTML, CSS, Ansible, Wood</td>
 				</tr>
+
+				<!--scripts-->
 				<tr>
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
 					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts/scripts_01.png" /></a></td>
@@ -138,6 +161,8 @@
 					</td>
 					<td>Bash, Shell, Script, Linux, Debian, Ubuntu, Raspbian, Termux, echo, rsync, curl, apt-get, ssh, openvpn, ping, grep, lscpu, lspci, lsblk, df, uname, lsb_release, route, netstat, nmcli, ifconfig, ip, iw, iwgetid, command, printf</td>
 				</tr>
+
+				<!--temp0-->
 				<tr>
 					<th scope="row"><a href="/projects/temp0.php">temp0</a></th>
 					<td><a href="/projects/temp0.php"><img class="thumbnail" src="/projects/images/temp0/small_temp0_22.jpg" /></a></td>
@@ -149,6 +174,8 @@
 					</td>
 					<td>Arduino, Pro-Trinket, Adafruit, HackADay, ESP8266, ESP-01, HDC1080, SSD1306, OLED, PlatformIO, C++, HTML, cURL, Serial, I2C</td>
 				</tr>
+
+				<!--volcon-->
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">volcon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_21.jpg" /></a></td>
@@ -162,6 +189,8 @@
 					</td>
 					<td>AVR, Atmel, <s>AT90usb162</s>, ATmega32U4, C, Eagle, USB, <s>Type-B</s>, Type-C, HID, LUFA, Quadrature Encoder, Gray Code, VCR, VHS, Wood, KiCad</td>
 				</tr>
+
+				<!--WiSHABI-->
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
 					<td><a href="/projects/wishabi.php"><img class="thumbnail" src="/projects/images/wishabi/small_wishabi_01.jpg" /></a></td>
@@ -172,6 +201,8 @@
 					</td>
 					<td>AVR, Atmel, ATmega8, 433.92MHz, Wireless, USB, HID, C, Keyboard, Mouse, Accelerometer, ADXL330, University, Engineering</td>
 				</tr>
+
+				<!--Wood-->
 				<tr>
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
 					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
@@ -182,6 +213,8 @@
 					</td>
 					<td>Wood, Timber, Lumber, Cellulose, Former Tree, Hard Paper, Pre-Cardboard</td>
 				</tr>
+
+				<!--clewsy_ansible-->
 				<tr>
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
 					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible/clewsy_ansible_01.png" /></a></td>
@@ -192,6 +225,8 @@
 					</td>
 					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, iperf3, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, so much yaml</td>
 				</tr>
+
+				<!--Contributions-->
 				<tr>
 					<th scope="row"><a href="/projects/contributions.php">Contributions</a></th>
 					<td><a href="/projects/contributions.php"><img class="thumbnail" src="/projects/images/contributions/contributions_03.png" /></a></td>

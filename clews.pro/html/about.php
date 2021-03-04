@@ -9,8 +9,8 @@
 		<div id="page">
 			<h2 class="align-center">About</h2>
 			<center>
-				<p>I like to learn things.  Today I'm learning how to write html and css.</p>
-				<p>This is a work-in-progress.  I do like the idea of a central place from which I can link all my different projects.</p>
+				<p>I like to learn things - today I'm learning how to write html and css.</p>
+				<p>This site is a work-in-progress.  It also serves as a central location for documenting some of my various projects.</p>
 				<p>If you'd like to contact me, try <img style="vertical-align:top;" src="/images/clews_email.png" \></p>
 				<table>
 					<tr>
