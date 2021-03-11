@@ -252,7 +252,6 @@
 					<td class="align-left"><a href="images/macr0/macr0_17.png"><img class="photo" src="images/macr0/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
 					<td class="align-right"><a href="images/macr0/macr0_18.png"><img class="photo" src="images/macr0/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
 				</tr>
-
 				<tr>
 					<td class="align-left"><a href="images/macr0/macr0_19.jpg"><img class="photo" src="images/macr0/small_macr0_19.jpg" alt="Rev 2 PCB - top view." /></a></td>
 					<td class="align-right"><a href="images/macr0/macr0_20.jpg"><img class="photo" src="images/macr0/small_macr0_20.jpg" alt="Rev 2 PCB - bottom view." /></a></td>
