@@ -123,9 +123,9 @@
 					</td>
 					<td>Docker, Docker-Compose, DockerHub, Dockerfile, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL, Cron</td>
 				</tr>
-<!--
+
 				<!--numpty-->
-				<tr>
+<!--				<tr>
 					<th scope="row"><a href="/projects/numpty.php">numpty</a></th>
 					<td><a href="/projects/numpty.php"><img class="thumbnail" src="/projects/images/numpty/numpty_01.jpg" /></a></td>
 					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
