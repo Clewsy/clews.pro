@@ -18,10 +18,11 @@
 			</ul>
 
 			<h2>Hardware</h2>
-			<p>Paragraph.</p>
+			<p>The schematic and PCB layout were designed in KiCAD.</p>
 			<ul>
-				<li>First item.</li>
-				<li>Second item.</li>
+				<li>21 gateron mechanical keyswitches connected in a matrix of 4 columns and 6 rows.</li>
+				<li>ATmega32u4 AVR microcontroller.</li>
+				<li>MP3202 LED driver.</li>
 			</ul>
 			<hr />
 
