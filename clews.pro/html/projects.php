@@ -73,6 +73,18 @@
 					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancillio Rocky, PWM, 32.738kHz, PlatformIO</td>
 				</tr>
 
+				<!--jank-->
+<!--				<tr>
+					<th scope="row"><a href="/projects/jank.php">jank</a></th>
+					<td><a href="/projects/jank.php"><img class="thumbnail" src="/projects/images/jank/jank_01.jpg" /></a></td>
+					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
+					<td class="date">2021-02-11</td>
+					<td class="links">
+						<a href="https://gitlab.com/clewsy/jank">gitlab</a><br />
+					</td>
+					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Key Matrix, Gateron, Cherry MX, mechanical, MP3202, LED Driver, PWM</td>
+				</tr>
+-->
 				<!--led_matrix-->
 				<tr>
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>
@@ -124,18 +136,6 @@
 					<td>Docker, Docker-Compose, DockerHub, Dockerfile, Nextcloud, Self-Host, Container, rsync, bash, shell script, MariaDB, MySQL, Cron</td>
 				</tr>
 
-				<!--numpty-->
-<!--				<tr>
-					<th scope="row"><a href="/projects/numpty.php">numpty</a></th>
-					<td><a href="/projects/numpty.php"><img class="thumbnail" src="/projects/images/numpty/numpty_01.jpg" /></a></td>
-					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
-					<td class="date">2021-02-11</td>
-					<td class="links">
-						<a href="https://gitlab.com/clewsy/numpty">gitlab</a><br />
-					</td>
-					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Key Matrix, Gateron, Cherry MX, mechanical, LED Driver, PWM</td>
-				</tr>
--->
 				<!--p0wer-->
 				<tr>
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
