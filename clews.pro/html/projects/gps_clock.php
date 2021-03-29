@@ -18,7 +18,7 @@
 				<li>Date/Time display ISO-8601 format (YYYY.MM.DD.HH.MM.SS).</li>
 				<li>Adjustable brightness (setting retained with power-cycle).</li>
 				<li>Programmable UTC offset from -12hrs to +12hrs in 0.5 hour increments (setting retained with power-cycle).</li>
-				<li>RTC with battery back-up to retain time with power-cycle and/or absence of a GPS signal.</li>
+				<li>RTC with battery back-up to retain time with power-cycle or loss of GPS signal.</li>
 			</ol>
 			<p>The date/time data is parsed from the <a href="https://en.wikipedia.org/wiki/NMEA_0183">NMEA</a> sentence output by the GPS module via the ATmega's USART.  This is converted to local time according to an adjustable UTC offset.  This offset is stored in eeprom so that it is retained after a power-cycle.  The offset can be adjusted in half-hour increments from -12hrs to +12hrs.</p>
 			<p>After a sync, the time is set in the <a href="https://www.maximintegrated.com/en/products/analog/real-time-clocks/DS3234.html">DS3234</a> RTC module which is referenced whenever the display is refreshed.  The RTC has a battery back-up so that the time is retained with no power.  The RTC is only re-set after a "successful" time sync from the GPS, so if there is no signal, the current time is not changed.</p>

@@ -23,7 +23,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-03-05</td>
+					<td class="date">2021-03-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -35,7 +35,7 @@
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/gps_clock/small_gps_clock_01.jpg" /></a></td>
 					<td>GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</td>
-					<td class="date">2020-08-18</td>
+					<td class="date">2020-08-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
 						<a href="https://hackaday.com/2018/09/18/epic-clock-clocks-the-unix-epoch/">hackaday</a><br />
@@ -78,7 +78,7 @@
 					<th scope="row"><a href="/projects/jank.php">jank</a></th>
 					<td><a href="/projects/jank.php"><img class="thumbnail" src="/projects/images/jank/jank_01.jpg" /></a></td>
 					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
-					<td class="date">2021-02-11</td>
+					<td class="date">2021-03-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/jank">gitlab</a><br />
 					</td>
@@ -102,7 +102,7 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2021-02-28</td>
+					<td class="date">2021-03-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a><br />
 						<a href="https://hackaday.com/2020/11/19/micro-macro-keyboard-is-mega-based/">hackaday</a><br />
@@ -128,7 +128,7 @@
 					<th scope="row"><a href="/projects/ncbu.php">ncbu</a></th>
 					<td><a href="/projects/ncbu.php"><img class="thumbnail" src="/projects/images/ncbu/ncbu_01.png" /></a></td>
 					<td>Docker container image to simplify and automate backup of a self-hosted nextcloud service.</td>
-					<td class="date">2021-02-21</td>
+					<td class="date">2021-03-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/ncbu">gitlab</a><br />
 						<a href="https://hub.docker.com/r/clewsy/ncbu">Docker Hub</a>

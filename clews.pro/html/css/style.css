@@ -197,7 +197,9 @@ ol {
 	list-style-type: decimal-leading-zero;
 	list-style-position: outside;
 	position: relative;
-	left: 50px;
+	left: 40px;
+	overflow: hidden;
+	padding-right: 40px;
 }
 ul {
 	list-style-position: outside;

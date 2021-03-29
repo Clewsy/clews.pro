@@ -8,17 +8,19 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">jank</h2>
-			<a href="images/jank/jank_01.jpg"><img class="photo align-left" src="images/jank/small_jank_01.jpg" alt="A description of the image." /></a>
-			<p>jank is Just ANother Keypad.  Specifically it's a 21-key usb numeric keypad.  I wanted one for use with my laptop.  Sure it would have cost a lot less to just buy one, but... (insert justification here when you think of one).</p>
+			<a href="images/jank/jank_14.jpg"><img class="photo align-left" src="images/jank/small_jank_14.jpg" alt="Jank without the enclosure." /></a>
+			<p>jank is <b>j</b>ust <b>an</b>other <b>k</b>eypad.  Specifically it's a 21-key usb numeric keypad.  I wanted one for use with my laptop.  Sure it would have cost a lot less to just buy one, but... (<i>insert justification here when you think of one</i>).  jank is open-source with all the code and CAD files available at <a href="https://gitlab.com/clewsy/jank/">GitLab</a>.</p>
 			<p>The main features of this keypad include:</p>
 			<ul>
-				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller with connectivity via a USB type-c connector configured as a USB 2.1 device.</li>
+				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller with connectivity via a USB type-c connector configured as a USB 2 device.  Power is also derived from the USB port.</li>
 				<li>21 mechanical keys (gateron blues which are pin-compatible clones of <a href="https://www.cherrymx.de/en">Cherry MX</a> blues) with variable brightness white LED backlight on each key.</li>
 				<li>In addition to the 17 standard keys of a numerical keypad, there is also a row of four keys across the top of the device which are programmable macros.  (Well, all keys can be programmable macros, but this is how I have configured jank.)</li>
 			</ul>
+			<p>I previously completed a simpler macro pad project (<a href="/projects/macr0.php">macr0</a>) which served as an experiment to prepare for this project.  Effectively macr0 was a trial so that I could get my head around a few concepts (<a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">key matrixing</a>, LED boost controllers, configurable macros with the HID protocol).  As such, development for jank went a lot faster since a lot of the <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">code from macr0</a> worked with minimal changes.</p>
 			<hr />
 
-			<h2>Hardware</h2>
+			<h2><a href="https://gitlab.com/clewsy/jank/-/tree/master/hardware">Hardware</a></h2>
+			<a href="images/jank/jank_09.jpg"><img class="photo align-right" src="images/jank/small_jank_09.jpg" alt="Hardware assembly underway." /></a>
 			<p>The <a href="images/jank/jank_01.jpg">schematic</a> and PCB layout were designed in KiCAD.  The schematic can be divided into five main areas/components:</p>
 			<ol>
 				<li><b>The key matrix</b> - 21 gateron mechanical keyswitches connected in a matrix of 4 columns and 6 rows.  The key switches each include a 3mm LED.</li>
@@ -37,54 +39,76 @@
 			<p>The "enclosure" is a simple wood (spotted gum) frame and a clear acrylic base plate.</p>
 			<hr />
 
-			<h2>Firmware</h2>
-			<a href="images/jank/jank_02.jpg"><img class="photo align-right" src="images/jank/small_jank_02.jpg" alt="A description of the second image." /></a>
+			<h2><a href="https://gitlab.com/clewsy/jank/-/tree/master/firmware">Firmware</a></h2>
 			<p>For the most part, the firmware did not take long as it is heavily based on a previous project - <a href="/projects/macr0.php">macr0</a>.  The firmware can be separated into three parts:</p>
 			<ol>
 				<li><b>USB HID Implementation</b> - Achieved by using <a href="http://dean.camera/">Dean Camera's</a> <a href="http://fourwalledcubicle.com/LUFA.php">LUFA</a> <a href="https://github.com/abcminiuser/lufa">Library</a>.</li>
 				<li><b>LED Control</b> - Uses a timer configured as a PWM signal output to a pin conncted to the LED controller enable pin.  A tact-switch push-button on a pin-change interrupt is configured to cycle through various LED modes.  The modes are various levels of brightness and a few pulsing effects.  A second internal timer is used to vary the PWM duty cycle to provide the pulse effects.</li>
-				<li><b>Key Scanning</b> - By sequentially enebling each row of the key matrix, then reading the state of each column, key scan functions determine which keys are pressed.</li>
+				<li><b>Key Scanning</b> - By sequentially enabling each row of the key matrix, then reading the state of each column, key scan functions determine which keys are pressed.  The table below details the keyswitch layout and the corresponding row and column as connected to the microcontroller.</li>
 			</ol>
+			<table class="simple-table">
+				<tr>
+					<td>ROW0<br />COL0</td><td>ROW0<br />COL1</td><td>ROW0<br />COL2</td><td>ROW0<br />COL3</td>
+				</tr>
+				<tr>
+					<td colspan="4"><br /></td>
+				</tr>
+				<tr>
+					<td>ROW1<br />COL0</td><td>ROW1<br />COL1</td><td>ROW1<br />COL2</td><td>ROW1<br />COL3</td>
+				</tr>
+				<tr>
+					<td>ROW2<br />COL0</td><td>ROW2<br />COL1</td><td>ROW2<br />COL2</td><td valign="top" rowspan="2">ROW2<br />COL3</td>
+				</tr>
+				<tr>
+					<td>ROW3<br />COL0</td><td>ROW3<br />COL1</td><td>ROW3<br />COL2</td>
+				</tr>
+				<tr>
+					<td>ROW4<br />COL0</td><td>ROW4<br />COL1</td><td>ROW4<br />COL2</td><td valign="top" rowspan="2">ROW4<br />COL3</td>
+				</tr>
+				<tr>
+					<td colspan="2"><div style="text-align:left">ROW5<br />COL0</td><td>ROW5<br />COL2</div></td>
+				</tr>
+			</table>
 			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothy except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for these pins include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled be default (as it can serve as a means of programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
 			<hr />
 
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_01.png"><img class="photo" src="images/jank/jank_01.png" alt="PCB design - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_02.png"><img class="photo" src="images/jank/jank_02.png" alt="PCB design - bottom." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_01.png"><img class="photo" src="images/jank/jank_01.png" alt="Schematic." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_02.png"><img class="photo" src="images/jank/jank_02.png" alt="PCB layout." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_03.jpg"><img class="photo" src="images/jank/small_jank_03.jpg" alt="PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_04.jpg"><img class="photo" src="images/jank/small_jank_04.jpg" alt="PCB fabricated - bottom." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_03.png"><img class="photo" src="images/jank/jank_03.png" alt="PCB layout with infill - top." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_04.png"><img class="photo" src="images/jank/jank_04.png" alt="PCB layout with infill - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_05.jpg"><img class="photo" src="images/jank/small_jank_05.jpg" alt="PCB assembled - bottom." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_06.jpg"><img class="photo" src="images/jank/small_jank_06.jpg" alt="PCB assembled - top." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_05.png"><img class="photo" src="images/jank/jank_05.png" alt="PCB 3D view - top." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_06.png"><img class="photo" src="images/jank/jank_06.png" alt="PCB 3D view - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_07.jpg"><img class="photo" src="images/jank/small_jank_07.jpg" alt="PCB assembled - top with keycaps." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_08.jpg"><img class="photo" src="images/jank/small_jank_08.jpg" alt="Beginning fabrication of frame." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_07.jpg"><img class="photo" src="images/jank/small_jank_07.jpg" alt="PCB fabricated - top." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_08.jpg"><img class="photo" src="images/jank/small_jank_08.jpg" alt="PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_09.jpg"><img class="photo" src="images/jank/small_jank_09.jpg" alt="Frame and base fabrication 1." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_10.jpg"><img class="photo" src="images/jank/small_jank_10.jpg" alt="Frame and base fabrication 2." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_09.jpg"><img class="photo" src="images/jank/small_jank_09.jpg" alt="PCB with stainless steel plate and keyswitches." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_10.jpg"><img class="photo" src="images/jank/small_jank_10.jpg" alt="PCB and keyswitches fit to stainless steel plate." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_11.jpg"><img class="photo" src="images/jank/small_jank_11.jpg" alt="Frame assembled." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_12.jpg"><img class="photo" src="images/jank/small_jank_12.jpg" alt="Enclosed - bottom view.." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_11.jpg"><img class="photo" src="images/jank/small_jank_11.jpg" alt="PCB assembled with ISP connected." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_12.jpg"><img class="photo" src="images/jank/small_jank_12.jpg" alt="PCB assembled and USB connected." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_13.jpg"><img class="photo" src="images/jank/small_jank_13.jpg" alt="Next to volcon." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_14.jpg"><img class="photo" src="images/jank/small_jank_14.jpg" alt="Assembled, pen for scale." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_13.jpg"><img class="photo" src="images/jank/small_jank_13.jpg" alt="jank running - top." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_14.jpg"><img class="photo" src="images/jank/small_jank_14.jpg" alt="jank running - angled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_15.jpg"><img class="photo" src="images/jank/small_jank_15.jpg" alt="Assembled, closer view." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_16.png"><img class="photo" src="images/jank/jank_16.png" alt="Schematic for revision 1." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_15.jpg"><img class="photo" src="images/jank/small_jank_15.jpg" alt="XXX." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_16.png"><img class="photo" src="images/jank/jank_16.png" alt="XXX." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_17.png"><img class="photo" src="images/jank/jank_17.png" alt="PCB design - top - revision 2." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_18.png"><img class="photo" src="images/jank/jank_18.png" alt="PCB design - bottom - revision 2." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_17.png"><img class="photo" src="images/jank/jank_17.png" alt="XXX." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_18.png"><img class="photo" src="images/jank/jank_18.png" alt="XXX." /></a></td>
 				</tr>
 			</table>
 		</div>
