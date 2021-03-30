@@ -73,6 +73,71 @@
 			<hr />
 
 			<h2>Configuration</h2>
+<p>Any key can be configured as a any regular keystroke (including media control keys) or a macro (series of sequential keystrokes).  The code as listed on GitLab will have the top row configured as four macro keys while the remaining 17 keys are configured as a traditional numeric keypad.</p>
+<p>Only the <i>keymap.c</i> file needs to be modified in order to configure the action for each key.</p>
+
+<div class="code"><p>
+<span class="compiler">#include "keymap.h"</span><br />
+<br />
+<span class="comment">// Define the physical row and column pins on the microcontroller to be scanned for key presses.</span><br />
+<span class="type">const uint8_t</span> key_row_array[] <span class="operator">=</span> {ROW1, ROW2, ROW3, ROW4, ROW5};<br />
+<span class="type">const uint8_t</span> key_col_array[] <span class="operator">=</span> {COL0, COL1, COL2, COL3};<br />
+<span class="type">const uint8_t</span> macro_row_array[] <span class="operator">=</span> {ROW0};<br />
+<span class="type">const uint8_t</span> macro_col_array[] <span class="operator">=</span> {COL0, COL1, COL2, COL3};<br />
+<br />
+<span class="comment">// Number pad key definitions.</span><br />
+<span class="comment">// KEY_XY where X:Row Number, Y:Column Number.</span><br />
+<span class="compiler">#define KEY_10 HID_KEYBOARD_SC_NUM_LOCK</span><br />
+<span class="compiler">#define KEY_11 HID_KEYBOARD_SC_KEYPAD_SLASH</span><br />
+<span class="compiler">#define KEY_12 HID_KEYBOARD_SC_KEYPAD_ASTERISK</span><br />
+<span class="compiler">#define KEY_13 HID_KEYBOARD_SC_KEYPAD_MINUS</span><br />
+<span class="compiler">#define KEY_20 HID_KEYBOARD_SC_KEYPAD_7_AND_HOME</span><br />
+<span class="compiler">#define KEY_21 HID_KEYBOARD_SC_KEYPAD_8_AND_UP_ARROW</span><br />
+<span class="compiler">#define KEY_22 HID_KEYBOARD_SC_KEYPAD_9_AND_PAGE_UP</span><br />
+<span class="compiler">#define KEY_23 HID_KEYBOARD_SC_KEYPAD_PLUS</span><br />
+<span class="compiler">#define KEY_30 HID_KEYBOARD_SC_KEYPAD_4_AND_LEFT_ARROW</span><br />
+<span class="compiler">#define KEY_31 HID_KEYBOARD_SC_KEYPAD_5</span><br />
+<span class="compiler">#define KEY_32 HID_KEYBOARD_SC_KEYPAD_6_AND_RIGHT_ARROW</span><br />
+<span class="compiler">#define KEY_33 0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+<span class="compiler">#define KEY_40 HID_KEYBOARD_SC_KEYPAD_1_AND_END</span><br />
+<span class="compiler">#define KEY_41 HID_KEYBOARD_SC_KEYPAD_2_AND_DOWN_ARROW</span><br />
+<span class="compiler">#define KEY_42 HID_KEYBOARD_SC_KEYPAD_3_AND_PAGE_DOWN</span><br />
+<span class="compiler">#define KEY_43 HID_KEYBOARD_SC_KEYPAD_ENTER</span><br />
+<span class="compiler">#define KEY_50 HID_KEYBOARD_SC_KEYPAD_0_AND_INSERT</span><br />
+<span class="compiler">#define KEY_51 0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+<span class="compiler">#define KEY_52 HID_KEYBOARD_SC_KEYPAD_DOT_AND_DELETE</span><br />
+<span class="compiler">#define KEY_53 0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+
+
+<br />
+
+<span class="comment">// The key map array - for regular key strokes including media control keys.</span><br />
+<span class="type">const char</span> KEYMAP[NUM_KEY_ROWS][NUM_KEY_COLS] PROGMEM <span class="operator">=</span> {<br />
+&emsp;&emsp;&emsp;	<span class="comment">//Col 0 &emsp;&emsp;&emsp;	Col 1 &emsp; &emsp;&emsp;	Col 2 &emsp; &emsp;&emsp;	Col 3</span><br />
+&emsp;&emsp;&emsp;	{KEY_10,&emsp;&emsp;&emsp;	KEY_11,&emsp;&emsp;&emsp;	KEY_12,&emsp;&emsp;&emsp;	KEY_13},&emsp;&emsp;&emsp;	<span class="comment">// Row 1</span><br />
+&emsp;&emsp;&emsp;	{KEY_20,&emsp;&emsp;&emsp;	KEY_21,&emsp;&emsp;&emsp;	KEY_22,&emsp;&emsp;&emsp;	KEY_23},&emsp;&emsp;&emsp;	<span class="comment">// Row 2</span><br />
+&emsp;&emsp;&emsp;	{KEY_30,&emsp;&emsp;&emsp;	KEY_31,&emsp;&emsp;&emsp;	KEY_32,&emsp;&emsp;&emsp;	KEY_33},&emsp;&emsp;&emsp;	<span class="comment">// Row 3</span><br />
+&emsp;&emsp;&emsp;	{KEY_40,&emsp;&emsp;&emsp;	KEY_41,&emsp;&emsp;&emsp;	KEY_42,&emsp;&emsp;&emsp;	KEY_43},&emsp;&emsp;&emsp;	<span class="comment">// Row 4</span><br />
+&emsp;&emsp;&emsp;	{KEY_50,&emsp;&emsp;&emsp;	KEY_51,&emsp;&emsp;&emsp;	KEY_52,&emsp;&emsp;&emsp;	KEY_53}	&emsp;&emsp;&emsp;	<span class="comment">// Row 5</span><br />
+};<br />
+<br />
+<span class="comment">// Macro definitions.  Currently just simple text strings can be used as macros.</span><br />
+<span class="compiler">#define MACRO_0 "TEST_0\n"</span><br />
+<span class="compiler">#define MACRO_1 "The quick brown fox "</span><br />
+<span class="compiler">#define MACRO_2 "jumped over the lazy dog.\n"</span><br />
+<span class="compiler">#define MACRO_3 "`1234567890-=~!@#$%^&*()_+qwertyuiop[]\\QWERTYUIOP{}|asdfghjkl;'ASDFGHJKL:\"zxcvbnm,./ZXCVBNM<>?\n"</span><br />
+<br />
+<span class="comment">// The macro map array - for key strokes that are mapped as macros.</span><br />
+<span class="type">const char</span> MACROMAP[NUM_MACRO_ROWS][NUM_MACRO_COLS][MAX_MACRO_CHARS] PROGMEM <span class="operator">=</span> {<br />
+&emsp;&emsp;&emsp;	<span class="comment">//Col 0 &emsp; &emsp;&emsp;	Col 1 &emsp; &emsp; &emsp;	Col 2 &emsp; &emsp; &emsp;	Col 3</span><br />
+&emsp;&emsp;&emsp;	{MACRO_0,&emsp;&emsp;&emsp;	MACRO_1,&emsp;&emsp;&emsp;	MACRO_2,&emsp;&emsp;&emsp;	MACRO_3}&emsp;&emsp;&emsp;	<span class="comment">// Row 0</span><br />
+};<br />
+</p></div>
+
+
+
+
+
 			<hr />
 
 			<h2 class="align-center">Gallery</h2>
