@@ -78,7 +78,7 @@
 					<th scope="row"><a href="/projects/jank.php">jank</a></th>
 					<td><a href="/projects/jank.php"><img class="thumbnail" src="/projects/images/jank/jank_01.jpg" /></a></td>
 					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
-					<td class="date">2021-03-29</td>
+					<td class="date">2021-03-31</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/jank">gitlab</a><br />
 					</td>

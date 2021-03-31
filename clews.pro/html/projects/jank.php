@@ -25,7 +25,7 @@
 			<ol>
 				<li><b>The key matrix</b> - 21 gateron mechanical keyswitches connected in a matrix of 4 columns and 6 rows.  The key switches each include a 3mm LED.</li>
 				<li><b><a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32u4</a> AVR microcontroller</b> - Selected because it has enough GPIO and hardware USB.  I'm also familiar with the device from previous projects and have a few on-hand.  Includes an external 16MHz crystal.</li>
-				<li><b><a href="https://www.monolithicpower.com/en/mp3202.html">MP3202</a> LED driver</b> - I've not (successfully) used a boost LED driver before so this was a neat learning experience.  It drives all 21 keyswitch LEDs and is enabled by a PWM signal from the AVR which allows variable LED brightness.</li>
+				<li><b><a href="https://www.monolithicpower.com/en/mp3202.html">MP3202</a> LED driver</b> - I've not (successfully) used a boost LED driver before, so this was a neat learning experience.  It drives all 21 keyswitch LEDs and is enabled by a PWM signal from the AVR which allows variable LED brightness.</li>
 				<li><b>USB type-C Receptacle</b> - Configured to be detected by a host as a USB 2.0 device.  I went with a simple 16-pin through-hole connector that is (barely) hand-solderable.</li>
 				<li><b>6-Pin AVR ISP connector</b> - A standard In-System Programming port.</li>
 			</ol>
@@ -34,16 +34,16 @@
 			<p>Two issues during assembly of the PCB:</p>
 			<ol>
 				<li>My fist step is usually solder in the minimum components to test the programming circuit.  I.e. the AVR, ISP connector and a few passives.  Turns out I had two pins on the AVR shorted and they just so happened to be VCC and GND.  The programmer I was using didn't survive but fortunately I had a spare.  Once the bridge was fixed I used <a href="https://www.nongnu.org/avrdude/">AVRDUDE</a> to test the AVR which was unharmed.</li>
-				<li>The single SMD LED mounted on the side opposite the keyswitches (used to indicate numlock status) failed to work.  In my schematic I initially had it backwards.  Fortunately I super-easy fix to reverse so I didn't need to have the boards re-fabricated.</li>
+				<li>The single SMD LED mounted on the side opposite the keyswitches (used to indicate num lock status) failed to work.  In my schematic I initially had it backwards.  Fortunately this was a super-easy fix (reverse the LED) so I didn't need to have the board re-fabricated.</li>
 			</ol>
-			<p>The "enclosure" is a simple wood (spotted gum) frame and a clear acrylic base plate.</p>
+			<p>The "enclosure" is a simple wood (spotted gum) frame and a clear acrylic base plate.  There is a small hole in the base to provide access to the tact switch that cycles the LED backlighting through various brightness levels and pulse effects.</p>
 			<hr />
 
 			<h2><a href="https://gitlab.com/clewsy/jank/-/tree/master/firmware">Firmware</a></h2>
 			<p>For the most part, the firmware did not take long as it is heavily based on a previous project - <a href="/projects/macr0.php">macr0</a>.  The firmware can be separated into three parts:</p>
 			<ol>
 				<li><b>USB HID Implementation</b> - Achieved by using <a href="http://dean.camera/">Dean Camera's</a> <a href="http://fourwalledcubicle.com/LUFA.php">LUFA</a> <a href="https://github.com/abcminiuser/lufa">Library</a>.</li>
-				<li><b>LED Control</b> - Uses a timer configured as a PWM signal output to a pin conncted to the LED controller enable pin.  A tact-switch push-button on a pin-change interrupt is configured to cycle through various LED modes.  The modes are various levels of brightness and a few pulsing effects.  A second internal timer is used to vary the PWM duty cycle to provide the pulse effects.</li>
+				<li><b>LED Control</b> - Uses a timer configured as a PWM signal output on a pin connected to the LED controller enable pin.  A tact-switch push-button on a pin-change interrupt is configured to cycle through various LED modes.  The modes include various levels of brightness and a few pulsing effects.  A second internal timer is used to vary the PWM duty cycle to provide the pulse effects.</li>
 				<li><b>Key Scanning</b> - By sequentially enabling each row of the key matrix, then reading the state of each column, key scan functions determine which keys are pressed.  The table below details the keyswitch layout and the corresponding row and column as connected to the microcontroller.</li>
 			</ol>
 			<table class="simple-table">
@@ -69,7 +69,7 @@
 					<td colspan="2"><div style="text-align:left">ROW5<br />COL0</td><td>ROW5<br />COL2</div></td>
 				</tr>
 			</table>
-			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothy except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for these pins include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled be default (as it can serve as a means of programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
+			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothy except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for PF4 and PF5 include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled be default (as it can serve as an interface for programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
 			<hr />
 
 			<h2>Configuration</h2>
