@@ -74,17 +74,17 @@
 				</tr>
 
 				<!--jank-->
-<!--				<tr>
+				<tr>
 					<th scope="row"><a href="/projects/jank.php">jank</a></th>
-					<td><a href="/projects/jank.php"><img class="thumbnail" src="/projects/images/jank/jank_01.jpg" /></a></td>
+					<td><a href="/projects/jank.php"><img class="thumbnail" src="/projects/images/jank/small_jank_19.jpg" /></a></td>
 					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
-					<td class="date">2021-03-31</td>
+					<td class="date">2021-04-04</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/jank">gitlab</a><br />
 					</td>
 					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Key Matrix, Gateron, Cherry MX, mechanical, MP3202, LED Driver, PWM</td>
 				</tr>
--->
+
 				<!--led_matrix-->
 				<tr>
 					<th scope="row"><a href="/projects/led_matrix.php">led_matrix</a></th>

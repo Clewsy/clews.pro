@@ -73,67 +73,131 @@
 			<hr />
 
 			<h2>Configuration</h2>
-<p>Any key can be configured as a any regular keystroke (including media control keys) or a macro (series of sequential keystrokes).  The code as listed on GitLab will have the top row configured as four macro keys while the remaining 17 keys are configured as a traditional numeric keypad.</p>
-<p>Only the <i>keymap.c</i> file needs to be modified in order to configure the action for each key.</p>
-
-<div class="code"><p>
-<span class="compiler">#include "keymap.h"</span><br />
-<br />
-<span class="comment">// Define the physical row and column pins on the microcontroller to be scanned for key presses.</span><br />
-<span class="type">const uint8_t</span> key_row_array[] <span class="operator">=</span> {ROW1, ROW2, ROW3, ROW4, ROW5};<br />
-<span class="type">const uint8_t</span> key_col_array[] <span class="operator">=</span> {COL0, COL1, COL2, COL3};<br />
-<span class="type">const uint8_t</span> macro_row_array[] <span class="operator">=</span> {ROW0};<br />
-<span class="type">const uint8_t</span> macro_col_array[] <span class="operator">=</span> {COL0, COL1, COL2, COL3};<br />
-<br />
-<span class="comment">// Number pad key definitions.</span><br />
-<span class="comment">// KEY_XY where X:Row Number, Y:Column Number.</span><br />
-<span class="compiler">#define KEY_10 HID_KEYBOARD_SC_NUM_LOCK</span><br />
-<span class="compiler">#define KEY_11 HID_KEYBOARD_SC_KEYPAD_SLASH</span><br />
-<span class="compiler">#define KEY_12 HID_KEYBOARD_SC_KEYPAD_ASTERISK</span><br />
-<span class="compiler">#define KEY_13 HID_KEYBOARD_SC_KEYPAD_MINUS</span><br />
-<span class="compiler">#define KEY_20 HID_KEYBOARD_SC_KEYPAD_7_AND_HOME</span><br />
-<span class="compiler">#define KEY_21 HID_KEYBOARD_SC_KEYPAD_8_AND_UP_ARROW</span><br />
-<span class="compiler">#define KEY_22 HID_KEYBOARD_SC_KEYPAD_9_AND_PAGE_UP</span><br />
-<span class="compiler">#define KEY_23 HID_KEYBOARD_SC_KEYPAD_PLUS</span><br />
-<span class="compiler">#define KEY_30 HID_KEYBOARD_SC_KEYPAD_4_AND_LEFT_ARROW</span><br />
-<span class="compiler">#define KEY_31 HID_KEYBOARD_SC_KEYPAD_5</span><br />
-<span class="compiler">#define KEY_32 HID_KEYBOARD_SC_KEYPAD_6_AND_RIGHT_ARROW</span><br />
-<span class="compiler">#define KEY_33 0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
-<span class="compiler">#define KEY_40 HID_KEYBOARD_SC_KEYPAD_1_AND_END</span><br />
-<span class="compiler">#define KEY_41 HID_KEYBOARD_SC_KEYPAD_2_AND_DOWN_ARROW</span><br />
-<span class="compiler">#define KEY_42 HID_KEYBOARD_SC_KEYPAD_3_AND_PAGE_DOWN</span><br />
-<span class="compiler">#define KEY_43 HID_KEYBOARD_SC_KEYPAD_ENTER</span><br />
-<span class="compiler">#define KEY_50 HID_KEYBOARD_SC_KEYPAD_0_AND_INSERT</span><br />
-<span class="compiler">#define KEY_51 0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
-<span class="compiler">#define KEY_52 HID_KEYBOARD_SC_KEYPAD_DOT_AND_DELETE</span><br />
-<span class="compiler">#define KEY_53 0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
-
-
-<br />
-
-<span class="comment">// The key map array - for regular key strokes including media control keys.</span><br />
-<span class="type">const char</span> KEYMAP[NUM_KEY_ROWS][NUM_KEY_COLS] PROGMEM <span class="operator">=</span> {<br />
-&emsp;&emsp;&emsp;	<span class="comment">//Col 0 &emsp;&emsp;&emsp;	Col 1 &emsp; &emsp;&emsp;	Col 2 &emsp; &emsp;&emsp;	Col 3</span><br />
-&emsp;&emsp;&emsp;	{KEY_10,&emsp;&emsp;&emsp;	KEY_11,&emsp;&emsp;&emsp;	KEY_12,&emsp;&emsp;&emsp;	KEY_13},&emsp;&emsp;&emsp;	<span class="comment">// Row 1</span><br />
-&emsp;&emsp;&emsp;	{KEY_20,&emsp;&emsp;&emsp;	KEY_21,&emsp;&emsp;&emsp;	KEY_22,&emsp;&emsp;&emsp;	KEY_23},&emsp;&emsp;&emsp;	<span class="comment">// Row 2</span><br />
-&emsp;&emsp;&emsp;	{KEY_30,&emsp;&emsp;&emsp;	KEY_31,&emsp;&emsp;&emsp;	KEY_32,&emsp;&emsp;&emsp;	KEY_33},&emsp;&emsp;&emsp;	<span class="comment">// Row 3</span><br />
-&emsp;&emsp;&emsp;	{KEY_40,&emsp;&emsp;&emsp;	KEY_41,&emsp;&emsp;&emsp;	KEY_42,&emsp;&emsp;&emsp;	KEY_43},&emsp;&emsp;&emsp;	<span class="comment">// Row 4</span><br />
-&emsp;&emsp;&emsp;	{KEY_50,&emsp;&emsp;&emsp;	KEY_51,&emsp;&emsp;&emsp;	KEY_52,&emsp;&emsp;&emsp;	KEY_53}	&emsp;&emsp;&emsp;	<span class="comment">// Row 5</span><br />
-};<br />
-<br />
-<span class="comment">// Macro definitions.  Currently just simple text strings can be used as macros.</span><br />
-<span class="compiler">#define MACRO_0 "TEST_0\n"</span><br />
-<span class="compiler">#define MACRO_1 "The quick brown fox "</span><br />
-<span class="compiler">#define MACRO_2 "jumped over the lazy dog.\n"</span><br />
-<span class="compiler">#define MACRO_3 "`1234567890-=~!@#$%^&*()_+qwertyuiop[]\\QWERTYUIOP{}|asdfghjkl;'ASDFGHJKL:\"zxcvbnm,./ZXCVBNM<>?\n"</span><br />
-<br />
-<span class="comment">// The macro map array - for key strokes that are mapped as macros.</span><br />
-<span class="type">const char</span> MACROMAP[NUM_MACRO_ROWS][NUM_MACRO_COLS][MAX_MACRO_CHARS] PROGMEM <span class="operator">=</span> {<br />
-&emsp;&emsp;&emsp;	<span class="comment">//Col 0 &emsp; &emsp;&emsp;	Col 1 &emsp; &emsp; &emsp;	Col 2 &emsp; &emsp; &emsp;	Col 3</span><br />
-&emsp;&emsp;&emsp;	{MACRO_0,&emsp;&emsp;&emsp;	MACRO_1,&emsp;&emsp;&emsp;	MACRO_2,&emsp;&emsp;&emsp;	MACRO_3}&emsp;&emsp;&emsp;	<span class="comment">// Row 0</span><br />
-};<br />
-</p></div>
-
+			<p>Any key can be configured as a any regular keystroke (including media control keys) or a macro (series of sequential keystrokes).  The code as listed on GitLab will have the top row configured as four macro keys while the remaining 17 keys are configured as a traditional numeric keypad.</p>
+			<p>Only the <i>keymap.c</i> file needs to be modified in order to configure the action for each key.</p>
+			<p>A macro consists of an array of a structure type defined as <i>macro_t</i>.  That is to say that a single macro keypress can actually trigger a series of "macros" where a single macro is structured as type macro_t as defined below:</p>
+			<div class="code"><p>
+			<span class="type">typedef struct</span> {<br />
+			&emsp;&emsp;&emsp;	<span class="type">uint8_t</span> m_action; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span class="comment">// m_action defines the kind of macro action (string, keys or delay).</span><br />
+			&emsp;&emsp;&emsp;	<span class="type">char</span> m_array[<span class="compiler">MAX_MACRO_CHARS</span>]; <span class="comment">// m_array is interpreted differently depending on the value of m_action.</span><br />
+			} macro_t;<br />
+			</p></div>
+			<p>The array part of the macro_t structure (<i>m_array</i>) is interpreted in different ways by the <i>SendMacroReports()</i> function based on the value of the interger part of the structure (<i>m_action</i>).</p>
+			<table class="simple-table">
+				<tr>
+					<th>m_action</th><th>m_array</th>
+				</tr>
+				<tr>
+					<td>M_NULL</td><td style="text-align:left">No macro.  The m_array is ignored.</td>
+				</tr>
+				<tr>
+					<td>M_STRING</td><td style="text-align:left">"Type" a string of characters.  The m_array is interpreted as a character array.  Each character is converted to the required keyboard scancode and sequentially sent as a keyboard report.</td>
+				</tr>
+				<tr>
+					<td>M_KEYS</td><td style="text-align:left">A combination of keystrokes (including modifiers).  Each element of m_array is interpreted as a keyboard scancode.  All scancodes are sent simultaneously in a single keyboard report.</td>
+				</tr>
+				<tr>
+					<td>M_WAIT</td><td style="text-align:left">No keystrokes.  Each element of the m_array is interpreted as an integer.  The value of each integer represents the number of seconds to "wait".  Such a delay can be useful if a previous macro keystroke needs time for the corresponding command to execute.</td>
+				</tr>
+			</table>
+			<br />
+			<div class="code"><p>
+			<span class="compiler">#include "keymap.h"</span><br />
+			<br />
+			<span class="comment">// Define the physical row and column pins on the microcontroller to be scanned for key presses.</span><br />
+			<span class="type">const uint8_t</span> key_row_array[] <span class="operator">=</span> {<span class="compiler">ROW1</span>, <span class="compiler">ROW2</span>, <span class="compiler">ROW3</span>, <span class="compiler">ROW4</span>, <span class="compiler">ROW5</span>};<br />
+			<span class="type">const uint8_t</span> key_col_array[] <span class="operator">=</span> {<span class="compiler">COL0</span>, <span class="compiler">COL1</span>, <span class="compiler">COL2</span>, <span class="compiler">COL3</span>};<br />
+			<span class="type">const uint8_t</span> macro_row_array[] <span class="operator">=</span> {<span class="compiler">ROW0</span>};<br />
+			<span class="type">const uint8_t</span> macro_col_array[] <span class="operator">=</span> {<span class="compiler">COL0</span>, <span class="compiler">COL1</span>, <span class="compiler">COL2</span>, <span class="compiler">COL3</span>};<br />
+			<br />
+			<span class="comment">// Number pad key definitions.</span><br />
+			<span class="comment">// KEY_X_Y where X:Row Number, Y:Column Number.</span><br />
+			<span class="compiler">#define KEY_1_0 HID_KEYBOARD_SC_NUM_LOCK</span><br />
+			<span class="compiler">#define KEY_1_1 HID_KEYBOARD_SC_KEYPAD_SLASH</span><br />
+			<span class="compiler">#define KEY_1_2 HID_KEYBOARD_SC_KEYPAD_ASTERISK</span><br />
+			<span class="compiler">#define KEY_1_3 HID_KEYBOARD_SC_KEYPAD_MINUS</span><br />
+			<span class="compiler">#define KEY_2_0 HID_KEYBOARD_SC_KEYPAD_7_AND_HOME</span><br />
+			<span class="compiler">#define KEY_2_1 HID_KEYBOARD_SC_KEYPAD_8_AND_UP_ARROW</span><br />
+			<span class="compiler">#define KEY_2_2 HID_KEYBOARD_SC_KEYPAD_9_AND_PAGE_UP</span><br />
+			<span class="compiler">#define KEY_2_3 HID_KEYBOARD_SC_KEYPAD_PLUS</span><br />
+			<span class="compiler">#define KEY_3_0 HID_KEYBOARD_SC_KEYPAD_4_AND_LEFT_ARROW</span><br />
+			<span class="compiler">#define KEY_3_1 HID_KEYBOARD_SC_KEYPAD_5</span><br />
+			<span class="compiler">#define KEY_3_2 HID_KEYBOARD_SC_KEYPAD_6_AND_RIGHT_ARROW</span><br />
+			<span class="compiler">#define KEY_3_3</span> <span class="numerical">0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+			<span class="compiler">#define KEY_4_0 HID_KEYBOARD_SC_KEYPAD_1_AND_END</span><br />
+			<span class="compiler">#define KEY_4_1 HID_KEYBOARD_SC_KEYPAD_2_AND_DOWN_ARROW</span><br />
+			<span class="compiler">#define KEY_4_2 HID_KEYBOARD_SC_KEYPAD_3_AND_PAGE_DOWN</span><br />
+			<span class="compiler">#define KEY_4_3 HID_KEYBOARD_SC_KEYPAD_ENTER</span><br />
+			<span class="compiler">#define KEY_5_0 HID_KEYBOARD_SC_KEYPAD_0_AND_INSERT</span><br />
+			<span class="compiler">#define KEY_5_1 </span> <span class="numerical">0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+			<span class="compiler">#define KEY_5_2 HID_KEYBOARD_SC_KEYPAD_DOT_AND_DELETE</span><br />
+			<span class="compiler">#define KEY_5_3 </span> <span class="numerical">0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+			<br />
+			<span class="comment">// The key map array - for regular key strokes including media control keys.</span><br />
+			<span class="type">const char</span> KEYMAP[<span class="compiler">NUM_KEY_ROWS</span>][<span class="compiler">NUM_KEY_COLS</span>] PROGMEM <span class="operator">=</span> {<br />
+			&emsp;&emsp;&emsp;	<span class="comment">//Col 0 &emsp;&emsp;&emsp;	Col 1 &emsp; &emsp;&emsp;	Col 2 &emsp; &emsp;&emsp;	Col 3</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_1_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_1_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_1_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_1_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 1</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_2_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_2_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_2_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_2_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 2</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_3_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_3_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_3_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_3_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 3</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_4_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_4_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_4_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_4_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 4</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_5_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_5_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_5_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_5_3</span>}	&emsp;&emsp;&emsp;	<span class="comment">// Row 5</span><br />
+			};<br />
+			<br />
+			<span class="comment">// The macro map array - for key strokes that are mapped as macros.</span><br />
+			<span class="type">const macro_t</span> MACROMAP[<span class="compiler">NUM_MACRO_ROWS</span>][<span class="compiler">NUM_MACRO_COLS</span>][<span class="compiler">MAX_MACRO_ACTIONS</span>] PROGMEM = <br />
+			{<br />
+			&emsp;&emsp;&emsp;	{ <span class="comment">//Row0</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{ <span class="comment">//Col0</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_KEYS</span>, {<span class="compiler">HID_KEYBOARD_SC_F12</span>}},	<span class="comment">// This macro is just the same as hitting the F12 key.</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{ <span class="comment">//Col1</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_KEYS</span>, {<span class="compiler">HID_KEYBOARD_SC_LEFT_GUI</span>}},	<span class="comment">// This macro will go to the specified url in a new firefox tab.</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_WAIT</span>, {<span class="numerical">1</span>}},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"firefox"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_KEYS</span>, {<span class="compiler">HID_KEYBOARD_SC_ENTER</span>}},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_WAIT</span>, {<span class="numerical">3</span>}},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_KEYS</span>, {<span class="compiler">HID_KEYBOARD_SC_LEFT_CONTROL</span>, <span class="compiler">HID_KEYBOARD_SC_T</span>}},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"https://clews.pro/projects/jank.php"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_KEYS</span>, {<span class="compiler">HID_KEYBOARD_SC_ENTER</span>}},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{ <span class="comment">//Col2</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"      _\n"</span>},	<span class="comment">// This macro will enter a series of strings to create some ascii art.</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"     ( )\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"      H\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"      H\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"     _H_\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"  .-'-.-'-.\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">" /         \\\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|           |\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|   .-------'._\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|  / /  '.' '. \\\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|  \\ \\ @   @ / /\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|   '---------'\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|    _______|\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|  .'-+-+-+|\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|  '.-+-+-+|\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"|    '''''' |\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"'-.__   __.-'\n"</span>},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"     '''\n</span>"}<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{ <span class="comment">//Col3</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_STRING</span>, <span class="string">"Bender is Great!"</span>},	<span class="comment">// This macro will type a string of characters then hit enter.</span><br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	{<span class="compiler">M_KEYS</span>, {<span class="compiler">HID_KEYBOARD_SC_ENTER</span>}},<br />
+			&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;	}<br />
+			&emsp;&emsp;&emsp;	}<br />
+			};<br />
+			</p></div>
+			<p>Using the configuration above, the macro mapped to the key at row zero, column 1 is an example that uses all three types of macro actions.</p>
+			<ol>
+				<li>Press the keyboard "GUI" key.</li>
+				<li>Wait a second for the OS context to switch.</li>
+				<li>Type the string "firefox".</li>
+				<li>Press the "Enter" key, thus opening (or switching to) firefox.</li>
+				<li>Wait a few seconds for firefox to load (in case it isn't already running).</li>
+				<li>Enter the key combination "ctrl + t" to open a new browsing tab.</li>
+				<li>Enter a URL.</li>
+				<li>Press the "Enter" key, thus directing firefox to the specified URL.</li>
+			</ol>
 
 
 
@@ -171,12 +235,20 @@
 					<td class="align-right"><a href="images/jank/jank_14.jpg"><img class="photo" src="images/jank/small_jank_14.jpg" alt="jank running - angled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_15.jpg"><img class="photo" src="images/jank/small_jank_15.jpg" alt="XXX." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_16.png"><img class="photo" src="images/jank/jank_16.png" alt="XXX." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_15.jpg"><img class="photo" src="images/jank/small_jank_15.jpg" alt="Wooden frame - top." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_16.jpg"><img class="photo" src="images/jank/small_jank_16.jpg" alt="Wooden frame - bottom	." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_17.png"><img class="photo" src="images/jank/jank_17.png" alt="XXX." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_18.png"><img class="photo" src="images/jank/jank_18.png" alt="XXX." /></a></td>
+					<td class="align-left"><a href="images/jank/jank_17.jpg"><img class="photo" src="images/jank/small_jank_17.jpg" alt="Wooden frame, LEDs on, no keycaps." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_18.jpg"><img class="photo" src="images/jank/small_jank_18.jpg" alt="Wooden frame, LEDs on, with keycaps." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/jank/jank_19.jpg"><img class="photo" src="images/jank/small_jank_19.jpg" alt="Testing with the laptop - 1." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_20.jpg"><img class="photo" src="images/jank/small_jank_20.jpg" alt="Testing with the laptop - 2." /></a></td>
+				</tr>
+				<tr>
+					<td class="align-left"><a href="images/jank/jank_21.gif"><img class="photo" src="images/jank/jank_21.gif" alt="Fast-speed LED pulse effect, no keycaps." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_22.gif"><img class="photo" src="images/jank/jank_22.gif" alt="Medium-speed LED pulse effect, with keycaps." /></a></td>
 				</tr>
 			</table>
 		</div>
