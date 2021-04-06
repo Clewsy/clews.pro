@@ -59,7 +59,7 @@ table.gallery td {
 img.photo {
 	border: 10px solid black;
 	width: 500px;
-	border-radius: 100px;
+	border-radius: 50px;
 	overflow: hidden;
 	margin: 20px 20px 20px 20px;
 }
