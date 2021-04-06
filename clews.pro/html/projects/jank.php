@@ -72,7 +72,7 @@
 			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothy except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for PF4 and PF5 include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled be default (as it can serve as an interface for programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
 			<hr />
 
-			<a href="images/jank/jank_09.jpg"><img class="photo align-right" src="images/jank/small_jank_20.jpg" alt="Testing." /></a>
+			<a href="images/jank/jank_20.jpg"><img class="photo align-right" src="images/jank/small_jank_20.jpg" alt="Testing." /></a>
 			<h2>Configuration</h2>
 			<p>Any key can be configured as a regular keystroke (including media control keys) or a macro (a series of sequential/combined keystrokes).  The code as listed on GitLab will cause the top row of keyswitches to be configured as four macro keys while the remaining 17 keys are configured as a traditional numeric keypad, including standard Num Lock operation.</p>
 			<p>Only the <i>keymap.c</i> source file needs to be modified in order to configure the action for each key.  The <i>keymap.h</i> header file is a useful reference, particularly for finding all the defined keyboard scan-codes.</p>
