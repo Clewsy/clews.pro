@@ -221,10 +221,10 @@
 				<li><b>STRING</b> - Enter a URL.</li>
 				<li><b>KEYS</b> - Press the "Enter" key, thus directing firefox to the specified URL.</li>
 			</ol>
+			<hr />
 
-
-
-
+			<h2>Improvememnts</h2>
+			<p>If I ever do a revision, I'll make an adjustment to the LED controller circuit.  I implemented the PWM brightness control using the basic configuration as per figure 7 of the <a href="https://gitlab.com/clewsy/jank/-/blob/master/data/MP3202_LED_Driver_U2.pdf">MP3202 datasheet</a>.  This arrangement is for dimming with a PWM frequency of no higher than 1kHz.  This seemed fine for my purpose, however what I didn't think of was the hum from the inductor.  It's only audible if the room is otherwise silent, but I could have eliminated it completely with a PWM frequency above the human-audible range.  I should have configured the circuit in accordance with figure 8 of the datasheet which can tolerate higher frequencies because it has some additional passives for filtering the PWM signal.</p>
 			<hr />
 
 			<h2 class="align-center">Gallery</h2>
