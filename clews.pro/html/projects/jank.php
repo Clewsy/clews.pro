@@ -35,9 +35,12 @@
 	<li>Start witha keyboard layout generated at <a href="http://www.keyboard-layout-editor.com/#/">keyboard-layout-editor.com</a>.</li>
 	<li>Copy the text from the "Raw Data" tab.</li>
 	<li>Paste the data into the "Plate Layout" field at <a href="http://builder.swillkb.com/">builder.swillkb.com</a>.</li>
-	<li>...</li>
-	<li>Profit.</li>
+	<li>Select "MX {_t:3}" as the "Switch Type").</li>
+	<li>Turn on the "Edge Padding" option and set all edges to "1.9mm" (this will add padding so that the overall plate dimensions match the PCB dimensions).</li>
+	<li>Click "Draw My CAD!!!", check the outline and dimensions, then download the *.dxf CAD file.</li>
+	<li>Upload the CAD file to a laser cutting service to irder the plate.  I used <a href="https://www.laserboost.com/keyboards-about">LaserBoost</a>.</li>
 </ol>
+<p>If you want to skip generating the *.dxf CAD file, I have uploaded the file I generated to the GitLab repo (<a href="XXXXXX">jank_plate_cad.dxf</a>).</p>
 --> 
 			<p>Two issues during assembly of the PCB:</p>
 			<ol>
