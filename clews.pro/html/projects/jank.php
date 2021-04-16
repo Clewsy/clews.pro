@@ -30,18 +30,28 @@
 				<li><b>6-Pin AVR ISP connector</b> - A standard In-System Programming port.</li>
 			</ol>
 			<p>I ordered board fabrication from <a href="https://jlcpcb.com/">JLCPCB</a> and had boards in-hand within a week.  Sooner than some of the SMD parts which were ordered from a domestic supplier.</p>
-<!--			<p>The keyswitches are the "plate-mount" type.  Some years ago I ordered some 108-key keyboard plates laser cut from stainless steel.  For my first test assembly I took an angle grinder to one of these and cut off just the end keypad section to use with jank.  The assembled unit worked well and I eventually made a simple wood enclosure for it which hid the rough-cut edge.  I assembled a second unit (minimum order quantity meant I ended up with five PCBs) but this time I ordered a laser-cut stainless steel plate for a nicer finish.  To generate the CAD file for the plate, I took the following steps:</p>
-<ol>
-	<li>Start witha keyboard layout generated at <a href="http://www.keyboard-layout-editor.com/#/">keyboard-layout-editor.com</a>.</li>
-	<li>Copy the text from the "Raw Data" tab.</li>
-	<li>Paste the data into the "Plate Layout" field at <a href="http://builder.swillkb.com/">builder.swillkb.com</a>.</li>
-	<li>Select "MX {_t:3}" as the "Switch Type").</li>
-	<li>Turn on the "Edge Padding" option and set all edges to "1.9mm" (this will add padding so that the overall plate dimensions match the PCB dimensions).</li>
-	<li>Click "Draw My CAD!!!", check the outline and dimensions, then download the *.dxf CAD file.</li>
-	<li>Upload the CAD file to a laser cutting service to irder the plate.  I used <a href="https://www.laserboost.com/keyboards-about">LaserBoost</a>.</li>
-</ol>
-<p>If you want to skip generating the *.dxf CAD file, I have uploaded the file I generated to the GitLab repo (<a href="XXXXXX">jank_plate_cad.dxf</a>).</p>
---> 
+			<p>The keyswitches are the "plate-mount" type.  Some years ago I ordered some 108-key keyboard plates laser cut from stainless steel.  For my first test assembly I took an angle grinder to one of these and cut off just the end keypad section to use with jank.  The assembled unit worked well and I eventually made a simple wood enclosure for it which hid the rough-cut edge.  I assembled a second unit (minimum order quantity meant I ended up with five PCBs) but this time I ordered a laser-cut stainless steel plate for a nicer finish.  To generate the CAD file for the plate, I took the following steps:</p>
+			<ol>
+				<li>Start with a keyboard layout generated at <a href="http://www.keyboard-layout-editor.com/#/">keyboard-layout-editor.com</a>.</li>
+				<li>Copy the text from the "Raw Data" tab.</li>
+				<li>Paste the "Raw data" from the layout editor into the "Plate Layout" field at <a href="http://builder.swillkb.com/">builder.swillkb.com</a>.</li>
+				<li>Select "MX {_t:3}" as the "Switch Type").</li>
+				<li>Set the "Stabilizer Type".  I went with "Cherry + Costar {_s:1}".</li>
+				<li>Turn on the "Edge Padding" option and set all edges to "1.9mm" (this will add padding so that the overall plate dimensions match the PCB dimensions).</li>
+				<li>Click "Draw My CAD!!!", check the outline and dimensions, then download the *.dxf CAD file.</li>
+				<li>Upload the CAD file to a laser cutting service to order the plate.  I used <a href="https://www.laserboost.com/keyboards-about">LaserBoost</a>.</li>
+			</ol>
+			<p>Following is the raw data for the layout I created.  The actual text on the keys isn't important for creating the plate CAD, but I included it anyway.</p>
+			<div class="code"><p>
+			[<span class="string">"M1"</span>,<span class="string">"M2"</span>,<span class="string">"M3"</span>,<span class="string">"M4"</span>],<br />
+			[{y:<span class="numerical">0.5</span>},<span class="string">"Num Lock"</span>,<span class="string">"/"</span>,<span class="string">"*"</span>,<span class="string">"-"</span>],<br />
+			[<span class="string">"7<span class="compiler">\n</span>Home"</span>,<span class="string">"8<span class="compiler">\n</span>↑"</span>,<span class="string">"9<span class="compiler">\n</span>PgUp"</span>,{h:<span class="numerical">2</span>},<span class="string">"+"</span>],<br />
+			[<span class="string">"4<span class="compiler">\n</span>←"</span>,<span class="string">"5"</span>,<span class="string">"6<span class="compiler">\n</span>→"</span>],<br />
+			[<span class="string">"1<span class="compiler">\n</span>End"</span>,<span class="string">"2<span class="compiler">\n</span>↓"</span>,<span class="string">"3<span class="compiler">\n</span>PgDn"</span>,{h:<span class="numerical">2</span>},<span class="string">"Enter"</span>],<br />
+			[{w:<span class="numerical">2</span>},<span class="string">"0<span class="compiler">\n</span>Ins"</span>,<span class="string">".<span class="compiler">\n</span>Del"</span>]<br />
+			</p></div>
+			<p>If you want to skip steps 01-07 above (generating the *.dxf CAD file), I have uploaded the file I generated to the GitLab repo (<a href="XXXXXX">jank_plate_cad.dxf</a>).</p>
+ 
 			<p>Two issues during assembly of the PCB:</p>
 			<ol>
 				<li>My fist step is usually solder in the minimum components to test the programming circuit.  I.e. the AVR, ISP connector and a few passives.  Turns out I had two pins on the AVR shorted and they just so happened to be VCC and GND.  The programmer I was using didn't survive but fortunately I had a spare.  Once the bridge was fixed I used <a href="https://www.nongnu.org/avrdude/">AVRDUDE</a> to test the AVR which was unharmed.</li>
