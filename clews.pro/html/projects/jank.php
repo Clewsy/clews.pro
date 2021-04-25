@@ -97,7 +97,7 @@
 			<h2>Configuration</h2>
 			<p>Any key can be configured as a regular keystroke (including media control keys) or a macro (a series of sequential/combined keystrokes).  The code as listed on GitLab will cause the top row of keyswitches to be configured as four macro keys while the remaining 17 keys are configured as a traditional numeric keypad, including standard Num Lock operation.</p>
 			<p>Only the <i>keymap.c</i> source file needs to be modified in order to configure the action for each key.  The <i>keymap.h</i> header file is a useful reference, particularly for finding all the defined keyboard scan-codes.</p>
-			<p>So a keystroke configured as a macro actually triggers a series of one or more single "macros".  The series of macros are defined within a multi-dimensional array <i>MACROMAP[number_of_rows][number_of_columns][number_of_macro_t]</i>.  One such macro is a custom structure type named <i>macro_t</i>.  The type definition (typedef) for the structure is listed within the <i>keymap.h</i> header file, and is also duplicated below for reference:</p>
+			<p>So a keystroke configured as a macro actually triggers a series of one or more single "macro actions".  The series of macro actions are defined within a multi-dimensional array <i>MACROMAP[number_of_rows][number_of_columns][number_of_macro_t]</i>.  One such macro action is a custom structure type named <i>macro_t</i>.  The type definition (typedef) for the structure is listed within the <i>keymap.h</i> header file, and is also duplicated below for reference:</p>
 			<br />
 			<div class="code"><p>
 			<span class="type">typedef struct</span> {<br />
@@ -210,7 +210,7 @@
 			&emsp;&emsp;&emsp;	}<br />
 			};<br />
 			</p></div>
-			<p>Using the configuration above, the macro mapped to the key at row zero, column 1 is an example that uses all three types of macro actions (string, keys and wait).</p>
+			<p>Using the configuration above, the macro mapped to the key at row 0, column 1 is an example that uses all three types of macro actions (string, keys and wait).</p>
 			<ol>
 				<li><b>KEYS</b> - Press the keyboard "GUI" key.</li>
 				<li><b>WAIT</b> - Wait a second for the OS context to switch.</li>
