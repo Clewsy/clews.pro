@@ -219,8 +219,59 @@
 				<li><b>WAIT</b> - Wait a few seconds for firefox to load (in case it isn't already running).</li>
 				<li><b>KEYS</b> - Enter the key combination "ctrl + t" to open a new browsing tab.</li>
 				<li><b>STRING</b> - Enter a URL.</li>
-				<li><b>KEYS</b> - Press the "Enter" key, thus directing firefox to the specified URL.</li>
+				<li><b>KEYS</b> - Press the "Enter" key, thus directing firefox to the specified URL.  This could alternatively be achieved by appending a <i>newline</i> ("\n") to the end of the string entered in the previous step.</li>
 			</ol>
+			<p>If no macros are wanted, the top four keys can be included in the KEYMAP array while leaving the MACROMAP array empty.  In the following example, the numeric keypad remains the same as the example above, but the top four keys (row 0) are configured as media controls.</p>
+			<div class="code"><p>
+			<span class="compiler">#include "keymap.h"</span><br />
+			<br />
+			<span class="comment">// Define the physical row and column pins on the microcontroller to be scanned for key presses.</span><br />
+			<span class="type">const uint8_t</span> key_row_array[] <span class="operator">=</span> {<span class="compiler">ROW0</span>, <span class="compiler">ROW1</span>, <span class="compiler">ROW2</span>, <span class="compiler">ROW3</span>, <span class="compiler">ROW4</span>, <span class="compiler">ROW5</span>};<br />
+			<span class="type">const uint8_t</span> key_col_array[] <span class="operator">=</span> {<span class="compiler">COL0</span>, <span class="compiler">COL1</span>, <span class="compiler">COL2</span>, <span class="compiler">COL3</span>};<br />
+			<span class="type">const uint8_t</span> macro_row_array[] <span class="operator">=</span> {};<br />
+			<span class="type">const uint8_t</span> macro_col_array[] <span class="operator">=</span> {};<br />
+			<br />
+			<span class="comment">// Number pad key definitions.</span><br />
+			<span class="comment">// KEY_X_Y where X:Row Number, Y:Column Number.</span><br />
+			<span class="compiler">#define KEY_0_0 HID_MEDIACONTROLLER_SC_TOGGLE</span><br />
+			<span class="compiler">#define KEY_0_1 HID_MEDIACONTROLLER_SC_STOP</span><br />
+			<span class="compiler">#define KEY_0_2 HID_MEDIACONTROLLER_SC_PREVIOUS</span><br />
+			<span class="compiler">#define KEY_0_3 HID_MEDIACONTROLLER_SC_NEXT</span><br />
+			<span class="compiler">#define KEY_1_0 HID_KEYBOARD_SC_NUM_LOCK</span><br />
+			<span class="compiler">#define KEY_1_1 HID_KEYBOARD_SC_KEYPAD_SLASH</span><br />
+			<span class="compiler">#define KEY_1_2 HID_KEYBOARD_SC_KEYPAD_ASTERISK</span><br />
+			<span class="compiler">#define KEY_1_3 HID_KEYBOARD_SC_KEYPAD_MINUS</span><br />
+			<span class="compiler">#define KEY_2_0 HID_KEYBOARD_SC_KEYPAD_7_AND_HOME</span><br />
+			<span class="compiler">#define KEY_2_1 HID_KEYBOARD_SC_KEYPAD_8_AND_UP_ARROW</span><br />
+			<span class="compiler">#define KEY_2_2 HID_KEYBOARD_SC_KEYPAD_9_AND_PAGE_UP</span><br />
+			<span class="compiler">#define KEY_2_3 HID_KEYBOARD_SC_KEYPAD_PLUS</span><br />
+			<span class="compiler">#define KEY_3_0 HID_KEYBOARD_SC_KEYPAD_4_AND_LEFT_ARROW</span><br />
+			<span class="compiler">#define KEY_3_1 HID_KEYBOARD_SC_KEYPAD_5</span><br />
+			<span class="compiler">#define KEY_3_2 HID_KEYBOARD_SC_KEYPAD_6_AND_RIGHT_ARROW</span><br />
+			<span class="compiler">#define KEY_3_3</span> <span class="numerical">0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+			<span class="compiler">#define KEY_4_0 HID_KEYBOARD_SC_KEYPAD_1_AND_END</span><br />
+			<span class="compiler">#define KEY_4_1 HID_KEYBOARD_SC_KEYPAD_2_AND_DOWN_ARROW</span><br />
+			<span class="compiler">#define KEY_4_2 HID_KEYBOARD_SC_KEYPAD_3_AND_PAGE_DOWN</span><br />
+			<span class="compiler">#define KEY_4_3 HID_KEYBOARD_SC_KEYPAD_ENTER</span><br />
+			<span class="compiler">#define KEY_5_0 HID_KEYBOARD_SC_KEYPAD_0_AND_INSERT</span><br />
+			<span class="compiler">#define KEY_5_1 </span> <span class="numerical">0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+			<span class="compiler">#define KEY_5_2 HID_KEYBOARD_SC_KEYPAD_DOT_AND_DELETE</span><br />
+			<span class="compiler">#define KEY_5_3 </span> <span class="numerical">0x00</span>&emsp;&emsp;&emsp; <span class="comment">// No key here.</span><br />
+			<br />
+			<span class="comment">// The key map array - for regular key strokes including media control keys.</span><br />
+			<span class="type">const char</span> KEYMAP[<span class="compiler">NUM_KEY_ROWS</span>][<span class="compiler">NUM_KEY_COLS</span>] PROGMEM <span class="operator">=</span> {<br />
+			&emsp;&emsp;&emsp;	<span class="comment">//Col 0 &emsp;&emsp;&emsp;	Col 1 &emsp; &emsp;&emsp;	Col 2 &emsp; &emsp;&emsp;	Col 3</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_0_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_0_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_0_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_0_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 1</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_1_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_1_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_1_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_1_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 1</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_2_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_2_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_2_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_2_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 2</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_3_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_3_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_3_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_3_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 3</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_4_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_4_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_4_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_4_3</span>},&emsp;&emsp;&emsp;	<span class="comment">// Row 4</span><br />
+			&emsp;&emsp;&emsp;	{<span class="compiler">KEY_5_0</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_5_1</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_5_2</span>,&emsp;&emsp;&emsp;	<span class="compiler">KEY_5_3</span>}	&emsp;&emsp;&emsp;	<span class="comment">// Row 5</span><br />
+			};<br />
+			<br />
+			<span class="comment">// The macro map array - for key strokes that are mapped as macros.</span><br />
+			<span class="type">const macro_t</span> MACROMAP[<span class="compiler">NUM_MACRO_ROWS</span>][<span class="compiler">NUM_MACRO_COLS</span>][<span class="compiler">MAX_MACRO_ACTIONS</span>] PROGMEM = {};<br />
+			</p></div>
 			<hr />
 
 			<h2>Improvememnts</h2>
