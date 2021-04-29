@@ -96,8 +96,8 @@
 			<a href="images/jank/jank_20.jpg"><img class="photo align-right" src="images/jank/small_jank_20.jpg" alt="Testing." /></a>
 			<h2>Configuration</h2>
 			<p>Any key can be configured as a regular keystroke (including media control keys) or a macro (a series of sequential/combined keystrokes).  The code as listed on GitLab will cause the top row of keyswitches to be configured as four macro keys while the remaining 17 keys are configured as a traditional numeric keypad, including standard Num Lock operation.</p>
-			<p>Only the <i>keymap.c</i> source file needs to be modified in order to configure the action for each key.  The <i>keymap.h</i> header file is a useful reference, particularly for finding all the defined keyboard scan-codes.</p>
-			<p>So a keystroke configured as a macro actually triggers a series of one or more single "macro actions".  The series of macro actions are defined within a multi-dimensional array <i>MACROMAP[number_of_rows][number_of_columns][number_of_macro_t]</i>.  One such macro action is a custom structure type named <i>macro_t</i>.  The type definition (typedef) for the structure is listed within the <i>keymap.h</i> header file, and is also duplicated below for reference:</p>
+			<p>Only the <i><a href="https://gitlab.com/clewsy/jank/-/blob/master/firmware/src/keymap.c">keymap.c</a></i> source file needs to be modified in order to configure the action for each key.  The <i><a href="https://gitlab.com/clewsy/jank/-/blob/master/firmware/include/keymap.h">keymap.h</a></i> header file is a useful reference, particularly for finding all the defined keyboard scan-codes.</p>
+			<p>So a keystroke configured as a macro actually triggers a series of one or more single "macro actions".  The series of macro actions are defined within a multi-dimensional array <i>MACROMAP[number_of_rows][number_of_columns][number_of_macro_t]</i>.  A single macro action is represented as a custom structure type named <i>macro_t</i>.  The type definition (typedef) for the structure is listed within the <i>keymap.h</i> header file, and is also duplicated below for reference:</p>
 			<br />
 			<div class="code"><p>
 			<span class="type">typedef struct</span> {<br />
@@ -120,7 +120,7 @@
 					<td>M_KEYS</td><td style="text-align:left">A combination of keystrokes (including modifiers).  Each element of m_array is interpreted as a keyboard scancode.  All scancodes are sent simultaneously in a single keyboard report.</td>
 				</tr>
 				<tr>
-					<td>M_WAIT</td><td style="text-align:left">No keystrokes.  Each element of the m_array is interpreted as an integer.  The value of each integer represents the number of seconds to "wait".  Such a delay can be useful if a previous macro keystroke needs time for the corresponding command to execute.</td>
+					<td>M_WAIT</td><td style="text-align:left">No keystrokes.  Each element of the m_array is interpreted as an integer.  The value of each integer represents the number of seconds to "wait".  Such a delay can be useful if previous macro keystrokes need time for the corresponding command to execute.</td>
 				</tr>
 			</table>
 			<br />
