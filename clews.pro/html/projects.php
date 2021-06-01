@@ -78,9 +78,10 @@
 					<th scope="row"><a href="/projects/jank.php">jank</a></th>
 					<td><a href="/projects/jank.php"><img class="thumbnail" src="/projects/images/jank/small_jank_19.jpg" /></a></td>
 					<td>A backlit usb numerical keypad to keep my laptop company.  Includes four macro keys.</td>
-					<td class="date">2021-05-31</td>
+					<td class="date">2021-06-01</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/jank">gitlab</a><br />
+						<a href="https://hackaday.io/project/180104-jank">hackaday.io</a><br />
 					</td>
 					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Key Matrix, Gateron, Cherry MX, mechanical, MP3202, LED Driver, PWM</td>
 				</tr>

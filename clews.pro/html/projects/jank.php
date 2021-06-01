@@ -326,6 +326,10 @@
 					<td class="align-left"><a href="images/jank/jank_21.gif"><img class="photo" src="images/jank/jank_21.gif" alt="Fast-speed LED pulse effect, no keycaps." /></a></td>
 					<td class="align-right"><a href="images/jank/jank_22.gif"><img class="photo" src="images/jank/jank_22.gif" alt="Medium-speed LED pulse effect, with keycaps." /></a></td>
 				</tr>
+				<tr>
+					<td class="align-left"><a href="images/jank/jank_23.jpg"><img class="photo" src="images/jank/small_jank_23.jpg" alt="From the notebook - LED driver." /></a></td>
+					<td class="align-right"><a href="images/jank/jank_24.jpg"><img class="photo" src="images/jank/small_jank_24.jpg" alt="From the notebook - System overview." /></a></td>
+				</tr>
 			</table>
 		</div>
 	</body>
