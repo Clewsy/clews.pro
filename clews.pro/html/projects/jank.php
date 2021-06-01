@@ -50,7 +50,7 @@
 			[<span class="string">"1<span class="compiler">\n</span>End"</span>,<span class="string">"2<span class="compiler">\n</span>↓"</span>,<span class="string">"3<span class="compiler">\n</span>PgDn"</span>,{h:<span class="numerical">2</span>},<span class="string">"Enter"</span>],<br />
 			[{w:<span class="numerical">2</span>},<span class="string">"0<span class="compiler">\n</span>Ins"</span>,<span class="string">".<span class="compiler">\n</span>Del"</span>]<br />
 			</p></div>
-			<p>If you want to skip steps 01-07 above (generating the *.dxf CAD file), I have uploaded the file I generated to the GitLab repo (<a href="XXXXXX">jank_plate_cad.dxf</a>).</p>
+			<p>If you want to skip steps 01-07 above (generating the *.dxf CAD file), I have uploaded the file I generated to the GitLab repo (<a href="documents/jank/jank_plate_cad.dxf">jank_plate_cad.dxf</a>).</p>
  
 			<p>Two issues during assembly of the PCB:</p>
 			<ol>
