@@ -32,6 +32,8 @@
 				<a href="photos/pet_bowls/pet_bowls_21.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_21.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_22.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_22.jpg"></a>
 				<a href="photos/pet_bowls/pet_bowls_23.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_23.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_24.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_24.jpg"></a>
+				<a href="photos/pet_bowls/pet_bowls_25.jpg"><img class="photo" src="photos/pet_bowls/small_pet_bowls_25.jpg"></a>
 			</div>
 		</div>
 	</body>
