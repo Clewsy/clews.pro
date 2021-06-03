@@ -70,7 +70,7 @@
 						<a href="https://gitlab.com/clewsy/grinder_timer">gitlab</a><br />
 						<a href="https://hackaday.io/project/28450-grindertimer">hackaday.io</a><br />
 					</td>
-					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancillio Rocky, PWM, 32.738kHz, PlatformIO</td>
+					<td>Coffee, Timer, OLED, SH1106, AVR, ATmega328pb, Microcontroller, Mains Switch Relay, C++, KiCAD, PCB Fabrication, JLCPCB, Rancilio Rocky, PWM, 32.738kHz, PlatformIO</td>
 				</tr>
 
 				<!--jank-->
