@@ -219,7 +219,7 @@ td {
 /* Default heading settings*/
 h1 {
 	text-transform: lowercase;
-	letter-spacing: 10px;
+	letter-spacing: 6px;
 	font-size: 32px;
 }
 h2 {

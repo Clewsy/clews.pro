@@ -89,7 +89,7 @@
 					<td>ROW4<br />COL0</td><td>ROW4<br />COL1</td><td>ROW4<br />COL2</td><td valign="top" rowspan="2">ROW4<br />COL3</td>
 				</tr>
 				<tr>
-					<td colspan="2"><div style="text-align:left">ROW5<br />COL0</td><td>ROW5<br />COL2</div></td>
+					<td colspan="2"><div style="text-align:left">ROW5<br />COL0</div></td><td>ROW5<br />COL2</td>
 				</tr>
 			</table>
 			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothy except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for PF4 and PF5 include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled be default (as it can serve as an interface for programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
