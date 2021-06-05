@@ -25,9 +25,9 @@
 				<li><b>NCBU</b> (Nextcloud Backup) (image:  <a href="https://hub.docker.com/r/clewsy/ncbu">clewsy/ncbu</a>) - I <a href="/projects/ncbu.php">created</a> this container image to simplify automated backups of my nextcloud data and database.</li>
 				<li><b>Collabora</b> (image:  <a href="https://hub.docker.com/r/collabora/code">collabora/code</a>) - Implemented to enable web-based editing of documents/spreadsheets within the Nextcloud instance.</li>
 				<li><b>AirSonic-Advanced</b> (image:  <a href="https://hub.docker.com/r/airsonicadvanced/airsonic-advanced">airsonicadvanced/airsonic-advanced</a>) - Music library and streaming app.  Stream via web interface or android app (such as <a href="https://www.f-droid.org/en/packages/org.moire.ultrasonic/">UltraSonic</a>).</li>
-				<li><b>BitWarden</b> (image:  <a href="https://hub.docker.com/r/bitwardenrs/server">bitwardenrs/server</a>) - Password management system.</li>
 				<li><b>Calibre</b> (image:  <a href="https://hub.docker.com/r/linuxserver/calibre">linuxserver/calibre</a>) - Ebook library/database management system.</li>
 				<li><b>Calibre-Web</b> (image:  <a href="https://hub.docker.com/r/linuxserver/calibre-web">linuxserver/calibre-web</a>) - Web-based ebook library access system.</li>
+				<li><b>Vaultwarden</b> (image:  <a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden/server</a>) - Password management system (formerly bitwardenrs/server). </li>
 				<li><b>NGINX</b> (image:  <a href="https://hub.docker.com/_/nginx">nginx</a>) - For serving up the html/css/php that forms this (and other) sites.</li>
 				<li><b>PHP</b> (image: <a href="https://hub.docker.com/_/php">php</a>) - Configured for access by NGINX containers to enable serving php scripts.</li>
 				<li><b>Watchtower</b> (image: <a href="https://hub.docker.com/r/containrrr/watchtower">containrrr/watchtower</a>) - Periodically checks for updates to all container images.  Downloads and runs when new images are discovered.</li>

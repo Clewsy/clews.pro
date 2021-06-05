@@ -13,10 +13,9 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 * nextcloud-bu - [clewsy/ncbu][link_dockerhub_clewsy_ncbu] - container for syncing the nextcloud data and database for convenient backup access.
 * collabora-app - [collabora/code][link_dockerhub_collabora_code] - allows me to edit documents within my nextcloud instance.
 * airsonic-app - [airsonicadvanced/airsonic-advanced][link_dockerhub_airsonicadvanced_airsonic-advanced] - for streaming music - either via the webui or an f-droid app (I like [UltraSonic][link_web_ultrasonic]).
-* bitwarden-app - [bitwardenrs/server][link_dockerhub_bitwardenrs_server] - my personal password management server.
 * calibre-app - [linuxserver/calibre][link_dockerhub_linuxserver_calibre] - for ebook management (converting, editing metadata, etc), only accessible locally.
 * calibre-web-app - [linuxserver/calibre-web][link_dockerhub_linuxserver_calibre-web] - web-based ebook library, uses library/database created and managed by calibre-app.
-* netdata-app - [netdata/netdata][link_dockerhub_netdata] - charts and snapshots of live system hardware statistic.
+* vaultwarden-app - [vaultwarden/server][link_dockerhub_vaultwarden_server] - my personal password management server (formerly known as bitwardenrs).
 * php - [php][link_dockerhub_php] - accessed by nginx containers in order to execute php scripts.
 * nginx-clews.pro - [nginx][link_dockerhub_nginx] - html and css files for my personal web site [clews.pro][link_clews].  The html and css for clews.pro is also contained within this repository.
 * nginx-clews.dev - [nginx][link_dockerhub_nginx] - html and css files for my other personal web site [clews.dev][link_clews.dev].  The html and css for clews.dev is also contained within this repository.
@@ -36,7 +35,6 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_clews.dev]:https://clews.dev
 
 [link_dockerhub_airsonicadvanced_airsonic-advanced]:https://hub.docker.com/r/airsonicadvanced/airsonic-advanced
-[link_dockerhub_bitwardenrs_server]:https://hub.docker.com/r/bitwardenrs/server
 [link_dockerhub_clewsy_ncbu]:https://hub.docker.com/r/clewsy/ncbu
 [link_dockerhub_collabora_code]:https://hub.docker.com/r/collabora/code
 [link_dockerhub_netdata]:https://hub.docker.com/r/netdata/netdata
@@ -49,6 +47,7 @@ The [clews.pro/html][link_repo_html] directory contains the html and css I devel
 [link_dockerhub_nextcloud]:https://hub.docker.com/_/nextcloud
 [link_dockerhub_php]:https://hub.docker.com/_/php
 [link_dockerhub_rcdailey_nextcloud-cronjob]:https://hub.docker.com/r/rcdailey/nextcloud-cronjob
+[link_dockerhub_vaultwarden_server]:https://hub.docker.com/r/vaultwarden/server
 [link_dockerhub_watchtower]:https://hub.docker.com/r/containrrr/watchtower
 
 [link_gitlab_clewsy_ncbu]:https://gitlab.com/clewsy/ncbu

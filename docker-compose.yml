@@ -8,9 +8,9 @@
 #### - nextcloud-bu             NCBU                (image: clewsy/ncbu)
 #### - collabora-app            Collabora           (image: collabora/code)
 #### - airsonic-app             Airsonic-Advanced   (image: airsonicadvanced/airsonic-advanced)
-#### - bitwarden-app            BitWarden           (image: bitwardenrs/server)
 #### - calibre-app              Calibre             (image: linuxserver/calibre)
 #### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
+#### - vaultwarden-app          Vaultwarden         (image: vaultwarden/server)
 #### - php                      PHP                 (image: php:fpm)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-clews.dev          NGINX               (image: nginx)
@@ -182,10 +182,10 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
-######################################### Bitwarden web app container
-  bitwarden-app:
-    image: bitwardenrs/server:latest
-    container_name: bitwarden-app
+######################################### Vaultwarden web app container
+  vaultwarden-app:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden-app
     networks:
       - clews.pro_network
     depends_on:
@@ -195,13 +195,13 @@ services:
       - 8170:80 #Keep a port accessible on the local network too.
     environment:
       - VIRTUAL_PORT=80
-      - VIRTUAL_HOST=${BITWARDEN_APP_URL}
-      - LETSENCRYPT_HOST=${BITWARDEN_APP_URL}
+      - VIRTUAL_HOST=${VAULTWARDEN_APP_URL}
+      - LETSENCRYPT_HOST=${VAULTWARDEN_APP_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
       - SIGNUPS_ALLOWED=false
-      - LOG_FILE="/data/bitwarden.log"
+      - LOG_FILE="/data/vaultwarden.log"
     volumes:
-      - ./bitwarden-app/data/:/data/
+      - ./vaultwarden-app/data/:/data/
     restart: unless-stopped
 
 ######################################### Calibre container
