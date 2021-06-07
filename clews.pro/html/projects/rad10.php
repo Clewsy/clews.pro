@@ -22,6 +22,27 @@
 			<p>There are a few MPD client apps for android that allow finer control of MPD (I like <a href="https://f-droid.org/en/packages/org.gateshipone.malp/">M.A.L.P.</a>)  That said, in keeping with the minimalist hardware interface, I created a similarly minimal web interface with a small amount of php, html and css.  This WebUI provides the same contol (play/pause and volume +/-), but I also added a few "preset" buttons to launch my most-used streams.</p>
 			<hr />
 
+			<h3>The Daemon</h3>
+			<p>Written in C, the daemon code will compile to an executable called "rad10d".  The code draws from two libraries:</p>
+			<ul>
+				<li><b><a href="http://abyz.me.uk/rpi/pigpio/cif.html">pigpio</a></b> - A C library written to allow control of the GPIO pins on a Raspberry Pi.</li>
+				<li><b><a href="https://musicpd.org/libs/libmpdclient/">libmpdclient</a></b> - a C library written to allow interfacing with <a href="https://musicpd.org/">mpd</a> (Music Player Daemon).</li>
+			</ul>
+			<p>Using the pigpio library, three of the raspberry pi gpio pins are configured as inputs.  Although there are multiple pins that could be used for interfacing with an encoder, following is the configuration I implemented:</p>
+			<ul>
+				<li>Pin 14 - Connected to channel A of the optical encoder.</li>
+				<li>Pin 15 - Connected to channel B of the optical encoder.</li>
+				<li>Pin 18 - Connected to the encoder momentary push-button.</li>
+			</ul>
+			<p>All three pins are configured to trigger one of two interrupt sub-routines (ISR):</p>
+			<ol>
+				<li><b>volume_ISR</b> - A state change of either of the optical encoder channels will trigger this ISR.  Using 2-bit <a href="https://en.wikipedia.org/wiki/Gray_code">Gray-code</a>, the ISR will determine which direction the encoder has turned.  A clockwise rotation will set a variable that will trigger an increase in volume.  Conversely, a counter-clockwise rotation will set the variable so that a volume decrease is triggered.</li>
+				<li><b>button_ISR</b> - A state change of the push-button will trigger this ISR.  A software de-bounce is implemented by comparing "tick" (effectively timestamp) variables.  Similarly, ticks are recorded and compared when the button is pressed and when it is released so that the daemon can tell if a short- (&lt;2 seconds) or long-press (&gt;2 seconds) has occurred.  A variable will be set to trigger either toggle (play/pause) for a short-press, or stop for a long-press.</li>
+			</ol>
+			<p>The main routine of the daemon includes an infinite loop that will poll flags set by the ISRs.  Said flags will trigger functions that use the libmpdclient library to control mpd with volume-up, volume-down, play, pause or stop signals.
+			<hr />
+
+
 			<h3>Daemon Installation and Setup</h3>
 			<p>Install the dependencies:</p>
 			<div class="code"><p class="terminal">
