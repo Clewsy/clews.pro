@@ -83,8 +83,8 @@
 			<hr />
 
 			<h3>WebUI</h3>
-			<p>In December 2019, I decided to create a simple web interface for controlling all 4 channels from a browser.  I wrote a simple php script and combined it with some basic html and css.  Combined with <a href="http://www.apache.org/">Apache</a> and <a href="https://www.php.net/">php</a> installed on the raspberry pi, I am now able to control power points from and browser with access to the local network.  To achieve this I learned about setting the SUID bit on an executable so that when called by the web user (www-data) it is still executed as root.  WebUI setup instructions can be found in the <a href="https://gitlab.com/clewsy/p0wer">README</a> at gitlab.</p>
-			<p>As a bonus, the webui allows me to script control of the remote units using a <a href="https://curl.haxx.se/">curl</a> command as an alternative to ssh.  Using curl to control the outlets enables simple integration into automation platforms such as <a href="https://www.openhab.org/">openHAB</a> or <a href="https://www.home-assistant.io/">Home Assistant</a>.  The following example commands produce an equivalent result (turning on channel a).</p>
+			<p>In December 2019, I decided to create a web interface for controlling all 4 channels from a browser.  I wrote a simple php script and combined it with some basic html and css.  Combined with <a href="http://www.apache.org/">Apache</a> and <a href="https://www.php.net/">php</a> installed on the raspberry pi, I am now able to control power points from any browser with access to the local network.  To achieve this I learned about setting the SUID bit on an executable so that when called by the web user (www-data) it is still executed as root.  WebUI setup instructions can be found in the <a href="https://gitlab.com/clewsy/p0wer">README</a> at gitlab.</p>
+			<p>As a bonus, the webui allows me to script control of the remote mains units using a <a href="https://curl.haxx.se/">curl</a> command as an alternative to ssh.  Using curl to control the outlets enables simple integration into automation platforms such as <a href="https://www.openhab.org/">openHAB</a> or <a href="https://www.home-assistant.io/">Home Assistant</a>.  The following example commands produce an equivalent result (turning on channel a).</p>
 			<p><b>Using ssh</b> (user <b>pi</b> on host <b>raspberrypi</b>):</p>
 			<div class="code"><p class="terminal">
 				$ ssh pi@raspberrypi "sudo p0wer a on"
@@ -100,7 +100,13 @@
 			<hr />
 
 			<h3>Ansible Deployment</h3>
-			<p>As part of another project (<a href="/projects/clewsy_ansible.php">clewsy_ansible</a>) I have automated installation of the p0wer command and the webui.  Starting with a fresh <a href="https://www.raspberrypi.org/downloads/">Raspberry Pi OS</a> installation on a raspberry pi, I can run a single <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/p0wer.yml">playbook</a> that will install the dependencies, clone and install the executable and configure the webui.  See the <a href="https://gitlab.com/clewsy/clewsy_ansible">clewsy_ansible</a> gitlab repository and specifically the <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/roles/p0wer/tasks/main.yml">main p0wer role</a> for more information.</p>
+			<p>As part of another project (<a href="/projects/clewsy_ansible.php">clewsy_ansible</a>) I have automated installation of the p0wer executable and the webui.  Starting with a fresh <a href="https://www.raspberrypi.org/downloads/">Raspberry Pi OS</a> installation on a raspberry pi zero, I can run a single <a href="https://gitlab.com/clewsy/clewsy_ansible/-/blob/master/playbooks/p0wer.yml">playbook</a> that will:</p>
+			<ol>
+				<li>Install the dependencies.</li>
+				<li>Clone, build and install the <i>p0wer</i> executable.</li>
+				<li>Configure the webui.</li>
+			</ol>
+			<p>See the <a href="https://gitlab.com/clewsy/clewsy_ansible">clewsy_ansible</a> gitlab repository and specifically the <a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/p0wer"> p0wer role</a> for more information.</p>
 			<hr />
 
 			<h2 class="align-center">Gallery</h2>

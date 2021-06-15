@@ -143,12 +143,12 @@
 					<th scope="row"><a href="/projects/p0wer.php">p0wer</a></th>
 					<td><a href="/projects/p0wer.php"><img class="thumbnail" src="/projects/images/p0wer/p0wer_01.jpg" /></a></td>
 					<td>Simple rf mains remote switches hacked to add wifi control.</td>
-					<td class="date">2021-02-21</td>
+					<td class="date">2021-06-15</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/p0wer">gitlab</a><br />
 						<a href="https://core-electronics.com.au/projects/p0wer-control-mains-outlets-over-wifi">core-electronics</a>
 					</td>
-					<td>Raspberry Pi Zero W, Raspbian, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, <s>wiringpi</s>, pigpio, Termux, C, PHP, cURL, Automation, KiCAD, Reverse Engineer, Ansible</td>
+					<td>Raspberry Pi Zero W, <s>Raspbian</s>, Raspberry Pi OS, WiFi, 4066 CMOS Quad Bilateral Switch, 70HC4066, <s>wiringpi</s>, pigpio, Termux, C, HTML, CSS, PHP, Apache, curl, Automation, KiCAD, Reverse Engineer, Ansible</td>
 				</tr>
 
 				<!--rad10-->
@@ -169,11 +169,11 @@
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
 					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts/scripts_01.png" /></a></td>
 					<td>Various bash shell scripts.</td>
-					<td class="date">2020-01-10</td>
+					<td class="date">2021-06-15</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/scripts">gitlab</a>
 					</td>
-					<td>Bash, Shell, Script, Linux, Debian, Ubuntu, Raspbian, Termux, echo, rsync, curl, apt-get, ssh, openvpn, ping, grep, lscpu, lspci, lsblk, df, uname, lsb_release, route, netstat, nmcli, ifconfig, ip, iw, iwgetid, command, printf</td>
+					<td>Bash, Shell, Script, Linux, Debian, Ubuntu, Raspbian, Termux, echo, rsync, curl, apt-get, ssh, openvpn, ping, grep, lscpu, lspci, lsblk, df, uname, lsb_release, route, netstat, nmcli, ifconfig, ip, iw, iwgetid, command, printf, <s>ipinfo.io</s>, ifconfig.co</td>
 				</tr>
 
 				<!--temp0-->
