@@ -48,7 +48,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/wami">wami</a></th>
-					<td>Pulls and displays info (IP, country, city, etc) from <a href="https://ipinfo.io/">ipinfo.io</a> - useful to verify vpn operation.</td>
+					<td>Pulls and displays info (IP, country, city, etc) from <a href="https://ifconfig.co/">ifconfig.co</a>.  Useful to verify vpn/wireguard connection.  Previously wami used <i>ipinfo.io</i> to source ip data, but <i>ifconfig.co</i> is a great, open-source, self-hostable project and is generally just a lot nicer.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/whodis">whodis</a></th>
