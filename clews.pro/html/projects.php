@@ -35,14 +35,14 @@
 					<th scope="row"><a href="/projects/gps_clock.php">gps_clock</a></th>
 					<td><a href="/projects/gps_clock.php"><img class="thumbnail" src="/projects/images/gps_clock/small_gps_clock_01.jpg" /></a></td>
 					<td>GPS-synchronised clock that displays time in UNIX Epoch or ISO-8601 format.</td>
-					<td class="date">2020-08-29</td>
+					<td class="date">2021-06-17</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/gps_clock">gitlab</a><br />
 						<a href="https://hackaday.com/2018/09/18/epic-clock-clocks-the-unix-epoch/">hackaday</a><br />
 						<a href="https://hackaday.io/project/161257-gpsclock">hackaday.io</a><br />
 						<a href="https://core-electronics.com.au/projects/gps-clock">core-electronics</a>
 					</td>
-					<td>Clock, GPS, ISO-8601, epoch, UNIX Time, 7-seg, led, MAX-7219, AVR, Atmel, ATmega328p, ds3234, RTC, C, KiCAD, Wood</td>
+					<td>Clock, GPS, NMEA, ISO-8601, epoch, UNIX Time, 7-seg, led, MAX-7219, AVR, Atmel, ATmega328p, ds3234, RTC, C, KiCAD, Wood, Year 2038 problem</td>
 				</tr>
 
 				<!--grinder_timer-->
