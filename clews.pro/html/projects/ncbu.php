@@ -238,6 +238,44 @@
 			</p></div>
 			<hr/>
 
+			<h3>Debugging:</h3>
+			<p>To assist in tracking down any issues, the scripts output info to a logfile.  All output from any <i>rsync</i> commands also goes into the logs.</p>
+			<p>The logfile is located within the <b>/backup</b> directory within the container.  Provided this directory is bound to another directory oin the host machine, then it can be read by the host.  If the previously referenced <a href="https://gitlab.com/clewsy/clews.pro/blob/master/docker-compose.yml">example docker-compose.yml</a>is used along with the demo configurations above, then the logfile will be located at <b>/home/docker/nextcloud-bu/ncbu.log</b>.  Example logs are shown below:
+			<div class="code"><p class="terminal">
+				$ cat /home/docker/nextcloud-bu/ncbu.log<br/>
+				<br/>
+				<b>2021-06-18 00:00:00</b> - Running ncbu (nextcloud backup)...<br/>
+				<b>2021-06-18 00:00:00</b> - Putting nextcloud-app into maintenance mode...<br/>
+				<b>2021-06-18 00:00:00</b> - Nextcloud data backup: Syncing nextcloud-app volume to /backup...<br/>
+				2021/06/18 00:00:00 [35874] building file list<br/>
+				2021/06/18 00:00:01 [35874] >f..t...... config/config.php<br/>
+				2021/06/18 00:00:02 [35874] >f.st...... data/nextcloud.log<br/>
+				2021/06/18 00:00:02 [35874] >f.st...... data/appdata_oc037zsrujze/appstore/apps.json<br/>
+				2021/06/18 00:00:02 [35874] .d..t...... data/appdata_oc037zsrujze/preview/0/6/c/d/4/1/6/<br/>
+			</p></div>
+			<h1><center>...</center></h1>
+			<div class="code"><p class="terminal">
+				2021/06/18 00:00:06 [35874] sent 67.01M bytes  received 44.01K bytes  10.32M bytes/sec<br/>
+				2021/06/18 00:00:06 [35874] total size is 34.27G  speedup is 511.07<br/>
+				<b>2021-06-18 00:00:06</b> - Finished nextcloud data sync.<br/>
+				<b>2021-06-18 00:00:06</b> - Setting permission of nextcloud data directory to :33<br/>
+				<b>2021-06-18 00:00:07</b> - Ensure user on host machine is part of group id GID=33 for read access to backup.<br/>
+				<b>2021-06-18 00:00:07</b> - Nextcloud database backup (physical copy): Syncing nextcloud-db volume to /backup...<br/>
+				2021/06/18 00:00:07 [35901] building file list<br/>
+				2021/06/18 00:00:07 [35901] >f..t...... databases/ib_logfile0<br/>
+				2021/06/18 00:00:08 [35901] >f..t...... databases/ib_logfile1<br/>
+			</p></div>
+			<h1><center>...</center></h1>
+			<div class="code"><p class="terminal">
+				2021/06/18 00:00:10 [35901] >f.st...... log/mysql/mariadb-bin.index<br/>
+				2021/06/18 00:00:10 [35901] sent 386.56M bytes  received 436 bytes  110.45M bytes/sec<br/>
+				2021/06/18 00:00:10 [35901] total size is 878.59M  speedup is 2.27<br/>
+				<b>2021-06-18 00:00:10</b> - Finished nextcloud database sync.<br/>
+				<b>2021-06-18 00:00:10</b> - Taking nextcloud-app out of maintenance mode...<br/>
+				<b>2021-06-18 00:00:10</b> - Rotating logfile if required...<br/>
+				<b>2021-06-18 00:00:10</b> - All done.<br/>
+			</p></div>
+			<hr/>
 			<a class="align-center" href="/index.php"><img src="/images/clews_logo.png" title="Logo" width="100" /></a>
 		</div>
 	</body>
