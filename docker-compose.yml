@@ -43,7 +43,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
-######################################### Nginx-proxy-acme-companion
+######################################### Nginx-proxy-acme-companion container
   nginx-proxy-acme:
     image: nginxproxy/acme-companion
     container_name: nginx-proxy-acme
@@ -94,7 +94,7 @@ services:
       - VIRTUAL_PORT=80
       - VIRTUAL_HOST=${NEXTCLOUD_APP_URL}
       - LETSENCRYPT_HOST=${NEXTCLOUD_APP_URL}
-      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}  
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - nextcloud-app:/var/www/html
       - /etc/localtime:/etc/localtime:ro
