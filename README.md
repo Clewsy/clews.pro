@@ -28,7 +28,7 @@ I use this file with [docker-compose][link_web_docker-compose] to set up the fol
 
 I switched from the official mariadb container for the nextcloud database to the linuxserver/mariadb container because the [linuxserver.io][link_web_linuxserver] developers allow you to specify uid and gid - this fixed the errors I encountered when attempting to create physical backups of database files belonging to an unknown user (uid 999).
 
-Another switch I made was the music-streaming service I use.  Previusly I had [airsonic-advanced][link_dockerhub_airsonicadvanced_airsonic-advanced] set up, but I switched to [navidrome][link_dockerhub_deluan_navidrome] which seems more modern and up-to-date.
+Another switch I made was the music-streaming service I use.  Previously I had [airsonic-advanced][link_dockerhub_airsonicadvanced_airsonic-advanced] set up, but I migrated to [navidrome][link_dockerhub_deluan_navidrome] which seems more modern and up-to-date.
 
 The nextcloud-bu container (docker image: [clewsy/ncbu][link_dockerhub_clewsy_ncbu]) is my own project.  The source is on [gitlab][link_gitlab_clewsy_ncbu].  I tried a few different methods of backing up my nextcloud files and database but eventually decided it would be an ideal project for learning how to create my own docker image.
 
