@@ -28,7 +28,7 @@
 			<hr/>
 
 			<h3>How:</h3>
-			<p>The following commands may be useful, but much more detail can be found at the <a href="https://gitlab.com/clewsy/ncbu">gitlab</a> or <a href="https://hub.docker.com/r/ncbu/ncbu">dockerhub</a> repositories.</p>
+			<p>The following commands may be useful, but much more detail can be found at the <a href="https://gitlab.com/clewsy/ncbu">gitlab</a> or <a href="https://hub.docker.com/r/clewsy/ncbu">dockerhub</a> repositories.</p>
 			<hr/>
 
 			<h4>Create the container:</h4>
