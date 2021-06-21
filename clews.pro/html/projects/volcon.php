@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<?php include("$_SERVER[DOCUMENT_ROOT]/includes/head.html"); ?>
-	</head>
-	<body>
-		<?php include("$_SERVER[DOCUMENT_ROOT]/includes/header.html"); ?>
+<?php include("$_SERVER[DOCUMENT_ROOT]/includes/header.php"); ?>
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">VolCon</h2>
