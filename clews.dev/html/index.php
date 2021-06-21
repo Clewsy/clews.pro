@@ -5,6 +5,7 @@
 	<head>
 		<title>clews.dev</title>
 		<link href="/css/style.css" type="text/css" rel="stylesheet" />
+		<link rel="shortcut icon" href="/favicon.ico">
 	</head>
 	<body>
 		<div id="header">
