@@ -5,14 +5,14 @@ body {
 	background-color: black;
 	background-image: url("/images/logo_outrun.png");
 	background-repeat: no-repeat;
-	background-size: auto 1000px;
+	background-size: auto 3000px;
 	background-position-x: center;
-	background-position-y: 300px;
+	background-position-y: 100px;
 	margin: 0px 0px 0px 0px;
 }
 
 #clewsy_image {
-	padding-top: 100px;
+	padding-top: 150px;
 }
 
 
