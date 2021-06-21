@@ -2,9 +2,21 @@ body {
 	font-family: helvetica, verdana, arial, sans-serif;
 	line-height: 1.4em;
 	color: rgb(150,150,150);
-	background-color: rgb(55,55,55);
+	background-color: black;
+	background-image: url("/images/logo_outrun.png");
+	background-repeat: no-repeat;
+	background-size: auto 1000px;
+	background-position-x: center;
+	background-position-y: 300px;
 	margin: 0px 0px 0px 0px;
 }
+
+#clewsy_image {
+	padding-top: 100px;
+}
+
+
+
 
 #header {
 	text-align: center;
