@@ -1,6 +1,6 @@
 body {
-	font-family: helvetica, verdana, arial, sans-serif;
-	line-height: 1.4em;
+	padding-bottom: 2600px;
+	font-family: monospace;
 	color: rgb(150,150,150);
 	background-color: black;
 	background-image: url("/images/logo_outrun.png");
@@ -8,229 +8,22 @@ body {
 	background-size: auto 3000px;
 	background-position-x: center;
 	background-position-y: 100px;
-	margin: 0px 0px 0px 0px;
 }
 
 #clewsy_image {
 	padding-top: 150px;
+	padding-bottom: 50px;
 }
-
-
-
 
 #header {
 	text-align: center;
 }
 
-#header-links a:link, #header-links a:visited{
-	color: rgb(150,150,150);
-	text-decoration: none;	/* Remove underlines from links in header */
-}
-
-#header-links a:hover{
-	color: rgb(150,150,150);
-	text-decoration: underline;
-}
-
-#header-links a:active{
-	color: black;
-	text-decoration: underline;
-}
-
-#header-links {
-	background-color: rgb(30,30,30);
-	margin: 0px 0px 10px 0px;
-	padding: 5px 0px 5px 0px;
-	border-top: 2px solid rgb(150,150,150);
-	border-bottom: 2px solid rgb(150,150,150);
-}
-
-#page {
-	max-width: 1200px;
-	min-width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*Table formatting for photo tables*/
-table.gallery {
-	min-width: 1200px;
-	margin-left: 0px;
-	margin-right: 0px;
-	image-orientation: from-image;
-}
-table.gallery td {
-	border-bottom: none;
-}
-
-/*Formatting for photos*/
-img.photo {
-	border: 10px solid black;
-	width: 500px;
-	border-radius: 100px;
-	overflow: hidden;
-	margin: 20px 20px 20px 20px;
-	image-orientation: from-image;
-}
-
-/*Formatting for images (like photos but no border)*/
-img.image {
-	width: 500px;
-	overflow: hidden;
-	margin: 20px 20px 20px 20px;
-}
-
-/*Table formatting for text tables*/
-table.text-table {
-	margin: auto;
-}
-table.text-table a:link, table.text-table a:visited {
-	color: DodgerBlue;
-	text-decoration: none;
-}
-table.text-table a:hover {
-	color: DodgerBlue;
-	text-decoration: underline;	
-}
-table.text-table a:active {
-	color: black;
-	text-decoration: underline;	
-}
-table.text-table .links, table.text-table .date {
-	text-align: center;
-}
-table.text-table th, table.text-table td {
-	min-width: 120px;
-	padding: 10px 10px 10px 0px;
-	border-bottom: 5px solid black;
-}
-table.text-table ul, table.text-table ol{
-	padding: 0px 0px 0px 0px;
-}
-
-img.thumbnail {
-	max-width: 200px;
-	max-height: 100px;
-	display: block;
-	border: 2px solid black;
-	border-radius: 10px;
-	image-orientation: from-image;
-}
-.thumbnail {
-	text-align: center;
-	margin: auto auto auto auto;
-}
-img.icon {
-	max-width: 200px;
-	max-height: 100px;
-	display: block;
-	margin: auto auto auto auto;
-}
-
-/*Text formatting when showing code or command blocks.*/
-.code {
-	tab-size: 68;
-	font-family: courier, "courier new", monospace;
-	text-transform: none;
-	text-align: left;
-	color: white;
-	background-color: black;
-	border-radius: 20px;
-	border-spacing: 0px;
-	padding: 10px 10px 10px 10px;
-	margin-bottom: 16px;
-}
-.terminal {
-	color: green;
-	margin: 0px 0px 0px 0px;
-}
-.comment {
-	color: gray;
-}
-.type {
-	color: cyan;
-}
-.function {/*Use when defining or declaring a function.*/
-	font-weight: bold;
-}
-.compiler {/*Use for compiler flags - #define, #include, etc*/
-	color: dodgerblue;
-}
-.flow {/*Use for flow control - for, if, else, while, switch, case, etc.*/
-	color:steelblue;
-	font-weight: bold;
-}
-.operator {/*Use for operators (arithmetic, logical and relational) - +, -, *, /, %, =, !, <, >, &, |, etc.*/
-	color: goldenrod;
-}
-.numerical {
-	color: firebrick;
-}
-.string {
-	color: indianred;
-}
-
-/*General purpose alignment classes.*/
-.align-left {
-	text-align: left;
-	float: left;
-}
-.align-right {
-	text-align: right;
-	float: right;
-}
-.align-center {
-	text-align: center;
-	display: block;
-	margin: 0px auto 20px auto;
-}
-
-/*Default list formatting.*/
-ol {
-	list-style-type: decimal-leading-zero;
-	list-style-position: outside;
-	position: relative;
-	left: 50px;
-}
-ul {
-	list-style-position: outside;
-	position: relative;
-	left: 20px;
-}
-
-/*Default table formatting.*/
-th {
-	text-transform: lowercase;
-	font-size: 24px;
-}
-td {
-	padding: 0px 0px 0px 0px;
-}
-
-/* Default heading settings*/
-h1 {
-	text-transform: lowercase;
-	letter-spacing: 10px;
-	font-size: 32px;
-}
-h2 {
-	text-transform: lowercase;
-	font-size: 24px;
-}
-h3 {
-	text-transform: lowercase;
-	font-size: 18px;
-}
-h4 {
-	text-transform: lowercase;
-}
-
-/* Default link settings. */
 a:link, a:visited {
-	color: DodgerBlue;
+	color: cyan;
 	text-decoration: none;
 }
 a:hover, a:active {
-	color: DodgerBlue;
+	color: yellow;
 	text-decoration: underline;	
 }
