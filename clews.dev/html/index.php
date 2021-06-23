@@ -19,9 +19,9 @@
 	</head>
 	<body>
 		<div id="header">
-			<a href="https://clews.dev"><img id="clewsy_image" src="<?php echo $random_image ?>" title="clewsy" width="1000" /></a>
+			<a href="https://clews.dev"><img id="clewsy_image" src="<?php echo $random_image ?>" title="clewsy" height="180" /></a>
 			<br />
-			<a href="https://clews.pro"><b>Try this for something less rad.</b></a>
+			<a href="https://clews.pro"><b>Click here for something less rad.</b></a>
 		</div>
 		<div id="content">
 			<br />
