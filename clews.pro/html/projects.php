@@ -17,7 +17,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-06-19</td>
+					<td class="date">2021-06-24</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -233,6 +233,18 @@
 					</td>
 					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, iperf3, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, so much yaml</td>
 				</tr>
+
+				<!--clews.dev-->
+				<tr>
+					<th scope="row"><a href="/projects/clews_dev.php">clews.dev</a></th>
+					<td><a href="/projects/clews_dev.php"><img class="thumbnail" src="/projects/images/clews_dev/clews_dev_01.png" /></a></td>
+					<td>A site for experimenting.</td>
+					<td class="date">2021-06-24</td>
+					<td class="links">
+						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
+						<a href="https://clews.dev/index.php">clews.dev</a>
+					</td>
+					<td>HTML, CSS, PHP, Self-Host, Docker, Nginx, Inkscape, SVG</td>
 
 				<!--Contributions-->
 				<tr>
