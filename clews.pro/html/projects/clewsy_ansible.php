@@ -84,8 +84,8 @@
 							<li>docker</li>
 							<li>headless</li>
 							<li>secure</li>
-							<li>wireguard_server</li>
 							<li>vpn</li>
+							<li>wireguard</li>
 						</ul>
 					</td>
 				</tr>
@@ -126,6 +126,7 @@
 							<li>node</li>
 							<li>secure</li>
 							<li>vpn</li>
+							<li>wireguard</li>
 						</ul>
 					</td>
 				</tr>
@@ -303,6 +304,7 @@
 							<li>qbittorrent</li>
 							<li>rsync_server</li>
 							<li>vpn</li>
+							<li>wireguard</li>
 						</ul>
 					</td>
 				</tr>
@@ -470,14 +472,9 @@
 				<!-- wireguard -->
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/wireguard">wireguard</a></th>
-					<td>Install <a href="https://www.wireguard.com/">wireguard</a> and create custom "client" connection configurations.  Also create some aliases for quickly bringing wireguard up/down from the command line.</td>
+					<td>Install <a href="https://www.wireguard.com/">wireguard</a> and configure a host as a wireguard vpn "server" (endpoint) and/or "client".  Also create some client aliases for quickly bringing wireguard connections up/down from the command line.</td>
 				</tr>
 
-				<!-- wireguard_server -->
-				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/wireguard_server">wireguard_server</a></th>
-					<td>Configure a box as a <a href="https://www.wireguard.com/">wireguard</a> "server" endpoint.</td>
-				</tr>
 			</table>
 			<p><a class="align-center" href="images/clewsy_ansible/clewsy_ansible_02.png"><img class="image" src="images/clewsy_ansible/clewsy_ansible_02.png" alt="I don't know what I'm doing." /></a></p>
 		</div>

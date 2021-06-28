@@ -231,7 +231,7 @@
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
 					</td>
-					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, iperf3, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, motioneye, mount, mpc, mpd, ncdu, ncmpc, netdiscover, nfs, nmap, OpenMediaVault, OpenVPN, OSMC,  php, pigpio, pip Pop_OS!,  python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, ssh, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VPS, VSCode, Watchtower, Wireguard, so much yaml</td>
+					<td>alias, android, Ansible, Apache, apt, bash, Beaglebone Black, chmod, chown, cifs, Conky, cron, cups curl, Debian, Docker, docker-compose, fstab, git, GitLab, Gnome, Guake, Home Assistant, htop, iftop, iperf3, LineageOS, Linux, lm-sensors, logrotate, midnight commander, motd, motion, motioneye, mount, mpc, mpd, Nautilus, ncdu, ncmpc, netdiscover, nfs, nmap, <s>OMV</s>, <s>OpenMediaVault</s>, OpenVPN, OSMC,  php, pigpio, pip, Pop_OS!, python, qbittorrent, Raspbian, Raspberry Pi, rsync, scripts, snap, Sonata, ssh, sshd, sudo, systemd,  Terminator, Termux, tmux, Ubuntu, ufw, Vim, VLC, vpn, VPS, VSCode, Watchtower, Wireguard, so much yaml</td>
 				</tr>
 
 				<!--clews.dev-->
