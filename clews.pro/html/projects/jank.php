@@ -7,17 +7,17 @@
 			<p>The main features of this keypad include:</p>
 			<ul>
 				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller with connectivity via a USB type-c connector configured as a USB 2 device.  Power is also derived from the USB port.</li>
-				<li>21 mechanical keys (gateron blues which are pin-compatible clones of <a href="https://www.cherrymx.de/en">Cherry MX</a> switches) with variable brightness white LED backlight on each key.</li>
+				<li>21 mechanical keys (<a href="http://www.gateron.com/col/58460?categoryId=3295&lang=2">gateron</a> blues which are pin-compatible clones of <a href="https://www.cherrymx.de/en">Cherry MX</a> switches) with variable brightness white LED backlight on each key.</li>
 				<li>In addition to the 17 standard keys of a numerical keypad, there is also a row of four keys across the top of the device which are programmable macros.  (Well, all keys can be programmable macros, but this is how I have configured jank.)</li>
 			</ul>
-			<p>I previously completed a simpler macro pad project (<a href="/projects/macr0.php">macr0</a>) which served as an experiment to prepare for this project.  Effectively macr0 was a trial so that I could get my head around a few concepts (<a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">key matrixing</a>, LED boost controllers, configurable macros with the HID protocol).  As such, development for jank went a lot faster since a lot of the <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">code from macr0</a> worked with minimal changes.</p>
+			<p>I previously completed a simpler macro pad project (<a href="/projects/macr0.php">macr0</a>) which served as an experiment to prepare for this project.  macr0 was effectively a trial so that I could get my head around a few concepts (<a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">key matrixing</a>, LED boost controllers, configurable macros with the HID protocol).  As such, development for jank went a lot faster since a lot of the <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">code from macr0</a> worked with minimal changes.</p>
 			<hr />
 
 			<h2><a href="https://gitlab.com/clewsy/jank/-/tree/master/hardware">Hardware</a></h2>
 			<a href="images/jank/jank_09.jpg"><img class="photo align-right" src="images/jank/small_jank_09.jpg" alt="Hardware assembly underway." /></a>
-			<p>The <a href="images/jank/jank_01.jpg">schematic</a> and PCB layout were designed in <a href="https://www.kicad.org/">KiCAD</a>.  The schematic can be divided into five main areas/components:</p>
+			<p>The <a href="images/jank/jank_01.png">schematic</a> and <a href="images/jank/jank_02.png">PCB layout</a> were designed in <a href="https://www.kicad.org/">KiCAD</a>.  The schematic can be divided into five main areas/components:</p>
 			<ol>
-				<li><b>The key <a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">matrix</a></b> - 21 gateron mechanical keyswitches connected in a matrix of 4 columns and 6 rows.  The key switches each include a 3mm LED.</li>
+				<li><b>The <a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">key matrix</a></b> - 21 <a href="http://www.gateron.com/col/58460?categoryId=3295&lang=2">gateron</a> mechanical keyswitches connected in a matrix of 4 columns and 6 rows.  The key switches each include a 3mm LED.</li>
 				<li><b><a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32u4</a> AVR microcontroller</b> - Selected because it has enough GPIO and hardware USB.  I'm also familiar with the device from previous projects and have a few on-hand.  Includes an external 16MHz crystal.</li>
 				<li><b><a href="https://www.monolithicpower.com/en/mp3202.html">MP3202</a> LED driver</b> - I've not (successfully) used a boost LED driver before, so this was a neat learning experience.  It drives all 21 keyswitch LEDs and is enabled by a PWM signal from the AVR which allows variable LED brightness.</li>
 				<li><b><a href="https://en.wikipedia.org/wiki/USB-C">USB type-C</a> Receptacle</b> - Configured to be detected by a host as a USB 2.0 device.  I went with a simple 16-pin through-hole connector that is (barely) hand-solderable.</li>
@@ -86,7 +86,7 @@
 					<td colspan="2"><div style="text-align:left">ROW5<br />COL0</div></td><td>ROW5<br />COL2</td>
 				</tr>
 			</table>
-			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothy except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for PF4 and PF5 include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled be default (as it can serve as an interface for programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
+			<p>Porting the firmware from <a href="/projects/macr0.php">macr0</a> went relatively smoothly except for one issue that took longer to solve than I will admit.  GPIO pins PF4 and PF5 are configured as inputs for reading in key matrix columns 2 and 3.  Alternate functions for PF4 and PF5 include JTAG TCK (test clock) and JTAG TMS (test mode select) respectively.  I did not intend to use <a href="https://en.wikipedia.org/wiki/JTAG">JTAG</a> so this was irrelevant!  Of course I now know that JTAG is enabled by default (as it can serve as an interface for programming the AVR) and GPIO is therefore disabled on PF4 and PF5.  Disabling JTAG by clearing the applicable fuse bit solved all my problems.</p>
 			<hr />
 
 			<a href="images/jank/jank_20.jpg"><img class="photo align-right" src="images/jank/small_jank_20.jpg" alt="Testing." /></a>
