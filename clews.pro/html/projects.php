@@ -98,13 +98,13 @@
 					<th scope="row"><a href="/projects/macr0.php">macr0</a></th>
 					<td><a href="/projects/macr0.php"><img class="thumbnail" src="/projects/images/macr0/small_macr0_30.jpg" /></a></td>
 					<td>4-button USB input device.</td>
-					<td class="date">2021-03-29</td>
+					<td class="date">2021-07-01</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/macr0">gitlab</a><br />
 						<a href="https://hackaday.com/2020/11/19/micro-macro-keyboard-is-mega-based/">hackaday</a><br />
 						<a href="https://hackaday.io/project/175874-macr0">hackaday.io</a>
 					</td>
-					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver, PWM</td>
+					<td>AVR, ATmega32U4, Microcontroller, USB, HID, Keyboard, Macro, Media Controller, Key Matrix, Gateron, Cherry MX, <s>CAT4104</s>, LED Driver, Transistor, PWM</td>
 				</tr>
 
 				<!--media_center-->

@@ -4,17 +4,17 @@
 			<h2 class="align-center">macr0</h2>
 			<a href="images/macr0/macr0_32.jpg"><img class="photo align-left" src="images/macr0/small_macr0_32.jpg" alt="The assembled macr0 revision 2." /></a>
 			<p>Macr0 is a 4-button macro pad which identifies as a USB keyboard.</p>
-			<p>This project is effectively a handful of proofs of concepts.  I wanted to test a few things I haven't done before with the intention to scale-up for a future project.</p>
-			<p>The goals I had in mind for this project included:</p>
+			<p>This project is effectively a handful of proofs of concept.  I wanted to test a few things I haven't done before with the intention to scale-up for a future project (that project: <a href="/projects/jank.php">jank</a>).</p>
+			<p>The goals I had in mind for macr0 included:</p>
 			<ol>
 				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller.</li>
-				<li>Keys will be matrixed (even though the mcu has plenty of spare IO for only 4 buttons).</li>
-				<li>Keys will be mechanical Gateron switches - these are pin-compatible <a href="https://www.cherrymx.de/en">Cherry MX</a> clones.</li>
+				<li>Keys will be matrixed (even though the mcu has plenty of IO for only 4 keys ).</li>
+				<li>Keys will be mechanical <a href="http://www.gateron.com/col/58460?categoryId=3295&lang=2">Gateron</a> switches - these are pin-compatible <a href="https://www.cherrymx.de/en">Cherry MX</a> clones.</li>
 				<li>Keys will all be LED back-lit using a <a href="https://www.onsemi.com/products/power-management/led-drivers/linear-led-drivers/cat4104">CAT4104</a> constant-current LED driver (even though there are only 4 LEDs and they could be easily driven directly by the mcu).</li>
 				<li>Back-light illumination will be adjustable.</li>
 				<li>Connectivity (and power) via a <a href="https://en.wikipedia.org/wiki/USB-C">USC-C</a> connector, configured for USB 2.0.</li>
 			</ol>
-			<p><a href="https://kicad-pcb.org/">KiCad</a> for PCB design and <a href="https://jlcpcb.com/">JLCPCB</a> for fabrication.  <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/">PlatformIO IDE</a> extension for developng the firmware.  <a href="https://gitlab.com/clewsy/macr0/-/tree/master/hardware">Hardware</a> (schematic and PCB design) and <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">firmware</a> are all open and published in a <a href="https://gitlab.com/clewsy/macr0/">Gitlab repository</a>.</p>
+			<p><a href="https://kicad-pcb.org/">KiCad</a> for schematic and PCB design, <a href="https://jlcpcb.com/">JLCPCB</a> for fabrication.  <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://platformio.org/">PlatformIO IDE</a> extension for developng the firmware.  <a href="https://gitlab.com/clewsy/macr0/-/tree/master/hardware">Hardware</a> (schematic and PCB design) and <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">firmware</a> are all open and published in a <a href="https://gitlab.com/clewsy/macr0/">Gitlab repository</a>.</p>
 			<p>The firmware was programmed in C and draws from Dean Camera's <a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA libray</a>.
 			<hr />
 
@@ -26,15 +26,15 @@
 
 			<h2>Revision 2</h2>
 			<a href="images/macr0/macr0_35.gif"><img class="photo align-right" src="images/macr0/small_macr0_35.gif" alt="The assembled macr0 revision 2, showing the LED pulse effect." /></a>
-			<p>Having learned a few lessons and prooved concepts for a larger-scale project, I decided to revise macr0 since I've found it quite useful.  Changes to be incorporated::</p>
+			<p>Having learned a few lessons and proved concepts for a larger-scale project, I decided to revise macr0 since I've found it quite useful.  Changes to be incorporated::</p>
 			<ul>
 				<li>The smd crystal foorprint was from the included KiCad libray and has huge pads to ease hand-soldering.  They take up too much space and could easily be much smaller and still hand-solderable.</li>
-				<li>With only four LEDs I would just drive them directly from the microcontroller instead of with the LED driver.  To have adjustable brightness I would still use a PWM pin and probably some transistors to sink the LED current.  The point of the LED driver was of course just to try it out and determine if it would be suitable for a future project.</li>
-				<li>Similarly I would just use a gpio pin configured as an input to directly read each key.  For this 4-key input it would take exactly the same number of gpio pins.  Of course, then I wouldn't have learned how best to read a key matrix - also required for a future project.</li>
+				<li>With only four LEDs I would just drive them directly from the microcontroller instead of with the LED driver.  To have adjustable brightness I would still use a PWM pin and probably some transistors to sink the LED current.  The point of the LED driver was just to try it out and determine if it would be suitable for a future project.</li>
+				<li>Similarly I would just use a gpio pin configured as an input to directly read each key.  For this 4-key input it would take exactly the same number of gpio pins to read directly as it wouls to matrix the keys.  Of course, then I wouldn't have learned how best to read a key matrix - also required for a future project.</li>
 				<li>I put a pull-up resistor on the dimmer/brightness button for some reason.  This can be ommitted in favour of an internal pull-up.</li>
 			</ul>
-			<p>Since this revision won't require the keyscan functionality, I'll record the code bellow for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
-			<p>Revision 2 works great.  I get full brightness out of the LEDs (although I set the default to quite dim).  A button underneath the unit cycles through different LED mode - off, various brighness levels and a pulse effect with three different speeds.  The PCB is also a nicer fit to the wood enclosure.</p>
+			<p>Since this revision won't require the keyscan functionality, I'll record the keyscan code below for future reference (i.e. the mentioned larger-scale project) since it will no longer be reflected in the main gitlab branch.</p>
+			<p>Update: revision 2 works great.  I get full brightness out of the LEDs (although I set the default to quite dim).  A button underneath the unit cycles through different LED modes - off, various brighness levels and a pulse effect with three different speeds.  The PCB is also a nicer fit to the wood enclosure.</p>
 			<hr />
 
 			<h2>Configuration</h2>
@@ -44,7 +44,7 @@
 				<li>A media control key (e.g. play, pause, toggle, stop, previous, next, volume up/down, etc).</li>
 				<li>A "macro" - effectively types a sequential string of characters.</li>
 			</ul>
-			<p>The key actions are set when the AVR is flashed so configuration is done with the source code.  The only file that needs to be edited is the "keymap.c" file.  Following are some examples of how the keys can be configured.</p>
+			<p>The key actions are set when the AVR is flashed, so configuration is done with the source code.  The only file that needs to be edited is the "keymap.c" file.  Following are some examples of how the keys can be configured.</p>
 			<h3>Example 1</h3>
 			<p>All four keys are configured for media control - toggle (play/pause) stop, previous and next.  It is this  configuration I actually settled on for daily use.</p>
 			<div class="code"><p>
