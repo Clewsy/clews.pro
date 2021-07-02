@@ -187,8 +187,8 @@
 				<tr>
 					<th scope="row"><a href="/projects/volcon.php">volcon</a></th>
 					<td><a href="/projects/volcon.php"><img class="thumbnail" src="/projects/images/volcon/small_volcon_21.jpg" /></a></td>
-					<td>HID compliant USB volume controller.</td>
-					<td class="date">2021-02-21</td>
+					<td>HID compliant USB volume controller from a VCR head drum and an optical encoder.</td>
+					<td class="date">2021-07-02</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/volcon">gitlab</a><br />
 						<a href="https://hackaday.com/2021/02/15/a-volume-control-from-a-vcr-drum/">hackaday</a><br />

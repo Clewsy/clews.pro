@@ -10,22 +10,22 @@
 			<ul>
 				<li>The optical encoder parts (sensors and disk) were salvaged from an old track-ball.</li>
 				<li>The "knob" was made from the <a href="https://en.wikipedia.org/wiki/File:Kopftrommel_2.jpg">head drum</a> of a <a href="https://en.wikipedia.org/wiki/VHS">VHS</a> <a href="https://en.wikipedia.org/wiki/Videocassette_recorder">VCR</a> (remember those?).  This is the part that spins and is used to adjust volume on my PC.</li>
-				<li>The optical disk was fixed to the shaft and optical sensors mounted off some strip-board and attached to the base of the drum.</li>
-				<li>This assembly is mounted to a custom PCB with some nylon stand-offs. The PCB became the base of the whole unit.</li>
+				<li>The optical disk was fixed to the shaft and optical sensors mounted to some strip-board and attached to the stationary base of the drum.</li>
+				<li>The assembly is mounted to a custom PCB with some nylon stand-offs. The PCB became the base of the whole unit.</li>
 				<li>I cut some wooden rings to enclose the electronics and the base of the VCR drum.</li>
-				<li>The custom PCB was designed in eagle and etched at home from some single-sided copper-clad board. The circuit was designed around an AVR at90usb162.</li>
+				<li>The custom PCB was designed in Eagle and etched at home into some single-sided copper-clad board. The circuit was designed around an AVR at90usb162.</li>
 				<li>The code is written in C and implements the <a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA</a> library <a href="https://github.com/abcminiuser/lufa/">developed</a> by <a href="http://www.fourwalledcubicle.com/AboutMe.php">Dean Camera</a>.</li>
 				<li>The whole unit plugs into a PC via USB and is automatically identified as a HID - no drivers required (tested in Debian Linux and Windows).</li>
 				<li>It's a very simple device - rotate clockwise to increase volume, counter-clockwise to decrease.</li>
-        			<li>Code and PCB design are available via <a href="https://gitlab.com/clewsy/volcon">gitlab</a>). Here are some reference links:</li>
-				<ul>
-					<li><a href="https://gitlab.com/clewsy/volcon">VolCon gitlab repo</a> - for code and eagle design (PCB)</li>
-					<li><a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA</a> (lightweight USB Framework for AVRs) main page</li>
-				</ul>
+        		<li>Code and PCB design are available on <a href="https://gitlab.com/clewsy/volcon">gitlab</a>. Here are some reference links:</li>
+					<ul>
+						<li><a href="https://gitlab.com/clewsy/volcon">VolCon gitlab repo</a> - for code and Eagle design (PCB).</li>
+						<li><a href="http://www.fourwalledcubicle.com/LUFA.php">LUFA</a> (lightweight USB Framework for AVRs) main page.</li>
+					</ul>
 			</ul>
 			<hr />
 			<h2>Spotted Gum > Stained Pine</h2>
-			<p>After some time (about six years!) of having this device in-use on my desk, I finally got sick of the simple (ugly) stained pine wood enclosure.  With some scrap spotted gum and a router (with a Roman ogee and a roundover bit) I made a slightly nicer enclosure for volcon.
+			<p>After some time (about six years!) of having this device in-use on my desk, I finally got sick of the simple (ugly) stained pine wood enclosure.  With some scrap spotted gum and a router (using a Roman ogee and roundover bits) I made a slightly nicer enclosure for volcon.
 			<hr />
 			<a href="images/volcon/volcon_22.gif"><img class="photo align-right" src="images/volcon/small_volcon_22.gif" alt="Rev 2 - Demo of gray code LED visualisation." /></a>
 			<h2>Revision 2</h2>
@@ -33,17 +33,17 @@
 			<ul>
 				<li>Schematic and PCB layout completely redone but using <a href="https://www.kicad.org/">KiCad</a> instead of Eagle.</li>
 				<li>Microcontroller changed from an AT90usb162 AVR to an ATmega32U4.</li>
-				<li>Remove the serial Tx/Rx connector.</li>
-				<li>Remove the reset tact-switch.</li>
+				<li>Remove the serial Tx/Rx connector (was only used for debugging).</li>
+				<li>Remove the reset tact-switch	.</li>
 				<li>Use smd components instead of through-hole.</li>
 				<li>Connect with a USB type C connector instead of a USB type B.</li>
 				<li>Have the PCB fabricated (<a href="https://jlcpcb.com/">JLCPCB</a>) instead of the home-made copper-etch method.</li>
-				<li>A couple of LEDs on the bottom of the PCB purely to visualise the gray code (Rev 1 had LEDs but they only barely shone through etched sections of the PCB).</li>
+				<li>A couple of LEDs on the bottom of the PCB purely to visualise the Gray code (Rev 1 had LEDs but they only barely shone through etched sections of the PCB).</li>
 				<li>Generally improved and cleaner code (still using the LUFA library).</li>
 			</ul>
 			<hr />
 			<h2>Quadrature Encoder / Gray Code</h2>
-			<p>The encoder consists of two optical sensor "beams" that are sequentially opened/interrupted by the holes within the encoder disk.  The state of each of the sensors can be represented as two bits.</p>
+			<p>The encoder consists of two optical sensor "beams" that are sequentially opened/interrupted by the holes within the encoder disk.  The state of both the sensors can be represented as two bits.</p>
 			<p>Movement of the knob is simply determined by a change in the state of either of the two sensors.  I.e. if either of the bits change, the device has rotated.  The spacing of the sensors means only one of the bits will change at a time.  Therefore, the direction of rotation is determined by comparing the current state of the two bits to the previous state of the two bits.</p>
 			<table class="simple-table">
 				<tr>
