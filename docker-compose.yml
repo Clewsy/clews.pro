@@ -93,6 +93,7 @@ services:
       - nextcloud-db
     environment:
       - VIRTUAL_PORT=80
+      - NEXTCLOUD_OVERWRITEPROTOCOL=https
       - VIRTUAL_HOST=${NEXTCLOUD_APP_URL}
       - LETSENCRYPT_HOST=${NEXTCLOUD_APP_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
