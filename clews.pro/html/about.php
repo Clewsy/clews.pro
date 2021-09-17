@@ -14,6 +14,7 @@
 						<td><a href="https://hub.docker.com/u/clewsy"><img class="icon"  src="/images/dockerhub_icon.png" title="DockerHub Logo" alt="DockerHub repo" /></a></td>
 						<td><a href="https://hackaday.io/Clewsy"><img class="icon"  src="/images/hackaday_icon.png" title="Hackaday Logo" alt="Hackaday.io profile" /></a></td>
 						<td><a href="https://clews.dev"><img class="icon"  src="/images/clews_dev_logo.png" title="Clewsy Logo" alt="The other clews domain." /></a></td>
+						<td><a href="https://clews.monster"><img class="icon"  src="/images/clews_monster_logo.png" title="Clewsy Logo" alt="The other other clews domain." /></a></td>
 					</tr>
 				</table>
 			</center>
