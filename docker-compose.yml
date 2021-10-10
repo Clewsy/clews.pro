@@ -3,14 +3,14 @@
 #### - nginx-proxy              nginx-proxy         (image: nginxproxy/nginx-proxy)
 #### - acme-companion           acme-companion      (image: nginxproxy/acme-companion)
 #### - nextcloud-db             MariaDB             (image: linuxserver/mariadb)
-#### - nextcloud-app            Nextcloud           (image: nextcloud)
+#### - nextcloud                Nextcloud           (image: nextcloud)
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
 #### - nextcloud-bu             NCBU                (image: clewsy/ncbu)
-#### - collabora-app            Collabora           (image: collabora/code)
-#### - navidrome-app            Navidrome           (image: deluan/navidrome)
-#### - vaultwarden-app          Vaultwarden         (image: vaultwarden/server)
-#### - calibre-app              Calibre             (image: linuxserver/calibre)
-#### - calibre-web-app          Calibre-web         (image: linuxserver/calibre-web)
+#### - collabora                Collabora           (image: collabora/code)
+#### - navidrome                Navidrome           (image: deluan/navidrome)
+#### - vaultwarden              Vaultwarden         (image: vaultwarden/server)
+#### - calibre                  Calibre             (image: linuxserver/calibre)
+#### - calibre-web              Calibre-web         (image: linuxserver/calibre-web)
 #### - php                      PHP                 (image: php:fpm)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-clews.dev          NGINX               (image: nginx)
@@ -82,9 +82,9 @@ services:
     restart: unless-stopped
 
 ######################################### Nextcloud web app container
-  nextcloud-app:
+  nextcloud:
     image: nextcloud
-    container_name: nextcloud-app
+    container_name: nextcloud
     networks:
       - clews.pro_network
     depends_on:
@@ -94,8 +94,8 @@ services:
     environment:
       - VIRTUAL_PORT=80
       - NEXTCLOUD_OVERWRITEPROTOCOL=https
-      - VIRTUAL_HOST=${NEXTCLOUD_APP_URL}
-      - LETSENCRYPT_HOST=${NEXTCLOUD_APP_URL}
+      - VIRTUAL_HOST=${NEXTCLOUD_URL}
+      - LETSENCRYPT_HOST=${NEXTCLOUD_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - nextcloud-app:/var/www/html
@@ -108,9 +108,9 @@ services:
     container_name: nextcloud-cron
     network_mode: none
     depends_on:
-      - nextcloud-app
+      - nextcloud
     environment:
-      - NEXTCLOUD_CONTAINER_NAME=nextcloud-app
+      - NEXTCLOUD_CONTAINER_NAME=nextcloud
       - NEXTCLOUD_CRON_MINUTE_INTERVAL=5
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -123,11 +123,11 @@ services:
     container_name: nextcloud-bu
     network_mode: none
     depends_on:
-      - nextcloud-app
+      - nextcloud
       - nextcloud-db
     environment:
       - NEXTCLOUD_EXEC_USER=www-data                      # Name of the user that can execute the occ command in the nextcloud container (www-data by default).
-      - NEXTCLOUD_CONTAINER=nextcloud-app                 # Name of the nextcloud container.
+      - NEXTCLOUD_CONTAINER=nextcloud                     # Name of the nextcloud container.
       - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
       - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
     volumes:
@@ -139,9 +139,9 @@ services:
     restart: unless-stopped
 
 ######################################### Collabora (for nextcloud) container
-  collabora-app:
+  collabora:
     image: collabora/code
-    container_name: collabora-app
+    container_name: collabora
     networks:
       - clews.pro_network
     depends_on:
@@ -151,19 +151,19 @@ services:
       - MKNOD
     environment:
       - domain=nextcloud\.clews\.pro    # This needs to be the same as the nextcloud domain, with periods escaped.
-      - username=${COLLABORA_APP_USERNAME}
-      - password=${COLLABORA_APP_PASSWORD}
+      - username=${COLLABORA_USERNAME}
+      - password=${COLLABORA_PASSWORD}
       - VIRTUAL_PORT=9980
-      - VIRTUAL_HOST=${COLLABORA_APP_URL}
-      - LETSENCRYPT_HOST=${COLLABORA_APP_URL}
+      - VIRTUAL_HOST=${COLLABORA_URL}
+      - LETSENCRYPT_HOST=${COLLABORA_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
       - extra_params=--o:ssl.enable=false --o:ssl.termination=true
     restart: unless-stopped
 
 ######################################### Navidrome container
-  navidrome-app:
+  navidrome:
     image: deluan/navidrome
-    container_name: navidrome-app
+    container_name: navidrome
     networks:
       - clews.pro_network
     depends_on:
@@ -175,19 +175,19 @@ services:
       - RecentlyAddedByModTime=true #Defaults to false.
       - ND_ENABLEGRAVATAR=true #Defaults to false.
       - VIRTUAL_PORT=4533
-      - VIRTUAL_HOST=${NAVIDROME_APP_URL}
-      - LETSENCRYPT_HOST=${NAVIDROME_APP_URL}
+      - VIRTUAL_HOST=${NAVIDROME_URL}
+      - LETSENCRYPT_HOST=${NAVIDROME_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - ./navidrome-app/data:/data
-      - ./navidrome-app/music:/music
+      - ./navidrome/data:/data
+      - ./navidrome/music:/music
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
 ######################################### Vaultwarden web app container
-  vaultwarden-app:
+  vaultwarden:
     image: vaultwarden/server:latest
-    container_name: vaultwarden-app
+    container_name: vaultwarden
     networks:
       - clews.pro_network
     depends_on:
@@ -197,26 +197,26 @@ services:
       - 8170:80 #Keep a port accessible on the local network too.
     environment:
       - VIRTUAL_PORT=80
-      - VIRTUAL_HOST=${VAULTWARDEN_APP_URL}
-      - LETSENCRYPT_HOST=${VAULTWARDEN_APP_URL}
+      - VIRTUAL_HOST=${VAULTWARDEN_URL}
+      - LETSENCRYPT_HOST=${VAULTWARDEN_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
       - SIGNUPS_ALLOWED=false
       - LOG_FILE="/data/vaultwarden.log"
     volumes:
-      - ./vaultwarden-app/data/:/data/
+      - ./vaultwarden/data/:/data/
     restart: unless-stopped
 
 ######################################### Calibre container
-  calibre-app:
+  calibre:
     image: linuxserver/calibre
-    container_name: calibre-app
+    container_name: calibre
     networks:
       - clews.pro_network
     environment:
       - PUID=1000
       - PGID=1000
     volumes:
-      - ./calibre-app/config:/config
+      - ./calibre/config:/config
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 8080:8080 #Desktop gui
@@ -225,26 +225,26 @@ services:
     restart: unless-stopped
 
 ######################################### Calibre-Web container
-  calibre-web-app:
+  calibre-web:
     image: linuxserver/calibre-web
-    container_name: calibre-web-app
+    container_name: calibre-web
     networks:
       - clews.pro_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
-      - calibre-app
+      - calibre
     environment:
       - PUID=1000
       - PGID=1000
       - DOCKER_MODS=linuxserver/calibre-web:calibre
       - VIRTUAL_PORT=8083
-      - VIRTUAL_HOST=${CALIBRE_APP_URL}
-      - LETSENCRYPT_HOST=${CALIBRE_APP_URL}
+      - VIRTUAL_HOST=${CALIBRE_URL}
+      - LETSENCRYPT_HOST=${CALIBRE_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - ./calibre-app/calibre-web-app/config:/config  #calibre-web-app specific config (separate from calibre-app config)
-      - ./calibre-app/config:/books                   #Map /books to the calibre-app container config volume (contains books/metadata)
+      - ./calibre/calibre-web/config:/config  #calibre-web specific config (separate from calibre config)
+      - ./calibre/config:/books               #Map /books to the calibre container config volume (contains books/metadata)
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 

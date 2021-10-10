@@ -1,8 +1,8 @@
 .env
-calibre-app/
+calibre/
 jadon.clews.pro/
-navidrome-app/
+navidrome/
 nextcloud-bu/
 nginx-proxy/
 tyler.clews.pro/
-vaultwarden-app/
+vaultwarden/
