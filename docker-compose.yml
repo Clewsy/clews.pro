@@ -150,7 +150,7 @@ services:
     cap_add:
       - MKNOD
     environment:
-      - domain=nextcloud\.clews\.pro    # This needs to be the same as the nextcloud domain, with periods escaped.
+      - domain=${COLLABORA_DOMAIN}
       - username=${COLLABORA_USERNAME}
       - password=${COLLABORA_PASSWORD}
       - VIRTUAL_PORT=9980
