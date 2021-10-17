@@ -270,7 +270,7 @@
 				<b>2021-06-18 00:00:10</b> - All done.<br/>
 			</p></div>
 			<hr/>
-			<a class="align-center" href="/index.php"><img src="/images/clews_logo.png" title="Logo" width="100" /></a>
+			<a class="align-center" href="/index.php"><img src="/images/clews_logo/clews_logo_00.png" title="Logo" width="100" /></a>
 		</div>
 	</body>
 </html>
