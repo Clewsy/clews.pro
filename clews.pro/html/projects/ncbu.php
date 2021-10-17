@@ -43,7 +43,7 @@
 			<div class="code"><p class="terminal">
 				$ docker run -ti \<br/>
 				-h ncbu \<br/>
-				-e NEXTCLOUD_CONTAINER=nextcloud-app \<br/>
+				-e NEXTCLOUD_CONTAINER=nextcloud \<br/>
 				-e NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db \<br/>
 				-e NEXTCLOUD_BACKUP_CRON="0 0 * * *" \<br/>
 				-v /etc/localtime:/etc/localtime:ro \<br/>
@@ -77,7 +77,7 @@
 					<td>----------------------------------------</td>
 				</tr>
 				<tr>
-					<td>collabora-app</td>
+					<td>collabora</td>
 					<td>/bin/sh -c bash start-libr ...</td>
 					<td>Up</td>
 					<td>9980/tcp</td>
@@ -89,7 +89,7 @@
 					<td> </td>
 				</tr>
 				<tr>
-					<td>nextcloud-app</td>
+					<td>nextcloud</td>
 					<td>/entrypoint.sh apache2-for ...</td>
 					<td>Up</td>
 					<td>80/tcp</td>
@@ -135,7 +135,7 @@
 			<div class="code"><p class="terminal">
 				<b>2020-03-30 11:13:29</b> - Initialising ncbu (nextcloud-backup)...<br/>
 				<b>2020-03-30 11:13:29</b> - Checking environment variables provided:<br/>
-				&emsp;&emsp;&emsp;	NEXTCLOUD_CONTAINER=nextcloud-app<br/>
+				&emsp;&emsp;&emsp;	NEXTCLOUD_CONTAINER=nextcloud<br/>
 				&emsp;&emsp;&emsp;	NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db<br/>
 				<b>2020-03-30 11:13:29</b> - Checking mounted volumes:<br/>
 				&emsp;&emsp;&emsp;	Nextcloud app volume successfully mounted to /mnt/nextcloud_app<br/>
@@ -153,9 +153,9 @@
 			</p></div>
 			<div class="code"><p class="terminal">
 				<b>2020-03-30 10:22:14</b> - Running ncbu (nextcloud backup)...<br/>
-				<b>2020-03-30 10:22:14</b> - Putting nextcloud-app into maintenance mode...<br/>
+				<b>2020-03-30 10:22:14</b> - Putting nextcloud into maintenance mode...<br/>
 				&emsp;&emsp;&emsp;	Maintenance mode enabled<br/>
-				<b>2020-03-30 10:22:14</b> - Nextcloud data backup: Syncing nextcloud-app volume to /backup...<br/>
+				<b>2020-03-30 10:22:14</b> - Nextcloud data backup: Syncing nextcloud volume to /backup...<br/>
 				sending incremental file list<br/>
 				config/config.php<br/>
 				1.02K 100%    0.00kB/s    0:00:00 (xfr#1, ir-chk=1026/15502)<br/>
@@ -171,7 +171,7 @@
 				sent 9.77K bytes  received 18 bytes  19.58K bytes/sec<br/>
 				total size is 691.70M  speedup is 70,661.44<br/>
 				<b>2020-03-30 10:22:15</b> - Finished nextcloud database sync.<br/>
-				<b>2020-03-30 10:22:15</b> - Taking nextcloud-app out of maintenance mode...<br/>
+				<b>2020-03-30 10:22:15</b> - Taking nextcloud out of maintenance mode...<br/>
 				&emsp;&emsp;&emsp;	Maintenance mode disabled<br/>
 				<b>2020-03-30 10:22:15</b> - All done.
 			</p></div>
@@ -183,7 +183,7 @@
 			</p></div>
 			<div class="code"><p class="terminal">
 				<b>2020-03-30 11:34:12</b> - Running ncbu restore...<br/>
-				<b>2020-03-30 11:34:12</b> - Putting nextcloud-app into maintenance mode...<br/>
+				<b>2020-03-30 11:34:12</b> - Putting nextcloud into maintenance mode...<br/>
 				Maintenance mode enabled<br/>
 				<b>2020-03-30 11:34:12</b> - Nextcloud data restore from ncbu: Syncing /backup/nextcloud_app to nextcloud-app volume...<br/>
 				sending incremental file list<br/>
@@ -199,9 +199,9 @@
 				sent 9.82K bytes  received 18 bytes  19.67K bytes/sec<br/>
 				total size is 692.82M  speedup is 70,429.63<br/>
 				<b>2020-03-30 11:34:13</b> - Finished nextcloud database sync from backup.<br/>
-				<b>2020-03-30 11:34:13</b> - Taking nextcloud-app out of maintenance mode...<br/>
+				<b>2020-03-30 11:34:13</b> - Taking nextcloud out of maintenance mode...<br/>
 				Maintenance mode disabled<br/>
-				<b>2020-03-30 11:34:14</b> - Scanning the nextcloud-app data files and updating the cache accordingly.<br/>
+				<b>2020-03-30 11:34:14</b> - Scanning the nextcloud data files and updating the cache accordingly.<br/>
 				&emsp;&emsp;&emsp;	(This may take a while but the nextcloud instance should be accessible while the scan runs.)<br/>
 				Starting scan for user 1 out of 1 (jadon)<br/>
 				&emsp;&emsp;&emsp;	Folder 			/jadon/<br/>
@@ -239,7 +239,7 @@
 				$ cat /home/docker/nextcloud-bu/ncbu.log<br/>
 				<br/>
 				<b>2021-06-18 00:00:00</b> - Running ncbu (nextcloud backup)...<br/>
-				<b>2021-06-18 00:00:00</b> - Putting nextcloud-app into maintenance mode...<br/>
+				<b>2021-06-18 00:00:00</b> - Putting nextcloud into maintenance mode...<br/>
 				<b>2021-06-18 00:00:00</b> - Nextcloud data backup: Syncing nextcloud-app volume to /backup...<br/>
 				2021/06/18 00:00:00 [35874] building file list<br/>
 				2021/06/18 00:00:01 [35874] >f..t...... config/config.php<br/>
@@ -265,7 +265,7 @@
 				2021/06/18 00:00:10 [35901] sent 386.56M bytes  received 436 bytes  110.45M bytes/sec<br/>
 				2021/06/18 00:00:10 [35901] total size is 878.59M  speedup is 2.27<br/>
 				<b>2021-06-18 00:00:10</b> - Finished nextcloud database sync.<br/>
-				<b>2021-06-18 00:00:10</b> - Taking nextcloud-app out of maintenance mode...<br/>
+				<b>2021-06-18 00:00:10</b> - Taking nextcloud out of maintenance mode...<br/>
 				<b>2021-06-18 00:00:10</b> - Rotating logfile if required...<br/>
 				<b>2021-06-18 00:00:10</b> - All done.<br/>
 			</p></div>
