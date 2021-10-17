@@ -44,7 +44,7 @@
 
 			<h2 class="align-center">Hosts</h2>
 			<p><center>The following table lists the machines I have on my network and the roles I assigned them.</center></p>
-			<table class="text-table"><col style="width:auto"><col style="width:auto"><col style="width:600px"><col style="width:auto">
+			<table class="simple-table"><col style="width:auto"><col style="width:auto"><col style="width:600px"><col style="width:auto">
 
 				<!-- column headings -->
 				<tr>
@@ -63,10 +63,8 @@
 						<p>Configured as an ip cam.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>motion</li>
-						</ul>
+						<p>common</p>
+						<p>motion</p>
 					</td>
 				</tr>
 
@@ -79,14 +77,12 @@
 						<p>Also doubles as a <a href="https://www.wireguard.com/">wireguard</a> endpoint.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>docker</li>
-							<li>headless</li>
-							<li>secure</li>
-							<li>vpn</li>
-							<li>wireguard</li>
-						</ul>
+						<p>common</p>
+						<p>docker</p>
+						<p>headless</p>
+						<p>secure</p>
+						<p>vpn</p>
+						<p>wireguard</p>
 					</td>
 				</tr>
 
@@ -100,10 +96,8 @@
 						<p>This pi runs home assistant on top of of an <a href="https://ubuntu.com/download/raspberry-pi">ubuntu server</a> base.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>homeassistant</li>
-						</ul>
+						<p>common</p>
+						<p>homeassistant</p>
 					</td>
 				</tr>
 
@@ -117,14 +111,12 @@
 						<p>Refer to the <a href="https://clews.pro/projects/clews.php">clews.pro project page</a> or <a href="https://gitlab.com/clewsy/clews.pro">gitlab repo</a>.</p>
 					</td>
 					<td>
-						<ul>
-							<li>clews.pro</li>
-							<li>common</li>
-							<li>docker</li>
-							<li>headless</li>
-							<li>secure</li>
-							<li>wireguard</li>
-						</ul>
+						<p>clews.pro</p>
+						<p>common</p>
+						<p>docker</p>
+						<p>headless</p>
+						<p>secure</p>
+						<p>wireguard</p>
 					</td>
 				</tr>
 
@@ -136,19 +128,17 @@
 						<p>My main desktop machine.</p>
 					</td>
 					<td>
-						<ul>
-							<li>clews.pro</li>
-							<li>common</li>
-							<li>desktop</li>
-							<li>develop</li>
-							<li>docker</li>
-							<li>headless</li>
-							<li>mpd</li>
-							<li>node</li>
-							<li>secure</li>
-							<li>vpn</li>
-							<li>wireguard</li>
-						</ul>
+						<p>clews.pro</p>
+						<p>common</p>
+						<p>desktop</p>
+						<p>develop</p>
+						<p>docker</p>
+						<p>headless</p>
+						<p>mpd</p>
+						<p>node</p>
+						<p>secure</p>
+						<p>vpn</p>
+						<p>wireguard</p>
 					</td>
 				</tr>
 
@@ -160,9 +150,7 @@
 						<p>My smortphone.</p>
 					</td>
 					<td>
-						<ul>
-							<li>droid</li>
-						</ul>
+						<p>droid</p>
 					</td>
 				</tr>
 
@@ -175,10 +163,8 @@
 						<p>Configured to serve a connected laser printer on the local network.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>cups</li>
-						</ul>
+						<p>common</p>
+						<p>cups</p>
 					</td>
 				</tr>
 
@@ -192,9 +178,7 @@
 						<p>Refer to the <a href="/projects/media_center.php">media_center</a> project page.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-						</ul>
+						<p>common</p>
 					</td>
 				</tr>
 
@@ -206,16 +190,14 @@
 						<p>My laptop.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>desktop</li>
-							<li>develop</li>
-							<li>mpd</li>
-							<li>node</li>
-							<li>secure</li>
-							<li>vpn</li>
-							<li>wireguard</li>
-						</ul>
+						<p>common</p>
+						<p>desktop</p>
+						<p>develop</p>
+						<p>mpd</p>
+						<p>node</p>
+						<p>secure</p>
+						<p>vpn</p>
+						<p>wireguard</p>
 					</td>
 				</tr>
 
@@ -228,10 +210,8 @@
 						<p>Refer to the <a href="/projects/p0wer.php">p0wer</a> project page or <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>p0wer</li>
-						</ul>
+						<p>common</p>
+						<p>p0wer</p>
 					</td>
 				</tr>
 
@@ -244,10 +224,8 @@
 						<p>Configured as an ip cam.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>motion</li>
-						</ul>
+						<p>common</p>
+						<p>motion</p>
 					</td>
 				</tr>
 
@@ -260,11 +238,9 @@
 						<p>Refer to the <a href="/projects/rad10.php">rad10</a> project page or <a href="https://gitlab.com/clewsy/rad10d">gitlab repo</a>.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>mpd</li>
-							<li>rad10</li>
-						</ul>
+						<p>common</p>
+						<p>mpd</p>
+						<p>rad10</p>
 					</td>
 				</tr>
 
@@ -277,12 +253,10 @@
 						<p>Pulls various camera streams together into a single point of access.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>secure</li>
-							<li>docker</li>
-							<li>motioneye</li>
-						</ul>
+						<p>common</p>
+						<p>secure</p>
+						<p>docker</p>
+						<p>motioneye</p>
 					</td>
 				</tr>
 
@@ -296,13 +270,11 @@
 						<p>Also runs some custom cron job admin/maintenance scripts.</p>
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>headless</li>
-							<li>node</li>
-							<li>polly</li>
-							<li>secure</li>
-						</ul>
+						<p>common</p>
+						<p>headless</p>
+						<p>node</p>
+						<p>polly</p>
+						<p>secure</p>
 					</td>
 				</tr>
 
@@ -317,16 +289,14 @@
 						<p>For a few years I used <a href="https://www.openmediavault.org/">openmediavault</a> (omv) as the operating system for backups and file serving, but I switched to a minimal Ubuntu server install which allowed me to fully automate deployment/redeployment without needing to use the omv gui or learn the omv command-line options.</p> 
 					</td>
 					<td>
-						<ul>
-							<li>common</li>
-							<li>docker</li>
-							<li>file_server</li>
-							<li>headless</li>
-							<li>qbittorrent</li>
-							<li>rsync_server</li>
-							<li>vpn</li>
-							<li>wireguard</li>
-						</ul>
+						<p>common</p>
+						<p>docker</p>
+						<p>file_server</p>
+						<p>headless</p>
+						<p>qbittorrent</p>
+						<p>rsync_server</p>
+						<p>vpn</p>
+						<p>wireguard</p>
 					</td>
 				</tr>
 
@@ -340,14 +310,12 @@
 						<p>Refer to the <a href="/projects/clews.php">clews.pro</a> project page or <a href="https://gitlab.com/clewsy/clews.pro">gitlab repo</a>.</p>
 					</td>
 					<td>
-						<ul>
-							<li>clews.pro</li>
-							<li>common</li>
-							<li>docker</li>
-							<li>headless</li>
-							<li>polly</li>
-							<li>secure</li>
-						</ul>
+						<p>clews.pro</p>
+						<p>common</p>
+						<p>docker</p>
+						<p>headless</p>
+						<p>polly</p>
+						<p>secure</p>
 					</td>
 				</tr>
 
@@ -356,7 +324,7 @@
 			<hr />
 			<h2 class="align-center">Roles</h2>
 			<p><center>The following table describes the various roles I created and use.</center></p>
-			<table class="text-table">
+			<table class="simple-table">
 
 				<!-- column headings -->
 				<tr>

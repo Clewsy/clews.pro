@@ -83,6 +83,9 @@ table.simple-table th, table.simple-table td {
 table.simple-table th {
 	font-weight: bold;
 }
+table.simple-table p {
+	margin: 0px;
+}
 
 /*Table formatting for text tables*/
 table.text-table {
