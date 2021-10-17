@@ -107,6 +107,27 @@
 					</td>
 				</tr>
 
+				<!-- clews.pro -->
+				<tr>
+					<th scope="row">clews.pro</th>
+					<td><a href="https://ubuntu.com/">Ubuntu</a></td>
+					<td>
+						<p>Remote VPS web server machine.</p>
+						<p>Serves various web sites and web apps.  Also acts as a <a href="https://www.wireguard.com/">Wireguard</a> endpoint.</p>
+						<p>Refer to the <a href="https://clews.pro/projects/clews.php">clews.pro project page</a> or <a href="https://gitlab.com/clewsy/clews.pro">gitlab repo</a>.</p>
+					</td>
+					<td>
+						<ul>
+							<li>clews.pro</li>
+							<li>common</li>
+							<li>docker</li>
+							<li>headless</li>
+							<li>secure</li>
+							<li>wireguard</li>
+						</ul>
+					</td>
+				</tr>
+
 				<!-- farnsworth -->
 				<tr>
 					<th scope="row">farnsworth</th>
@@ -401,6 +422,12 @@
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/homeassistant">homeassistant</a></th>
 					<td>First configure docker role as a pre-requisite.  Then install/remove certain packages as required by the <a href="https://github.com/home-assistant/supervised-installer">home assistant supervised installer script</a>.  Finally download and run the installer script that will install <a href="https://www.home-assistant.io/">home assistant supervised</a>.</td>
+				</tr>
+
+				<!-- monster -->
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/monster">monster</a></th>
+					<td>Using <a href="https://docs.docker.com/compose/">docker-compose</a>, will configure a box as a containerised web server.  Will serve the <a href="https://clews.monster">clews.monster</a> web-site and a handful of web-apps.  Some additional information can be seen <a href="https://clews.pro/projects/clews_monster.php">here</a>.</td>
 				</tr>
 
 				<!-- motion -->
