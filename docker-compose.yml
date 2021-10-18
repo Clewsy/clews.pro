@@ -255,8 +255,9 @@ services:
     networks:
       - clews.pro_network
     volumes:
-      - ./clews.pro/html/:/clews.pro/html/  #Must match location of html/css/php files volume defined for clews.pro container.
-      - ./clews.dev/html/:/clews.dev/html/  #Must match location of html/css/php files volume defined for clews.dev container.
+      - ./clews.pro/html/:/clews.pro/html/   #Must match location of html/css/php files volume defined for clews.pro container.
+      - ./clews.dev/html/:/clews.dev/html/   #Must match location of html/css/php files volume defined for clews.dev container.
+      - ./clews.tech/html/:/clews.tech/html/ #Must match location of html/css/php files volume defined for clews.tech container.
     restart: unless-stopped
 
 ######################################### Personal website container clews.pro
@@ -300,6 +301,27 @@ services:
     volumes:
       - ./clews.dev/html/:/clews.dev/html/
       - ./clews.dev/conf.d/:/etc/nginx/conf.d
+    restart: unless-stopped
+
+######################################### clews.tech website container
+  nginx-clews.tech:
+    image: nginx
+    container_name: nginx-clews.tech
+    networks:
+      - clews.pro_network
+    depends_on:
+      - nginx-proxy
+      - nginx-proxy-acme
+    environment:
+      - NGINX_HOST=${NGINX_CLEWS_TECH_URL}
+      - NGINX_PORT=80
+      - VIRTUAL_PORT=80
+      - VIRTUAL_HOST=${NGINX_CLEWS_TECH_URL}
+      - LETSENCRYPT_HOST=${NGINX_CLEWS_TECH_URL}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    volumes:
+      - ./clews.tech/html/:/clews.tech/html/
+      - ./clews.tech/conf.d/:/etc/nginx/conf.d
     restart: unless-stopped
 
 ########################################## tyler website container

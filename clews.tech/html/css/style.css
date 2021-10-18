@@ -1,0 +1,29 @@
+body {
+	font-family: monospace;
+	font-size: 30px;
+	color: darkgreen;
+	background-color: black;
+}
+
+#header {
+	text-align: center;
+}
+
+h1 {
+	color: ghostwhite;
+	font-size: 60px;
+	margin-top: 0px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+a:link, a:visited {
+	color: ghostwhite;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: dodgerblue;
+	text-decoration: underline;	
+}
