@@ -18,7 +18,7 @@
 			<div id="header-links">
 				<h2>
 					<b>|</b>
-					<a href="/antarctica.php">antarctica</a>
+					<a href="/antarctica/antarctica.php">antarctica</a>
 					<b>|</b>
 				</h2>
 			</div>

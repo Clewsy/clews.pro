@@ -8,6 +8,7 @@ body {
 	margin-right: auto;
 }
 
+
 h1 {
 	color: ghostwhite;
 	font-size: 60px;
@@ -15,26 +16,42 @@ h1 {
 	margin-bottom: 20px;
 }
 
+h2 {
+	color: ghostwhite;
+	font-size: 30px;
+	font-weight: normal;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
 a:link, a:visited {
 	color: ghostwhite;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover, a:active {
 	color: darkblue;
 	text-decoration: underline;	
 }
 
+
 .gallery {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	border-spacing: 50px 0px;
+	border-spacing: 50px 50px;
 }
 
 .gallery td {
 	border-style: solid;
-	border-width: 5px;
+	border-width: 10px;
 	border-color: ghostwhite;
 	border-radius: 20px;
+	padding: 0;
 	width: 50%;
+}
+
+.gallery img {
+	width: 100%;
+	overflow: hidden;
+	vertical-align: bottom;
 }
