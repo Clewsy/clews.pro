@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1>met-tech in Antarctica</h1>
-		<a href="https://clews.tech/antarctica.php"><img id="clewsy_image" src="/images/clews_antarctica_logo.png" title="clewsy" /></a>
+		<a href="https://clews.tech/antarctica/antarctica.php"><img id="clewsy_image" src="/images/clews_antarctica_logo.png" title="clewsy" /></a>
 		<h2>This is where I'll share photos and video clips from my time at <a href="https://www.antarctica.gov.au/antarctic-operations/stations/casey/"><u>Casey Station</u></a>.</h2>
 		<table class="gallery">
 			<tr>
