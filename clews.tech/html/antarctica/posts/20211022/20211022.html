@@ -3,7 +3,7 @@
 	<head>
 		<title>Adventures of a met-tech in Antarctica.</title>
 		<link href="/css/style_antarctica.css" type="text/css" rel="stylesheet" />
-		<link rel="shortcut icon" href="/antarctica/favicon_antarctica.ico">
+		<link rel="shortcut icon" type="image/png" href="/antarctica/favicon_antarctica.ico">
 		<meta charset="UTF-8">
 	</head>
 	<body>
