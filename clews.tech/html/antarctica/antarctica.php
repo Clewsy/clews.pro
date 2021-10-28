@@ -14,18 +14,18 @@
 			<tr>
 				<td class="align-right">
 					<a href="posts/20211022/20211022.html">
-					<p>2021-10-22</p>
-					<img src="posts/20211022/20211022-4.jpg" title="Fire-Fighting">
-					<p>Fire-fighting Training.</p>
-				</a>
-			</td>
-			<td class="align-left">
-				<a href="posts/20211016/20211016.html">
-					<p>2021-10-16</p>
-					<img src="posts/20211016/small_20211016_095326.jpg" title="Nuyina">
-					<p>The Nuyina arrives in Hobart.</p>
-				</a>
-			</td>
+						<p>2021-10-22</p>
+						<img src="posts/20211022/20211022-4.jpg" title="Fire-Fighting">
+						<p>Fire-fighting Training.</p>
+					</a>
+				</td>
+				<td class="align-left">
+					<a href="posts/20211016/20211016.html">
+						<p>2021-10-16</p>
+						<img src="posts/20211016/small_20211016_095326.jpg" title="Nuyina">
+						<p>The Nuyina arrives in Hobart.</p>
+					</a>
+				</td>
 			</tr>
 		</table>
 	</body>
