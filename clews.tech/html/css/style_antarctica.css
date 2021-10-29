@@ -53,10 +53,10 @@ a:hover, a:active {
 	border-radius: 20px;
 	padding: 0;
 	width: 50%;
+	overflow: hidden;
 }
 
 .gallery img {
 	width: 100%;
-	overflow: hidden;
 	vertical-align: bottom;
 }
