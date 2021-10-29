@@ -9,10 +9,10 @@
 			<p>A daemon written in C (<a href="https://gitlab.com/clewsy/rad10d">rad10d</a>) runs on the pi and polls for changes in the encoder or a push of the toggle button.  The code is available on <a href="https://gitlab.com/clewsy/rad10d">gitlab</a>.</p>
 			<p>The daemon is configured as a service to run at boot.  It intefaces with <a href="https://www.musicpd.org/">MPD</a> using the API thanks to the <a href="https://www.musicpd.org/libs/libmpdclient/">libmpdclient</a> C/C++ library.</p>
 			<p>Audio is output from the raspberry pi 3.5mm audio jack to a single speaker via a small amplifier module.</p>
-			<p>Initially I found (via dmesg) that the raspberry pi occassionally triggered an undervolt warning.  It never crashed, but with some experimenting I found the under-voltage would occassionaly be triggered at higher volumes when the amplifier drew higher currents.  I fixed this by switching to a 4amp  power supply, combined with a big capacitor to help supply peak loads.</p>
-			<p>I prototyped with a breadboard until I got the code working before making it permanent.</p>
+			<p>Initially I found (via dmesg) that the raspberry pi occassionally triggered an undervolt warning.  It never crashed, but with some experimenting I found the under-voltage would occassionaly be triggered at higher volumes when the amplifier drew higher currents.  I fixed this by switching to a 4amp  power supply and a big capacitor to help supply peak loads.</p>
+			<p>The prototyping was done with a breadboard until I got the code working before making it permanent.</p>
 			<p>I had been experimenting with some hobbyist-level <a href="/projects/wood.php">woodworking</a> so I decided to put it all in a wooden box, most of which is recycled pallet wood. Access to the ethernet and usb ports was retained for alternative connectivity and the ability to play MP3s from a usb drive, though I almost exclusivley use it for playing a few streams over wifi.</p>
-			<p>Mostly I use this self-contained, wifi-connected setup to <a href="http://dir.xiph.org/genres/Electronic">stream</a> "radio", though it is set to locally mount an <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> share containing my music collection.</p>
+			<p>Mostly I use this self-contained, wifi-connected setup to <a href="https://nightride.fm/">stream</a> "radio", though it is also configured to locally mount an <a href="https://en.wikipedia.org/wiki/Network_File_System_(protocol)">nfs</a> share containing my music collection.</p>
 			<p>There are a few MPD client apps for android that allow finer control of MPD (I like <a href="https://f-droid.org/en/packages/org.gateshipone.malp/">M.A.L.P.</a>)  That said, in keeping with the minimalist hardware interface, I created a similarly minimal web interface with a small amount of php, html and css.  This WebUI provides the same contol (play/pause and volume +/-), but I also added a few "preset" buttons to launch my most-used streams.</p>
 			<hr />
 
@@ -91,15 +91,15 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/rad10/rad10_02.jpg"><img class="photo" src="images/rad10/small_rad10_02.jpg" alt="Rear view." /></a></td>
-					<td class="align-right"><a href="images/rad10/rad10_03.jpg"><img class="photo" src="images/rad10/small_rad10_03.jpg" alt="Prototyping." /></a></td>
+					<td><a href="images/rad10/rad10_02.jpg"><img src="images/rad10/small_rad10_02.jpg" alt="Rear view." /></a></td>
+					<td><a href="images/rad10/rad10_03.jpg"><img src="images/rad10/small_rad10_03.jpg" alt="Prototyping." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/rad10/rad10_04.png"><img class="photo" src="images/rad10/rad10_04.png" alt="WebUI on an android smartphone." /></a></td>
-					<td class="align-right"><a href="images/rad10/rad10_05.png"><img class="photo" src="images/rad10/rad10_05.png" alt="WebUI on an android smartphone." /></a></td>
+					<td><a href="images/rad10/rad10_04.png"><img src="images/rad10/rad10_04.png" alt="WebUI on an android smartphone." /></a></td>
+					<td><a href="images/rad10/rad10_05.png"><img src="images/rad10/rad10_05.png" alt="WebUI on an android smartphone." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/rad10/rad10_06.jpg"><img class="photo" src="images/rad10/small_rad10_06.jpg" alt="Opened to add a capacitor." /></a></td>
+					<td><a href="images/rad10/rad10_06.jpg"><img src="images/rad10/small_rad10_06.jpg" alt="Opened to add a capacitor." /></a></td>
 				</tr>
 			</table>
 		</div>

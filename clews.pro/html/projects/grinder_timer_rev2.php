@@ -4,8 +4,7 @@
 			<h2 class="align-center">grinder_timer_rev2</h2>
 			<a href="images/grinder_timer_rev2/grinder_timer_rev2_11.jpg"><img class="photo align-left" src="images/grinder_timer_rev2/small_grinder_timer_rev2_11.jpg" alt="The final timer."></a>
 			<p>An upgrade to the original <a href="/projects/grinder_timer.php">grinder_timer</a> - a programmable timer tethered to a Rancilio Rocky coffee grinder.</p>
-			<p>Honestly, I use the original every day and it has been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.</p>
-			<p>The goals for revision 2 included:</p>
+			<p>Honestly, I use the original every day and it has been working flawlessly for a few years, but the one thing that always bugged me about it was the mushy keypad buttons.  I was looking for a new project to start, so I decided to re-design and build from scratch a version with some nicer tactile buttons and a few other improvements.  The goals for revision 2 included:</p>
 			<ul>
 				<li>Hardware improvements:</li>
 				<ul>
@@ -119,28 +118,28 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_01.png"><img class="photo" src="images/grinder_timer_rev2/grinder_timer_rev2_01.png" alt="PCB render top." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_02.png"><img class="photo" src="images/grinder_timer_rev2/grinder_timer_rev2_02.png" alt="PCB render bottom." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_01.png"><img src="images/grinder_timer_rev2/grinder_timer_rev2_01.png" alt="PCB render top." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_02.png"><img src="images/grinder_timer_rev2/grinder_timer_rev2_02.png" alt="PCB render bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_03.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_03.jpg" alt="PCB fabricated top." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_04.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_04.jpg" alt="PCB fabricated bottom." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_03.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_03.jpg" alt="PCB fabricated top." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_04.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_04.jpg" alt="PCB fabricated bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_05.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_05.jpg" alt="PCB assembled top." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_06.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_06.jpg" alt="PCB assembled bottom." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_05.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_05.jpg" alt="PCB assembled top." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_06.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_06.jpg" alt="PCB assembled bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_07.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_07.jpg" alt="PCB assembled top, another angle." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_08.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_08.jpg" alt="Close shot of the OLED." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_07.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_07.jpg" alt="PCB assembled top, another angle." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_08.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_08.jpg" alt="Close shot of the OLED." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_09.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_09.jpg" alt="Template for enclosure cut-out." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_10.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_10.jpg" alt="Enclosure prepared." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_09.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_09.jpg" alt="Template for enclosure cut-out." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_10.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_10.jpg" alt="Enclosure prepared." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer_rev2/grinder_timer_rev2_12.jpg"><img class="photo" src="images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" alt="Installed into the enclosure and powered on." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer_rev2/grinder_timer_rev2_14.png"><img class="photo" src="images/grinder_timer_rev2/grinder_timer_rev2_14.png" alt="The complete schematic." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_12.jpg"><img src="images/grinder_timer_rev2/small_grinder_timer_rev2_12.jpg" alt="Installed into the enclosure and powered on." /></a></td>
+					<td><a href="images/grinder_timer_rev2/grinder_timer_rev2_14.png"><img src="images/grinder_timer_rev2/grinder_timer_rev2_14.png" alt="The complete schematic." /></a></td>
 				</tr>
 			</table>
 		</div>

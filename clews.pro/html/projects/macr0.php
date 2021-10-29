@@ -211,75 +211,75 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_01.png"><img class="photo" src="images/macr0/macr0_01.png" alt="PCB design - top." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_02.png"><img class="photo" src="images/macr0/macr0_02.png" alt="PCB design - bottom." /></a></td>
+					<td><a href="images/macr0/macr0_01.png"><img src="images/macr0/macr0_01.png" alt="PCB design - top." /></a></td>
+					<td><a href="images/macr0/macr0_02.png"><img src="images/macr0/macr0_02.png" alt="PCB design - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_03.jpg"><img class="photo" src="images/macr0/small_macr0_03.jpg" alt="PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_04.jpg"><img class="photo" src="images/macr0/small_macr0_04.jpg" alt="PCB fabricated - bottom." /></a></td>
+					<td><a href="images/macr0/macr0_03.jpg"><img src="images/macr0/small_macr0_03.jpg" alt="PCB fabricated - top." /></a></td>
+					<td><a href="images/macr0/macr0_04.jpg"><img src="images/macr0/small_macr0_04.jpg" alt="PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_05.jpg"><img class="photo" src="images/macr0/small_macr0_05.jpg" alt="PCB assembled - bottom." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_06.jpg"><img class="photo" src="images/macr0/small_macr0_06.jpg" alt="PCB assembled - top." /></a></td>
+					<td><a href="images/macr0/macr0_05.jpg"><img src="images/macr0/small_macr0_05.jpg" alt="PCB assembled - bottom." /></a></td>
+					<td><a href="images/macr0/macr0_06.jpg"><img src="images/macr0/small_macr0_06.jpg" alt="PCB assembled - top." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_07.jpg"><img class="photo" src="images/macr0/small_macr0_07.jpg" alt="PCB assembled - top with keycaps." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_08.jpg"><img class="photo" src="images/macr0/small_macr0_08.jpg" alt="Beginning fabrication of frame." /></a></td>
+					<td><a href="images/macr0/macr0_07.jpg"><img src="images/macr0/small_macr0_07.jpg" alt="PCB assembled - top with keycaps." /></a></td>
+					<td><a href="images/macr0/macr0_08.jpg"><img src="images/macr0/small_macr0_08.jpg" alt="Beginning fabrication of frame." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_09.jpg"><img class="photo" src="images/macr0/small_macr0_09.jpg" alt="Frame and base fabrication 1." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_10.jpg"><img class="photo" src="images/macr0/small_macr0_10.jpg" alt="Frame and base fabrication 2." /></a></td>
+					<td><a href="images/macr0/macr0_09.jpg"><img src="images/macr0/small_macr0_09.jpg" alt="Frame and base fabrication 1." /></a></td>
+					<td><a href="images/macr0/macr0_10.jpg"><img src="images/macr0/small_macr0_10.jpg" alt="Frame and base fabrication 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_11.jpg"><img class="photo" src="images/macr0/small_macr0_11.jpg" alt="Frame assembled." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_12.jpg"><img class="photo" src="images/macr0/small_macr0_12.jpg" alt="Enclosed - bottom view.." /></a></td>
+					<td><a href="images/macr0/macr0_11.jpg"><img src="images/macr0/small_macr0_11.jpg" alt="Frame assembled." /></a></td>
+					<td><a href="images/macr0/macr0_12.jpg"><img src="images/macr0/small_macr0_12.jpg" alt="Enclosed - bottom view.." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_13.jpg"><img class="photo" src="images/macr0/small_macr0_13.jpg" alt="Next to volcon." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_14.jpg"><img class="photo" src="images/macr0/small_macr0_14.jpg" alt="Assembled, pen for scale." /></a></td>
+					<td><a href="images/macr0/macr0_13.jpg"><img src="images/macr0/small_macr0_13.jpg" alt="Next to volcon." /></a></td>
+					<td><a href="images/macr0/macr0_14.jpg"><img src="images/macr0/small_macr0_14.jpg" alt="Assembled, pen for scale." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_15.jpg"><img class="photo" src="images/macr0/small_macr0_15.jpg" alt="Assembled, closer view." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_16.png"><img class="photo" src="images/macr0/macr0_16.png" alt="Schematic for revision 1." /></a></td>
+					<td><a href="images/macr0/macr0_15.jpg"><img src="images/macr0/small_macr0_15.jpg" alt="Assembled, closer view." /></a></td>
+					<td><a href="images/macr0/macr0_16.png"><img src="images/macr0/macr0_16.png" alt="Schematic for revision 1." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_17.png"><img class="photo" src="images/macr0/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_18.png"><img class="photo" src="images/macr0/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
+					<td><a href="images/macr0/macr0_17.png"><img src="images/macr0/macr0_17.png" alt="PCB design - top - revision 2." /></a></td>
+					<td><a href="images/macr0/macr0_18.png"><img src="images/macr0/macr0_18.png" alt="PCB design - bottom - revision 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_19.jpg"><img class="photo" src="images/macr0/small_macr0_19.jpg" alt="Rev 2 PCB - top view." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_20.jpg"><img class="photo" src="images/macr0/small_macr0_20.jpg" alt="Rev 2 PCB - bottom view." /></a></td>
+					<td><a href="images/macr0/macr0_19.jpg"><img src="images/macr0/small_macr0_19.jpg" alt="Rev 2 PCB - top view." /></a></td>
+					<td><a href="images/macr0/macr0_20.jpg"><img src="images/macr0/small_macr0_20.jpg" alt="Rev 2 PCB - bottom view." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_21.jpg"><img class="photo" src="images/macr0/small_macr0_21.jpg" alt="Rev 2 PCB assembled." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_22.jpg"><img class="photo" src="images/macr0/small_macr0_22.jpg" alt="Rev 2 assembly - 1." /></a></td>
+					<td><a href="images/macr0/macr0_21.jpg"><img src="images/macr0/small_macr0_21.jpg" alt="Rev 2 PCB assembled." /></a></td>
+					<td><a href="images/macr0/macr0_22.jpg"><img src="images/macr0/small_macr0_22.jpg" alt="Rev 2 assembly - 1." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_23.jpg"><img class="photo" src="images/macr0/small_macr0_23.jpg" alt="Rev 2 assembly - 2." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_24.jpg"><img class="photo" src="images/macr0/small_macr0_24.jpg" alt="Rev 2 assembly - 3." /></a></td>
+					<td><a href="images/macr0/macr0_23.jpg"><img src="images/macr0/small_macr0_23.jpg" alt="Rev 2 assembly - 2." /></a></td>
+					<td><a href="images/macr0/macr0_24.jpg"><img src="images/macr0/small_macr0_24.jpg" alt="Rev 2 assembly - 3." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_25.jpg"><img class="photo" src="images/macr0/small_macr0_25.jpg" alt="Rev 2 assembled - bottom." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_26.jpg"><img class="photo" src="images/macr0/small_macr0_26.jpg" alt="Rev 2 assembled - top." /></a></td>
+					<td><a href="images/macr0/macr0_25.jpg"><img src="images/macr0/small_macr0_25.jpg" alt="Rev 2 assembled - bottom." /></a></td>
+					<td><a href="images/macr0/macr0_26.jpg"><img src="images/macr0/small_macr0_26.jpg" alt="Rev 2 assembled - top." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_27.jpg"><img class="photo" src="images/macr0/small_macr0_27.jpg" alt="Rev 2 working." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_28.png"><img class="photo" src="images/macr0/macr0_28.png" alt="Schematic for revision 2." /></a></td>
+					<td><a href="images/macr0/macr0_27.jpg"><img src="images/macr0/small_macr0_27.jpg" alt="Rev 2 working." /></a></td>
+					<td><a href="images/macr0/macr0_28.png"><img src="images/macr0/macr0_28.png" alt="Schematic for revision 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_29.jpg"><img class="photo" src="images/macr0/small_macr0_29.jpg" alt="Rev 2 working with blank, black keycaps." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_30.jpg"><img class="photo" src="images/macr0/small_macr0_30.jpg" alt="Rev 2 working with blank, translucent keycaps." /></a></td>
+					<td><a href="images/macr0/macr0_29.jpg"><img src="images/macr0/small_macr0_29.jpg" alt="Rev 2 working with blank, black keycaps." /></a></td>
+					<td><a href="images/macr0/macr0_30.jpg"><img src="images/macr0/small_macr0_30.jpg" alt="Rev 2 working with blank, translucent keycaps." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_31.jpg"><img class="photo" src="images/macr0/small_macr0_31.jpg" alt="Rev 2 working with chrome arrow keycaps, next to volcon." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_32.jpg"><img class="photo" src="images/macr0/small_macr0_32.jpg" alt="Rev 2 working with chrome arrow keycaps." /></a></td>
+					<td><a href="images/macr0/macr0_31.jpg"><img src="images/macr0/small_macr0_31.jpg" alt="Rev 2 working with chrome arrow keycaps, next to volcon." /></a></td>
+					<td><a href="images/macr0/macr0_32.jpg"><img src="images/macr0/small_macr0_32.jpg" alt="Rev 2 working with chrome arrow keycaps." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_33.jpg"><img class="photo" src="images/macr0/small_macr0_33.jpg" alt="Rev 2 working with black media control keycaps." /></a></td>
-					<td class="align-right"><a href="images/macr0/macr0_34.jpg"><img class="photo" src="images/macr0/small_macr0_34.jpg" alt="Rev 2 working with black media control keycaps." /></a></td>
+					<td><a href="images/macr0/macr0_33.jpg"><img src="images/macr0/small_macr0_33.jpg" alt="Rev 2 working with black media control keycaps." /></a></td>
+					<td><a href="images/macr0/macr0_34.jpg"><img src="images/macr0/small_macr0_34.jpg" alt="Rev 2 working with black media control keycaps." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/macr0/macr0_35.gif"><img class="photo" src="images/macr0/small_macr0_35.gif" alt="The assembled macr0 revision 2, showing the LED pulse effect." /></a></td>
+					<td><a href="images/macr0/macr0_35.gif"><img src="images/macr0/small_macr0_35.gif" alt="The assembled macr0 revision 2, showing the LED pulse effect." /></a></td>
 				</tr>
 			</table>
 		</div>

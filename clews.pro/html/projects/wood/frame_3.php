@@ -2,11 +2,15 @@
 <!-- Above here can be copied for a consistent header across pages -->
 		<div id="page">
 			<h2 class="align-center">Frame 3</h2>
-			<div id="gallery">
-				<a href="photos/frame_3/frame_3_01.jpg"><img class="photo" src="photos/frame_3/small_frame_3_01.jpg"></a>
-				<a href="photos/frame_3/frame_3_02.jpg"><img class="photo" src="photos/frame_3/small_frame_3_02.jpg"></a>
-				<a href="photos/frame_3/frame_3_03.jpg"><img class="photo" src="photos/frame_3/small_frame_3_03.jpg"></a>
-			</div>
+			<table class="gallery">
+				<tr>
+					<td><a href="photos/frame_3/frame_3_01.jpg"><img src="photos/frame_3/small_frame_3_01.jpg"></a></td>
+					<td><a href="photos/frame_3/frame_3_02.jpg"><img src="photos/frame_3/small_frame_3_02.jpg"></a></td>
+				</tr>
+				<tr>
+					<td><a href="photos/frame_3/frame_3_03.jpg"><img src="photos/frame_3/small_frame_3_03.jpg"></a></td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>

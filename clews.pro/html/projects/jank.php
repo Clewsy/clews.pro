@@ -3,14 +3,13 @@
 		<div id="page">
 			<h2 class="align-center">jank</h2>
 			<a href="images/jank/jank_14.jpg"><img class="photo align-left" src="images/jank/small_jank_14.jpg" alt="Jank without the enclosure." /></a>
-			<p>jank is <b>j</b>ust <b>an</b>other <b>k</b>eypad.  Specifically it's a 21-key usb numeric keypad.  I wanted one for use with my laptop.  Sure it would have cost a lot less to just buy one, but... (<i>insert justification here when you think of one</i>).  jank is open-source with all the code and CAD files available at <a href="https://gitlab.com/clewsy/jank/">GitLab</a>.</p>
-			<p>The main features of this keypad include:</p>
+			<p>jank is <b>j</b>ust <b>an</b>other <b>k</b>eypad.  Specifically it's a 21-key usb numeric keypad.  I wanted one for use with my laptop.  Sure it would have cost a lot less to just buy one, but... (<i>insert justification here when you think of one</i>).  jank is open-source with all the code and CAD files available at <a href="https://gitlab.com/clewsy/jank/">GitLab</a>.  The main features of this keypad include:</p>
 			<ul>
-				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller with connectivity via a USB type-c connector configured as a USB 2 device.  Power is also derived from the USB port.</li>
+				<li><a href="https://en.wikipedia.org/wiki/Human_interface_device">HID</a> compliant USB peripheral using an <a href="https://www.microchip.com/wwwproducts/en/ATmega32U4">ATmega32U4</a> microcontroller with connectivity via a USB type-c connector configured as a USB 2 device.  Power is also derived from USB.</li>
 				<li>21 mechanical keys (<a href="http://www.gateron.com/col/58460?categoryId=3295&lang=2">gateron</a> blues which are pin-compatible clones of <a href="https://www.cherrymx.de/en">Cherry MX</a> switches) with variable brightness white LED backlight on each key.</li>
 				<li>In addition to the 17 standard keys of a numerical keypad, there is also a row of four keys across the top of the device which are programmable macros.  (Well, all keys can be programmable macros, but this is how I have configured jank.)</li>
 			</ul>
-			<p>I previously completed a simpler macro pad project (<a href="/projects/macr0.php">macr0</a>) which served as an experiment to prepare for this project.  macr0 was effectively a trial so that I could get my head around a few concepts (<a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">key matrixing</a>, LED boost controllers, configurable macros with the HID protocol).  As such, development for jank went a lot faster since a lot of the <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">code from macr0</a> worked with minimal changes.</p>
+			<p>I previously completed a similar but simpler project (<a href="/projects/macr0.php">macr0</a>) which served as an experiment to prepare for this project.  macr0 was effectively a trial so that I could get my head around a few concepts (<a href="https://en.wikipedia.org/wiki/Keyboard_matrix_circuit">key matrixing</a>, LED boost controllers, configurable macros with the HID protocol).  As such, development for jank went a lot faster since I re-used <a href="https://gitlab.com/clewsy/macr0/-/tree/master/firmware">code from macr0</a> with minimal changes.</p>
 			<hr />
 
 			<h2><a href="https://gitlab.com/clewsy/jank/-/tree/master/hardware">Hardware</a></h2>
@@ -277,52 +276,52 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_01.png"><img class="photo" src="images/jank/jank_01.png" alt="Schematic." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_02.png"><img class="photo" src="images/jank/jank_02.png" alt="PCB layout." /></a></td>
+					<td><a href="images/jank/jank_01.png"><img src="images/jank/jank_01.png" alt="Schematic." /></a></td>
+					<td><a href="images/jank/jank_02.png"><img src="images/jank/jank_02.png" alt="PCB layout." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_03.png"><img class="photo" src="images/jank/jank_03.png" alt="PCB layout with infill - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_04.png"><img class="photo" src="images/jank/jank_04.png" alt="PCB layout with infill - bottom." /></a></td>
+					<td><a href="images/jank/jank_03.png"><img src="images/jank/jank_03.png" alt="PCB layout with infill - top." /></a></td>
+					<td><a href="images/jank/jank_04.png"><img src="images/jank/jank_04.png" alt="PCB layout with infill - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_05.png"><img class="photo" src="images/jank/jank_05.png" alt="PCB 3D view - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_06.png"><img class="photo" src="images/jank/jank_06.png" alt="PCB 3D view - bottom." /></a></td>
+					<td><a href="images/jank/jank_05.png"><img src="images/jank/jank_05.png" alt="PCB 3D view - top." /></a></td>
+					<td><a href="images/jank/jank_06.png"><img src="images/jank/jank_06.png" alt="PCB 3D view - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_07.jpg"><img class="photo" src="images/jank/small_jank_07.jpg" alt="PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_08.jpg"><img class="photo" src="images/jank/small_jank_08.jpg" alt="PCB fabricated - bottom." /></a></td>
+					<td><a href="images/jank/jank_07.jpg"><img src="images/jank/small_jank_07.jpg" alt="PCB fabricated - top." /></a></td>
+					<td><a href="images/jank/jank_08.jpg"><img src="images/jank/small_jank_08.jpg" alt="PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_09.jpg"><img class="photo" src="images/jank/small_jank_09.jpg" alt="PCB with stainless steel plate and keyswitches." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_10.jpg"><img class="photo" src="images/jank/small_jank_10.jpg" alt="PCB and keyswitches fit to stainless steel plate." /></a></td>
+					<td><a href="images/jank/jank_09.jpg"><img src="images/jank/small_jank_09.jpg" alt="PCB with stainless steel plate and keyswitches." /></a></td>
+					<td><a href="images/jank/jank_10.jpg"><img src="images/jank/small_jank_10.jpg" alt="PCB and keyswitches fit to stainless steel plate." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_11.jpg"><img class="photo" src="images/jank/small_jank_11.jpg" alt="PCB assembled with ISP connected." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_12.jpg"><img class="photo" src="images/jank/small_jank_12.jpg" alt="PCB assembled and USB connected." /></a></td>
+					<td><a href="images/jank/jank_11.jpg"><img src="images/jank/small_jank_11.jpg" alt="PCB assembled with ISP connected." /></a></td>
+					<td><a href="images/jank/jank_12.jpg"><img src="images/jank/small_jank_12.jpg" alt="PCB assembled and USB connected." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_13.jpg"><img class="photo" src="images/jank/small_jank_13.jpg" alt="jank running - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_14.jpg"><img class="photo" src="images/jank/small_jank_14.jpg" alt="jank running - angled." /></a></td>
+					<td><a href="images/jank/jank_13.jpg"><img src="images/jank/small_jank_13.jpg" alt="jank running - top." /></a></td>
+					<td><a href="images/jank/jank_14.jpg"><img src="images/jank/small_jank_14.jpg" alt="jank running - angled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_15.jpg"><img class="photo" src="images/jank/small_jank_15.jpg" alt="Wooden frame - top." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_16.jpg"><img class="photo" src="images/jank/small_jank_16.jpg" alt="Wooden frame - bottom	." /></a></td>
+					<td><a href="images/jank/jank_15.jpg"><img src="images/jank/small_jank_15.jpg" alt="Wooden frame - top." /></a></td>
+					<td><a href="images/jank/jank_16.jpg"><img src="images/jank/small_jank_16.jpg" alt="Wooden frame - bottom	." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_17.jpg"><img class="photo" src="images/jank/small_jank_17.jpg" alt="Wooden frame, LEDs on, no keycaps." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_18.jpg"><img class="photo" src="images/jank/small_jank_18.jpg" alt="Wooden frame, LEDs on, with keycaps." /></a></td>
+					<td><a href="images/jank/jank_17.jpg"><img src="images/jank/small_jank_17.jpg" alt="Wooden frame, LEDs on, no keycaps." /></a></td>
+					<td><a href="images/jank/jank_18.jpg"><img src="images/jank/small_jank_18.jpg" alt="Wooden frame, LEDs on, with keycaps." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_19.jpg"><img class="photo" src="images/jank/small_jank_19.jpg" alt="Testing with the laptop - 1." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_20.jpg"><img class="photo" src="images/jank/small_jank_20.jpg" alt="Testing with the laptop - 2." /></a></td>
+					<td><a href="images/jank/jank_19.jpg"><img src="images/jank/small_jank_19.jpg" alt="Testing with the laptop - 1." /></a></td>
+					<td><a href="images/jank/jank_20.jpg"><img src="images/jank/small_jank_20.jpg" alt="Testing with the laptop - 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_21.gif"><img class="photo" src="images/jank/jank_21.gif" alt="Fast-speed LED pulse effect, no keycaps." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_22.gif"><img class="photo" src="images/jank/jank_22.gif" alt="Medium-speed LED pulse effect, with keycaps." /></a></td>
+					<td><a href="images/jank/jank_21.gif"><img src="images/jank/jank_21.gif" alt="Fast-speed LED pulse effect, no keycaps." /></a></td>
+					<td><a href="images/jank/jank_22.gif"><img src="images/jank/jank_22.gif" alt="Medium-speed LED pulse effect, with keycaps." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/jank/jank_23.jpg"><img class="photo" src="images/jank/small_jank_23.jpg" alt="From the notebook - LED driver." /></a></td>
-					<td class="align-right"><a href="images/jank/jank_24.jpg"><img class="photo" src="images/jank/small_jank_24.jpg" alt="From the notebook - System overview." /></a></td>
+					<td><a href="images/jank/jank_23.jpg"><img src="images/jank/small_jank_23.jpg" alt="From the notebook - LED driver." /></a></td>
+					<td><a href="images/jank/jank_24.jpg"><img src="images/jank/small_jank_24.jpg" alt="From the notebook - System overview." /></a></td>
 				</tr>
 			</table>
 		</div>

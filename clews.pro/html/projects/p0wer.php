@@ -106,16 +106,16 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/p0wer/p0wer_03.jpg"><img class="photo" src="images/p0wer/p0wer_03.jpg" alt="Off-the-shelf 433.92MHz mains remote control kit." /></a></td>
-					<td class="align-right"><a href="images/p0wer/p0wer_04.jpg"><img class="photo" src="images/p0wer/p0wer_04.jpg" alt="Intermediate interface board with the 4066 chips." /></a></td>
+					<td><a href="images/p0wer/p0wer_03.jpg"><img src="images/p0wer/p0wer_03.jpg" alt="Off-the-shelf 433.92MHz mains remote control kit." /></a></td>
+					<td><a href="images/p0wer/p0wer_04.jpg"><img src="images/p0wer/p0wer_04.jpg" alt="Intermediate interface board with the 4066 chips." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/p0wer/p0wer_05.jpg"><img class="photo" src="images/p0wer/p0wer_05.jpg" alt="Assembled circuit." /></a></td>
-					<td class="align-right"><a href="images/p0wer/p0wer_06.png"><img class="photo" src="images/p0wer/p0wer_06.png" alt="Schematic." /></a></td>
+					<td><a href="images/p0wer/p0wer_05.jpg"><img src="images/p0wer/p0wer_05.jpg" alt="Assembled circuit." /></a></td>
+					<td><a href="images/p0wer/p0wer_06.png"><img src="images/p0wer/p0wer_06.png" alt="Schematic." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/p0wer/p0wer_07.png"><img class="photo" src="images/p0wer/p0wer_07.png" alt="Rev_2.0 Schematic." /></a></td>
-					<td class="align-right"><a href="images/p0wer/p0wer_08.png"><img class="photo" src="images/p0wer/p0wer_08.png" alt="WebUI on an Android device" /></a></td>
+					<td><a href="images/p0wer/p0wer_07.png"><img src="images/p0wer/p0wer_07.png" alt="Rev_2.0 Schematic." /></a></td>
+					<td><a href="images/p0wer/p0wer_08.png"><img src="images/p0wer/p0wer_08.png" alt="WebUI on an Android device" /></a></td>
 				</tr>
 			</table>
 		</div>

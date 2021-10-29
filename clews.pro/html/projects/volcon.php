@@ -4,7 +4,7 @@
 			<h2 class="align-center">VolCon</h2>
 			<a href="images/volcon/volcon_09.jpg"><img class="photo align-left" src="images/volcon/small_volcon_09.jpg" alt="Assembled volcon Rev 1 after re-working the wooden enclosure." /></a>
 			<p>This project began as an experiment when I inexplicably decided to learn how an optical rotary encoder worked (FYI, 2-bit <a href="https://en.wikipedia.org/wiki/Gray_code">Gray code</a>).</p>
-			<p>It transformed into a learning experience around USB - specifically the <a href="https://en.wikipedia.org/wiki/USB_human_interface_device_class">HID protocol</a>. Ultimately I ended up with a simple gadget that now sits on my desk and allows me to control the PC volume.</p>
+			<p>It transformed into a USM learning experience - specifically the <a href="https://en.wikipedia.org/wiki/USB_human_interface_device_class">HID protocol</a>. Ultimately I ended up with a simple desk gadget that allows me to control the PC volume.</p>
 			<p>A salvaged optical encoder was used to detect rotation along with a reclaimed head drum from a VCR which was repurposed as a control knob.  I very much like the smooth bearings combined with the heavy mass that let the drum spin forever.</p>
 			<p>Key concepts for the project were:</p>
 			<ul>
@@ -27,8 +27,8 @@
 			<h2>Spotted Gum > Stained Pine</h2>
 			<p>After some time (about six years!) of having this device in-use on my desk, I finally got sick of the simple (ugly) stained pine wood enclosure.  With some scrap spotted gum and a router (using a Roman ogee and roundover bits) I made a slightly nicer enclosure for volcon.
 			<hr />
-			<a href="images/volcon/volcon_22.gif"><img class="photo align-right" src="images/volcon/small_volcon_22.gif" alt="Rev 2 - Demo of gray code LED visualisation." /></a>
 			<h2>Revision 2</h2>
+			<a href="images/volcon/volcon_22.gif"><img class="photo align-right" src="images/volcon/small_volcon_22.gif" alt="Rev 2 - Demo of gray code LED visualisation." /></a>
 			<p>After even more time, I decided to do an overhaul.  Revision 2 would use the same head drum, optical encoder sensors and wooden enclosure.  The upgrades from revision 1 include:</p>
 			<ul>
 				<li>Schematic and PCB layout completely redone but using <a href="https://www.kicad.org/">KiCad</a> instead of Eagle.</li>
@@ -207,44 +207,44 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_01.jpg"><img class="photo" src="images/volcon/small_volcon_01.jpg" alt="The original assembly (with stained pine finish)." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_02.jpg"><img class="photo" src="images/volcon/small_volcon_02.jpg" alt="Partially assembled." /></a></td>
+					<td><a href="images/volcon/volcon_01.jpg"><img src="images/volcon/small_volcon_01.jpg" alt="The original assembly (with stained pine finish)." /></a></td>
+					<td><a href="images/volcon/volcon_02.jpg"><img src="images/volcon/small_volcon_02.jpg" alt="Partially assembled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_03.jpg"><img class="photo" src="images/volcon/small_volcon_03.jpg" alt="PCB view." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_04.jpg"><img class="photo" src="images/volcon/small_volcon_04.jpg" alt="Disassembled and dusty." /></a></td>
+					<td><a href="images/volcon/volcon_03.jpg"><img src="images/volcon/small_volcon_03.jpg" alt="PCB view." /></a></td>
+					<td><a href="images/volcon/volcon_04.jpg"><img src="images/volcon/small_volcon_04.jpg" alt="Disassembled and dusty." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_05.jpg"><img class="photo" src="images/volcon/small_volcon_05.jpg" alt="Planning - block diagram." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_06.jpg"><img class="photo" src="images/volcon/small_volcon_06.jpg" alt="Planning - sensors." /></a></td>
+					<td><a href="images/volcon/volcon_05.jpg"><img src="images/volcon/small_volcon_05.jpg" alt="Planning - block diagram." /></a></td>
+					<td><a href="images/volcon/volcon_06.jpg"><img src="images/volcon/small_volcon_06.jpg" alt="Planning - sensors." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_07.jpg"><img class="photo" src="images/volcon/small_volcon_07.jpg" alt="Assembled without enclosure." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_08.jpg"><img class="photo" src="images/volcon/small_volcon_08.jpg" alt="The current assembly (with nicer spotted gum finish)." /></a></td>
+					<td><a href="images/volcon/volcon_07.jpg"><img src="images/volcon/small_volcon_07.jpg" alt="Assembled without enclosure." /></a></td>
+					<td><a href="images/volcon/volcon_08.jpg"><img src="images/volcon/small_volcon_08.jpg" alt="The current assembly (with nicer spotted gum finish)." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_10.png"><img class="photo" src="images/volcon/small_volcon_10.png" alt="Rev 2 underway - schematic." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_11.png"><img class="photo" src="images/volcon/small_volcon_11.png" alt="Rev 2 - PCB Layout.." /></a></td>
+					<td><a href="images/volcon/volcon_10.png"><img src="images/volcon/small_volcon_10.png" alt="Rev 2 underway - schematic." /></a></td>
+					<td><a href="images/volcon/volcon_11.png"><img src="images/volcon/small_volcon_11.png" alt="Rev 2 - PCB Layout.." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_12.png"><img class="photo" src="images/volcon/small_volcon_12.png" alt="Rev 2 - PCB top render." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_13.png"><img class="photo" src="images/volcon/small_volcon_13.png" alt="Rev 2 - PCB bottom render." /></a></td>
+					<td><a href="images/volcon/volcon_12.png"><img src="images/volcon/small_volcon_12.png" alt="Rev 2 - PCB top render." /></a></td>
+					<td><a href="images/volcon/volcon_13.png"><img src="images/volcon/small_volcon_13.png" alt="Rev 2 - PCB bottom render." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_14.jpg"><img class="photo" src="images/volcon/small_volcon_14.jpg" alt="Rev 2 - PCB fabricated top." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_15.jpg"><img class="photo" src="images/volcon/small_volcon_15.jpg" alt="Rev 2 - PCB fabricated bottom." /></a></td>
+					<td><a href="images/volcon/volcon_14.jpg"><img src="images/volcon/small_volcon_14.jpg" alt="Rev 2 - PCB fabricated top." /></a></td>
+					<td><a href="images/volcon/volcon_15.jpg"><img src="images/volcon/small_volcon_15.jpg" alt="Rev 2 - PCB fabricated bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_16.jpg"><img class="photo" src="images/volcon/small_volcon_16.jpg" alt="Rev 2 - PCB assembly underway." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_17.jpg"><img class="photo" src="images/volcon/small_volcon_17.jpg" alt="Rev 2 - Temporary setup for coding/programming." /></a></td>
+					<td><a href="images/volcon/volcon_16.jpg"><img src="images/volcon/small_volcon_16.jpg" alt="Rev 2 - PCB assembly underway." /></a></td>
+					<td><a href="images/volcon/volcon_17.jpg"><img src="images/volcon/small_volcon_17.jpg" alt="Rev 2 - Temporary setup for coding/programming." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_18.jpg"><img class="photo" src="images/volcon/small_volcon_18.jpg" alt="Rev 2 - Ready to assemble." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_19.jpg"><img class="photo" src="images/volcon/small_volcon_19.jpg" alt="Rev 2 - Comaprison of PCBs Rev 1 vs Rev 2." /></a></td>
+					<td><a href="images/volcon/volcon_18.jpg"><img src="images/volcon/small_volcon_18.jpg" alt="Rev 2 - Ready to assemble." /></a></td>
+					<td><a href="images/volcon/volcon_19.jpg"><img src="images/volcon/small_volcon_19.jpg" alt="Rev 2 - Comaprison of PCBs Rev 1 vs Rev 2." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/volcon/volcon_20.jpg"><img class="photo" src="images/volcon/small_volcon_20.jpg" alt="Rev 2 - Rev 1 RIP." /></a></td>
-					<td class="align-right"><a href="images/volcon/volcon_21.jpg"><img class="photo" src="images/volcon/small_volcon_21.jpg" alt="Rev 2 - Complete and alongside macr0." /></a></td>
+					<td><a href="images/volcon/volcon_20.jpg"><img src="images/volcon/small_volcon_20.jpg" alt="Rev 2 - Rev 1 RIP." /></a></td>
+					<td><a href="images/volcon/volcon_21.jpg"><img src="images/volcon/small_volcon_21.jpg" alt="Rev 2 - Complete and alongside macr0." /></a></td>
 				</tr>
 			</table>
 		</div>

@@ -43,7 +43,7 @@
 			<hr />
 
 			<h2 class="align-center">Hosts</h2>
-			<p><center>The following table lists the machines I have on my network and the roles I assigned them.</center></p>
+			<center><p>The following table lists the machines I have on my network and the roles I assigned them.</p></center>
 			<table class="simple-table"><col style="width:auto"><col style="width:auto"><col style="width:600px"><col style="width:auto">
 
 				<!-- column headings -->
@@ -323,7 +323,7 @@
 			<br /><br />
 			<hr />
 			<h2 class="align-center">Roles</h2>
-			<p><center>The following table describes the various roles I created and use.</center></p>
+			<center><p>The following table describes the various roles I created and use.</p></center>
 			<table class="simple-table">
 
 				<!-- column headings -->

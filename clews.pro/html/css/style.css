@@ -3,7 +3,26 @@ body {
 	line-height: 1.4em;
 	color: rgb(150,150,150);
 	background-color: rgb(55,55,55);
-	margin: 0px 0px 0px 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Default heading settings*/
+h1 {
+	text-transform: lowercase;
+	letter-spacing: 6px;
+	font-size: 32px;
+}
+h2 {
+	text-transform: lowercase;
+	font-size: 24px;
+}
+h3 {
+	text-transform: lowercase;
+	font-size: 18px;
+}
+h4 {
+	text-transform: lowercase;
 }
 
 #header {
@@ -40,28 +59,39 @@ body {
 	margin-right: auto;
 }
 
-/*Table formatting defaults for all tables.*/
-table {
-	border-collapse: collapse;
+/*Table formatting for photo galleries*/
+.gallery {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 40px 40px;
+	width: 100%
 }
 
-/*Table formatting for photo tables*/
-table.gallery {
-	min-width: 1200px;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-table.gallery td {
-	border-bottom: none;
+.gallery td {
+	vertical-align: center;
+	border-style: solid;
+	border-width: 10px;
+	border-color: black;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 0;
+	width: 50%;
+	height: 0;
 }
 
-/*Formatting for photos*/
+.gallery img {
+	width: 100%;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+
+/*Formatting for photos within articles*/
 img.photo {
 	border: 10px solid black;
 	width: 500px;
 	border-radius: 50px;
 	overflow: hidden;
-	margin: 20px 20px 20px 20px;
 }
 
 /*Formatting for images (like photos but no border)*/
@@ -73,6 +103,7 @@ img.image {
 /*Table formatting for simple tables*/
 table.simple-table {
 	margin: auto auto auto auto;
+	border-collapse: collapse;
 }
 
 table.simple-table th, table.simple-table td {
@@ -184,10 +215,12 @@ img.icon {
 .align-left {
 	text-align: left;
 	float: left;
+	margin: 0px 20px 0px 0px;
 }
 .align-right {
 	text-align: right;
 	float: right;
+	margin: 0px 0px 0px 20px;
 }
 .align-center {
 	text-align: center;
@@ -219,23 +252,6 @@ td {
 	padding: 0px 0px 0px 0px;
 }
 
-/* Default heading settings*/
-h1 {
-	text-transform: lowercase;
-	letter-spacing: 6px;
-	font-size: 32px;
-}
-h2 {
-	text-transform: lowercase;
-	font-size: 24px;
-}
-h3 {
-	text-transform: lowercase;
-	font-size: 18px;
-}
-h4 {
-	text-transform: lowercase;
-}
 
 /* Default link settings. */
 a:link, a:visited {

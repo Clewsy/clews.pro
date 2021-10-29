@@ -28,36 +28,36 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_17.gif"><img class="photo" src="images/gps_clock/small_gps_clock_17.gif" alt="Demo." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_02.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_02.jpg" alt="In development." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_17.gif"><img src="images/gps_clock/small_gps_clock_17.gif" alt="Demo." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_02.jpg"><img src="images/gps_clock/small_gps_clock_02.jpg" alt="In development." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_03.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_03.jpg" alt="PCB modules, rear view." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_04.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_04.jpg" alt="PCB modules, top view." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_03.jpg"><img src="images/gps_clock/small_gps_clock_03.jpg" alt="PCB modules, rear view." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_04.jpg"><img src="images/gps_clock/small_gps_clock_04.jpg" alt="PCB modules, top view." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_05.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_05.jpg" alt="Assembled into the wooden enclosure." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_06.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_06.jpg" alt="Comparison to the first iteration." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_05.jpg"><img src="images/gps_clock/small_gps_clock_05.jpg" alt="Assembled into the wooden enclosure." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_06.jpg"><img src="images/gps_clock/small_gps_clock_06.jpg" alt="Comparison to the first iteration." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_07.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_07.jpg" alt="The final clock, one of the ISO-8601 display modes." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_08.png"><img class="photo" src="images/gps_clock/gps_clock_08.png" alt="The Control Board Schematic." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_07.jpg"><img src="images/gps_clock/small_gps_clock_07.jpg" alt="The final clock, one of the ISO-8601 display modes." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_08.png"><img src="images/gps_clock/gps_clock_08.png" alt="The Control Board Schematic." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_09.png"><img class="photo" src="images/gps_clock/gps_clock_09.png" alt="The Display Board Schematic." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_10.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_10.jpg" alt="Slick new black PCB - front." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_09.png"><img src="images/gps_clock/gps_clock_09.png" alt="The Display Board Schematic." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_10.jpg"><img src="images/gps_clock/small_gps_clock_10.jpg" alt="Slick new black PCB - front." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_11.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_11.jpg" alt="Slick new black PCB - back." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_12.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_12.jpg" alt="Black display board populated - back." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_11.jpg"><img src="images/gps_clock/small_gps_clock_11.jpg" alt="Slick new black PCB - back." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_12.jpg"><img src="images/gps_clock/small_gps_clock_12.jpg" alt="Black display board populated - back." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_13.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_13.jpg" alt="Black display board populated - front." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_14.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_14.jpg" alt="Assembled with new display board." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_13.jpg"><img src="images/gps_clock/small_gps_clock_13.jpg" alt="Black display board populated - front." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_14.jpg"><img src="images/gps_clock/small_gps_clock_14.jpg" alt="Assembled with new display board." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/gps_clock/gps_clock_15.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_15.jpg" alt="Assembled with new display board - ISO8601." /></a></td>
-					<td class="align-right"><a href="images/gps_clock/gps_clock_16.jpg"><img class="photo" src="images/gps_clock/small_gps_clock_16.jpg" alt="Assembled with new display board - EPOCH." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_15.jpg"><img src="images/gps_clock/small_gps_clock_15.jpg" alt="Assembled with new display board - ISO8601." /></a></td>
+					<td><a href="images/gps_clock/gps_clock_16.jpg"><img src="images/gps_clock/small_gps_clock_16.jpg" alt="Assembled with new display board - EPOCH." /></a></td>
 				</tr>
 			</table>
 		</div>

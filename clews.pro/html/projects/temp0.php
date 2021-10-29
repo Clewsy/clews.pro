@@ -74,12 +74,12 @@
 				<li>C++ instead of C.  This meant creating a class and declaring private and public functions.</li>
 				<li>Character and string functions were made more efficient and (somewhat) more robust.</li>
 			</ul>
-			<p>To display text on the oled, I can now just specify a font array plus coordinates, and the char/string functions will output to the SSD1306/OLED regardless of font characteristics (character widths and font height).  To create the char/string functions I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  After getting my head around the font and character metadata embedded in the array, I was able to create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments around these functions that I added as I went - this is part of my learning process, plus I'm sure I'll have to re-learn this one day when I return to the project for whatever reason.</p>
+			<p>To display text on the oled, I can now just specify a font array plus coordinates, and the char/string functions will output to the SSD1306/OLED regardless of character widths and font height.  To create the char/string functions I started with a <a href="http://oleddisplay.squix.ch/#/home">font file generator</a> created by <a href="https://blog.squix.org/about-me">Daniel Eichhorn</a> to generate a <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/include/ssd1306_fonts.h">couple of fonts</a> with dimensions I thought would suit the project.  After getting my head around the font and character metadata embedded in the array, I was able to create the <a href="https://gitlab.com/clewsy/temp0/-/blob/master/temp0_pro_trinket/src/ssd1306.cpp">print_char and print_string</a> functions.  The code has a lot of comments around these functions that I added as I went - this is part of my learning process, plus I'm sure I'll have to re-learn this one day when I return to the project for whatever reason.</p>
 			<hr />
 
 			<h3>HDC1080</h3>
 			<p>The HDC1080 is a temperature and humidity sensor that interfaces over I2C.  Similar to the OLED/SSD1306, I wrote a project-specific driver for it.</p>
-			<p>When testing the prototype system on a breadboard, I had the sensor attached with jumper leads which gave it 100mm or so clearance from the rest of the components.  This worked fine and temperature readings matched another thermometer I used for comparison.  My first assembled PCB however reported temperatures 3-4 degrees higher.  I had located the sensor on the PCB too close to the 3.3V regulator on the opposite side, so the waste heat from the regulator was affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located at opposite corners and sides of the PCB to give the sensor additional copper into which it could dissipate heat.  This improved the accuracy of the sensor readings, but it was still showing higher than my callibration thermometer.  Fortunately the delta was a consistent value regardless of temperature so ultimately I added a bodge-factor in code to compensate.</p>
+			<p>When testing the prototype on a breadboard, I had the sensor attached with jumper leads which gave it ~100mm clearance from the rest of the components.  This worked fine and temperature readings matched a thermometer I used for comparison.  However my first assembled PCB reported temperatures 3-4 degrees higher.  I located the sensor on the PCB too close to the 3.3V regulator, so the waste heat was affecting the temperature readings.  For the subsequent iteration of the PCB, these two components were located at opposite corners and sides of the PCB to give the regulator additional copper into which it could dissipate heat.  This improved the accuracy of the sensor readings, but it was still showing higher than my callibration thermometer.  Fortunately the delta was a consistent value regardless of temperature so ultimately I added a bodge-factor in code to compensate.</p>
 			<hr />
 
 			<h3>PCB</h3>
@@ -101,51 +101,51 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_23.gif"><img class="photo" src="images/temp0/small_temp0_23.gif" alt="Demo - start-up." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_24.gif"><img class="photo" src="images/temp0/temp0_24.gif" alt="Demo - modes." /></a></td>
+					<td><a href="images/temp0/temp0_23.gif"><img src="images/temp0/small_temp0_23.gif" alt="Demo - start-up." /></a></td>
+					<td><a href="images/temp0/temp0_24.gif"><img src="images/temp0/temp0_24.gif" alt="Demo - modes." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_02.jpg"><img class="photo" src="images/temp0/small_temp0_02.jpg" alt="Early prototyping - pre-OLED." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_03.jpg"><img class="photo" src="images/temp0/small_temp0_03.jpg" alt="Prototyping - added OLED." /></a></td>
+					<td><a href="images/temp0/temp0_02.jpg"><img src="images/temp0/small_temp0_02.jpg" alt="Early prototyping - pre-OLED." /></a></td>
+					<td><a href="images/temp0/temp0_03.jpg"><img src="images/temp0/small_temp0_03.jpg" alt="Prototyping - added OLED." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_04.jpg"><img class="photo" src="images/temp0/small_temp0_04.jpg" alt="Prototyping - OLED close-up." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_05.png"><img class="photo" src="images/temp0/temp0_05.png" alt="Web Server as seen on an android smartphone." /></a></td>
+					<td><a href="images/temp0/temp0_04.jpg"><img src="images/temp0/small_temp0_04.jpg" alt="Prototyping - OLED close-up." /></a></td>
+					<td><a href="images/temp0/temp0_05.png"><img src="images/temp0/temp0_05.png" alt="Web Server as seen on an android smartphone." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_06.png"><img class="photo" src="images/temp0/temp0_06.png" alt="Revision 1 PCB design render - top." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_07.png"><img class="photo" src="images/temp0/temp0_07.png" alt="Revision 1 PCB design render - bottom." /></a></td>
+					<td><a href="images/temp0/temp0_06.png"><img src="images/temp0/temp0_06.png" alt="Revision 1 PCB design render - top." /></a></td>
+					<td><a href="images/temp0/temp0_07.png"><img src="images/temp0/temp0_07.png" alt="Revision 1 PCB design render - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_08.jpg"><img class="photo" src="images/temp0/small_temp0_08.jpg" alt="Revision 1 PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_09.jpg"><img class="photo" src="images/temp0/small_temp0_09.jpg" alt="Revision 1 PCB fabricated - bottom." /></a></td>
+					<td><a href="images/temp0/temp0_08.jpg"><img src="images/temp0/small_temp0_08.jpg" alt="Revision 1 PCB fabricated - top." /></a></td>
+					<td><a href="images/temp0/temp0_09.jpg"><img src="images/temp0/small_temp0_09.jpg" alt="Revision 1 PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_10.jpg"><img class="photo" src="images/temp0/small_temp0_10.jpg" alt="Revision 1 PCB partially populated." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_11.jpg"><img class="photo" src="images/temp0/small_temp0_11.jpg" alt="Revision 1 PCB assembled and testing." /></a></td>
+					<td><a href="images/temp0/temp0_10.jpg"><img src="images/temp0/small_temp0_10.jpg" alt="Revision 1 PCB partially populated." /></a></td>
+					<td><a href="images/temp0/temp0_11.jpg"><img src="images/temp0/small_temp0_11.jpg" alt="Revision 1 PCB assembled and testing." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_12.png"><img class="photo" src="images/temp0/temp0_12.png" alt="Revision 2 PCB design render - top." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_13.png"><img class="photo" src="images/temp0/temp0_13.png" alt="Revision 2 PCB design render - bottom." /></a></td>
+					<td><a href="images/temp0/temp0_12.png"><img src="images/temp0/temp0_12.png" alt="Revision 2 PCB design render - top." /></a></td>
+					<td><a href="images/temp0/temp0_13.png"><img src="images/temp0/temp0_13.png" alt="Revision 2 PCB design render - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_14.jpg"><img class="photo" src="images/temp0/small_temp0_14.jpg" alt="Revision 2 PCB fabricated - top." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_15.jpg"><img class="photo" src="images/temp0/small_temp0_15.jpg" alt="Revision 2 PCB fabricated - bottom." /></a></td>
+					<td><a href="images/temp0/temp0_14.jpg"><img src="images/temp0/small_temp0_14.jpg" alt="Revision 2 PCB fabricated - top." /></a></td>
+					<td><a href="images/temp0/temp0_15.jpg"><img src="images/temp0/small_temp0_15.jpg" alt="Revision 2 PCB fabricated - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_16.jpg"><img class="photo" src="images/temp0/small_temp0_16.jpg" alt="Revision 2 PCB assembled - bottom." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_17.jpg"><img class="photo" src="images/temp0/small_temp0_17.jpg" alt="Revision 2 PCB assembled and testing - bottom." /></a></td>
+					<td><a href="images/temp0/temp0_16.jpg"><img src="images/temp0/small_temp0_16.jpg" alt="Revision 2 PCB assembled - bottom." /></a></td>
+					<td><a href="images/temp0/temp0_17.jpg"><img src="images/temp0/small_temp0_17.jpg" alt="Revision 2 PCB assembled and testing - bottom." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_18.jpg"><img class="photo" src="images/temp0/small_temp0_18.jpg" alt="Revision 2 PCB assembled - top." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_19.jpg"><img class="photo" src="images/temp0/small_temp0_19.jpg" alt="Revision 2 PCB assembled and testing - top." /></a></td>
+					<td><a href="images/temp0/temp0_18.jpg"><img src="images/temp0/small_temp0_18.jpg" alt="Revision 2 PCB assembled - top." /></a></td>
+					<td><a href="images/temp0/temp0_19.jpg"><img src="images/temp0/small_temp0_19.jpg" alt="Revision 2 PCB assembled and testing - top." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_20.jpg"><img class="photo" src="images/temp0/small_temp0_20.jpg" alt="Mounting hardware to enclosure.." /></a></td>
-					<td class="align-right"><a href="images/temp0/temp0_21.jpg"><img class="photo" src="images/temp0/small_temp0_21.jpg" alt="Installing PCB into enclosue." /></a></td>
+					<td><a href="images/temp0/temp0_20.jpg"><img src="images/temp0/small_temp0_20.jpg" alt="Mounting hardware to enclosure.." /></a></td>
+					<td><a href="images/temp0/temp0_21.jpg"><img src="images/temp0/small_temp0_21.jpg" alt="Installing PCB into enclosue." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/temp0/temp0_22.jpg"><img class="photo" src="images/temp0/small_temp0_22.jpg" alt="Fully assembled." /></a></td>
+					<td><a href="images/temp0/temp0_22.jpg"><img src="images/temp0/small_temp0_22.jpg" alt="Fully assembled." /></a></td>
 				</tr>
 			</table>
 		</div>

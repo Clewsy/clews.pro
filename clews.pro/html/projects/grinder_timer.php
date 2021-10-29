@@ -76,19 +76,19 @@
 			<h2 class="align-center">Gallery</h2>
 			<table class="gallery">
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer/grinder_timer_04.jpg"><img class="photo" src="images/grinder_timer/small_grinder_timer_04.jpg" alt="Populating PCB." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer/grinder_timer_05.jpg"><img class="photo" src="images/grinder_timer/small_grinder_timer_05.jpg" alt="PCB Assembled." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_04.jpg"><img src="images/grinder_timer/small_grinder_timer_04.jpg" alt="Populating PCB." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_05.jpg"><img src="images/grinder_timer/small_grinder_timer_05.jpg" alt="PCB Assembled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer/grinder_timer_07.jpg"><img class="photo" src="images/grinder_timer/small_grinder_timer_07.jpg" alt="Assembly Started." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer/grinder_timer_08.jpg"><img class="photo" src="images/grinder_timer/small_grinder_timer_08.jpg" alt="Mostly Assembled." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_07.jpg"><img src="images/grinder_timer/small_grinder_timer_07.jpg" alt="Assembly Started." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_08.jpg"><img src="images/grinder_timer/small_grinder_timer_08.jpg" alt="Mostly Assembled." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer/grinder_timer_09.jpg"><img class="photo" src="images/grinder_timer/small_grinder_timer_09.jpg" alt="Connecting Tether." /></a></td>
-					<td class="align-right"><a href="images/grinder_timer/grinder_timer_10.jpg"><img class="photo" src="images/grinder_timer/small_grinder_timer_10.jpg" alt="Complete and Functional." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_09.jpg"><img src="images/grinder_timer/small_grinder_timer_09.jpg" alt="Connecting Tether." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_10.jpg"><img src="images/grinder_timer/small_grinder_timer_10.jpg" alt="Complete and Functional." /></a></td>
 				</tr>
 				<tr>
-					<td class="align-left"><a href="images/grinder_timer/grinder_timer_11.png"><img class="photo" src="images/grinder_timer/grinder_timer_11.png" alt="The Complete Schematic." /></a></td>
+					<td><a href="images/grinder_timer/grinder_timer_11.png"><img src="images/grinder_timer/grinder_timer_11.png" alt="The Complete Schematic." /></a></td>
 				</tr>
 			</table>
 		</div>
