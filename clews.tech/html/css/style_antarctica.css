@@ -46,14 +46,14 @@ a:hover, a:active {
 }
 
 .gallery td {
-	vertical-align: top;
+	vertical-align: center;
 	border-style: solid;
 	border-width: 10px;
 	border-color: ghostwhite;
 	border-radius: 20px;
+	overflow: hidden;
 	padding: 0;
 	width: 50%;
-	overflow: hidden;
 }
 
 .gallery img {
