@@ -240,7 +240,7 @@
 					<td>A site for experimenting.</td>
 					<td class="date">2021-06-24</td>
 					<td class="links">
-						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
+						<a href="https://gitlab.com/clewsy/clews.pro/-/tree/master/clews.dev/html">gitlab</a><br />
 						<a href="https://clews.dev/index.php">clews.dev</a>
 					</td>
 					<td>HTML, CSS, PHP, Self-Host, Docker, Nginx, Inkscape, SVG</td>
@@ -256,6 +256,18 @@
 						<a href="https://clews.monster">clews.monster</a>
 					</td>
 					<td>HTML, CSS, Ansible, Self-Host, Docker, Inkscape, SVG, SWAG, Authelia</td>
+
+				<!--clews.tech-->
+				<tr>
+					<th scope="row"><a href="/projects/clews_tech.php">clews.tech</a></th>
+					<td><a href="/projects/clews_tech.php"><img class="thumbnail" style="background:black" src="/projects/images/clews_tech/clews_tech_01.png" /></a></td>
+					<td>Yet another site, this one for sharing photos and videos.</td>
+					<td class="date">2021-10-29</td>
+					<td class="links">
+						<a href="https://gitlab.com/clewsy/clews.pro/-/tree/master/clews.tech/html">gitlab</a><br />
+						<a href="https://clews.tech">clews.tech</a>
+					</td>
+					<td>HTML, CSS, Self-Host, Docker, Nginx, Inkscape, SVG, Jornal</td>
 
 				<!--contributions-->
 				<tr>

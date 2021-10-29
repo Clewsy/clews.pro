@@ -10,11 +10,13 @@
 				<table>
 					<tr>
 						<td><a href="https://gitlab.com/clewsy"><img class="icon" src="/images/gitlab_icon.png" title="GitLab Logo" alt="GitLab repo" /></a></td>
-						<td><a href="https://github.com/clewsy"><img class="icon"  src="/images/github_icon.png" title="GitHub Logo" alt="GitHub repo" /></a></td>
-						<td><a href="https://hub.docker.com/u/clewsy"><img class="icon"  src="/images/dockerhub_icon.png" title="DockerHub Logo" alt="DockerHub repo" /></a></td>
-						<td><a href="https://hackaday.io/Clewsy"><img class="icon"  src="/images/hackaday_icon.png" title="Hackaday Logo" alt="Hackaday.io profile" /></a></td>
-						<td><a href="https://clews.dev"><img class="icon"  src="/images/clews_dev_logo.png" title="Clewsy Logo" alt="The other clews domain." /></a></td>
-						<td><a href="https://clews.monster"><img class="icon"  src="/images/clews_monster_logo.png" title="Clewsy Logo" alt="The other other clews domain." /></a></td>
+						<td><a href="https://github.com/clewsy"><img class="icon" src="/images/github_icon.png" title="GitHub Logo" alt="GitHub repo" /></a></td>
+						<td><a href="https://hub.docker.com/u/clewsy"><img class="icon" src="/images/dockerhub_icon.png" title="DockerHub Logo" alt="DockerHub repo" /></a></td>
+						<td><a href="https://hackaday.io/Clewsy"><img class="icon" src="/images/hackaday_icon.png" title="Hackaday Logo" alt="Hackaday.io profile" /></a></td>
+						<td><a href="https://clews.dev"><img class="icon" src="/images/clews_dev_logo.png" title="Clewsy Logo" alt="The other clews domain." /></a></td>
+						<td><a href="https://clews.monster"><img class="icon" src="/images/clews_monster_logo.png" title="Clewsy Logo" alt="The other other clews domain." /></a></td>
+						<td><a href="https://clews.tech"><img class="icon" style="background:black; border-radius:50px" src="/images/clews_tech_logo.png" title="Clewsy Logo" alt="The other other other clews domain." /></a></td>
+						<td><a href="https://clews.tech/antarctica/antarctica.php"><img class="icon" src="/images/clews_antarctica_logo.png" title="Clewsy Logo" alt="A kind of journal for my work in Antarctica." /></a></td>
 					</tr>
 				</table>
 			</center>
