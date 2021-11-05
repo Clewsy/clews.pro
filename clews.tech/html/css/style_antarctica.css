@@ -56,7 +56,7 @@ a:hover, a:active {
 	width: 50%;
 }
 
-.gallery img {
+.gallery img, .gallery video {
 	width: 100%;
 	vertical-align: bottom;
 }
