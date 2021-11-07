@@ -14,6 +14,7 @@
 #### - php                      PHP                 (image: php:fpm)
 #### - nginx-clews.pro          NGINX               (image: nginx)
 #### - nginx-clews.dev          NGINX               (image: nginx)
+#### - nginx-clews.tech         NGINX               (image: nginx)
 #### - nginx-tyler.clews.pro    NGINX               (image: nginx)
 #### - nginx-jadon.clews.pro    NGINX               (image: nginx)
 #### - watchtower               Watchtower          (image: containrrr/watchtower)
