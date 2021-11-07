@@ -119,7 +119,7 @@ services:
 
 ######################################### Nextcloud backup container (for periodically copying data and database)
   nextcloud-bu:
-    image: clewsy/ncbu
+    image: registry.gitlab.com/clewsy/ncbu
     container_name: nextcloud-bu
     network_mode: none
     depends_on:
