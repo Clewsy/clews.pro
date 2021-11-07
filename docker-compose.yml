@@ -5,7 +5,7 @@
 #### - nextcloud-db             MariaDB             (image: linuxserver/mariadb)
 #### - nextcloud                Nextcloud           (image: nextcloud)
 #### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
-#### - nextcloud-bu             NCBU                (image: clewsy/ncbu)
+#### - nextcloud-bu             NCBU                (image: registry.gitlab.com/clewsy/ncbu)
 #### - collabora                Collabora           (image: collabora/code)
 #### - navidrome                Navidrome           (image: deluan/navidrome)
 #### - vaultwarden              Vaultwarden         (image: vaultwarden/server)
