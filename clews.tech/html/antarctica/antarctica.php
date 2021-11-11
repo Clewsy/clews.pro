@@ -13,26 +13,26 @@
 		<table class="gallery">
 			<tr>
 				<td>
+					<a href="posts/20211102/20211102.html">
+						<p>2021-11-02</p>
+						<img src="posts/20211102/small_13_20211102_150355.jpg" title="Sun and trees">
+						<p>Final day before pre-departure isolation.</p>
+					</a>
+				</td>
+				<td>
 					<a href="posts/20211022/20211022.html">
 						<p>2021-10-22</p>
 						<img src="posts/20211022/20211022-4.jpg" title="Fire-Fighting">
 						<p>Fire-fighting Training.</p>
 					</a>
 				</td>
+			</tr>
+			<tr>
 				<td>
 					<a href="posts/20211016/20211016.html">
 						<p>2021-10-16</p>
 						<img src="posts/20211016/small_20211016_095326.jpg" title="Nuyina">
 						<p>The Nuyina arrives in Hobart.</p>
-					</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="posts/20211102/20211102.html">
-						<p>2021-11-02</p>
-						<img src="posts/20211102/small_13_20211102_150355.jpg" title="Sun and trees">
-						<p>Final day before pre-departure isolation.</p>
 					</a>
 				</td>
 <!--				<td>
