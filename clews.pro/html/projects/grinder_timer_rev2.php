@@ -51,7 +51,7 @@
 			<p>The grind button is illuminated when it is ready to use and off while a grind is underway.  The LED pulses while the timer is in sleep mode.</p>
 			<hr />
 			<h3>Hardware</h3>
-			<p>The schematic and PCB were designed using <a href="https://kicad-pcb.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (the toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
+			<p>The schematic and PCB were designed using <a href="https://kicad.org/">KiCad</a>.  The previous PCB version I fabricated myself using single-sided copper clad-board and copper etchant (the toner-transfer method).  This time I uploaded the gerber files and had the board fabricated by <a href="https://jlcpcb.com/">JLCPCB</a>.</p>
 			<p>I found some surface-mount tactile buttons with keycaps for the keypad.  The four direction buttons are identical, the grind button is similar but with a built-in white LED.  This LED was connected to a pin with PWM output capability to enable variable brightness.</p>
 			<p>A suitable aluminium enclosure was selected and its internal dimensions dictated the dimensions for the PCB design.</p>
 			<hr />

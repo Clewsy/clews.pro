@@ -61,7 +61,7 @@
 			<a href="images/grinder_timer/grinder_timer_06.jpg"><img class="photo align-right" src="images/grinder_timer/small_grinder_timer_06.jpg" alt="Re-programming." /></a>
 			<hr />
 			<h3>Circuit Design</h3>
-			<p>The schematic and PCB layout were designed with <a href="https://kicad-pcb.org/">KiCad</a>.  Prior to this project my only circuit CAD experience was with eagle.  I used this project to familiarise myself with the open source alternative.</p>
+			<p>The schematic and PCB layout were designed with <a href="https://kicad.org/">KiCad</a>.  Prior to this project my only circuit CAD experience was with eagle.  I used this project to familiarise myself with the open source alternative.</p>
 			<p>All the KiCad project files are included in the gitlab repo.</p>
 			<p>The PCB layout outer-dimensions was driven by the size of an aluminium enclosure I wanted to use.  This enclosure was selected based on the most cumbersome component - the PCB mounted transformer.</p>
 			<hr />

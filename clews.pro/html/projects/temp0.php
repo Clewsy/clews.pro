@@ -83,7 +83,7 @@
 			<hr />
 
 			<h3>PCB</h3>
-			<p>The schematic and PCB layouts were created with <a href="https://kicad-pcb.org/">KiCad</a>.  Early iterations included a header for an FTDI serial adapter intended to facillitate programming of the ESP-01.  This was removed from the final PCB iteration for simplicity.</p>
+			<p>The schematic and PCB layouts were created with <a href="https://kicad.org/">KiCad</a>.  Early iterations included a header for an FTDI serial adapter intended to facillitate programming of the ESP-01.  This was removed from the final PCB iteration for simplicity.</p>
 			<p>A few component symbols and footprints were custom made:</p>
 			<ul>
 				<li>OLED module - these are pretty cheap but non-standard.  I made the footprint to match the actual model I intended to install (dimensions vary from module-to-module depending on the manufacturer).  Also, some versions of this module have the GND and VCC pins in the opposite order.</li>

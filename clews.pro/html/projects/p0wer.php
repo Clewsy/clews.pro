@@ -22,7 +22,7 @@
 
 			<h3>Code</h3>
 			<p>In C I wrote a program that takes the desired channel (A, B, C or D) and desired action ("on" or "off") and then pulses the remote control to emulate pressing the desired button.</p>
-			<p>The code and <a href="https://kicad-pcb.org/">KiCad</a> files are on the <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
+			<p>The code and <a href="https://kicad.org/">KiCad</a> files are on the <a href="https://gitlab.com/clewsy/p0wer">gitlab repo</a>.</p>
 			<p>The program interfaces with the gpio via the <s>wiringpi</s> <a href="http://abyz.me.uk/rpi/pigpio/index.html">pigpio</a> library.</p>
 			<p>Program usage follows:</p>
 			<div class="code"><p class="terminal">
