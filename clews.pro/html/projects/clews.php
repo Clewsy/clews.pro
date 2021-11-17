@@ -20,8 +20,7 @@
 				<tr><td>ncbu</td>		<td><a href="https://hub.docker.com/r/clewsy/ncbu">clewsy/ncbu</a></td>					<td>I <a href="/projects/ncbu.php">created</a> this container image to simplify automated backups of my nextcloud data and database.</td></tr>
 				<tr><td>Collabora</td>		<td><a href="https://hub.docker.com/r/collabora/code">collabora/code</a></td>				<td>Implemented to enable web-based editing of documents/spreadsheets within the Nextcloud instance.</td></tr>
 				<tr><td>Navidrome</td>		<td><a href="https://hub.docker.com/r/deluan/navidrome">deluan/navidrome</a></td>			<td>Music library and streaming app.  Stream via web interface or android app (such as <a href="https://www.f-droid.org/en/packages/org.moire.ultrasonic/">UltraSonic</a>).</td></tr>
-				<tr><td>Calibre</td>		<td><a href="https://hub.docker.com/r/linuxserver/calibre">linuxserver/calibre</a></td>			<td>Ebook library/database management system.</td></tr>
-				<tr><td>Calibre-Web</td>	<td><a href="https://hub.docker.com/r/linuxserver/calibre-web">linuxserver/calibre-web</a></td>		<td>Web-based ebook library access system.</td></tr>
+				<tr><td>Calibre-Web</td>	<td><a href="https://hub.docker.com/r/linuxserver/calibre-web">linuxserver/calibre-web</a></td>		<td>Web-based ebook library.</td></tr>
 				<tr><td>Vaultwarden</td>	<td><a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden/server</a></td>			<td>Password management system (formerly bitwardenrs/server). </td></tr>
 				<tr><td>NGINX</td>		<td><a href="https://hub.docker.com/_/nginx">nginx</a></td>						<td>For serving up the html/css/php that forms this (and other) sites.</td></tr>
 				<tr><td>PHP</td>		<td><a href="https://hub.docker.com/_/php">php</a></td>							<td>Configured for access by NGINX containers to enable serving php scripts.</td></tr>

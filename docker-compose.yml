@@ -9,7 +9,6 @@
 #### - collabora                Collabora           (image: collabora/code)
 #### - navidrome                Navidrome           (image: deluan/navidrome)
 #### - vaultwarden              Vaultwarden         (image: vaultwarden/server)
-#### - calibre                  Calibre             (image: linuxserver/calibre)
 #### - calibre-web              Calibre-web         (image: linuxserver/calibre-web)
 #### - php                      PHP                 (image: php:fpm)
 #### - nginx-clews.pro          NGINX               (image: nginx)
@@ -207,24 +206,6 @@ services:
       - ./vaultwarden/data/:/data/
     restart: unless-stopped
 
-######################################### Calibre container
-  calibre:
-    image: linuxserver/calibre
-    container_name: calibre
-    networks:
-      - clews.pro_network
-    environment:
-      - PUID=1000
-      - PGID=1000
-    volumes:
-      - ./calibre/config:/config
-      - /etc/localtime:/etc/localtime:ro
-    ports:
-      - 8080:8080 #Desktop gui
-      - 8081:8081 #Webserver gui
-      - 8082:9090 #Wireless device connection
-    restart: unless-stopped
-
 ######################################### Calibre-Web container
   calibre-web:
     image: linuxserver/calibre-web
@@ -234,7 +215,6 @@ services:
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
-      - calibre
     environment:
       - PUID=1000
       - PGID=1000
@@ -244,8 +224,8 @@ services:
       - LETSENCRYPT_HOST=${CALIBRE_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - ./calibre/calibre-web/config:/config  #calibre-web specific config (separate from calibre config)
-      - ./calibre/config:/books               #Map /books to the calibre container config volume (contains books/metadata)
+      - ./calibre-web/config:/config
+      - ./calibre-web/books:/books #This directory should contain the library as configured by calibre.
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
