@@ -150,7 +150,7 @@ services:
     cap_add:
       - MKNOD
     environment:
-      - aliasgroup1=${COLLABORA_DOMAIN}
+      - aliasgroup1=https://${COLLABORA_DOMAIN}:443
       - username=${COLLABORA_USERNAME}
       - password=${COLLABORA_PASSWORD}
       - VIRTUAL_PORT=9980
