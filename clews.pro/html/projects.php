@@ -225,7 +225,7 @@
 				<tr>
 					<th scope="row"><a href="/projects/clewsy_ansible.php">clewsy_ansible</a></th>
 					<td><a href="/projects/clewsy_ansible.php"><img class="thumbnail" src="/projects/images/clewsy_ansible/clewsy_ansible_01.png" /></a></td>
-					<td>Using Ansible to automate deplolyment, configuration and maintenance of the machines/devices on my home network.</td>
+					<td>Using Ansible to automate deployment, configuration and maintenance of the machines/devices on my home network.</td>
 					<td class="date">2021-10-29</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible">gitlab</a><br />
