@@ -13,6 +13,38 @@
 		<table class="gallery">
 			<tr>
 				<td>
+					<a href="posts/2021-12_random_shots_december/202112.html">
+						<p>2021-12</p>
+						<img src="posts/2021-12_random_shots_december/small_20211221_01_barry_becker.jpg" title="X-mas">
+						<p>Some random photos taken throughout December.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2021-12-13_skiway/20211213.html">
+						<p>2021-12-13</p>
+						<img src="posts/2021-12-13_skiway/small_20211213_01.jpg" title="Basler">
+						<p>Trip to the Skiway during a white-out.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2021-12-09_quad_training_and_wilkes/20211209.html">
+						<p>2021-12-09</p>
+						<img src="posts/2021-12-09_quad_training_and_wilkes/small_20211215_01.jpg" title="Quads">
+						<p>Quad-bike, field travel and survival training.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2021-12-05_trip_to_tiger_rock_and_bailey_peninsula/20211205.html">
+						<p>2021-12-05</p>
+						<img src="posts/2021-12-05_trip_to_tiger_rock_and_bailey_peninsula/small_20211205_07_barend_becker.jpg" title="Tiger Rock">
+						<p>Trip to Tiger Rock.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2021-12-01_walk_to_the_wharf/20211201.html">
 						<p>2021-12-01</p>
 						<img src="posts/2021-12-01_walk_to_the_wharf/small_20211201_03.jpg" title="Wharf">
