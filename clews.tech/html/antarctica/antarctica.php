@@ -11,6 +11,70 @@
 		<a href="https://clews.tech/antarctica/antarctica.php"><img id="clewsy_image" src="/images/clews_antarctica_logo.png" title="clewsy" /></a>
 		<h2>This is where I'll share photos and video clips from my time at <a href="https://www.antarctica.gov.au/antarctic-operations/stations/casey/"><u>Casey Station</u></a>.</h2>
 		<table class="gallery">
+		<tr>
+				<td>
+					<a href="posts/2022-01_random_shots_january/202201.html">
+						<p>2022-01</p>
+						<img src="posts/2022-01_random_shots_january/small_20220122_01.jpg" title="X-mas">
+						<p>Some random photos taken throughout January.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-01-28_wilkins/20220128.html">
+						<p>2022-01-28</p>
+						<img src="posts/2022-01-28_wilkins/small_20220131_02.jpg" title="Basler">
+						<p>Another trip to Wilkins to commission and test the new visibility meter.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-01-26_mid-summer_celebration/20220126.html">
+						<p>2022-01-26</p>
+						<img src="posts/2022-01-26_mid-summer_celebration/small_20220126_06_barrend_becker.jpg" title="X-mas">
+						<p>Mid-summer celebration includes a swim in the bay.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-01-25_x-mas_dinner/20220125.html">
+						<p>2022-01-25</p>
+						<img src="posts/2022-01-25_x-mas_dinner/small_20220125_06_barrend_becker.jpg" title="Basler">
+						<p>Because of the busy re-supply period, we celebrated x-mas a month late.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-01-17_visit_nuyina/20220117.html">
+						<p>2022-01-17</p>
+						<img src="posts/2022-01-17_visit_nuyina/small_20220117_03.jpg" title="X-mas">
+						<p>The Nuyina was parked up and giving tours to Casey expos.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-01-15_wilkins/20220115.html">
+						<p>2022-01-15</p>
+						<img src="posts/2022-01-15_wilkins/small_20220116_02.jpg" title="Basler">
+						<p>Another trip to Wilkins to begin installation of an upgraded visibility meter.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-01-10_wilkins/20220110.html">
+						<p>2022-01-10</p>
+						<img src="posts/2022-01-10_wilkins/small_20220111_03.jpg" title="X-mas">
+						<p>A trip to Wilkins to do some maintenance on the Wilkins East AWS.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-01-08_bunger_hills/20220108.html">
+						<p>2022-01-08</p>
+						<img src="posts/2022-01-08_bunger_hills/small_20220108_18.jpg" title="View from the Twin Otter.">
+						<p>A twin otter trip to Bunger Hills to maintain the AWS.</p>
+					</a>
+				</td>
+			</tr>
 			<tr>
 				<td>
 					<a href="posts/2021-12_random_shots_december/202112.html">
