@@ -13,6 +13,70 @@
 		<table class="gallery">
 		<tr>
 				<td>
+					<a href="posts/2022-03-01_sar_training/20220301.html">
+						<p>2022-03-01</p>
+						<img src="posts/2022-03-01_sar_training/small_20220304_01.jpg" title="SAR training">
+						<p>Summer SAR training.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-02-28_free_the_anemometer_cups/20220228.html">
+						<p>2022-02-28</p>
+						<img src="posts/2022-02-28_free_the_anemometer_cups/small_20220228_04_barrend_becker.jpg" title="The anemometer">
+						<p>Freeing the frozen anemometer cups.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-02-20_signing_the_met_sign/20220220.html">
+						<p>2022-02-20</p>
+						<img src="posts/2022-02-20_signing_the_met_sign/small_20220220_03.jpg" title="The Met Sign">
+						<p>Casey's Met contingent leaving our marks.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-02-18_camping_at_the_bailey_peninsula/20220218.html">
+						<p>2022-02-18</p>
+						<img src="posts/2022-02-18_camping_at_the_bailey_peninsula/small_20220218_06.jpg" title="Sunset on the Bailey">
+						<p>Overnight camping on the Bailey Peninsula.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-02-14_wilkins/20220214.html">
+						<p>2022-02-14</p>
+						<img src="posts/2022-02-14_wilkins/small_20220216_04.jpg" title="The C17">
+						<p>Trip to Wilkins and a C17 arrival/departure.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-02-12_balloon_launch/20220212.html">
+						<p>2022-02-12</p>
+						<img src="posts/2022-02-12_balloon_launch/small_20220212_03.jpg" title="The release">
+						<p>Summer balloon launch.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-02-07_snyder_rocks/20220207.html">
+						<p>2022-02-07</p>
+						<img src="posts/2022-02-07_snyder_rocks/small_20220207_12_ben_roberts.jpg" title="Taking care of business">
+						<p>Twin otter trip to Snyder Rocks.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-02-02_penguins_at_ops/20220202.html">
+						<p>2022-02-02</p>
+						<img src="posts/2022-02-02_penguins_at_ops/small_20220202_01_barrend_becker.jpg" title="Grumpy penguins">
+						<p>Grumpy penguins at ops.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2022-01_random_shots_january/202201.html">
 						<p>2022-01</p>
 						<img src="posts/2022-01_random_shots_january/small_20220122_01.jpg" title="The Balloon Shed">
