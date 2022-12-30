@@ -13,6 +13,38 @@
 		<table class="gallery">
 		<tr>
 				<td>
+					<a href="posts/2022-04_random_shots_april/202204.html">
+						<p>2022-04</p>
+						<img src="posts/2022-04_random_shots_april/small_20220405_01.jpg" title="Mammatus clouds">
+						<p>Some random photos taken throughout April.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-04-22_free_the_wind_vane/20220422.html">
+						<p>2022-04-22</p>
+						<img src="posts/2022-04-22_free_the_wind_vane/20220422_05_nelson_clegg.jpg" title="The anemometer">
+						<p>Freeing the frozen wind vane.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-04-09_trip_to_browning_peninsula/20220409.html">
+						<p>2022-04-09</p>
+						<img src="posts/2022-04-09_trip_to_browning_peninsula/small_20220409_02_perry_brag-dale.jpg" title="Purple hagg">
+						<p>Tip to Browning Peninsula.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-03_random_shots_march/202203.html">
+						<p>2022-03</p>
+						<img src="posts/2022-03_random_shots_march/small_20220318_01.jpg" title="The balloon shed">
+						<p>Some random photos taken throughout March.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2022-03-01_sar_training/20220301.html">
 						<p>2022-03-01</p>
 						<img src="posts/2022-03-01_sar_training/small_20220304_01.jpg" title="SAR training">
