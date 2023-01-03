@@ -13,6 +13,54 @@
 		<table class="gallery">
 		<tr>
 				<td>
+					<a href="posts/2022-08_random_shots_august/202208.html">
+						<p>2022-08</p>
+						<img src="posts/2022-08_random_shots_august/small_20220802_01.jpg" title="Ionosonde at sunrise">
+						<p>Some random photos taken throughout August.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-08-30_to_09-01_traverse_to_law_dome_aws/20220830.html">
+						<p>2022-08-30</p>
+						<img src="posts/2022-08-30_to_09-01_traverse_to_law_dome_aws/small_20220901_02.jpg" title="Law Dome AWS at sunrise">
+						<p>Traverse to Law Dome Summit.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-08-15_skidoo_training/20220815.html">
+						<p>2022-08-15</p>
+						<img src="posts/2022-08-15_skidoo_training/small_20220815_04.jpg" title="Quad and skidoos">
+						<p>Skidoo training.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-08-12_trip_to_robbos/20220812.html">
+						<p>2022-08-12</p>
+						<img src="posts/2022-08-12_trip_to_robbos/small_20220812_01.jpg" title="Nelsy and the Flynnisher">
+						<p>A trip to Robbo's.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-07_random_shots_july/202207.html">
+						<p>2022-07</p>
+						<img src="posts/2022-07_random_shots_july/small_20220704_02.jpg" title="The FD-12 visibility meter">
+						<p>Some random photos taken throughout July.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-06-20_mid-winter/20220620.html">
+						<p>2022-06-20</p>
+						<img src="posts/2022-06-20_mid-winter/20220620_06_barrend_becker.jpg" title="The swimmers">
+						<p>Mid-winter celebration.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2022-04_random_shots_april/202204.html">
 						<p>2022-04</p>
 						<img src="posts/2022-04_random_shots_april/small_20220405_01.jpg" title="Mammatus clouds">
@@ -32,7 +80,7 @@
 					<a href="posts/2022-04-09_trip_to_browning_peninsula/20220409.html">
 						<p>2022-04-09</p>
 						<img src="posts/2022-04-09_trip_to_browning_peninsula/small_20220409_02_perry_brag-dale.jpg" title="Purple hagg">
-						<p>Tip to Browning Peninsula.</p>
+						<p>Trip to Browning Peninsula.</p>
 					</a>
 				</td>
 				<td>
@@ -166,7 +214,7 @@
 				<td>
 					<a href="posts/2022-01-08_bunger_hills/20220108.html">
 						<p>2022-01-08</p>
-						<img src="posts/2022-01-08_bunger_hills/small_20220108_18.jpg" title="View from the Twin Otter.">
+						<img src="posts/2022-01-08_bunger_hills/small_20220108_18.jpg" title="View from the Twin Otter">
 						<p>A twin otter trip to Bunger Hills.</p>
 					</a>
 				</td>
