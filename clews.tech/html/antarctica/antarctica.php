@@ -13,6 +13,38 @@
 		<table class="gallery">
 			<tr>
 				<td>
+					<a href="posts/2022-10-24_swain_group_sea_ice_with_justin/20221024.html">
+						<p>2022-10-24</p>
+						<img src="posts/2022-10-24_swain_group_sea_ice_with_justin/small_20221024_17.jpg" title="Wedell seal and pup on the Sea Ice.">
+						<p>Sea ice trip to Swain Group Islands.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-10-20_shirley_island_with_justin/20221020.html">
+						<p>2022-10-20</p>
+						<img src="posts/2022-10-20_shirley_island_with_justin/small_20221020_03.jpg" title="Penguins at Shirley Island">
+						<p>A walk to Shirley Island.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-10-15_swain_group_on_skidoos_with_flynn_jackman/20221015.html">
+						<p>2022-10-15</p>
+						<img src="posts/2022-10-15_swain_group_on_skidoos_with_flynn_jackman/small_20221015_04_flynn_jackman.jpg" title="She didn't wave back">
+						<p>Day trip on the sea ice at the Swain Group Islands..</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-09_random_shots_september/202209.html">
+						<p>2022-09</p>
+						<img src="posts/2022-09_random_shots_september/20220909_01.jpg" title="Drifting snow at Wilkins East AWS">
+						<p>Some random photos taken throughout August.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2022-09-20_haupt_nunatak_and_browning_aws/20220920.html">
 						<p>2022-09-20</p>
 						<img src="posts/2022-09-20_haupt_nunatak_and_browning_aws/small_20220920_03.jpg" title="Haupt Nunatak AWS before we yanked it down">
