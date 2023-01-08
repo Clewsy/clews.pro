@@ -11,7 +11,14 @@
 		<a href="https://clews.tech/antarctica/antarctica.php"><img id="clewsy_image" src="/images/clews_antarctica_logo.png" title="clewsy" /></a>
 		<h2>This is where I'll share photos and video clips from my time at <a href="https://www.antarctica.gov.au/antarctic-operations/stations/casey/"><u>Casey Station</u></a>.</h2>
 		<table class="gallery">
-		<tr>
+			<tr>
+				<td>
+					<a href="posts/2022-09-20_haupt_nunatak_and_browning_aws/20220920.html">
+						<p>2022-09-20</p>
+						<img src="posts/2022-09-20_haupt_nunatak_and_browning_aws/small_20220920_03.jpg" title="Haupt Nunatak AWS before we yanked it down">
+						<p>Decommission the Haupt Nunatak AWS and service the Browning's AWS.</p>
+					</a>
+				</td>
 				<td>
 					<a href="posts/2022-08_random_shots_august/202208.html">
 						<p>2022-08</p>
@@ -19,6 +26,8 @@
 						<p>Some random photos taken throughout August.</p>
 					</a>
 				</td>
+			</tr>
+			<tr>
 				<td>
 					<a href="posts/2022-08-30_to_09-01_traverse_to_law_dome_aws/20220830.html">
 						<p>2022-08-30</p>
@@ -26,8 +35,6 @@
 						<p>Traverse to Law Dome Summit.</p>
 					</a>
 				</td>
-			</tr>
-			<tr>
 				<td>
 					<a href="posts/2022-08-15_skidoo_training/20220815.html">
 						<p>2022-08-15</p>
@@ -35,6 +42,8 @@
 						<p>Skidoo training.</p>
 					</a>
 				</td>
+			</tr>
+			<tr>
 				<td>
 					<a href="posts/2022-08-12_trip_to_robbos/20220812.html">
 						<p>2022-08-12</p>
@@ -42,8 +51,6 @@
 						<p>A trip to Robbo's.</p>
 					</a>
 				</td>
-			</tr>
-			<tr>
 				<td>
 					<a href="posts/2022-07_random_shots_july/202207.html">
 						<p>2022-07</p>
@@ -51,6 +58,8 @@
 						<p>Some random photos taken throughout July.</p>
 					</a>
 				</td>
+			</tr>
+			<tr>
 				<td>
 					<a href="posts/2022-06-20_mid-winter/20220620.html">
 						<p>2022-06-20</p>
@@ -58,13 +67,20 @@
 						<p>Mid-winter celebration.</p>
 					</a>
 				</td>
-			</tr>
-			<tr>
 				<td>
 					<a href="posts/2022-04_random_shots_april/202204.html">
 						<p>2022-04</p>
 						<img src="posts/2022-04_random_shots_april/small_20220405_01.jpg" title="Mammatus clouds">
 						<p>Some random photos taken throughout April.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="posts/2022-05_random_shots_may/202205.html">
+						<p>2022-05</p>
+						<img src="posts/2022-05_random_shots_may/small_20220507_02.jpg" title="Filling a 23Z balloon.">
+						<p>Some random photos taken throughout May.</p>
 					</a>
 				</td>
 				<td>
