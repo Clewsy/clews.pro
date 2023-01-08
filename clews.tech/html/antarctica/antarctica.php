@@ -13,6 +13,22 @@
 		<table class="gallery">
 			<tr>
 				<td>
+					<a href="posts/2022-11-05_swain_group_on_quads_ben_callahan/20221105.html">
+						<p>2022-11-05</p>
+						<img src="posts/2022-11-05_swain_group_on_quads_ben_callahan/small_20221105_41_ben_callahan.jpg" title="Pup with mum.">
+						<p>Quad bike trip to the sea ice around the Swain Group Islands.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-10_random_shots_october/202210.html">
+						<p>2022-10</p>
+						<img src="posts/2022-10_random_shots_october/small_20221006_01.jpg" title="Wilkins West AWS and the blue hagg">
+						<p>Some random photos taken throughout October.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2022-10-24_swain_group_sea_ice_with_justin/20221024.html">
 						<p>2022-10-24</p>
 						<img src="posts/2022-10-24_swain_group_sea_ice_with_justin/small_20221024_17.jpg" title="Wedell seal and pup on the Sea Ice.">
@@ -32,7 +48,7 @@
 					<a href="posts/2022-10-15_swain_group_on_skidoos_with_flynn_jackman/20221015.html">
 						<p>2022-10-15</p>
 						<img src="posts/2022-10-15_swain_group_on_skidoos_with_flynn_jackman/small_20221015_04_flynn_jackman.jpg" title="She didn't wave back">
-						<p>Day trip on the sea ice at the Swain Group Islands..</p>
+						<p>Day trip on the sea ice at the Swain Group Islands.</p>
 					</a>
 				</td>
 				<td>
