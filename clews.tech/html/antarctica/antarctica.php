@@ -23,7 +23,7 @@
 					<a href="posts/2022-11_random_shots_november/202211.html">
 						<p>2022-11</p>
 						<img src="posts/2022-11_random_shots_november/small_20221119_01.png" title="Trip in the purple hagg">
-						<p>Some random photos taken throughout October.</p>
+						<p>Some random photos taken throughout November.</p>
 					</a>
 				</td>
 			</tr>
