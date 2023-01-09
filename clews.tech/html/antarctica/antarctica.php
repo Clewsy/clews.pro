@@ -13,6 +13,22 @@
 		<table class="gallery">
 			<tr>
 				<td>
+					<a href="posts/2022-11-26_return_to_hobart_on_the_c17/20221126.html">
+						<p>2022-11-05</p>
+						<img src="posts/2022-11-26_return_to_hobart_on_the_c17/small_20221126_03.jpg" title="The C17 back in Hobart">
+						<p>RTA.</p>
+					</a>
+				</td>
+				<td>
+					<a href="posts/2022-11_random_shots_november/202211.html">
+						<p>2022-11</p>
+						<img src="posts/2022-11_random_shots_november/small_20221119_01.png" title="Trip in the purple hagg">
+						<p>Some random photos taken throughout October.</p>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="posts/2022-11-05_swain_group_on_quads_ben_callahan/20221105.html">
 						<p>2022-11-05</p>
 						<img src="posts/2022-11-05_swain_group_on_quads_ben_callahan/small_20221105_41_ben_callahan.jpg" title="Pup with mum.">
