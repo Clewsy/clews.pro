@@ -30,7 +30,7 @@ services:
     image: nginxproxy/nginx-proxy:alpine
     container_name: nginx-proxy
     networks:
-      - clews.pro_network
+      - clews_network
     ports:
       - 80:80
       - 443:443
@@ -50,7 +50,7 @@ services:
     image: nginxproxy/acme-companion
     container_name: nginx-proxy-acme
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
     environment:
@@ -69,7 +69,7 @@ services:
     image: linuxserver/mariadb
     container_name: nextcloud-db
     networks:
-      - clews.pro_network
+      - clews_network
     environment:
       - PUID=1000
       - PGID=1000
@@ -87,7 +87,7 @@ services:
     image: nextcloud
     container_name: nextcloud
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -144,7 +144,7 @@ services:
     image: collabora/code
     container_name: collabora
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -166,7 +166,7 @@ services:
     image: deluan/navidrome
     container_name: navidrome
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -190,7 +190,7 @@ services:
     image: vaultwarden/server:latest
     container_name: vaultwarden
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -212,7 +212,7 @@ services:
     image: linuxserver/calibre-web
     container_name: calibre-web
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -235,7 +235,7 @@ services:
     image: ghcr.io/advplyr/audiobookshelf:latest
     container_name: audiobookshelf
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -257,7 +257,7 @@ services:
     image: php:fpm
     container_name: php
     networks:
-      - clews.pro_network
+      - clews_network
     volumes:
       - ./clews.pro/html/:/clews.pro/html/   #Must match location of html/css/php files volume defined for clews.pro container.
       - ./clews.dev/html/:/clews.dev/html/   #Must match location of html/css/php files volume defined for clews.dev container.
@@ -269,7 +269,7 @@ services:
     image: nginx
     container_name: nginx-clews.pro
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -291,7 +291,7 @@ services:
     image: nginx
     container_name: nginx-clews.dev
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -312,7 +312,7 @@ services:
     image: nginx
     container_name: nginx-clews.tech
     networks:
-      - clews.pro_network
+      - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
@@ -333,7 +333,7 @@ services:
 #    image: nginx
 #    container_name: nginx-tyler.clews.pro
 #    networks:
-#      - clews.pro_network
+#      - clews_network
 #    depends_on:
 #      - nginx-proxy
 #      - nginx-proxy-acme
@@ -353,7 +353,7 @@ services:
 #    image: nginx
 #    container_name: nginx-jadon.clews.pro
 #    networks:
-#      - clews.pro_network
+#      - clews_network
 #    depends_on:
 #      - nginx-proxy
 #      - nginx-proxy-acme
@@ -390,4 +390,4 @@ volumes:
 
 ######################################### Docker-managed networks
 networks:
-  clews.pro_network:
+  clews_network:
