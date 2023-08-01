@@ -23,8 +23,6 @@
 					<b>|</b>
 					<a href="/about.php">About</a>
 					<b>|</b>
-					<a href="https://nextcloud.clews.pro">Cloud</a>
-					<b>|</b>
 				</h2>
 			</div>
 		</div>
