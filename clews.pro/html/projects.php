@@ -197,6 +197,18 @@
 					<td>AVR, Atmel, <s>AT90usb162</s>, ATmega32U4, C, Eagle, USB, <s>Type-B</s>, Type-C, HID, LUFA, Quadrature Encoder, Gray Code, VCR, VHS, Wood, KiCad</td>
 				</tr>
 
+				<!--wiggl3r-->
+				<tr>
+					<th scope="row"><a href="/projects/wiggl3r.php">wiggl3r</a></th>
+					<td><a href="/projects/wiggl3r.php"><img class="thumbnail" src="/projects/images/wiggl3r/small_wiggl3r.png" /></a></td>
+					<td>Occasionaly wiggle the mouse cursor so your PC doesn't automatically lock.</td>
+					<td class="date">2023-08-01</td>
+					<td class="links">
+						<a href="https://gitlab.com/clewsy/wiggl3r">gitlab</a><br />
+					</td>
+					<td>Arduino, Leonardo, AVR, Atmel, ATmega32U4, USB, HID, C, Mouse, PlatformIO</td>
+				</tr>
+
 				<!--WiSHABI-->
 				<tr>
 					<th scope="row"><a href="/projects/wishabi.php">WiSHABI</a></th>
