@@ -2,10 +2,10 @@
 #### Containers include:
 #### - nginx-proxy              nginx-proxy         (image: nginxproxy/nginx-proxy)
 #### - acme-companion           acme-companion      (image: nginxproxy/acme-companion)
-#### - nextcloud-db             MariaDB             (image: linuxserver/mariadb)
-#### - nextcloud                Nextcloud           (image: nextcloud)
-#### - nextcloud-cron           Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
-#### - nextcloud-bu             NCBU                (image: registry.gitlab.com/clewsy/ncbu)
+#### - nc-db                    MariaDB             (image: linuxserver/mariadb)
+#### - nc                       Nextcloud           (image: nextcloud)
+#### - nc-cron                  Nextcloud-Cronjob   (image: rcdailey/nextcloud-cronjob)
+#### - ncbu                     NCBU                (image: registry.gitlab.com/clewsy/ncbu)
 #### - collabora                Collabora           (image: collabora/code)
 #### - navidrome                Navidrome           (image: deluan/navidrome)
 #### - vaultwarden              Vaultwarden         (image: vaultwarden/server)
@@ -65,53 +65,53 @@ services:
     restart: unless-stopped
 
 ######################################### MariaDB database (for nextcloud) container
-  nextcloud-db:
+  nc-db:
     image: linuxserver/mariadb
-    container_name: nextcloud-db
+    container_name: nc-db
     networks:
       - clews_network
     environment:
       - PUID=1000
       - PGID=1000
-      - MYSQL_ROOT_PASSWORD=${MARIADB_NEXTCLOUD_MYSQL_ROOT_PASSWORD}
-      - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD=${MARIADB_NEXTCLOUD_MYSQL_PASSWORD}
-      - MYSQL_DATABASE=nextcloud
+      - MYSQL_ROOT_PASSWORD=${MARIADB_NC_MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MARIADB_NC_MYSQL_USER}
+      - MYSQL_PASSWORD=${MARIADB_NC_MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MARIADB_NC_MYSQL_DATABASE}
     volumes:
-      - nextcloud-db:/config
+      - nc-db:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
 ######################################### Nextcloud web app container
-  nextcloud:
+  nc:
     image: nextcloud
-    container_name: nextcloud
+    container_name: nc
     networks:
       - clews_network
     depends_on:
       - nginx-proxy
       - nginx-proxy-acme
-      - nextcloud-db
+      - nc-db
     environment:
       - OVERWRITEPROTOCOL=https
       - VIRTUAL_PORT=80
-      - VIRTUAL_HOST=${NEXTCLOUD_URL}
-      - LETSENCRYPT_HOST=${NEXTCLOUD_URL}
+      - VIRTUAL_HOST=${NC_URL}
+      - LETSENCRYPT_HOST=${NC_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - nextcloud-app:/var/www/html
+      - nc:/var/www/html
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
 ######################################### Nextcloud cronjob container (for periodically running cron.php)
-  nextcloud-cron:
+  nc-cron:
     image: rcdailey/nextcloud-cronjob
-    container_name: nextcloud-cron
+    container_name: nc-cron
     network_mode: none
     depends_on:
-      - nextcloud
+      - nc
     environment:
-      - NEXTCLOUD_CONTAINER_NAME=nextcloud
+      - NEXTCLOUD_CONTAINER_NAME=nc
       - NEXTCLOUD_CRON_MINUTE_INTERVAL=5
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -119,47 +119,68 @@ services:
     restart: unless-stopped
 
 ######################################### Nextcloud backup container (for periodically copying data and database)
-  nextcloud-bu:
+  ncbu:
     image: registry.gitlab.com/clewsy/ncbu
-    container_name: nextcloud-bu
+    container_name: ncbu
     network_mode: none
     depends_on:
-      - nextcloud
-      - nextcloud-db
+      - nc
+      - nc-db
     environment:
-      - NEXTCLOUD_EXEC_USER=www-data                      # Name of the user that can execute the occ command in the nextcloud container (www-data by default).
-      - NEXTCLOUD_CONTAINER=nextcloud                     # Name of the nextcloud container.
-      - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
-      - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
+      - NEXTCLOUD_EXEC_USER=www-data              # Name of the user that can execute the occ command in the nextcloud container (www-data by default).
+      - NEXTCLOUD_CONTAINER=nc                    # Name of the nextcloud container.
+      - NEXTCLOUD_DATABASE_CONTAINER=nc-db        # Name of the nextcloud database container.
+      - NEXTCLOUD_BACKUP_CRON=0 0 * * *           # Run at midnight.
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock         # Allows container to access another container.
-      - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
-      - nextcloud-app:/mnt/nextcloud_app                  # Must match the docker-managed nextcloud app volume (/var/www/html).
-      - nextcloud-db:/mnt/nextcloud_db                    # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
-      - ./nextcloud-bu:/backup                            # Convenient location for the backup.
+      - /var/run/docker.sock:/var/run/docker.sock # Allows container to access another container.
+      - /etc/localtime:/etc/localtime:ro          # Use to sync time so that the crond runs as expected.
+      - nc:/mnt/nextcloud_app                     # Must match the docker-managed nextcloud app volume (/var/www/html).
+      - nc-db:/mnt/nextcloud_db                   # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
+      - ./ncbu:/backup                            # Convenient location for the backup.
     restart: unless-stopped
+######################################### Nextcloud backup container (for periodically copying data and database)
+#  nextcloud-bu:
+#    image: registry.gitlab.com/clewsy/ncbu
+#    container_name: nextcloud-bu
+#    network_mode: none
+#    depends_on:
+#      - nextcloud
+#      - nextcloud-db
+#    environment:
+#      - NEXTCLOUD_EXEC_USER=www-data                      # Name of the user that can execute the occ command in the nextcloud container (www-data by default).
+#      - NEXTCLOUD_CONTAINER=nextcloud                     # Name of the nextcloud container.
+#      - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
+#      - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock         # Allows container to access another container.
+#      - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
+#      - nextcloud-app:/mnt/nextcloud_app                  # Must match the docker-managed nextcloud app volume (/var/www/html).
+#      - nextcloud-db:/mnt/nextcloud_db                    # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
+#      - ./nextcloud-bu:/backup                            # Convenient location for the backup.
+#    restart: unless-stopped
 
 ######################################### Collabora (for nextcloud) container
-  collabora:
-    image: collabora/code
-    container_name: collabora
-    networks:
-      - clews_network
-    depends_on:
-      - nginx-proxy
-      - nginx-proxy-acme
-    cap_add:
-      - MKNOD
-    environment:
-      - aliasgroup1=https://${COLLABORA_DOMAIN}:443
-      - username=${COLLABORA_USERNAME}
-      - password=${COLLABORA_PASSWORD}
-      - VIRTUAL_PORT=9980
-      - VIRTUAL_HOST=${COLLABORA_URL}
-      - LETSENCRYPT_HOST=${COLLABORA_URL}
-      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
-      - extra_params=--o:ssl.enable=false --o:ssl.termination=true
-    restart: unless-stopped
+#  collabora:
+#    image: collabora/code
+#    container_name: collabora
+#    networks:
+#      - clews_network
+#    depends_on:
+#      - nginx-proxy
+#      - nginx-proxy-acme
+#      - nc
+#    cap_add:
+#      - MKNOD
+#    environment:
+#      - aliasgroup1=https://${COLLABORA_DOMAIN}:443
+#      - username=${COLLABORA_USERNAME}
+#      - password=${COLLABORA_PASSWORD}
+#      - VIRTUAL_PORT=9980
+#      - VIRTUAL_HOST=${COLLABORA_URL}
+#      - LETSENCRYPT_HOST=${COLLABORA_URL}
+#      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+#      - extra_params=--o:ssl.enable=false --o:ssl.termination=true
+#    restart: unless-stopped
 
 ######################################### Navidrome container
   navidrome:
@@ -385,8 +406,10 @@ services:
 
 ######################################### Docker-managed volumes
 volumes:
-  nextcloud-app:
-  nextcloud-db:
+  nc:
+  nc-db:
+#  nextcloud-app:
+#  nextcloud-db:
 
 ######################################### Docker-managed networks
 networks:
