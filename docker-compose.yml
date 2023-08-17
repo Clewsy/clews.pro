@@ -240,7 +240,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - DOCKER_MODS=linuxserver/calibre-web:calibre
+      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional & x86-64 only. Adds the ability to perform ebook conversion
       - VIRTUAL_PORT=8083
       - VIRTUAL_HOST=${CALIBRE_URL}
       - LETSENCRYPT_HOST=${CALIBRE_URL}
