@@ -138,26 +138,6 @@ services:
       - nc-db:/mnt/nextcloud_db                   # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
       - ./ncbu:/backup                            # Convenient location for the backup.
     restart: unless-stopped
-######################################### Nextcloud backup container (for periodically copying data and database)
-#  nextcloud-bu:
-#    image: registry.gitlab.com/clewsy/ncbu
-#    container_name: nextcloud-bu
-#    network_mode: none
-#    depends_on:
-#      - nextcloud
-#      - nextcloud-db
-#    environment:
-#      - NEXTCLOUD_EXEC_USER=www-data                      # Name of the user that can execute the occ command in the nextcloud container (www-data by default).
-#      - NEXTCLOUD_CONTAINER=nextcloud                     # Name of the nextcloud container.
-#      - NEXTCLOUD_DATABASE_CONTAINER=nextcloud-db         # Name of the nextcloud database container.
-#      - NEXTCLOUD_BACKUP_CRON=0 0 * * *                   # Run at midnight.
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock         # Allows container to access another container.
-#      - /etc/localtime:/etc/localtime:ro                  # Use to sync time so that the crond runs as expected.
-#      - nextcloud-app:/mnt/nextcloud_app                  # Must match the docker-managed nextcloud app volume (/var/www/html).
-#      - nextcloud-db:/mnt/nextcloud_db                    # Must match the docker-managed nextcloud database volume (/var/lib/mysql).
-#      - ./nextcloud-bu:/backup                            # Convenient location for the backup.
-#    restart: unless-stopped
 
 ######################################### Collabora (for nextcloud) container
 #  collabora:
