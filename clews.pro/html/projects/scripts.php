@@ -13,28 +13,28 @@
 					<td>Runs apt-get update, apt-get dist-upgrade, apt-get autoremove and apt-get autoclean on a provided host or list of hosts.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ball">ball</a></th>
-					<td>Runs bu on a bunch of remote host or list of hosts.</td>
-				</tr>
-				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu">bu</a></th>
-					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories defined in a list file to a remote server.</td>
-				</tr>
-				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/p0wer_switch">p0wer_switch</a></th>
 					<td>Written for use with <a href="https://termux.com/">termux</a> to connect to a server that can control wireless mains outlets via <a href="https://gitlab.com/Clewsy/p0wer">p0wer</a>.</td>
-				</tr>
-				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/pong">pong</a></th>
-					<td>Runs through a list of servers, pings each once for a second then returns a success or fail result.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/polly">polly</a></th>
 					<td>Called as a cronjob to regularly poll a web site and check the return code.  Logs the result and uses a <a href="https://blink1.thingm.com/">blink(1)</a> as a visual status indicator.</td>
 				</tr>
 				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/pong">pong</a></th>
+					<td>Runs through a list of servers, pings each once for a second then returns a success or fail result.</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/sneak">sneak</a></th>
+					<td>Use rsync to pull the contents of a directory on a remote machine to the local machine.  Intended to be implemented as a cronjob to responsibly transfer files under limited bandwidth restrictions.</td>
+				</tr>
+				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/stuff">stuff</a></th>
 					<td>Pulls and lists a bunch of useful (to me) info about the host (hardware, disks/mounts, OS, network, etc).</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/terbling">terbling</a></th>
+					<td>Prints an ascii-art logo and some basic system info to the command line.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/vpn">vpn</a></th>
@@ -48,10 +48,6 @@
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/whodis">whodis</a></th>
 					<td>Grabs the contents of the /tmp/dhcp.leases file on a remote router, pretties it up and prints it to stdout.</td>
 				</tr>
-				<tr>
-					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ytdl">ytdl</a></th>
-					<td>Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  Not used often since switching to <a href="https://lineageos.org/">LineageOS</a> and running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  NewPipe has direct download capability.</td>
-				</tr>
 			</table>
 			<br />
 			<br />
@@ -61,6 +57,14 @@
 				<tr>
 					<th scope="col">Name</th>
 					<th scope="col">Description</th>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ball">ball</a></th>
+					<td>Runs bu on a bunch of remote host or list of hosts.  Deprecated thanks to <a href="https://www.ansible.com/">Ansible</a>.</td>
+				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/bu">bu</a></th>
+					<td>Uses <a href="https://rsync.samba.org/">rsync</a> to back up files and directories defined in a list file to a remote server.  Also deprecated thanks to <a href="https://www.ansible.com/">Ansible</a>.</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/cal_backup.sh">cal_backup.sh</a></th>
@@ -82,7 +86,13 @@
 					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/archive/roll_out.sh">roll_out.sh</a></th>
 					<td>Attempt to copy a specified file/directory to a destination (relative to home directory) on a list of remote hosts.   I used this to sync my custom scripts to a list of hosts.  Now deprecated as I manage this task with <a href= "https://docs.ansible.com/">Ansible</a>.</td>
 				</tr>
+				<tr>
+					<th scope="row"><a href="https://gitlab.com/clewsy/scripts/blob/master/ytdl">ytdl</a></th>
+					<td>Written for use with <a href="https://termux.com/">termux</a> to download a youtube video direct to the device.  No longer used often since running <a href="https://newpipe.schabi.org/">NewPipe</a> instead of the youtube app.  NewPipe has direct download capability.</td>
+				</tr>
 			</table>
+			<br />
+			<br />
 		</div>
 	</body>
 </html>

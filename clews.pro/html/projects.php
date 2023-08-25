@@ -162,7 +162,7 @@
 					<th scope="row"><a href="/projects/scripts.php">scripts</a></th>
 					<td><a href="/projects/scripts.php"><img class="thumbnail" src="/projects/images/scripts/scripts_01.png" /></a></td>
 					<td>Various bash shell scripts.</td>
-					<td class="date">2021-06-15</td>
+					<td class="date">2023-08-25</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/scripts">gitlab</a>
 					</td>
@@ -261,11 +261,11 @@
 				<tr>
 					<th scope="row"><a href="/projects/clews_monster.php">clews.monster</a></th>
 					<td><a href="/projects/clews_monster.php"><img class="thumbnail" src="/projects/images/clews_monster/clews_monster_01.png" /></a></td>
-					<td>Another site, this one for non-critical but useful services.</td>
-					<td class="date">2021-10-17</td>
+					<td>Another site, this one for non-critical but useful services.  Currently not in use.</td>
+					<td class="date">2023-08-25</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clewsy_ansible/-/tree/master/roles/monster">gitlab</a><br />
-						<a href="https://clews.monster">clews.monster</a>
+						<!--<a href="https://clews.monster">clews.monster</a>-->
 					</td>
 					<td>HTML, CSS, Ansible, Self-Host, Docker, Inkscape, SVG, SWAG, Authelia</td>
 
