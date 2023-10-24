@@ -32,6 +32,9 @@
 					<td><a href="wood/frame_5_and_6.php"><img src="wood/photos/frame_5_and_6/small_frame_5_and_6_09.jpg" title="X-mas 2020 Gift Frames"></a></td>
 					<td><a href="wood/knife_block.php"><img src="wood/photos/knife_block/small_knife_block_12.jpg" title="Knife Block"></a></td>
 				</tr>
+				<tr>
+					<td><a href="wood/dog_steps.php"><img src="wood/photos/dog_steps/small_dog_steps_01.jpg" title="Steps for Rosie"></a></td>
+				</tr>
 			</table>
 		</div>
 	</body>
