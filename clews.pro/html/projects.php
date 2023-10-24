@@ -16,7 +16,7 @@
 					<th scope="row"><a href="/projects/clews.php">clews.pro</a></th>
 					<td><a href="/projects/clews.php"><img class="thumbnail" src="/projects/images/clews/clews_01.png" /></a></td>
 					<td>Meta.</td>
-					<td class="date">2021-11-17</td>
+					<td class="date">2023-10-24</td>
 					<td class="links">
 						<a href="https://gitlab.com/clewsy/clews.pro">gitlab</a><br />
 						<a href="/projects.php">Recursion...</a>
@@ -226,7 +226,7 @@
 					<th scope="row"><a href="/projects/wood.php">Wood</a></th>
 					<td><a href="/projects/wood.php"><img class="thumbnail" src="/projects/wood/photos/wine_box/small_wine_box_30.jpg" /></a></td>
 					<td>Stuff made from wood.</td>
-					<td class="date">2021-10-29</td>
+					<td class="date">2023-10-24</td>
 					<td class="links">
 
 					</td>
