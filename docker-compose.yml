@@ -47,7 +47,7 @@ services:
 
 ######################################### Nginx-proxy-acme-companion container
   nginx-proxy-acme:
-    image: nginxproxy/acme-companion
+    image: nginxproxy/acme-companion:latest
     container_name: nginx-proxy-acme
     networks:
       - clews_network
