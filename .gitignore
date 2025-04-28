@@ -1,12 +1,10 @@
 .env
-calibre-web/
 audiobookshelf/
-jadon.clews.pro/
+calibre-web/
+clews/
 navidrome/
-nc/
-ncdb/
-ncbu/
+nextcloud/
 nginx-proxy/
-tyler.clews.pro/
 vaultwarden/
-staging
+watchtower/
+
