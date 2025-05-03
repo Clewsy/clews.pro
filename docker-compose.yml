@@ -2,23 +2,13 @@ version: '3'
 
 services:
 
-######################################### php app for use by nginx containers
-  php:
-    image: php:fpm
-    container_name: php-pro
-    networks:
-      - php-pro
-    volumes:
-      - ./clews.pro/html/:/clews.pro/html/   #Must match location of html/css/php files volume defined for clews.pro container.
-    restart: unless-stopped
-
 ######################################### Personal website container clews.pro
   nginx-clews.pro:
     image: nginx
     container_name: nginx-clews.pro
     networks:
        - nginx-proxy_reverse-proxy
-       - php-pro
+       - php_php
     environment:
       - NGINX_HOST=${NGINX_CLEWS_PRO_URL}
       - NGINX_PORT=80
@@ -27,12 +17,14 @@ services:
       - LETSENCRYPT_HOST=${NGINX_CLEWS_PRO_URL}
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - ./clews.pro/html/:/clews.pro/html/
-      - ./clews.pro/conf.d/:/etc/nginx/conf.d/
+      - ./html/:/clews.pro/html/
+      - ./conf.d/:/etc/nginx/conf.d/
     restart: unless-stopped
   
 ######################################### Docker-managed networks
 networks:
-  php-pro:
+  php_php:
+    external: true
   nginx-proxy_reverse-proxy:
     external: true
+
