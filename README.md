@@ -1,9 +1,9 @@
 # clews.pro
 
-Herein lies the docker-compose.yml file with which I establish my personal web site clews.pro.
+Herein lies the html and css files for clews.pro.
 
-You will also find the html and css files for said site.
+The site is containerised (nginx) and deployed with an ansible role.
 
 ![clews.pro][image_clews.pro]
 
-[image_clews.pro]:clews.pro/html/images/clews_logo/clews_logo_00.png
+[image_clews.pro]:/html/images/clews_logo/clews_logo_00.png
